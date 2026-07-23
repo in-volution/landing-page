@@ -1,5 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "name": "involut-landing-page",
   "version": 2,
   "cleanUrls": true,
   "trailingSlash": false,
