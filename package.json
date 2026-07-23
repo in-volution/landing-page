@@ -1,0 +1,26 @@
+{
+  "name": "involut-agentes-ia",
+  "version": "1.0.0",
+  "description": "Involut - Fuerza laboral agéntica y automatización impulsada por IA para empresas",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx serve .",
+    "start": "npx serve .",
+    "build": "echo 'Static build ready'",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "involut",
+    "ai-agents",
+    "agentes-ia",
+    "automation",
+    "landing-page"
+  ],
+  "author": "Involut",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.4",
+    "vercel": "^39.0.0"
+  }
+}
