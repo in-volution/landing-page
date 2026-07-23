@@ -1,8 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Involut | AI-Powered Automation</title>
+<meta name="description" content="Involut crea equipos de agentes autónomos de IA que asumen la carga operativa de tu negocio. Automatización inteligente, reducción de costes y operación 24/7.">
+<meta name="keywords" content="Involut, agentes IA, automatización empresarial, inteligencia artificial, workflows, agentes autónomos, RPA inteligente">
+<meta name="author" content="Involut">
+<meta name="robots" content="index, follow">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="assets/involut-logo-color.png">
+<link rel="apple-touch-icon" href="assets/involut-logo-color.png">
+
+<!-- Open Graph / Facebook / WhatsApp / LinkedIn -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://involut.ai/">
+<meta property="og:title" content="Involut | AI-Powered Automation">
+<meta property="og:description" content="Transforma la operativa de tu negocio con equipos de agentes autónomos de inteligencia artificial.">
+<meta property="og:image" content="assets/involut-logo-color.png">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Involut | AI-Powered Automation">
+<meta name="twitter:description" content="Transforma la operativa de tu negocio con equipos de agentes autónomos de inteligencia artificial.">
+<meta name="twitter:image" content="assets/involut-logo-color.png">
+
 <script src="./support.js"></script>
 </head>
 <body>
@@ -32,6 +55,15 @@
   @keyframes glowRing{0%,100%{box-shadow:0 0 0 0 rgba(22,163,74,0.45)}50%{box-shadow:0 0 0 10px rgba(22,163,74,0)}}
   summary::-webkit-details-marker, summary::marker { display: none !important; content: "" !important; }
   details[open] summary .faq-icon { transform: rotate(45deg); color: #0a0a0a !important; }
+  
+  @media (max-width: 768px) {
+    nav { padding: 0 16px !important; }
+    .nav-desktop-links { display: none !important; }
+    #inv-hero { padding-top: 32px !important; }
+    .hero-grid-container { grid-template-columns: 1fr !important; gap: 36px !important; }
+    h1 { font-size: 36px !important; line-height: 1.12 !important; }
+    p { font-size: 16px !important; }
+  }
 </style>
 </helmet>
 
@@ -40,38 +72,40 @@
   <!-- NAV -->
   <nav style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 32px;border-bottom:1px solid #ededed;background:rgba(255,255,255,0.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)">
     <div style="display:flex;align-items:center;gap:11px">
-      <img src="assets/involut-logo-color.png" alt="involut" style="height:24px;width:auto;display:block">
+      <a href="#" style="display:flex;align-items:center"><img src="assets/involut-logo-color.png" alt="Involut Logo" style="height:32px;width:auto;display:block"></a>
     </div>
-    <div style="display:flex;align-items:center;gap:30px">
+    <div class="nav-desktop-links" style="display:flex;align-items:center;gap:30px">
       <sc-for list="{{ navLinks }}" as="link" hint-placeholder-count="4">
         <a href="{{ link.href }}" style="font-size:14px;color:#525252;text-decoration:none;font-weight:450;transition:color .15s" style-hover="color:#0a0a0a">{{ link.label }}</a>
       </sc-for>
     </div>
-    <div style="display:flex;align-items:center;gap:14px">
-      <a href="tel:639904072" style="font-size:14px;font-weight:500;color:{{ heroPrimaryText }};background:{{ accent }};padding:8px 16px;border-radius:8px;text-decoration:none;transition:transform .15s,filter .15s" style-hover="transform:translateY(-1px);filter:brightness(1.15)">Llámanos por teléfono</a>
+    <div style="display:flex;align-items:center;gap:10px">
+      <button onclick="document.getElementById('demo-modal').style.display='flex'" style="font-size:14px;font-weight:500;color:#ffffff;background:#0a0a0a;padding:8px 16px;border-radius:8px;border:none;cursor:pointer;transition:transform .15s,background .15s">Agendar Demo</button>
+      <a href="tel:639904072" style="font-size:14px;font-weight:500;color:{{ heroPrimaryText }};background:{{ accent }};padding:8px 16px;border-radius:8px;text-decoration:none;transition:transform .15s,filter .15s" style-hover="transform:translateY(-1px);filter:brightness(1.15)">Llámanos</a>
     </div>
   </nav>
 
   <!-- HERO -->
   <header id="inv-hero" style="{{ heroSectionStyle }}">
     <div style="position:absolute;inset:0;overflow:hidden;pointer-events:none">
-      <video id="inv-hero-video" autoplay loop muted playsinline preload="auto" src="assets/hero-bg.mp4" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{ videoOpacity }};transition:opacity .4s"></video>
+      <video id="inv-hero-video" autoplay loop muted playsinline preload="auto" poster="assets/involut-logo-color.png" src="assets/hero-bg.mp4" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85;transition:opacity .4s"></video>
       <div style="position:absolute;inset:-60px;opacity:{{ gridOpacity }};background-image:radial-gradient(#e6e6e6 1px,transparent 1px);background-size:26px 26px;animation:drift 18s linear infinite;-webkit-mask-image:radial-gradient(ellipse 70% 55% at 50% 30%,#000 0%,transparent 80%);mask-image:radial-gradient(ellipse 70% 55% at 50% 30%,#000 0%,transparent 80%);transition:opacity .4s"></div>
       <div id="inv-hero-glow" style="position:absolute;top:0;left:0;width:640px;height:640px;border-radius:50%;background:{{ heroGlowColor }};transform:translate(20%,-20%);transition:transform .35s cubic-bezier(.2,.6,.2,1);will-change:transform"></div>
       <div style="position:absolute;inset:0;background:{{ heroOverlayGradient }};transition:background .4s"></div>
       <div style="position:absolute;left:0;right:0;bottom:0;height:120px;background:linear-gradient(180deg,transparent,{{ heroBaseBg }})"></div>
     </div>
     <div style="position:relative;max-width:1180px;margin:0 auto">
-      <div style="display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:52px">
+      <div class="hero-grid-container" style="display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:52px">
         <div>
           <div style="display:inline-flex;align-items:center;gap:9px;padding:6px 16px 6px 12px;border:1px solid rgba(16,185,129,0.35);border-radius:999px;background:rgba(16,185,129,0.06);font-size:13px;color:#10b981;font-weight:500;margin-bottom:26px;animation:revUp .7s ease both;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 0 16px rgba(16,185,129,0.12)">
             <span style="width:7px;height:7px;border-radius:50%;background:#10b981;box-shadow:0 0 10px #10b981;animation:pulse 1.6s ease infinite"></span>
-            <span style="font-family:'Geist Mono',monospace;letter-spacing:0.02em">Involut · Fuerza laboral agéntica</span>
+            <span style="font-family:'Geist Mono',monospace;letter-spacing:0.02em">Involut · AI-Powered Automation</span>
           </div>
           <h1 style="font-size:54px;line-height:1.04;font-weight:600;letter-spacing:-0.035em;margin:0 0 20px;color:{{ heroTitleColor }};animation:revUp .7s ease both;animation-delay:.05s">Automatización impulsada por IA para cada decisión</h1>
           <p style="font-size:18.5px;line-height:1.55;color:{{ heroBodyColor }};max-width:480px;margin:0 0 32px;font-weight:430;animation:revUp .7s ease both;animation-delay:.12s">Creamos equipos de agentes autónomos que asumen la carga operativa de tu negocio. Escala tu rendimiento a un coste 10 veces menor que contratar personal.</p>
           <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px;animation:revUp .7s ease both;animation-delay:.18s">
-            <a href="tel:639904072" style="font-size:15px;font-weight:500;color:{{ heroPrimaryText }};background:{{ accent }};padding:13px 24px;border-radius:10px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:transform .15s,filter .15s" style-hover="transform:translateY(-2px);filter:brightness(1.15)">Llamar por teléfono <span style="font-family:'Geist Mono',monospace">→</span></a>
+            <button onclick="document.getElementById('demo-modal').style.display='flex'" style="font-size:15px;font-weight:500;color:#ffffff;background:#0a0a0a;padding:13px 24px;border-radius:10px;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:transform .15s,filter .15s">Agendar Demo <span style="font-family:'Geist Mono',monospace">→</span></button>
+            <a href="tel:639904072" style="font-size:15px;font-weight:500;color:{{ heroPrimaryText }};background:{{ accent }};padding:13px 24px;border-radius:10px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:transform .15s,filter .15s" style-hover="transform:translateY(-2px);filter:brightness(1.15)">Llamar por teléfono</a>
             <a href="#como" style="font-size:15px;font-weight:500;color:{{ heroSecondaryText }};background:transparent;border:1px solid {{ heroSecondaryBorder }};padding:13px 24px;border-radius:10px;text-decoration:none;transition:border-color .15s,background .15s" style-hover="border-color:{{ accent }};background:{{ heroBadgeBg }}">Cómo trabajamos</a>
           </div>
           <div style="display:flex;gap:40px;border-top:1px solid {{ heroSecondaryBorder }};padding-top:24px;animation:revUp .7s ease both;animation-delay:.24s">
@@ -111,7 +145,7 @@
   <!-- INFRA PROVIDER -->
   <section style="padding:34px 32px 60px">
     <div style="max-width:1080px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap">
-      <span style="font-size:13px;color:#9a9a9a;letter-spacing:0.02em">Fuerza laboral agéntica con Google ADK sobre</span>
+      <span style="font-size:13px;color:#9a9a9a;letter-spacing:0.02em">AI-Powered Automation con Google ADK sobre</span>
       <div style="display:inline-flex;align-items:center;gap:9px;border:1px solid #ededed;border-radius:999px;padding:8px 16px 8px 13px;background:#fff;box-shadow:0 1px 2px rgba(10,10,10,0.04)">
         <svg width="22" height="22" viewBox="0 0 32 24" fill="none" aria-label="Google Cloud">
           <path d="M20.4 8.1l1.9-1.9.13-.8C18.96 2.34 13.6 2.7 10.5 6.05 9.64 6.98 9 8.2 8.6 9.45l.68-.1 3.8-.62.3-.3c1.7-1.86 4.57-2.1 6.5-.5l.72.27z" fill="#EA4335"/>
@@ -268,12 +302,7 @@
         </div>
       </div>
 
-      <div style="display:flex;align-items:center;justify-content:center;gap:14px;margin-top:28px;font-family:'Geist Mono',monospace;font-size:12.5px;color:#71717a;flex-wrap:wrap">
-        <span style="color:#a1a1aa">detección 24/7</span><span style="color:{{ accent }}">→</span><span style="color:#a1a1aa">orquestador</span><span style="color:{{ accent }}">→</span><span style="color:#a1a1aa">ejecutores en paralelo (Ops, Finanzas, CRM)</span><span style="color:{{ accent }}">→</span><span style="color:#a1a1aa">auditoría</span><span style="color:#27272a">·</span><span>en vivo</span>
-      </div>
     </div>
-  </section>
-
   <!-- CÓMO TRABAJAMOS -->
   <section id="como" style="padding:{{ sectionPadV }} 32px;border-top:1px solid #f0f0f0">
     <div style="max-width:1180px;margin:0 auto">
@@ -343,7 +372,7 @@
       <div style="background:#0c0c0e;color:#fff;border:1px solid #27272a;border-radius:24px;padding:{{ ctaPad }};text-align:center;position:relative;overflow:hidden;box-shadow:0 30px 60px -20px rgba(0,0,0,0.6)">
         <div style="position:absolute;inset:0;opacity:0.25;background-image:radial-gradient(#3f3f46 1px,transparent 1px);background-size:20px 20px"></div>
         <div style="position:relative;max-width:640px;margin:0 auto">
-          <div style="font-family:'Geist Mono',monospace;font-size:12px;color:#a1a1aa;letter-spacing:0.06em;margin-bottom:16px">/ DESPLIEGA TU FUERZA LABORAL AGÉNTICA</div>
+          <div style="font-family:'Geist Mono',monospace;font-size:12px;color:#a1a1aa;letter-spacing:0.06em;margin-bottom:16px">/ DESPLIEGA TU SISTEMA AI-POWERED AUTOMATION</div>
           <h2 style="font-size:42px;font-weight:600;letter-spacing:-0.035em;line-height:1.08;margin:0 0 18px;color:#ffffff">Diseñemos el equipo de agentes para tu empresa</h2>
           <p style="font-size:17.5px;color:#a1a1aa;max-width:520px;margin:0 auto 36px;line-height:1.55;font-weight:430">Auditoría operativa gratuita, diseño de enjambres a medida y acompañamiento técnico en cada paso.</p>
           <div style="display:flex;justify-content:center;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:28px">
@@ -363,7 +392,7 @@
     <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.8fr repeat(2,1fr);gap:48px;margin-bottom:48px">
       <div>
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
-          <img src="assets/involut-logo-white.png" alt="involut" style="height:22px;width:auto;display:block">
+          <img src="assets/involut-logo-white.png" alt="Involut" style="height:28px;width:auto;display:block">
         </div>
         <p style="font-size:14px;color:#6b6b6b;max-width:320px;line-height:1.6;margin:0 0 20px">Elevamos el nivel tecnológico de tu empresa con agentes de IA autónomos sobre Google Cloud e integrados directamente en tus sistemas.</p>
         <div style="display:flex;gap:16px;font-size:13px;color:#6b6b6b">
@@ -504,7 +533,7 @@ class Component extends DCLogic {
       { n: '01', title: 'Auditoría y diseño agéntico', desc: 'Analizamos tus procesos operativos y diseñamos la arquitectura multiagente a medida con roles y guardarraíles.' },
       { n: '02', title: 'Despliegue y configuración', desc: 'Desplegamos y configuramos los agentes dedicados en Google Cloud (GCP) e integramos con tus sistemas sin fricción.' },
       { n: '03', title: 'Conexión e integración', desc: 'Conectamos a los agentes con tus ERPs, CRMs y bases de datos con permisos restringidos y cifrado total.' },
-      { n: '04', title: 'Operación y mantenimiento 24/7', desc: 'Activamos la fuerza laboral agéntica bajo una cuota mensual por agente activo que cubre operación, soporte y mantenimiento.' },
+      { n: '04', title: 'Operación y mantenimiento 24/7', desc: 'Activamos el sistema de AI-Powered Automation bajo una cuota mensual por agente activo que cubre operación, soporte y mantenimiento.' },
     ];
 
     const features = [
@@ -523,7 +552,7 @@ class Component extends DCLogic {
 
     const faqData = [
       { q: '¿Qué tipo de procesos operativos podéis resolver?', a: 'Resolvemos cualquier proceso operativo complejo que implique datos, decisiones y acciones en múltiples sistemas: gestión de pedidos, conciliación financiera, facturación, respuesta y cualificación de leads B2B, atención a clientes y supervisión de incidencias en proveedores.' },
-      { q: '¿Cómo funciona la contratación y propiedad de los agentes?', a: 'Operamos como una fuerza laboral agéntica gestionada: los agentes son propiedad tecnológica de Involut y tú pagas únicamente una cuota mensual por cada agente activo en producción. Esto incluye soporte continuo, actualizaciones e infraestructura en Google Cloud (GCP). Tus datos son 100% tuyos.' },
+      { q: '¿Cómo funciona la contratación y propiedad de los agentes?', a: 'Operamos como un servicio de AI-Powered Automation gestionado: los agentes son propiedad tecnológica de Involut y tú pagas únicamente una cuota mensual por cada agente activo en producción. Esto incluye soporte continuo, actualizaciones e infraestructura en Google Cloud (GCP). Tus datos son 100% tuyos.' },
       { q: '¿En qué os diferenciáis de las automatizaciones tradicionales o RPA?', a: 'Las automatizaciones tradicionales ejecutan reglas rígidas "si ocurre A, haz B" que fallan ante cualquier imprevisto. Nuestros equipos de agentes de IA razonan, entienden el contexto, toman decisiones adaptativas y resuelven el proceso completo de extremo a extremo sin romperse.' },
       { q: '¿Cómo garantizáis que los agentes no cometan errores ni tomen decisiones indebidas?', a: 'Implementamos guardarraíles estrictos con agentes supervisores (Auditor) y políticas de control humano (Human-in-the-loop). Tienes visibilidad total y la opción de requerir validación humana en 1 clic antes de que el agente ejecute cualquier acción crítica.' },
       { q: '¿Cuánto tiempo se tarda en poner en marcha un proyecto en producción?', a: 'La mayoría de despliegues iniciales están operando en producción en un plazo de 2 a 4 semanas. Empezamos auditando y resolviendo un primer proceso clave y escalamos la capacidad agéntica de forma progresiva.' },
@@ -555,5 +584,36 @@ class Component extends DCLogic {
   }
 }
 </script>
+<!-- DEMO MODAL -->
+<div id="demo-modal" style="display:none;position:fixed;inset:0;z-index:100;background:rgba(0,0,0,0.65);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:16px" onclick="if(event.target===this)this.style.display='none'">
+  <div style="background:#ffffff;border-radius:16px;max-width:480px;width:100%;padding:32px;box-shadow:0 24px 48px rgba(0,0,0,0.25);position:relative;animation:revUp .3s ease both">
+    <button onclick="document.getElementById('demo-modal').style.display='none'" style="position:absolute;top:16px;right:16px;background:none;border:none;font-size:24px;line-height:1;cursor:pointer;color:#888">&times;</button>
+    <div style="display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;background:rgba(16,185,129,0.1);color:#10b981;font-size:12px;font-weight:600;margin-bottom:12px">
+      <span style="width:6px;height:6px;border-radius:50%;background:#10b981"></span> Involut Demo
+    </div>
+    <h3 style="margin:0 0 8px;font-size:22px;font-weight:600;color:#0a0a0a">Agendar Demo o Consulta</h3>
+    <p style="margin:0 0 20px;font-size:14px;color:#666;line-height:1.45">Descubre cómo los equipos de agentes autónomos de Involut pueden optimizar la operativa de tu negocio.</p>
+    <form onsubmit="event.preventDefault(); alert('¡Muchas gracias! Un especialista de Involut se pondrá en contacto contigo en breve.'); document.getElementById('demo-modal').style.display='none';">
+      <div style="margin-bottom:14px">
+        <label style="display:block;font-size:13px;font-weight:500;margin-bottom:4px;color:#333">Nombre completo *</label>
+        <input type="text" required placeholder="Ej. Ana Martínez" style="width:100%;padding:10px 12px;border:1px solid #e2e8f0;border-radius:8px;font-size:14px;outline:none">
+      </div>
+      <div style="margin-bottom:14px">
+        <label style="display:block;font-size:13px;font-weight:500;margin-bottom:4px;color:#333">Email corporativo *</label>
+        <input type="email" required placeholder="ana@tuempresa.com" style="width:100%;padding:10px 12px;border:1px solid #e2e8f0;border-radius:8px;font-size:14px;outline:none">
+      </div>
+      <div style="margin-bottom:14px">
+        <label style="display:block;font-size:13px;font-weight:500;margin-bottom:4px;color:#333">Teléfono de contacto</label>
+        <input type="tel" placeholder="+34 600 000 000" style="width:100%;padding:10px 12px;border:1px solid #e2e8f0;border-radius:8px;font-size:14px;outline:none">
+      </div>
+      <div style="margin-bottom:20px">
+        <label style="display:block;font-size:13px;font-weight:500;margin-bottom:4px;color:#333">Proceso a optimizar (opcional)</label>
+        <textarea rows="3" placeholder="Ej. Gestión de pedidos, atención a clientes, conciliación..." style="width:100%;padding:10px 12px;border:1px solid #e2e8f0;border-radius:8px;font-size:14px;font-family:inherit;outline:none"></textarea>
+      </div>
+      <button type="submit" style="width:100%;background:#16a34a;color:#ffffff;border:none;padding:12px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;transition:background .15s">Solicitar Demostración</button>
+    </form>
+  </div>
+</div>
 </body>
 </html>
+

@@ -1,4 +1,4 @@
-# 🚀 Involut · Fuerza Laboral Agéntica
+# 🚀 Involut · AI-Powered Automation
 
 Sitio web y plataforma interactiva de **Involut** — Automatización impulsada por agentes autónomos de IA para optimizar procesos empresariales complejos.
 

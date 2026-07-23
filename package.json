@@ -1,7 +1,7 @@
 {
   "name": "involut-landing-page",
   "version": "1.0.0",
-  "description": "Involut - Fuerza laboral agéntica y automatización impulsada por IA para empresas",
+  "description": "Involut - AI-Powered Automation para empresas",
   "private": true,
   "type": "module",
   "scripts": {
