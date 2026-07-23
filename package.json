@@ -6,9 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "npx serve .",
-    "start": "npx serve .",
-    "build": "echo 'Static build ready'",
-    "deploy": "vercel --prod"
+    "start": "npx serve ."
   },
   "keywords": [
     "involut",
@@ -20,7 +18,6 @@
   "author": "Involut",
   "license": "MIT",
   "devDependencies": {
-    "serve": "^14.2.4",
-    "vercel": "^39.0.0"
+    "serve": "^14.2.4"
   }
 }
