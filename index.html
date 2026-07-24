@@ -1,714 +1,748 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Involution | AI-Powered Automation</title>
-<meta name="description" content="Involution crea equipos de agentes autónomos de IA que asumen la carga operativa de tu negocio. Automatización inteligente, reducción de costes y operación 24/7.">
-<meta name="keywords" content="Involution, agentes IA, automatización empresarial, inteligencia artificial, workflows, agentes autónomos, RPA inteligente">
-<meta name="author" content="Involution">
-<meta name="robots" content="index, follow">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Involution | AI-Powered Automation</title>
+    <meta
+      name="description"
+      content="Involution crea equipos de agentes autónomos de IA que asumen la carga operativa de tu negocio. Automatización inteligente, reducción de costes y operación 24/7."
+    />
+    <meta name="keywords" content="Involution, agentes IA, automatización empresarial, inteligencia artificial, workflows, agentes autónomos, RPA inteligente" />
+    <meta name="author" content="Involution" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://involution.es/" />
 
-<!-- Favicon -->
-<link rel="icon" type="image/png" href="assets/involution-icon.png">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/involution-icon.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
 
-<!-- Open Graph / Facebook / WhatsApp / LinkedIn -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://involution.ai/">
-<meta property="og:title" content="Involution | AI-Powered Automation">
-<meta property="og:description" content="Transforma la operativa de tu negocio con equipos de agentes autónomos de inteligencia artificial.">
-<meta property="og:image" content="https://involution.ai/assets/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+    <!-- Open Graph / Facebook / WhatsApp / LinkedIn -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://involution.es/" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:site_name" content="Involution" />
+    <meta property="og:title" content="Involution | AI-Powered Automation" />
+    <meta property="og:description" content="Transforma la operativa de tu negocio con equipos de agentes autónomos de inteligencia artificial." />
+    <meta property="og:image" content="https://involution.es/assets/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Involution | AI-Powered Automation">
-<meta name="twitter:description" content="Transforma la operativa de tu negocio con equipos de agentes autónomos de inteligencia artificial.">
-<meta name="twitter:image" content="https://involution.ai/assets/og-image.png">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Involution | AI-Powered Automation" />
+    <meta name="twitter:description" content="Transforma la operativa de tu negocio con equipos de agentes autónomos de inteligencia artificial." />
+    <meta name="twitter:image" content="https://involution.es/assets/og-image.png" />
 
-<script src="./support.js"></script>
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
 
-<!-- Datos estructurados -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Involution",
-  "url": "https://involution.ai/",
-  "logo": "https://involution.ai/assets/involution-logo-color.png",
-  "email": "hola@involution.es",
-  "description": "Involution crea equipos de agentes autónomos de IA que asumen la carga operativa de tu negocio."
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    { "@type": "Question", "name": "¿Qué tipo de procesos operativos podéis resolver?", "acceptedAnswer": { "@type": "Answer", "text": "Resolvemos cualquier proceso operativo complejo que implique datos, decisiones y acciones en múltiples sistemas: gestión de pedidos, conciliación financiera, facturación, respuesta y cualificación de leads B2B, atención a clientes y supervisión de incidencias en proveedores." } },
-    { "@type": "Question", "name": "¿Cómo funciona la contratación y propiedad de los agentes?", "acceptedAnswer": { "@type": "Answer", "text": "Operamos como un servicio de AI-Powered Automation gestionado: los agentes son propiedad tecnológica de Involution y tú pagas únicamente una cuota mensual por cada agente activo en producción. Esto incluye soporte continuo, actualizaciones e infraestructura en Google Cloud (GCP). Tus datos son 100% tuyos." } },
-    { "@type": "Question", "name": "¿En qué os diferenciáis de las automatizaciones tradicionales o RPA?", "acceptedAnswer": { "@type": "Answer", "text": "Las automatizaciones tradicionales ejecutan reglas rígidas que fallan ante cualquier imprevisto. Nuestros equipos de agentes de IA razonan, entienden el contexto, toman decisiones adaptativas y resuelven el proceso completo de extremo a extremo sin romperse." } },
-    { "@type": "Question", "name": "¿Cómo garantizáis que los agentes no cometan errores ni tomen decisiones indebidas?", "acceptedAnswer": { "@type": "Answer", "text": "Implementamos guardarraíles estrictos con agentes supervisores (Auditor) y políticas de control humano (Human-in-the-loop). Tienes visibilidad total y la opción de requerir validación humana en 1 clic antes de que el agente ejecute cualquier acción crítica." } },
-    { "@type": "Question", "name": "¿Cuánto tiempo se tarda en poner en marcha un proyecto en producción?", "acceptedAnswer": { "@type": "Answer", "text": "La mayoría de despliegues iniciales están operando en producción en un plazo de 2 a 4 semanas. Empezamos auditando y resolviendo un primer proceso clave y escalamos la capacidad agéntica de forma progresiva." } },
-    { "@type": "Question", "name": "¿Qué esfuerzo o dedicación requiere por parte de nuestro equipo?", "acceptedAnswer": { "@type": "Answer", "text": "Mínimo. En Involution asumimos toda la arquitectura, desarrollo, integración y calibración técnica. Tu equipo solo participa en la fase inicial de definición del proceso y en la validación del comportamiento del sistema multiagente." } },
-    { "@type": "Question", "name": "¿Cómo se conecta Involution a nuestros sistemas actuales (ERP, CRM, BD)?", "acceptedAnswer": { "@type": "Answer", "text": "Nos conectamos directamente mediante APIs, conectores nativos y credenciales con permisos restringidos dentro de la infraestructura de GCP, sin necesidad de sustituir tus herramientas actuales ni interrumpir tu operativa diaria." } }
-  ]
-}
-</script>
+    <!-- Datos estructurados -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Involution",
+        "url": "https://involution.es/",
+        "logo": "https://involution.es/assets/involution-logo-color.png",
+        "email": "hola@involution.es",
+        "description": "Involution crea equipos de agentes autónomos de IA que asumen la carga operativa de tu negocio."
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Involution",
+        "url": "https://involution.es/"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Qué tipo de procesos operativos podéis resolver?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Resolvemos cualquier proceso operativo complejo que implique datos, decisiones y acciones en múltiples sistemas: gestión de pedidos, conciliación financiera, facturación, respuesta y cualificación de leads B2B, atención a clientes y supervisión de incidencias en proveedores."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cómo funciona la contratación y propiedad de los agentes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Operamos como un servicio de AI-Powered Automation gestionado: los agentes son propiedad tecnológica de Involution y tú pagas únicamente una cuota mensual por cada agente activo en producción. Esto incluye soporte continuo, actualizaciones e infraestructura en Google Cloud (GCP). Tus datos son 100% tuyos."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿En qué os diferenciáis de las automatizaciones tradicionales o RPA?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Las automatizaciones tradicionales ejecutan reglas rígidas que fallan ante cualquier imprevisto. Nuestros equipos de agentes de IA razonan, entienden el contexto, toman decisiones adaptativas y resuelven el proceso completo de extremo a extremo sin romperse."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cómo garantizáis que los agentes no cometan errores ni tomen decisiones indebidas?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Implementamos guardarraíles estrictos con agentes supervisores (Auditor) y políticas de control humano (Human-in-the-loop). Tienes visibilidad total y la opción de requerir validación humana en 1 clic antes de que el agente ejecute cualquier acción crítica."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuánto tiempo se tarda en poner en marcha un proyecto en producción?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "La mayoría de despliegues iniciales están operando en producción en un plazo de 2 a 4 semanas. Empezamos auditando y resolviendo un primer proceso clave y escalamos la capacidad agéntica de forma progresiva."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué esfuerzo o dedicación requiere por parte de nuestro equipo?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Mínimo. En Involution asumimos toda la arquitectura, desarrollo, integración y calibración técnica. Tu equipo solo participa en la fase inicial de definición del proceso y en la validación del comportamiento del sistema multiagente."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cómo se conecta Involution a nuestros sistemas actuales (ERP, CRM, BD)?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nos conectamos directamente mediante APIs, conectores nativos y credenciales con permisos restringidos dentro de la infraestructura de GCP, sin necesidad de sustituir tus herramientas actuales ni interrumpir tu operativa diaria."
+            }
+          }
+        ]
+      }
+    </script>
 
-<!-- Vercel Web Analytics -->
-<script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
-<script defer src="/_vercel/insights/script.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{margin:0;background:#ffffff;color:#0a0a0a;font-family:'Geist',system-ui,sans-serif;-webkit-font-smoothing:antialiased;letter-spacing:-0.011em}
-  ::selection{background:#0a0a0a;color:#fff}
-  @keyframes revUp{0%{opacity:0;transform:translateY(28px)}100%{opacity:1;transform:none}}
-  @keyframes fadeIn{0%{opacity:0}100%{opacity:1}}
-  @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
-  @keyframes drift{0%{transform:translate(0,0)}100%{transform:translate(-52px,-52px)}}
-  @keyframes dash{to{stroke-dashoffset:-16}}
-  @keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}
-  @keyframes streamline{0%{opacity:0;transform:translateY(6px)}100%{opacity:1;transform:none}}
-  @keyframes blob1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(50px,40px) scale(1.18)}}
-  @keyframes blob2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-46px,34px) scale(1.12)}}
-  @keyframes blob3{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(36px,-44px) scale(1.22)}}
-  @keyframes sweep{0%{transform:translateX(-60%)}50%{transform:translateX(420%)}100%{transform:translateX(-60%)}}
-  @keyframes agentPulse{0%,100%{transform:scale(1);opacity:.85}50%{transform:scale(1.16);opacity:1}}
-  @keyframes glowRing{0%,100%{box-shadow:0 0 0 0 rgba(22,163,74,0.45)}50%{box-shadow:0 0 0 10px rgba(22,163,74,0)}}
-  summary::-webkit-details-marker, summary::marker { display: none !important; content: "" !important; }
-  details[open] summary .faq-icon { transform: rotate(45deg); color: #0a0a0a !important; }
-  
-  @media (max-width: 768px) {
-    nav { padding: 0 16px !important; }
-    .nav-desktop-links { display: none !important; }
-    #inv-hero { padding-top: 32px !important; }
-    .hero-grid-container { grid-template-columns: 1fr !important; gap: 36px !important; }
-    h1 { font-size: 36px !important; line-height: 1.12 !important; }
-    p { font-size: 16px !important; }
-    .ladder-row { grid-template-columns: auto 1fr !important; align-items: start !important; gap: 16px !important; }
-    .ladder-row > p { grid-column: 1 / -1 !important; }
-    .casos-grid { grid-template-columns: 1fr !important; }
-    .split-grid { grid-template-columns: 1fr !important; }
-    .steps-grid { grid-template-columns: 1fr !important; }
-    .features-grid { grid-template-columns: 1fr !important; }
-    .footer-grid { grid-template-columns: 1fr !important; gap: 36px !important; }
-    .hero-stats { gap: 20px !important; }
-  }
-</style>
-</helmet>
+    <!-- Vercel Web Analytics -->
+    <script>
+      window.va =
+        window.va ||
+        function () {
+          (window.vaq = window.vaq || []).push(arguments);
+        };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+  </head>
+  <body>
+    <!-- Sprite SVG (icono WhatsApp, definido una sola vez) -->
+    <svg class="svg-sprite" width="0" height="0" aria-hidden="true" focusable="false">
+      <symbol id="ico-wa" viewBox="0 0 24 24">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+        />
+      </symbol>
+    </svg>
 
-<div style="min-height:100vh;overflow-x:hidden">
+    <div class="page">
+      <!-- NAV -->
+      <nav class="nav">
+        <div class="nav__brand">
+          <a href="#" aria-label="Involution — inicio"><img class="nav__logo" src="assets/involution-logo-nav.png" alt="Involution" /></a>
+        </div>
+        <div class="nav__links">
+          <a class="nav__link" href="#porque">Nuestro por qué</a>
+          <a class="nav__link" href="#multiagente">Red Multiagente</a>
+          <a class="nav__link" href="#caracteristicas">Capacidades</a>
+          <a class="nav__link" href="#empezar">Cómo empezar</a>
+          <a class="nav__link" href="#cta">Contacto</a>
+        </div>
+        <div class="nav__actions">
+          <a class="nav__tel" href="tel:+34639904072" data-cta="nav-tel">Llámanos</a>
+          <a
+            class="nav__wa"
+            href="https://wa.me/34639904072?text=Hola%2C%20quiero%20mi%20diagn%C3%B3stico%20gratuito%20de%20automatizaci%C3%B3n%20para%20mi%20empresa."
+            target="_blank"
+            rel="noopener"
+            data-cta="nav-whatsapp"
+          >
+            <svg class="ico" width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#ico-wa"></use></svg>
+            <span>WhatsApp</span>
+          </a>
+        </div>
+      </nav>
 
-  <!-- NAV -->
-  <nav style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;height:76px;padding:0 32px;border-bottom:1px solid #ededed;background:rgba(255,255,255,0.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)">
-    <div style="display:flex;align-items:center;gap:11px">
-      <a href="#" style="display:flex;align-items:center"><img src="assets/involution-logo-nav.png" alt="Involution Logo" style="height:52px;width:auto;display:block"></a>
-    </div>
-    <div class="nav-desktop-links" style="display:flex;align-items:center;gap:30px">
-      <sc-for list="{{ navLinks }}" as="link" hint-placeholder-count="4">
-        <a href="{{ link.href }}" style="font-size:14px;color:#525252;text-decoration:none;font-weight:450;transition:color .15s" style-hover="color:#0a0a0a">{{ link.label }}</a>
-      </sc-for>
-    </div>
-    <div style="display:flex;align-items:center;gap:14px">
-      <a href="tel:+34639904072" data-cta="nav-tel" style="font-size:14px;color:#525252;text-decoration:none;font-weight:500;transition:color .15s" style-hover="color:#0a0a0a">Llámanos</a>
-      <a href="{{ waLink }}" target="_blank" rel="noopener" data-cta="nav-whatsapp" style="display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:#06341c;background:#25D366;padding:8px 16px;border-radius:8px;text-decoration:none;transition:transform .15s,filter .15s" style-hover="transform:translateY(-1px);filter:brightness(1.06)">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        <span>WhatsApp</span>
+      <!-- HERO -->
+      <header class="hero" id="inv-hero">
+        <div class="hero__bg">
+          <video id="inv-hero-video" loop muted playsinline preload="auto" poster="assets/hero-poster.jpg" src="assets/hero-bg.mp4" class="hero__video"></video>
+          <div id="inv-hero-glow" class="hero__glow"></div>
+          <div class="hero__overlay"></div>
+          <div class="hero__fade"></div>
+        </div>
+        <div class="hero__inner">
+          <div class="hero__grid">
+            <div>
+              <div class="hero__badge reveal">
+                <span class="hero__badge-dot"></span>
+                <span class="hero__badge-txt">Involution · AI-Powered Automation</span>
+              </div>
+              <h1 class="hero__title reveal">Automatización impulsada por IA para cada decisión</h1>
+              <p class="hero__lead reveal">Creamos equipos de agentes autónomos que asumen la carga operativa de tu negocio. Escala tu rendimiento a un coste 10 veces menor que contratar personal.</p>
+              <div class="hero__cta-row reveal">
+                <a
+                  class="btn btn-wa"
+                  href="https://wa.me/34639904072?text=Hola%2C%20quiero%20mi%20diagn%C3%B3stico%20gratuito%20de%20automatizaci%C3%B3n%20para%20mi%20empresa."
+                  target="_blank"
+                  rel="noopener"
+                  data-cta="hero-whatsapp"
+                >
+                  <svg class="ico" width="17" height="17" fill="currentColor" aria-hidden="true"><use href="#ico-wa"></use></svg>
+                  Reserva tu diagnóstico gratis
+                </a>
+                <a class="btn btn-outline" href="#como">Cómo trabajamos</a>
+              </div>
+              <p class="hero__micro reveal">Sin compromiso · Respuesta en menos de 24&nbsp;h · <a href="tel:+34639904072" data-cta="hero-tel">o llámanos directamente</a></p>
+              <div class="hero__stats reveal">
+                <div>
+                  <div class="stat__v">2–3 sem</div>
+                  <div class="stat__k">del piloto a la puesta en marcha</div>
+                </div>
+                <div>
+                  <div class="stat__v">24/7</div>
+                  <div class="stat__k">operación autónoma</div>
+                </div>
+                <div>
+                  <div class="stat__v">10x</div>
+                  <div class="stat__k">más eficiente que contratar</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="reveal-lg">
+              <figure class="panel">
+                <div class="panel__bar">
+                  <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+                  <div class="panel__title">involution-panel · gestión &amp; operativa</div>
+                  <div class="panel__live"><span class="panel__live-dot"></span>En vivo</div>
+                </div>
+                <video id="inv-labor-video" muted loop playsinline preload="metadata" class="panel__video"><source src="assets/hero-fuerza-laboral.mp4" type="video/mp4" /></video>
+                <figcaption class="visually-hidden">La nueva fuerza laboral de Involution: equipos de agentes de IA que ejecutan las operaciones de tu empresa.</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- INFRA PROVIDER -->
+      <section class="infra">
+        <div class="infra__row">
+          <span class="infra__label">AI-Powered Automation sobre</span>
+          <div class="infra__chip">
+            <svg width="22" height="22" viewBox="0 0 32 24" fill="none" role="img" aria-label="Google Cloud">
+              <path d="M20.4 8.1l1.9-1.9.13-.8C18.96 2.34 13.6 2.7 10.5 6.05 9.64 6.98 9 8.2 8.6 9.45l.68-.1 3.8-.62.3-.3c1.7-1.86 4.57-2.1 6.5-.5l.72.27z" fill="#EA4335" />
+              <path
+                d="M25.2 9.4a8.56 8.56 0 0 0-2.6-4.1l-2.66 2.66a4.74 4.74 0 0 1 1.74 3.76v.48c1.3 0 2.36 1.06 2.36 2.36 0 1.3-1.06 2.33-2.36 2.33h-4.76l-.47.5v2.84l.47.45h4.76c3.42.03 6.2-2.7 6.22-6.12a6.08 6.08 0 0 0-2.74-5.1z"
+                fill="#4285F4"
+              />
+              <path d="M12.74 21.2h4.75v-3.8h-4.75c-.34 0-.66-.08-.96-.22l-.68.2-1.92 1.9-.17.65a6.18 6.18 0 0 0 3.7 1.27z" fill="#34A853" />
+              <path d="M12.74 8.96A6.18 6.18 0 0 0 8.02 19.1l2.76-2.75a2.36 2.36 0 0 1 1.96-3.62c.78 0 1.5.38 1.96.97l2.76-2.75a6.16 6.16 0 0 0-4.72-2z" fill="#FBBC05" />
+            </svg>
+            <span>Google Cloud (GCP)</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROBLEMA -->
+      <section class="section" id="problema">
+        <div class="wrap split">
+          <div class="on-scroll">
+            <div class="eyebrow">/ EL PROBLEMA</div>
+            <h2 class="h2-sm">Crecer exige tecnología que no tienes tiempo de construir</h2>
+            <p class="p-body">
+              La mayoría de empresas no cuenta con el conocimiento, el tiempo ni los recursos para elevar su nivel tecnológico. Contratar y mantener un equipo de IA es lento y caro, y las herramientas
+              sueltas dejan el trabajo de integrarlas de tu lado.
+            </p>
+          </div>
+          <div class="card-dark on-scroll">
+            <div class="eyebrow">/ NUESTRA RESPUESTA</div>
+            <p class="card-dark__lead">Somos tu socio tecnológico. Nos ocupamos de la tecnología en todas tus operaciones; tú, de tu negocio.</p>
+            <div class="check-list">
+              <div class="check"><span class="check__mark">✓</span>Equipos completos de agentes de IA a medida para la resolución integral de procesos</div>
+              <div class="check"><span class="check__mark">✓</span>No vendemos automatizaciones sueltas: asumimos la responsabilidad de extremo a extremo</div>
+              <div class="check"><span class="check__mark">✓</span>Resolución de procesos reales conectando tus datos, tus sistemas y tu equipo</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NUESTRO POR QUÉ -->
+      <section class="section section--soft" id="porque">
+        <div class="wrap-1040">
+          <div class="why on-scroll">
+            <div class="why__glow"></div>
+            <div class="eyebrow eyebrow--upper">/ NUESTRO POR QUÉ</div>
+            <h2 class="why__title">La verdadera evolución de las empresas empieza desde dentro</h2>
+            <p class="why__p">
+              En <strong>Involution</strong> creemos que la verdadera evolución de las empresas empieza desde dentro: convirtiendo sistemas rudimentarios en arquitecturas de alta tecnología donde la
+              inteligencia artificial esté verdaderamente al servicio del ser humano.
+            </p>
+            <p class="why__p">
+              El tiempo es nuestro recurso más valioso. Nuestra misión no solo es liberar a las personas de tareas operativas y repetitivas, sino desplegar una
+              <strong>fuerza laboral tecnológica de agentes de IA</strong> capaces de outperformar (superar en rendimiento, velocidad y precisión) cualquier tarea a un coste mínimo, permitiendo a las
+              empresas escalar su rendimiento de forma exponencial.
+            </p>
+            <div class="why__foot">
+              <span class="why__foot-dot"></span>
+              <span>Tecnología al servicio del potencial humano</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LA RED MULTIAGENTE -->
+      <section class="section section--dark" id="multiagente">
+        <div class="mesh__dots"></div>
+        <div class="mesh__inner">
+          <div class="section-head--center on-scroll-c">
+            <div class="eyebrow eyebrow--green">/ LA RED MULTIAGENTE</div>
+            <h2 class="h2">Sistemas Multiagentes Especializados que Operan en Sinergia</h2>
+            <p class="lead lead--dark">
+              No es un bot aislado. Es un sistema multiagente de agentes autónomos especializados (Ops, Finanzas, CRM) coordinados en tiempo real para resolver cada paso de tus procesos.
+            </p>
+          </div>
+
+          <figure class="mesh-demo reveal-lg">
+            <div class="mesh-demo__bar">
+              <div class="mesh-demo__bar-l">
+                <div class="dots"><span class="dot dot--sm"></span><span class="dot dot--sm"></span><span class="dot dot--sm"></span></div>
+                <span class="mesh-demo__title">involution-multiagent-mesh · sistema multiagente operativo autónomo</span>
+              </div>
+              <div class="mesh-demo__live">
+                <span class="mesh-demo__live-dot"></span>
+                <span>Red Multiagente Activa (3 Ejecutores en Paralelo)</span>
+              </div>
+            </div>
+            <video id="inv-mesh-video" src="assets/sistema-multiagente.mp4" muted loop playsinline preload="metadata" class="mesh-demo__video"></video>
+            <figcaption class="visually-hidden">Demostración del sistema multiagente de Involution resolviendo un pedido urgente de extremo a extremo.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- CASOS DE USO · PROBLEMA → SOLUCIÓN → AHORRO → ROI (oculto por ahora) -->
+      <section class="section is-hidden" id="casos">
+        <div class="wrap">
+          <div class="section-head section-head--wide on-scroll">
+            <div class="eyebrow">/ CASOS DE USO</div>
+            <h2 class="h2">El coste de no automatizar ya lo estás pagando</h2>
+            <p class="lead">
+              Cuatro procesos donde un equipo de agentes genera un retorno inmediato. Cada caso: el problema que te cuesta dinero hoy, la solución desplegada y el ahorro y ROI proyectados.
+            </p>
+          </div>
+          <div class="casos-grid">
+            <div class="caso on-scroll-sm">
+              <div class="chip"><span class="chip__dot"></span>Operaciones · Logística</div>
+              <h3 class="caso__title">La torre de control que se paga sola</h3>
+              <div>
+                <div class="caso__block-label caso__block-label--prob">PROBLEMA</div>
+                <p class="caso__p">
+                  Cada incidencia de pedido (retrasos, roturas de stock, errores de proveedor) consume 30–45 minutos de gestión manual. Con cientos al mes, equivale a 1–2 empleados dedicados solo a
+                  apagar fuegos.
+                </p>
+              </div>
+              <div>
+                <div class="caso__block-label caso__block-label--sol">SOLUCIÓN</div>
+                <p class="caso__p">
+                  Un sistema multiagente monitoriza pedidos y proveedores 24/7, detecta la incidencia en segundos y la resuelve de extremo a extremo: reclama al proveedor, reajusta la ruta e informa
+                  al cliente.
+                </p>
+              </div>
+              <div class="caso__kpis">
+                <div>
+                  <div class="caso__block-label caso__block-label--kpi">AHORRO</div>
+                  <div class="kpi__v">−74% coste/pedido</div>
+                  <div class="kpi__d">~€180K al año en costes operativos (estimado)</div>
+                </div>
+                <div>
+                  <div class="caso__block-label caso__block-label--kpi">ROI PROYECTADO</div>
+                  <div class="kpi__v kpi__v--green">&gt;8x primer año</div>
+                  <div class="kpi__d">Inversión recuperada en el primer trimestre</div>
+                </div>
+              </div>
+            </div>
+            <div class="caso on-scroll-sm">
+              <div class="chip"><span class="chip__dot"></span>Captación &amp; Ventas · B2B</div>
+              <h3 class="caso__title">Ningún lead se queda sin respuesta</h3>
+              <div>
+                <div class="caso__block-label caso__block-label--prob">PROBLEMA</div>
+                <p class="caso__p">
+                  Un lead atendido después de 1 hora tiene hasta 10 veces menos probabilidad de convertir. Los que entran de noche o en fin de semana se enfrían antes de que nadie los toque.
+                </p>
+              </div>
+              <div>
+                <div class="caso__block-label caso__block-label--sol">SOLUCIÓN</div>
+                <p class="caso__p">
+                  Agentes comerciales que responden en minutos a cualquier hora, cualifican al lead y preparan una propuesta personalizada lista para que tu equipo solo tenga que cerrar.
+                </p>
+              </div>
+              <div class="caso__kpis">
+                <div>
+                  <div class="caso__block-label caso__block-label--kpi">AHORRO</div>
+                  <div class="kpi__v">15 h/semana</div>
+                  <div class="kpi__d">Liberadas de cualificación manual para tu equipo comercial</div>
+                </div>
+                <div>
+                  <div class="caso__block-label caso__block-label--kpi">ROI PROYECTADO</div>
+                  <div class="kpi__v kpi__v--green">+140% conversión</div>
+                  <div class="kpi__d">Proyectada, con 3,2 min de lead a propuesta</div>
+                </div>
+              </div>
+            </div>
+            <div class="caso on-scroll-sm">
+              <div class="chip"><span class="chip__dot"></span>Finanzas · Facturación</div>
+              <h3 class="caso__title">Cobra sin perseguir facturas</h3>
+              <div>
+                <div class="caso__block-label caso__block-label--prob">PROBLEMA</div>
+                <p class="caso__p">La conciliación manual y la persecución de impagos retienen tu caja durante semanas (DSO alto) y consumen días de trabajo administrativo cada mes.</p>
+              </div>
+              <div>
+                <div class="caso__block-label caso__block-label--sol">SOLUCIÓN</div>
+                <p class="caso__p">
+                  Agentes de finanzas que cotejan facturas contra pagos, reclaman vencimientos automáticamente con escalado progresivo y gestionan el recobro con trazabilidad total.
+                </p>
+              </div>
+              <div class="caso__kpis">
+                <div>
+                  <div class="caso__block-label caso__block-label--kpi">AHORRO</div>
+                  <div class="kpi__v">−82% DSO</div>
+                  <div class="kpi__d">Y decenas de horas administrativas liberadas al mes</div>
+                </div>
+                <div>
+                  <div class="caso__block-label caso__block-label--kpi">ROI PROYECTADO</div>
+                  <div class="kpi__v kpi__v--green">1er mes</div>
+                  <div class="kpi__d">El sistema se financia con la caja recuperada de impagos</div>
+                </div>
+              </div>
+            </div>
+            <div class="caso on-scroll-sm">
+              <div class="chip"><span class="chip__dot"></span>Escalabilidad · Atención al cliente</div>
+              <h3 class="caso__title">Escala el soporte sin ampliar plantilla</h3>
+              <div>
+                <div class="caso__block-label caso__block-label--prob">PROBLEMA</div>
+                <p class="caso__p">Cada pico de demanda te obliga a elegir entre degradar el servicio (colas, SLA rotos) o contratar y formar plantilla que sobra el resto del año.</p>
+              </div>
+              <div>
+                <div class="caso__block-label caso__block-label--sol">SOLUCIÓN</div>
+                <p class="caso__p">
+                  Agentes de soporte que resuelven casos complejos directamente en tus sistemas internos —consultan el pedido, tramitan el reembolso, responden al cliente— y escalan a humano solo lo
+                  crítico.
+                </p>
+              </div>
+              <div class="caso__kpis">
+                <div>
+                  <div class="caso__block-label caso__block-label--kpi">AHORRO</div>
+                  <div class="kpi__v">−68% coste</div>
+                  <div class="kpi__d">De estructura de soporte</div>
+                </div>
+                <div>
+                  <div class="caso__block-label caso__block-label--kpi">ROI PROYECTADO</div>
+                  <div class="kpi__v kpi__v--green">x5 capacidad</div>
+                  <div class="kpi__d">De servicio sin una sola contratación; coste por ticket en caída desde el día 1</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cta-inline">
+            <span>¿Cuál es tu proceso más caro?</span>
+            <a
+              href="https://wa.me/34639904072?text=Hola%2C%20quiero%20mi%20diagn%C3%B3stico%20gratuito%20de%20automatizaci%C3%B3n%20para%20mi%20empresa."
+              target="_blank"
+              rel="noopener"
+              data-cta="casos-whatsapp"
+              >Te lo cuantificamos gratis →</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- CÓMO TRABAJAMOS -->
+      <section class="section" id="como">
+        <div class="wrap">
+          <div class="section-head section-head--md on-scroll">
+            <div class="eyebrow">/ CÓMO TRABAJAMOS</div>
+            <h2 class="h2">Te acompañamos de la idea a producción, en cuatro fases</h2>
+            <p class="lead">Un mismo equipo contigo en cada fase: nosotros construimos y operamos los agentes; tú te centras en tu negocio.</p>
+          </div>
+          <div class="grid-lines steps-grid">
+            <div class="step on-scroll-sm">
+              <div class="badge-num">01</div>
+              <h3 class="step__title">Auditoría y diseño agéntico</h3>
+              <p class="step__desc">Analizamos tus procesos operativos y diseñamos la arquitectura multiagente a medida con roles y guardarraíles.</p>
+            </div>
+            <div class="step on-scroll-sm">
+              <div class="badge-num">02</div>
+              <h3 class="step__title">Despliegue y configuración</h3>
+              <p class="step__desc">Desplegamos y configuramos los agentes dedicados en Google Cloud (GCP) e integramos con tus sistemas sin fricción.</p>
+            </div>
+            <div class="step on-scroll-sm">
+              <div class="badge-num">03</div>
+              <h3 class="step__title">Conexión e integración</h3>
+              <p class="step__desc">Conectamos a los agentes con tus ERPs, CRMs y bases de datos con permisos restringidos y cifrado total.</p>
+            </div>
+            <div class="step on-scroll-sm">
+              <div class="badge-num">04</div>
+              <h3 class="step__title">Operación y mantenimiento 24/7</h3>
+              <p class="step__desc">Activamos el sistema de AI-Powered Automation bajo una cuota mensual por agente activo que cubre operación, soporte y mantenimiento.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAPACIDADES -->
+      <section class="section section--soft" id="caracteristicas">
+        <div class="wrap">
+          <div class="section-head section-head--md on-scroll">
+            <div class="eyebrow">/ CAPACIDADES</div>
+            <h2 class="h2">Todo lo que necesitas para operar con IA, integrado</h2>
+            <p class="lead">Construimos la solución completa sobre tu infraestructura actual, garantizando seguridad, trazabilidad y control total.</p>
+          </div>
+          <div class="features-grid">
+            <div class="feature on-scroll-sm">
+              <div class="feature__tag">01</div>
+              <h3 class="feature__title">Integración con herramientas de terceros</h3>
+              <p class="feature__desc">Conectamos a los agentes con tus ERPs, CRMs, bases de datos, Slack, correo y cualquier API sin sustituir tus herramientas actuales.</p>
+            </div>
+            <div class="feature on-scroll-sm">
+              <div class="feature__tag">02</div>
+              <h3 class="feature__title">Razonamiento agéntico autónomo</h3>
+              <p class="feature__desc">Los agentes entienden el contexto, deciden y se adaptan ante imprevistos, en lugar de ejecutar reglas rígidas que se rompen.</p>
+            </div>
+            <div class="feature on-scroll-sm">
+              <div class="feature__tag">03</div>
+              <h3 class="feature__title">Operación autónoma 24/7</h3>
+              <p class="feature__desc">Los sistemas multiagente trabajan sin descanso: detectan eventos, ejecutan y resuelven procesos a cualquier hora del día.</p>
+            </div>
+            <div class="feature on-scroll-sm">
+              <div class="feature__tag">04</div>
+              <h3 class="feature__title">Procesamiento multimodal</h3>
+              <p class="feature__desc">Leen y actúan sobre texto, documentos, hojas de cálculo, correos, voz e imágenes dentro de un mismo flujo de trabajo.</p>
+            </div>
+            <div class="feature on-scroll-sm">
+              <div class="feature__tag">05</div>
+              <h3 class="feature__title">Guardarraíles y control humano</h3>
+              <p class="feature__desc">Políticas estrictas de seguridad y validación humana (human-in-the-loop) en un clic antes de cualquier acción crítica.</p>
+            </div>
+            <div class="feature on-scroll-sm">
+              <div class="feature__tag">06</div>
+              <h3 class="feature__title">Trazabilidad y auditoría</h3>
+              <p class="feature__desc">Paneles de gobierno en tiempo real donde cada decisión y cada acción de los agentes queda registrada y es auditable.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CÓMO EMPEZAR · ESCALERA DE OFERTA -->
+      <section class="section" id="empezar">
+        <div class="wrap-1040">
+          <div class="section-head section-head--md on-scroll">
+            <div class="eyebrow">/ CÓMO EMPEZAR</div>
+            <h2 class="h2">Empieza con poco riesgo y escala a tu ritmo</h2>
+            <p class="lead">No hace falta un gran contrato para empezar. Avanzas peldaño a peldaño: cada fase demuestra su valor antes de pasar a la siguiente.</p>
+          </div>
+          <div class="grid-lines ladder">
+            <div class="ladder-row on-scroll-sm">
+              <div class="badge-num">01</div>
+              <div class="ladder__mid">
+                <div class="chip"><span class="chip__dot"></span>Sin coste</div>
+                <h3 class="ladder__title">Diagnóstico</h3>
+              </div>
+              <p class="ladder__desc">Una auditoría corta en la que detectamos 1-3 procesos automatizables y cuantificamos las horas y el coste que pierdes hoy en ellos.</p>
+            </div>
+            <div class="ladder-row on-scroll-sm">
+              <div class="badge-num">02</div>
+              <div class="ladder__mid">
+                <div class="chip"><span class="chip__dot"></span>Sin coste</div>
+                <h3 class="ladder__title">Blueprint</h3>
+              </div>
+              <p class="ladder__desc">Un informe con el mapa de automatización priorizado y el ROI estimado de cada proceso, generado sin coste.</p>
+            </div>
+            <div class="ladder-row on-scroll-sm">
+              <div class="badge-num">03</div>
+              <div class="ladder__mid">
+                <div class="chip"><span class="chip__dot"></span>Punto de entrada</div>
+                <h3 class="ladder__title">Piloto</h3>
+              </div>
+              <p class="ladder__desc">
+                El primer servicio de pago: desplegamos un agente resolviendo un proceso concreto en producción en 2-3 semanas, con métricas de resultado visibles desde el primer día.
+              </p>
+            </div>
+            <div class="ladder-row on-scroll-sm">
+              <div class="badge-num">04</div>
+              <div class="ladder__mid">
+                <div class="chip"><span class="chip__dot"></span>Recurrente</div>
+                <h3 class="ladder__title">Retainer operativo</h3>
+              </div>
+              <p class="ladder__desc">Operamos, mejoramos y ampliamos tus agentes bajo una cuota mensual por agente activo que cubre soporte, mantenimiento e infraestructura.</p>
+            </div>
+            <div class="ladder-row on-scroll-sm">
+              <div class="badge-num">05</div>
+              <div class="ladder__mid">
+                <div class="chip"><span class="chip__dot"></span>Enterprise</div>
+                <h3 class="ladder__title">Departamento digital</h3>
+              </div>
+              <p class="ladder__desc">Un equipo de agentes cubriendo un área completa de tu operación (soporte, ventas o back-office) con acuerdos anuales y gobierno dedicado.</p>
+            </div>
+          </div>
+          <div class="cta-inline">
+            <span>El primer paso es gratis y sin compromiso.</span>
+            <a
+              href="https://wa.me/34639904072?text=Hola%2C%20quiero%20mi%20diagn%C3%B3stico%20gratuito%20de%20automatizaci%C3%B3n%20para%20mi%20empresa."
+              target="_blank"
+              rel="noopener"
+              data-cta="ladder-whatsapp"
+              >Reserva tu diagnóstico por WhatsApp →</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQS -->
+      <section class="section">
+        <div class="wrap-800">
+          <div class="section-head--center on-scroll-c">
+            <div class="eyebrow">/ PREGUNTAS FRECUENTES</div>
+            <h2 class="h2-sm h2--flush">Todo lo que necesitas saber antes de empezar</h2>
+          </div>
+          <div class="faq-list">
+            <details class="faq">
+              <summary class="faq__summary"><span>¿Qué tipo de procesos operativos podéis resolver?</span><span class="faq__icon">+</span></summary>
+              <div class="faq__body">
+                Resolvemos cualquier proceso operativo complejo que implique datos, decisiones y acciones en múltiples sistemas: gestión de pedidos, conciliación financiera, facturación, respuesta y
+                cualificación de leads B2B, atención a clientes y supervisión de incidencias en proveedores.
+              </div>
+            </details>
+            <details class="faq">
+              <summary class="faq__summary"><span>¿Cómo funciona la contratación y propiedad de los agentes?</span><span class="faq__icon">+</span></summary>
+              <div class="faq__body">
+                Operamos como un servicio de AI-Powered Automation gestionado: los agentes son propiedad tecnológica de Involution y tú pagas únicamente una cuota mensual por cada agente activo en
+                producción. Esto incluye soporte continuo, actualizaciones e infraestructura en Google Cloud (GCP). Tus datos son 100% tuyos.
+              </div>
+            </details>
+            <details class="faq">
+              <summary class="faq__summary"><span>¿En qué os diferenciáis de las automatizaciones tradicionales o RPA?</span><span class="faq__icon">+</span></summary>
+              <div class="faq__body">
+                Las automatizaciones tradicionales ejecutan reglas rígidas "si ocurre A, haz B" que fallan ante cualquier imprevisto. Nuestros equipos de agentes de IA razonan, entienden el contexto,
+                toman decisiones adaptativas y resuelven el proceso completo de extremo a extremo sin romperse.
+              </div>
+            </details>
+            <details class="faq">
+              <summary class="faq__summary"><span>¿Cómo garantizáis que los agentes no cometan errores ni tomen decisiones indebidas?</span><span class="faq__icon">+</span></summary>
+              <div class="faq__body">
+                Implementamos guardarraíles estrictos con agentes supervisores (Auditor) y políticas de control humano (Human-in-the-loop). Tienes visibilidad total y la opción de requerir validación
+                humana en 1 clic antes de que el agente ejecute cualquier acción crítica.
+              </div>
+            </details>
+            <details class="faq">
+              <summary class="faq__summary"><span>¿Cuánto tiempo se tarda en poner en marcha un proyecto en producción?</span><span class="faq__icon">+</span></summary>
+              <div class="faq__body">
+                La mayoría de despliegues iniciales están operando en producción en un plazo de 2 a 4 semanas. Empezamos auditando y resolviendo un primer proceso clave y escalamos la capacidad
+                agéntica de forma progresiva.
+              </div>
+            </details>
+            <details class="faq">
+              <summary class="faq__summary"><span>¿Qué esfuerzo o dedicación requiere por parte de nuestro equipo?</span><span class="faq__icon">+</span></summary>
+              <div class="faq__body">
+                Mínimo. En Involution asumimos toda la arquitectura, desarrollo, integración y calibración técnica. Tu equipo solo participa en la fase inicial de definición del proceso y en la
+                validación del comportamiento del sistema multiagente.
+              </div>
+            </details>
+            <details class="faq">
+              <summary class="faq__summary"><span>¿Cómo se conecta Involution a nuestros sistemas actuales (ERP, CRM, BD)?</span><span class="faq__icon">+</span></summary>
+              <div class="faq__body">
+                Nos conectamos directamente mediante APIs, conectores nativos y credenciales con permisos restringidos dentro de la infraestructura de GCP, sin necesidad de sustituir tus herramientas
+                actuales ni interrumpir tu operativa diaria.
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA FINAL -->
+      <section class="section" id="cta">
+        <div class="wrap">
+          <div class="cta-box">
+            <div class="cta-box__dots"></div>
+            <div class="cta-box__inner">
+              <div class="cta-box__eyebrow">/ DESPLIEGA TU SISTEMA AI-POWERED AUTOMATION</div>
+              <h2 class="cta-box__title">Diseñemos el equipo de agentes para tu empresa</h2>
+              <p class="cta-box__lead">Auditoría operativa gratuita, sistemas multiagentes a medida y acompañamiento técnico en cada paso.</p>
+              <div class="cta-box__actions">
+                <a
+                  class="btn btn-wa"
+                  href="https://wa.me/34639904072?text=Hola%2C%20quiero%20mi%20diagn%C3%B3stico%20gratuito%20de%20automatizaci%C3%B3n%20para%20mi%20empresa."
+                  target="_blank"
+                  rel="noopener"
+                  data-cta="cta-final-whatsapp"
+                >
+                  <svg class="ico" width="18" height="18" fill="currentColor" aria-hidden="true"><use href="#ico-wa"></use></svg>
+                  <span>Empezar mi diagnóstico gratuito</span>
+                  <span class="arrow">→</span>
+                </a>
+              </div>
+              <p class="cta-box__foot">
+                Sin compromiso · Respuesta en menos de 24 h · <a href="tel:+34639904072" data-cta="cta-final-tel">Llámanos</a> · O escríbenos a
+                <a class="u" href="mailto:hola@involution.es">hola@involution.es</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="footer-grid">
+          <div>
+            <img class="footer__logo" src="assets/involution-logo-white.png" alt="Involution" />
+            <p class="footer__about">Elevamos el nivel tecnológico de tu empresa con agentes de IA autónomos sobre Google Cloud e integrados directamente en tus sistemas.</p>
+            <div class="footer__meta"><span class="mono">Google Cloud</span><span>·</span><span class="mono">Integración directa</span></div>
+          </div>
+          <div>
+            <div class="footer-col__title">Empresa</div>
+            <div class="footer-col__links">
+              <a href="#porque">Nuestro por qué</a>
+              <a href="#multiagente">Red Multiagente</a>
+              <a href="#caracteristicas">Capacidades</a>
+            </div>
+          </div>
+          <div>
+            <div class="footer-col__title">Recursos</div>
+            <div class="footer-col__links">
+              <a href="#como">Cómo trabajamos</a>
+              <a href="#empezar">Cómo empezar</a>
+              <a href="#cta">Contacto</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span class="footer__copy">© 2026 Involution. Todos los derechos reservados.</span>
+          <a class="footer__mail" href="mailto:hola@involution.es">hola@involution.es</a>
+        </div>
+      </footer>
+
+      <!-- BOTÓN FLOTANTE WHATSAPP -->
+      <a
+        class="wa-float"
+        href="https://wa.me/34639904072?text=Hola%2C%20quiero%20mi%20diagn%C3%B3stico%20gratuito%20de%20automatizaci%C3%B3n%20para%20mi%20empresa."
+        target="_blank"
+        rel="noopener"
+        data-cta="float-whatsapp"
+        aria-label="Escríbenos por WhatsApp"
+      >
+        <svg width="28" height="28" fill="currentColor" aria-hidden="true"><use href="#ico-wa"></use></svg>
       </a>
     </div>
-  </nav>
 
-  <!-- HERO -->
-  <header id="inv-hero" style="{{ heroSectionStyle }}">
-    <div style="position:absolute;inset:0;overflow:hidden;pointer-events:none">
-      <video id="inv-hero-video" autoplay loop muted playsinline preload="auto" poster="assets/involution-logo-color.png" src="assets/hero-bg.mp4" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85;transition:opacity .4s"></video>
-      <div style="position:absolute;inset:-60px;opacity:{{ gridOpacity }};background-image:radial-gradient(#e6e6e6 1px,transparent 1px);background-size:26px 26px;animation:drift 18s linear infinite;-webkit-mask-image:radial-gradient(ellipse 70% 55% at 50% 30%,#000 0%,transparent 80%);mask-image:radial-gradient(ellipse 70% 55% at 50% 30%,#000 0%,transparent 80%);transition:opacity .4s"></div>
-      <div id="inv-hero-glow" style="position:absolute;top:0;left:0;width:640px;height:640px;border-radius:50%;background:{{ heroGlowColor }};transform:translate(20%,-20%);transition:transform .35s cubic-bezier(.2,.6,.2,1);will-change:transform"></div>
-      <div style="position:absolute;inset:0;background:{{ heroOverlayGradient }};transition:background .4s"></div>
-      <div style="position:absolute;left:0;right:0;bottom:0;height:120px;background:linear-gradient(180deg,transparent,{{ heroBaseBg }})"></div>
-    </div>
-    <div style="position:relative;max-width:1180px;margin:0 auto">
-      <div class="hero-grid-container" style="display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:52px">
-        <div>
-          <div style="display:inline-flex;align-items:center;gap:9px;padding:6px 16px 6px 12px;border:1px solid rgba(16,185,129,0.35);border-radius:999px;background:rgba(16,185,129,0.06);font-size:13px;color:#10b981;font-weight:500;margin-bottom:26px;animation:revUp .7s ease both;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 0 16px rgba(16,185,129,0.12)">
-            <span style="width:7px;height:7px;border-radius:50%;background:#10b981;box-shadow:0 0 10px #10b981;animation:pulse 1.6s ease infinite"></span>
-            <span style="font-family:'Geist Mono',monospace;letter-spacing:0.02em">Involution · AI-Powered Automation</span>
-          </div>
-          <h1 style="font-size:54px;line-height:1.04;font-weight:600;letter-spacing:-0.035em;margin:0 0 20px;color:{{ heroTitleColor }};animation:revUp .7s ease both;animation-delay:.05s">Automatización impulsada por IA para cada decisión</h1>
-          <p style="font-size:18.5px;line-height:1.55;color:{{ heroBodyColor }};max-width:480px;margin:0 0 32px;font-weight:430;animation:revUp .7s ease both;animation-delay:.12s">Creamos equipos de agentes autónomos que asumen la carga operativa de tu negocio. Escala tu rendimiento a un coste 10 veces menor que contratar personal.</p>
-          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:14px;animation:revUp .7s ease both;animation-delay:.18s">
-            <a href="{{ waLink }}" target="_blank" rel="noopener" data-cta="hero-whatsapp" style="font-size:15px;font-weight:600;color:#06341c;background:#25D366;padding:13px 24px;border-radius:10px;text-decoration:none;display:inline-flex;align-items:center;gap:9px;transition:transform .15s,filter .15s" style-hover="transform:translateY(-2px);filter:brightness(1.06)">
-              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              Reserva tu diagnóstico gratis
-            </a>
-            <a href="#como" style="font-size:15px;font-weight:500;color:{{ heroSecondaryText }};background:transparent;border:1px solid {{ heroSecondaryBorder }};padding:13px 24px;border-radius:10px;text-decoration:none;transition:border-color .15s,background .15s" style-hover="border-color:{{ accent }};background:{{ heroBadgeBg }}">Cómo trabajamos</a>
-          </div>
-          <p style="font-size:13px;color:#9a9a9a;margin:0 0 36px;animation:revUp .7s ease both;animation-delay:.2s">Sin compromiso · Respuesta en menos de 24 h · <a href="tel:+34639904072" data-cta="hero-tel" style="color:{{ heroBodyColor }};text-decoration:underline;text-underline-offset:3px">o llámanos directamente</a></p>
-          <div class="hero-stats" style="display:flex;flex-wrap:wrap;gap:40px;border-top:1px solid {{ heroSecondaryBorder }};padding-top:24px;animation:revUp .7s ease both;animation-delay:.24s">
-            <div><div style="font-size:26px;font-weight:600;letter-spacing:-0.02em;color:{{ heroTitleColor }}">2–3 sem</div><div style="font-size:13px;color:#9a9a9a;margin-top:3px">del piloto a la puesta en marcha</div></div>
-            <div><div style="font-size:26px;font-weight:600;letter-spacing:-0.02em;color:{{ heroTitleColor }}">24/7</div><div style="font-size:13px;color:#9a9a9a;margin-top:3px">operación autónoma</div></div>
-            <div><div style="font-size:26px;font-weight:600;letter-spacing:-0.02em;color:{{ heroTitleColor }}">10x</div><div style="font-size:13px;color:#9a9a9a;margin-top:3px">más eficiente que contratar</div></div>
-          </div>
-        </div>
-
-        <div style="animation:revUp .8s ease both;animation-delay:.26s">
-          <div style="border:1px solid #1f1f1f;border-radius:16px;background:#0a0a0a;overflow:hidden;box-shadow:0 34px 70px -34px rgba(10,10,10,0.55)">
-            <div style="display:flex;align-items:center;gap:8px;padding:13px 16px;border-bottom:1px solid #1a1a1a">
-              <div style="display:flex;gap:6px">
-                <span style="width:11px;height:11px;border-radius:50%;background:#2a2a2a"></span>
-                <span style="width:11px;height:11px;border-radius:50%;background:#2a2a2a"></span>
-                <span style="width:11px;height:11px;border-radius:50%;background:#2a2a2a"></span>
-              </div>
-              <div style="margin-left:8px;font-family:'Geist Mono',monospace;font-size:12px;color:#6b6b6b">involution-panel · gestión &amp; operativa</div>
-              <div style="margin-left:auto;display:flex;align-items:center;gap:6px;font-size:12px;color:#16a34a;font-weight:500"><span style="width:6px;height:6px;border-radius:50%;background:#16a34a;animation:pulse 1.8s ease infinite"></span>En vivo</div>
-            </div>
-            <video id="inv-labor-video" muted loop playsinline preload="metadata" aria-label="La nueva fuerza laboral de Involution: equipos de agentes de IA que ejecutan las operaciones de tu empresa" style="display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#08080a"><source src="assets/hero-fuerza-laboral.mp4" type="video/mp4"></video>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- INFRA PROVIDER -->
-  <section style="padding:34px 32px 60px">
-    <div style="max-width:1080px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap">
-      <span style="font-size:13px;color:#9a9a9a;letter-spacing:0.02em">AI-Powered Automation sobre</span>
-      <div style="display:inline-flex;align-items:center;gap:9px;border:1px solid #ededed;border-radius:999px;padding:8px 16px 8px 13px;background:#fff;box-shadow:0 1px 2px rgba(10,10,10,0.04)">
-        <svg width="22" height="22" viewBox="0 0 32 24" fill="none" aria-label="Google Cloud">
-          <path d="M20.4 8.1l1.9-1.9.13-.8C18.96 2.34 13.6 2.7 10.5 6.05 9.64 6.98 9 8.2 8.6 9.45l.68-.1 3.8-.62.3-.3c1.7-1.86 4.57-2.1 6.5-.5l.72.27z" fill="#EA4335"/>
-          <path d="M25.2 9.4a8.56 8.56 0 0 0-2.6-4.1l-2.66 2.66a4.74 4.74 0 0 1 1.74 3.76v.48c1.3 0 2.36 1.06 2.36 2.36 0 1.3-1.06 2.33-2.36 2.33h-4.76l-.47.5v2.84l.47.45h4.76c3.42.03 6.2-2.7 6.22-6.12a6.08 6.08 0 0 0-2.74-5.1z" fill="#4285F4"/>
-          <path d="M12.74 21.2h4.75v-3.8h-4.75c-.34 0-.66-.08-.96-.22l-.68.2-1.92 1.9-.17.65a6.18 6.18 0 0 0 3.7 1.27z" fill="#34A853"/>
-          <path d="M12.74 8.96A6.18 6.18 0 0 0 8.02 19.1l2.76-2.75a2.36 2.36 0 0 1 1.96-3.62c.78 0 1.5.38 1.96.97l2.76-2.75a6.16 6.16 0 0 0-4.72-2z" fill="#FBBC05"/>
-        </svg>
-        <span style="font-size:15px;font-weight:600;color:#1a1a1a;letter-spacing:-0.01em">Google Cloud (GCP)</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROBLEMA -->
-  <section id="problema" style="padding:{{ sectionPadV }} 32px;border-top:1px solid #f0f0f0">
-    <div class="split-grid" style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:{{ cardGap }};align-items:stretch">
-      <div style="animation:revUp .7s ease both;animation-timeline:view();animation-range:entry 0% cover 22%">
-        <div style="font-family:'Geist Mono',monospace;font-size:12px;color:{{ accent }};letter-spacing:0.05em;margin-bottom:14px">/ EL PROBLEMA</div>
-        <h2 style="font-size:36px;font-weight:600;letter-spacing:-0.03em;line-height:1.1;margin:0 0 16px">Crecer exige tecnología que no tienes tiempo de construir</h2>
-        <p style="font-size:17px;color:#525252;line-height:1.6;margin:0">La mayoría de empresas no cuenta con el conocimiento, el tiempo ni los recursos para elevar su nivel tecnológico. Contratar y mantener un equipo de IA es lento y caro, y las herramientas sueltas dejan el trabajo de integrarlas de tu lado.</p>
-      </div>
-      <div style="background:#0a0a0a;color:#fff;border-radius:16px;padding:34px;display:flex;flex-direction:column;justify-content:center;animation:revUp .7s ease both;animation-timeline:view();animation-range:entry 0% cover 22%">
-        <div style="font-family:'Geist Mono',monospace;font-size:12px;color:{{ accent }};letter-spacing:0.05em;margin-bottom:14px">/ NUESTRA RESPUESTA</div>
-        <p style="font-size:19px;line-height:1.5;margin:0 0 20px;font-weight:500;letter-spacing:-0.015em">Somos tu socio tecnológico. Nos ocupamos de la tecnología en todas tus operaciones; tú, de tu negocio.</p>
-        <div style="display:flex;flex-direction:column;gap:12px">
-          <sc-for list="{{ answer }}" as="a" hint-placeholder-count="3">
-            <div style="display:flex;align-items:flex-start;gap:10px;font-size:14.5px;color:#d4d4d4;line-height:1.5"><span style="color:#16a34a;flex-shrink:0">✓</span>{{ a }}</div>
-          </sc-for>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- NUESTRO POR QUÉ -->
-  <section id="porque" style="padding:{{ sectionPadV }} 32px;background:#fafafa;border-top:1px solid #f0f0f0">
-    <div style="max-width:1040px;margin:0 auto">
-      <div style="border:1px solid #e5e5e5;border-radius:24px;padding:48px 40px;background:#fff;box-shadow:0 12px 32px -16px rgba(0,0,0,0.05);position:relative;overflow:hidden;animation:revUp .7s ease both;animation-timeline:view();animation-range:entry 0% cover 22%">
-        <div style="position:absolute;top:0;right:0;width:300px;height:300px;background:radial-gradient(circle,rgba(22,163,74,0.06),transparent 70%);pointer-events:none"></div>
-        <div style="font-family:'Geist Mono',monospace;font-size:12px;color:{{ accent }};letter-spacing:0.06em;margin-bottom:16px;text-transform:uppercase">/ NUESTRO POR QUÉ</div>
-        <h2 style="font-size:32px;font-weight:600;letter-spacing:-0.03em;line-height:1.2;margin:0 0 24px;color:#0a0a0a">La verdadera evolución de las empresas empieza desde dentro</h2>
-        <p style="font-size:18px;line-height:1.65;color:#333333;margin:0 0 20px;font-weight:430">
-          En <strong>Involution</strong> creemos que la verdadera evolución de las empresas empieza desde dentro: convirtiendo sistemas rudimentarios en arquitecturas de alta tecnología donde la inteligencia artificial esté verdaderamente al servicio del ser humano.
-        </p>
-        <p style="font-size:18px;line-height:1.65;color:#333333;margin:0 0 24px;font-weight:430">
-          El tiempo es nuestro recurso más valioso. Nuestra misión no solo es liberar a las personas de tareas operativas y repetitivas, sino desplegar una <strong>fuerza laboral tecnológica de agentes de IA</strong> capaces de outperformar (superar en rendimiento, velocidad y precisión) cualquier tarea a un coste mínimo, permitiendo a las empresas escalar su rendimiento de forma exponencial.
-        </p>
-        <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #f0f0f0;padding-top:20px;font-family:'Geist Mono',monospace;font-size:13px;color:#737373">
-          <span style="width:8px;height:8px;border-radius:50%;background:#16a34a"></span>
-          <span>Tecnología al servicio del potencial humano</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- LA RED MULTIAGENTE -->
-  <section id="multiagente" style="padding:{{ sectionPadV }} 32px;background:#0a0a0a;color:#fff;position:relative;overflow:hidden;border-top:1px solid #f0f0f0">
-    <div style="position:absolute;inset:0;opacity:0.4;background-image:radial-gradient(#262626 1px,transparent 1px);background-size:24px 24px;-webkit-mask-image:radial-gradient(ellipse 80% 70% at 50% 35%,#000,transparent 75%);mask-image:radial-gradient(ellipse 80% 70% at 50% 35%,#000,transparent 75%)"></div>
-    <div style="position:relative;max-width:1180px;margin:0 auto">
-      <div style="max-width:760px;margin:0 auto 56px;text-align:center;animation:revUp .7s ease both;animation-timeline:view();animation-range:entry 0% cover 25%">
-        <div style="font-family:'Geist Mono',monospace;font-size:12px;color:#10b981;letter-spacing:0.05em;margin-bottom:14px">/ LA RED MULTIAGENTE</div>
-        <h2 style="font-size:40px;font-weight:600;letter-spacing:-0.03em;line-height:1.08;margin:0 0 16px">Sistemas Multiagentes Especializados que Operan en Sinergia</h2>
-        <p style="font-size:17px;color:#a3a3a3;line-height:1.55;margin:0;font-weight:430">No es un bot aislado. Es un sistema multiagente de agentes autónomos especializados (Ops, Finanzas, CRM) coordinados en tiempo real para resolver cada paso de tus procesos.</p>
-      </div>
-
-      <!-- DEMO EN VÍDEO · SISTEMA MULTIAGENTE EN EJECUCIÓN -->
-      <div style="border:1px solid #27272a;border-radius:16px;background:#09090b;overflow:hidden;box-shadow:0 24px 48px -18px rgba(0,0,0,0.8);animation:revUp .8s ease both">
-        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:14px 20px;border-bottom:1px solid #18181b;background:#121215">
-          <div style="display:flex;align-items:center;gap:10px">
-            <div style="display:flex;gap:6px">
-              <span style="width:10px;height:10px;border-radius:50%;background:#27272a"></span>
-              <span style="width:10px;height:10px;border-radius:50%;background:#27272a"></span>
-              <span style="width:10px;height:10px;border-radius:50%;background:#27272a"></span>
-            </div>
-            <span style="font-family:'Geist Mono',monospace;font-size:12px;color:#71717a">involution-multiagent-mesh · sistema multiagente operativo autónomo</span>
-          </div>
-          <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:#10b981;font-family:'Geist Mono',monospace">
-            <span style="width:7px;height:7px;border-radius:50%;background:#10b981;box-shadow:0 0 8px rgba(16,185,129,0.5);animation:pulse 1.6s ease infinite"></span>
-            <span>Red Multiagente Activa (3 Ejecutores en Paralelo)</span>
-          </div>
-        </div>
-        <video id="inv-mesh-video" src="assets/sistema-multiagente.mp4" muted loop playsinline preload="metadata" aria-label="Demostración del sistema multiagente de Involution resolviendo un pedido urgente de extremo a extremo" style="display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#08080a"></video>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CASOS DE USO · PROBLEMA → SOLUCIÓN → AHORRO → ROI -->
-  <section id="casos" style="display:none;padding:{{ sectionPadV }} 32px;border-top:1px solid #f0f0f0">
-    <div style="max-width:1180px;margin:0 auto">
-      <div style="max-width:680px;margin-bottom:56px;animation:revUp .7s ease both;animation-timeline:view();animation-range:entry 0% cover 22%">
-        <div style="font-family:'Geist Mono',monospace;font-size:12px;color:{{ accent }};letter-spacing:0.05em;margin-bottom:14px">/ CASOS DE USO</div>
-        <h2 style="font-size:40px;font-weight:600;letter-spacing:-0.03em;line-height:1.08;margin:0 0 16px">El coste de no automatizar ya lo estás pagando</h2>
-        <p style="font-size:17px;color:#525252;line-height:1.55;margin:0;font-weight:430">Cuatro procesos donde un equipo de agentes genera un retorno inmediato. Cada caso: el problema que te cuesta dinero hoy, la solución desplegada y el ahorro y ROI proyectados.</p>
-      </div>
-      <div class="casos-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
-        <sc-for list="{{ sectors }}" as="c" hint-placeholder-count="4">
-          <div style="background:#fff;border:1px solid #e5e5e5;border-radius:16px;padding:32px 28px;display:flex;flex-direction:column;gap:18px;animation:revUp .6s ease both;animation-timeline:view();animation-range:entry 0% cover 18%;transition:border-color .2s,box-shadow .2s" style-hover="border-color:#d4d4d4;box-shadow:0 12px 32px -16px rgba(0,0,0,0.08)">
-            <div style="display:inline-flex;align-items:center;gap:7px;align-self:flex-start;font-family:'Geist Mono',monospace;font-size:11.5px;color:{{ accent }};border:1px solid #ededed;border-radius:999px;padding:4px 11px;background:#fafafa"><span style="width:6px;height:6px;border-radius:50%;background:#16a34a"></span>{{ c.tag }}</div>
-            <h3 style="font-size:20px;font-weight:600;margin:0;letter-spacing:-0.015em;color:#0a0a0a">{{ c.title }}</h3>
-            <div>
-              <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#dc2626;margin-bottom:6px">PROBLEMA</div>
-              <p style="font-size:14.5px;color:#525252;line-height:1.6;margin:0">{{ c.problema }}</p>
-            </div>
-            <div>
-              <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#16a34a;margin-bottom:6px">SOLUCIÓN</div>
-              <p style="font-size:14.5px;color:#525252;line-height:1.6;margin:0">{{ c.solucion }}</p>
-            </div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;border-top:1px solid #f0f0f0;padding-top:18px;margin-top:auto">
-              <div>
-                <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#737373;margin-bottom:6px">AHORRO</div>
-                <div style="font-size:21px;font-weight:600;letter-spacing:-0.02em;color:#0a0a0a">{{ c.ahorroKpi }}</div>
-                <div style="font-size:12.5px;color:#737373;line-height:1.5;margin-top:4px">{{ c.ahorroDesc }}</div>
-              </div>
-              <div>
-                <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#737373;margin-bottom:6px">ROI PROYECTADO</div>
-                <div style="font-size:21px;font-weight:600;letter-spacing:-0.02em;color:#16a34a">{{ c.roiKpi }}</div>
-                <div style="font-size:12.5px;color:#737373;line-height:1.5;margin-top:4px">{{ c.roiDesc }}</div>
-              </div>
-            </div>
-          </div>
-        </sc-for>
-      </div>
-      <div style="margin-top:28px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:14.5px;color:#525252">
-        <span>¿Cuál es tu proceso más caro?</span>
-        <a href="{{ waLink }}" target="_blank" rel="noopener" data-cta="casos-whatsapp" style="font-weight:600;color:#0a0a0a;text-decoration:underline;text-underline-offset:3px">Te lo cuantificamos gratis →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CÓMO TRABAJAMOS -->
-  <section id="como" style="padding:{{ sectionPadV }} 32px;border-top:1px solid #f0f0f0">
-    <div style="max-width:1180px;margin:0 auto">
-      <div style="max-width:620px;margin-bottom:60px;animation:revUp .7s ease both;animation-timeline:view();animation-range:entry 0% cover 22%">
-        <div style="font-family:'Geist Mono',monospace;font-size:12px;color:{{ accent }};letter-spacing:0.05em;margin-bottom:14px">/ CÓMO TRABAJAMOS</div>
-        <h2 style="font-size:40px;font-weight:600;letter-spacing:-0.03em;line-height:1.08;margin:0 0 16px">Te acompañamos de la idea a producción, en cuatro fases</h2>
-        <p style="font-size:17px;color:#525252;line-height:1.55;margin:0;font-weight:430">Un mismo equipo contigo en cada fase: nosotros construimos y operamos los agentes; tú te centras en tu negocio.</p>
-      </div>
-      <div class="steps-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#ededed;border:1px solid #ededed;border-radius:14px;overflow:hidden">
-        <sc-for list="{{ steps }}" as="s" hint-placeholder-count="4">
-          <div style="background:#fff;padding:30px 24px;transition:background .2s;animation:revUp .6s ease both;animation-timeline:view();animation-range:entry 0% cover 18%" style-hover="background:#fafafa">
-            <div style="font-family:'Geist Mono',monospace;font-size:13px;color:#0a0a0a;border:1px solid #e5e5e5;width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;margin-bottom:22px">{{ s.n }}</div>
-            <h3 style="font-size:17px;font-weight:600;margin:0 0 9px;letter-spacing:-0.01em">{{ s.title }}</h3>
-            <p style="font-size:14px;color:#737373;line-height:1.55;margin:0">{{ s.desc }}</p>
-          </div>
-        </sc-for>
-      </div>
-    </div>
-  </section>
-
-  <!-- CAPACIDADES -->
-  <section id="caracteristicas" style="padding:{{ sectionPadV }} 32px;background:#fafafa;border-top:1px solid #f0f0f0;border-bottom:1px solid #f0f0f0">
-    <div style="max-width:1180px;margin:0 auto">
-      <div style="max-width:620px;margin-bottom:56px;animation:revUp .7s ease both;animation-timeline:view();animation-range:entry 0% cover 22%">
-        <div style="font-family:'Geist Mono',monospace;font-size:12px;color:{{ accent }};letter-spacing:0.05em;margin-bottom:14px">/ CAPACIDADES</div>
-        <h2 style="font-size:40px;font-weight:600;letter-spacing:-0.03em;line-height:1.08;margin:0 0 16px">Todo lo que necesitas para operar con IA, integrado</h2>
-        <p style="font-size:17px;color:#525252;line-height:1.55;margin:0;font-weight:430">Construimos la solución completa sobre tu infraestructura actual, garantizando seguridad, trazabilidad y control total.</p>
-      </div>
-      <div class="features-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
-        <sc-for list="{{ features }}" as="f" hint-placeholder-count="6">
-          <div style="background:#fff;border:1px solid #e5e5e5;border-radius:14px;padding:32px 26px;animation:revUp .6s ease both;animation-timeline:view();animation-range:entry 0% cover 18%;transition:border-color .2s,box-shadow .2s" style-hover="border-color:#d4d4d4;box-shadow:0 8px 24px -12px rgba(0,0,0,0.06)">
-            <div style="font-family:'Geist Mono',monospace;font-size:12px;color:{{ accent }};margin-bottom:16px">{{ f.tag }}</div>
-            <h3 style="font-size:16.5px;font-weight:600;margin:0 0 9px;letter-spacing:-0.01em">{{ f.title }}</h3>
-            <p style="font-size:14px;color:#666666;line-height:1.55;margin:0">{{ f.desc }}</p>
-          </div>
-        </sc-for>
-      </div>
-    </div>
-  </section>
-
-  <!-- CÓMO EMPEZAR · ESCALERA DE OFERTA -->
-  <section id="empezar" style="padding:{{ sectionPadV }} 32px;border-top:1px solid #f0f0f0">
-    <div style="max-width:1040px;margin:0 auto">
-      <div style="max-width:620px;margin-bottom:56px;animation:revUp .7s ease both;animation-timeline:view();animation-range:entry 0% cover 22%">
-        <div style="font-family:'Geist Mono',monospace;font-size:12px;color:{{ accent }};letter-spacing:0.05em;margin-bottom:14px">/ CÓMO EMPEZAR</div>
-        <h2 style="font-size:40px;font-weight:600;letter-spacing:-0.03em;line-height:1.08;margin:0 0 16px">Empieza con poco riesgo y escala a tu ritmo</h2>
-        <p style="font-size:17px;color:#525252;line-height:1.55;margin:0;font-weight:430">No hace falta un gran contrato para empezar. Avanzas peldaño a peldaño: cada fase demuestra su valor antes de pasar a la siguiente.</p>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:1px;background:#ededed;border:1px solid #ededed;border-radius:14px;overflow:hidden">
-        <sc-for list="{{ ladder }}" as="s" hint-placeholder-count="5">
-          <div class="ladder-row" style="display:grid;grid-template-columns:34px 240px 1fr;align-items:center;gap:28px;background:#fff;padding:26px 28px;transition:background .2s;animation:revUp .6s ease both;animation-timeline:view();animation-range:entry 0% cover 18%" style-hover="background:#fafafa">
-            <div style="font-family:'Geist Mono',monospace;font-size:13px;color:#0a0a0a;border:1px solid #e5e5e5;width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0">{{ s.n }}</div>
-            <div style="display:flex;flex-direction:column;gap:8px;min-width:0">
-              <div style="display:inline-flex;align-items:center;gap:7px;align-self:flex-start;font-family:'Geist Mono',monospace;font-size:11.5px;color:{{ accent }};border:1px solid #ededed;border-radius:999px;padding:4px 11px;background:#fafafa"><span style="width:6px;height:6px;border-radius:50%;background:#16a34a"></span>{{ s.tag }}</div>
-              <h3 style="font-size:18px;font-weight:600;margin:0;letter-spacing:-0.01em;color:#0a0a0a">{{ s.title }}</h3>
-            </div>
-            <p style="font-size:14.5px;color:#666666;line-height:1.55;margin:0">{{ s.desc }}</p>
-          </div>
-        </sc-for>
-      </div>
-      <div style="margin-top:28px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:14.5px;color:#525252">
-        <span>El primer paso es gratis y sin compromiso.</span>
-        <a href="{{ waLink }}" target="_blank" rel="noopener" data-cta="ladder-whatsapp" style="font-weight:600;color:#0a0a0a;text-decoration:underline;text-underline-offset:3px">Reserva tu diagnóstico por WhatsApp →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQS -->
-  <section style="padding:{{ sectionPadV }} 32px;border-top:1px solid #f0f0f0">
-    <div style="max-width:800px;margin:0 auto">
-      <div style="text-align:center;margin-bottom:48px;animation:revUp .7s ease both;animation-timeline:view();animation-range:entry 0% cover 25%">
-        <div style="font-family:'Geist Mono',monospace;font-size:12px;color:{{ accent }};letter-spacing:0.05em;margin-bottom:14px">/ PREGUNTAS FRECUENTES</div>
-        <h2 style="font-size:36px;font-weight:600;letter-spacing:-0.03em;line-height:1.1;margin:0">Todo lo que necesitas saber antes de empezar</h2>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:12px">
-        <sc-for list="{{ faqData }}" as="faq" hint-placeholder-count="4">
-          <details style="border:1px solid #e5e5e5;border-radius:12px;background:#fff;overflow:hidden;transition:border-color .15s" style-hover="border-color:#0a0a0a">
-            <summary style="display:flex;align-items:center;justify-content:space-between;padding:20px 24px;background:none;border:none;cursor:pointer;list-style:none;font-family:'Geist',sans-serif;font-size:16px;font-weight:500;color:#0a0a0a;user-select:none">
-              <span>{{ faq.q }}</span>
-              <span class="faq-icon" style="font-family:'Geist Mono',monospace;font-size:20px;color:#737373;margin-left:16px;flex-shrink:0;transition:transform .2s ease,color .2s ease;display:inline-block">+</span>
-            </summary>
-            <div style="padding:0 24px 22px;font-size:14.5px;color:#525252;line-height:1.65;border-top:1px solid #f5f5f5;margin-top:2px;padding-top:16px">
-              {{ faq.a }}
-            </div>
-          </details>
-        </sc-for>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA FINAL -->
-  <section id="cta" style="padding:{{ sectionPadV }} 32px">
-    <div style="max-width:1180px;margin:0 auto">
-      <div style="background:#0c0c0e;color:#fff;border:1px solid #27272a;border-radius:24px;padding:{{ ctaPad }};text-align:center;position:relative;overflow:hidden;box-shadow:0 30px 60px -20px rgba(0,0,0,0.6)">
-        <div style="position:absolute;inset:0;opacity:0.25;background-image:radial-gradient(#3f3f46 1px,transparent 1px);background-size:20px 20px"></div>
-        <div style="position:relative;max-width:640px;margin:0 auto">
-          <div style="font-family:'Geist Mono',monospace;font-size:12px;color:#a1a1aa;letter-spacing:0.06em;margin-bottom:16px">/ DESPLIEGA TU SISTEMA AI-POWERED AUTOMATION</div>
-          <h2 style="font-size:42px;font-weight:600;letter-spacing:-0.035em;line-height:1.08;margin:0 0 18px;color:#ffffff">Diseñemos el equipo de agentes para tu empresa</h2>
-          <p style="font-size:17.5px;color:#a1a1aa;max-width:520px;margin:0 auto 36px;line-height:1.55;font-weight:430">Auditoría operativa gratuita, sistemas multiagentes a medida y acompañamiento técnico en cada paso.</p>
-          <div style="display:flex;justify-content:center;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:28px">
-            <a href="{{ waLink }}" target="_blank" rel="noopener" data-cta="cta-final-whatsapp" style="font-size:15.5px;font-weight:600;color:#06341c;background:#25D366;padding:15px 34px;border-radius:10px;text-decoration:none;display:inline-flex;align-items:center;gap:10px;box-shadow:0 4px 18px rgba(37,211,102,0.35);transition:transform .15s,filter .15s" style-hover="transform:translateY(-2px);filter:brightness(1.06)">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              <span>Empezar mi diagnóstico gratuito</span>
-              <span style="font-family:'Geist Mono',monospace">→</span>
-            </a>
-          </div>
-          <p style="font-size:14.5px;color:#a1a1aa;margin:0">Sin compromiso · Respuesta en menos de 24 h · <a href="tel:+34639904072" data-cta="cta-final-tel" style="color:#ffffff;font-weight:600;text-decoration:none">Llámanos</a> · O escríbenos a <a href="mailto:hola@involution.es" style="color:#ffffff;font-weight:500;text-decoration:underline;text-underline-offset:3px">hola@involution.es</a></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer style="border-top:1px solid #ededed;padding:64px 32px 40px;background:#050505;color:#8a8a8a">
-    <div class="footer-grid" style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.8fr repeat(2,1fr);gap:48px;margin-bottom:48px">
-      <div>
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
-          <img src="assets/involution-logo-white.png" alt="Involution" style="height:44px;width:auto;display:block">
-        </div>
-        <p style="font-size:14px;color:#6b6b6b;max-width:320px;line-height:1.6;margin:0 0 20px">Elevamos el nivel tecnológico de tu empresa con agentes de IA autónomos sobre Google Cloud e integrados directamente en tus sistemas.</p>
-        <div style="display:flex;gap:16px;font-size:13px;color:#6b6b6b">
-          <span style="font-family:'Geist Mono',monospace">Google Cloud</span>
-          <span>·</span>
-          <span style="font-family:'Geist Mono',monospace">Integración directa</span>
-        </div>
-      </div>
-      <sc-for list="{{ footerCols }}" as="col" hint-placeholder-count="2">
-        <div>
-          <div style="font-size:12px;font-weight:600;color:#fff;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:16px">{{ col.title }}</div>
-          <div style="display:flex;flex-direction:column;gap:10px">
-            <sc-for list="{{ col.links }}" as="item" hint-placeholder-count="3">
-              <a href="{{ item.href }}" style="font-size:13.5px;color:#6b6b6b;text-decoration:none;transition:color .15s" style-hover="color:#fff">{{ item.label }}</a>
-            </sc-for>
-          </div>
-        </div>
-      </sc-for>
-    </div>
-    <div style="max-width:1180px;margin:0 auto;border-top:1px solid #171717;padding-top:28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
-      <span style="font-size:13px;color:#6b6b6b">© {{ year }} Involution. Todos los derechos reservados.</span>
-      <a href="mailto:hola@involution.es" style="font-family:'Geist Mono',monospace;font-size:12px;color:#6b6b6b;text-decoration:none;transition:color .15s" style-hover="color:#fff">hola@involution.es</a>
-    </div>
-  </footer>
-
-  <!-- BOTÓN FLOTANTE WHATSAPP -->
-  <a href="{{ waLink }}" target="_blank" rel="noopener" data-cta="float-whatsapp" aria-label="Escríbenos por WhatsApp" style="position:fixed;right:22px;bottom:22px;z-index:60;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;color:#ffffff;box-shadow:0 8px 24px rgba(0,0,0,0.22);animation:glowRing 2.6s ease infinite;transition:transform .15s" style-hover="transform:scale(1.07)">
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  </a>
-
-</div>
-</x-dc>
-<script type="text/x-dc" data-dc-script data-props="{
-  &quot;heroMode&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;default&quot;: &quot;video&quot;, &quot;options&quot;: [&quot;video&quot;, &quot;monocromo&quot;], &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Hero&quot;},
-  &quot;brandAccent&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#0a0a0a&quot;, &quot;options&quot;: [&quot;#0a0a0a&quot;, &quot;#2f4bd1&quot;, &quot;#16a34a&quot;, &quot;#dc2626&quot;], &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Marca&quot;},
-  &quot;density&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;default&quot;: &quot;espacioso&quot;, &quot;options&quot;: [&quot;espacioso&quot;, &quot;compacto&quot;], &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Layout&quot;}
-}">
-class Component extends DCLogic {
-  state = { node: 0, faq: 0 };
-
-  componentDidMount() {
-    this._glow = document.getElementById('inv-hero-glow');
-    this._hero = document.getElementById('inv-hero');
-    this._onMove = (e) => {
-      if (!this._glow || !this._hero) return;
-      const r = this._hero.getBoundingClientRect();
-      if (e.clientY > r.bottom + 140) return;
-      const x = e.clientX - r.left;
-      const y = e.clientY - r.top;
-      this._glow.style.transform = 'translate(' + (x - 310) + 'px,' + (y - 310) + 'px)';
-    };
-    window.addEventListener('mousemove', this._onMove, { passive: true });
-    const v = document.getElementById('inv-hero-video');
-    if (v) {
-      v.muted = true;
-      v.loop = true;
-      v.playsInline = true;
-      const playVideo = () => {
-        if (v.paused) {
-          const p = v.play();
-          if (p && p.catch) p.catch(() => {});
-        }
-      };
-      v.addEventListener('ended', () => { v.currentTime = 0; playVideo(); }, false);
-      v.addEventListener('pause', playVideo, false);
-      playVideo();
-    }
-
-    // Los vídeos demo sólo se reproducen cuando están en pantalla, y arrancan
-    // desde el principio para que no se pierda el inicio del caso.
-    this._videoObservers = [];
-    ['inv-labor-video', 'inv-mesh-video'].forEach((id) => {
-      const el = document.getElementById(id);
-      if (!el) return;
-      el.muted = true;
-      el.loop = true;
-      el.playsInline = true;
-      const playEl = () => {
-        const p = el.play();
-        if (p && p.catch) p.catch(() => {});
-      };
-      if ('IntersectionObserver' in window) {
-        const obs = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              if (el.paused) { el.currentTime = 0; playEl(); }
-            } else {
-              el.pause();
-            }
-          });
-        }, { threshold: 0.35 });
-        obs.observe(el);
-        this._videoObservers.push(obs);
-      } else {
-        playEl();
-      }
-    });
-  }
-
-  componentWillUnmount() {
-    if (this._onMove) window.removeEventListener('mousemove', this._onMove);
-    if (this._videoObservers) this._videoObservers.forEach((o) => o.disconnect());
-  }
-
-  renderVals() {
-    const heroMode = this.props.heroMode ?? 'video';
-    const accent = this.props.brandAccent ?? '#0a0a0a';
-    const density = this.props.density ?? 'espacioso';
-    const isVideo = heroMode === 'video';
-    const compact = density === 'compacto';
-
-    const accentRing = accent === '#0a0a0a' ? 'rgba(10,10,10,0.15)' : (accent + '26');
-    const heroPrimaryText = accent === '#0a0a0a' ? '#ffffff' : '#0a0a0a';
-
-    const sectionPadV = compact ? '64px' : '96px';
-    const ctaPad = compact ? '56px 40px' : '80px 48px';
-    const cardGap = compact ? '10px' : '16px';
-
-    const heroSectionStyle = 'position:relative;padding:' + (compact ? '76px 32px 68px' : '104px 32px 96px')
-      + ';background:' + (isVideo ? '#070707' : '#ffffff') + ';color:' + (isVideo ? '#fff' : '#0a0a0a') + ';transition:background .4s,color .4s';
-    const videoOpacity = isVideo ? 1 : 0;
-    const gridOpacity = isVideo ? 0 : 0.5;
-    const heroBaseBg = isVideo ? '#070707' : '#ffffff';
-    const heroOverlayGradient = isVideo
-      ? 'linear-gradient(90deg,rgba(7,7,7,0.96) 0%,rgba(7,7,7,0.8) 28%,rgba(7,7,7,0.32) 55%,rgba(7,7,7,0.08) 100%)'
-      : 'transparent';
-    const heroGlowColor = isVideo ? 'radial-gradient(circle,rgba(255,255,255,0.07),transparent 62%)' : 'radial-gradient(circle,rgba(10,10,10,0.06),transparent 62%)';
-    const heroBadgeBorder = isVideo ? 'rgba(255,255,255,0.16)' : '#e5e5e5';
-    const heroBadgeBg = isVideo ? 'rgba(255,255,255,0.05)' : '#fafafa';
-    const heroBadgeText = isVideo ? '#d4d4d4' : '#525252';
-    const heroTitleColor = isVideo ? '#ffffff' : '#0a0a0a';
-    const heroBodyColor = isVideo ? '#a8a8a8' : '#525252';
-    const heroSecondaryText = isVideo ? '#ffffff' : '#0a0a0a';
-    const heroSecondaryBorder = isVideo ? '#383838' : '#e0e0e0';
-
-    const waLink = 'https://wa.me/34639904072?text=' + encodeURIComponent('Hola, quiero mi diagnóstico gratuito de automatización para mi empresa.');
-
-    const navLinks = [
-      { label: 'Nuestro por qué', href: '#porque' },
-      { label: 'Red Multiagente', href: '#multiagente' },
-      { label: 'Capacidades', href: '#caracteristicas' },
-      { label: 'Cómo empezar', href: '#empezar' },
-      { label: 'Contacto', href: '#cta' },
-    ];
-
-    const answer = [
-      'Equipos completos de agentes de IA a medida para la resolución integral de procesos',
-      'No vendemos automatizaciones sueltas: asumimos la responsabilidad de extremo a extremo',
-      'Resolución de procesos reales conectando tus datos, tus sistemas y tu equipo',
-    ];
-
-    const core = [
-      { n: '01', kind: 'Inteligencia', title: 'Sensores & Detección 24/7', desc: 'Monitorizan eventos, bases de datos y métricas en vivo para identificar anomalías y oportunidades de forma ininterrumpida.', tags: ['detección en tiempo real', 'análisis contextual', 'patrones'] },
-      { n: '02', kind: 'Orquestación', title: 'Agente Director Central', desc: 'Evalúa la prioridad global en tiempo real, distribuye tareas y coordina dinámicamente sistemas multiagentes especializados.', tags: ['orquestación dinámica', 'coordinación', 'gobierno'] },
-      { n: '03', kind: 'Operativa', title: 'Ejecución Autónoma', desc: 'Agentes especialistas que resuelven los procesos directamente en tus sistemas con precisión, velocidad y adaptación continua.', tags: ['resolución autónoma', 'interoperabilidad', 'trazabilidad'] },
-      { n: '04', kind: 'Seguridad', title: 'Guardarraíles & Auditoría', desc: 'Supervisión 360° en tiempo real con políticas estrictas de control, límites de seguridad y escalado humano si se requiere.', tags: ['guardarraíles', 'supervisión viva', 'auditoría total'] },
-    ];
-
-    const sectors = [
-      {
-        tag: 'Operaciones · Logística',
-        title: 'La torre de control que se paga sola',
-        problema: 'Cada incidencia de pedido (retrasos, roturas de stock, errores de proveedor) consume 30–45 minutos de gestión manual. Con cientos al mes, equivale a 1–2 empleados dedicados solo a apagar fuegos.',
-        solucion: 'Un sistema multiagente monitoriza pedidos y proveedores 24/7, detecta la incidencia en segundos y la resuelve de extremo a extremo: reclama al proveedor, reajusta la ruta e informa al cliente.',
-        ahorroKpi: '−74% coste/pedido', ahorroDesc: '~€180K al año en costes operativos (estimado)',
-        roiKpi: '>8x primer año', roiDesc: 'Inversión recuperada en el primer trimestre',
-      },
-      {
-        tag: 'Captación & Ventas · B2B',
-        title: 'Ningún lead se queda sin respuesta',
-        problema: 'Un lead atendido después de 1 hora tiene hasta 10 veces menos probabilidad de convertir. Los que entran de noche o en fin de semana se enfrían antes de que nadie los toque.',
-        solucion: 'Agentes comerciales que responden en minutos a cualquier hora, cualifican al lead y preparan una propuesta personalizada lista para que tu equipo solo tenga que cerrar.',
-        ahorroKpi: '15 h/semana', ahorroDesc: 'Liberadas de cualificación manual para tu equipo comercial',
-        roiKpi: '+140% conversión', roiDesc: 'Proyectada, con 3,2 min de lead a propuesta',
-      },
-      {
-        tag: 'Finanzas · Facturación',
-        title: 'Cobra sin perseguir facturas',
-        problema: 'La conciliación manual y la persecución de impagos retienen tu caja durante semanas (DSO alto) y consumen días de trabajo administrativo cada mes.',
-        solucion: 'Agentes de finanzas que cotejan facturas contra pagos, reclaman vencimientos automáticamente con escalado progresivo y gestionan el recobro con trazabilidad total.',
-        ahorroKpi: '−82% DSO', ahorroDesc: 'Y decenas de horas administrativas liberadas al mes',
-        roiKpi: '1er mes', roiDesc: 'El sistema se financia con la caja recuperada de impagos',
-      },
-      {
-        tag: 'Escalabilidad · Atención al cliente',
-        title: 'Escala el soporte sin ampliar plantilla',
-        problema: 'Cada pico de demanda te obliga a elegir entre degradar el servicio (colas, SLA rotos) o contratar y formar plantilla que sobra el resto del año.',
-        solucion: 'Agentes de soporte que resuelven casos complejos directamente en tus sistemas internos —consultan el pedido, tramitan el reembolso, responden al cliente— y escalan a humano solo lo crítico.',
-        ahorroKpi: '−68% coste', ahorroDesc: 'De estructura de soporte',
-        roiKpi: 'x5 capacidad', roiDesc: 'De servicio sin una sola contratación; coste por ticket en caída desde el día 1',
-      },
-    ];
-
-    const heroTools = [
-      { name: 'Base de conocimiento', icon: '⌘' },
-      { name: 'ERP · Reembolsos', icon: '⊞' },
-      { name: 'Email + Slack', icon: '✉' },
-    ];
-
-    const logos = ['Northwind', 'Vértiga', 'Google Cloud', 'Lumio', 'Foundry', 'Calíope'];
-
-    const steps = [
-      { n: '01', title: 'Auditoría y diseño agéntico', desc: 'Analizamos tus procesos operativos y diseñamos la arquitectura multiagente a medida con roles y guardarraíles.' },
-      { n: '02', title: 'Despliegue y configuración', desc: 'Desplegamos y configuramos los agentes dedicados en Google Cloud (GCP) e integramos con tus sistemas sin fricción.' },
-      { n: '03', title: 'Conexión e integración', desc: 'Conectamos a los agentes con tus ERPs, CRMs y bases de datos con permisos restringidos y cifrado total.' },
-      { n: '04', title: 'Operación y mantenimiento 24/7', desc: 'Activamos el sistema de AI-Powered Automation bajo una cuota mensual por agente activo que cubre operación, soporte y mantenimiento.' },
-    ];
-
-    const features = [
-      { tag: '01', title: 'Integración con herramientas de terceros', desc: 'Conectamos a los agentes con tus ERPs, CRMs, bases de datos, Slack, correo y cualquier API sin sustituir tus herramientas actuales.' },
-      { tag: '02', title: 'Razonamiento agéntico autónomo', desc: 'Los agentes entienden el contexto, deciden y se adaptan ante imprevistos, en lugar de ejecutar reglas rígidas que se rompen.' },
-      { tag: '03', title: 'Operación autónoma 24/7', desc: 'Los sistemas multiagente trabajan sin descanso: detectan eventos, ejecutan y resuelven procesos a cualquier hora del día.' },
-      { tag: '04', title: 'Procesamiento multimodal', desc: 'Leen y actúan sobre texto, documentos, hojas de cálculo, correos, voz e imágenes dentro de un mismo flujo de trabajo.' },
-      { tag: '05', title: 'Guardarraíles y control humano', desc: 'Políticas estrictas de seguridad y validación humana (human-in-the-loop) en un clic antes de cualquier acción crítica.' },
-      { tag: '06', title: 'Trazabilidad y auditoría', desc: 'Paneles de gobierno en tiempo real donde cada decisión y cada acción de los agentes queda registrada y es auditable.' },
-    ];
-
-    const ladder = [
-      { n: '01', tag: 'Sin coste', title: 'Diagnóstico', desc: 'Una auditoría corta en la que detectamos 1-3 procesos automatizables y cuantificamos las horas y el coste que pierdes hoy en ellos.' },
-      { n: '02', tag: 'Sin coste', title: 'Blueprint', desc: 'Un informe con el mapa de automatización priorizado y el ROI estimado de cada proceso, generado sin coste.' },
-      { n: '03', tag: 'Punto de entrada', title: 'Piloto', desc: 'El primer servicio de pago: desplegamos un agente resolviendo un proceso concreto en producción en 2-3 semanas, con métricas de resultado visibles desde el primer día.' },
-      { n: '04', tag: 'Recurrente', title: 'Retainer operativo', desc: 'Operamos, mejoramos y ampliamos tus agentes bajo una cuota mensual por agente activo que cubre soporte, mantenimiento e infraestructura.' },
-      { n: '05', tag: 'Enterprise', title: 'Departamento digital', desc: 'Un equipo de agentes cubriendo un área completa de tu operación (soporte, ventas o back-office) con acuerdos anuales y gobierno dedicado.' },
-    ];
-
-    const testimonials = [
-      { quote: 'Involution no nos vendió automatizaciones sueltas, desplegó un equipo de agentes que resolvió procesos operativos enteros que llevábamos años arrastrando.', name: 'Marina Costa', role: 'VP de Operaciones, Northwind', initials: 'MC' },
-      { quote: 'Diseñaron el equipo de agentes completo con nosotros: roles especializados que resuelven los casos y nos dan visibilidad total del negocio.', name: 'Diego Ferrán', role: 'Head of CX, Lumio', initials: 'DF' },
-    ];
-
-    const faqData = [
-      { q: '¿Qué tipo de procesos operativos podéis resolver?', a: 'Resolvemos cualquier proceso operativo complejo que implique datos, decisiones y acciones en múltiples sistemas: gestión de pedidos, conciliación financiera, facturación, respuesta y cualificación de leads B2B, atención a clientes y supervisión de incidencias en proveedores.' },
-      { q: '¿Cómo funciona la contratación y propiedad de los agentes?', a: 'Operamos como un servicio de AI-Powered Automation gestionado: los agentes son propiedad tecnológica de Involution y tú pagas únicamente una cuota mensual por cada agente activo en producción. Esto incluye soporte continuo, actualizaciones e infraestructura en Google Cloud (GCP). Tus datos son 100% tuyos.' },
-      { q: '¿En qué os diferenciáis de las automatizaciones tradicionales o RPA?', a: 'Las automatizaciones tradicionales ejecutan reglas rígidas "si ocurre A, haz B" que fallan ante cualquier imprevisto. Nuestros equipos de agentes de IA razonan, entienden el contexto, toman decisiones adaptativas y resuelven el proceso completo de extremo a extremo sin romperse.' },
-      { q: '¿Cómo garantizáis que los agentes no cometan errores ni tomen decisiones indebidas?', a: 'Implementamos guardarraíles estrictos con agentes supervisores (Auditor) y políticas de control humano (Human-in-the-loop). Tienes visibilidad total y la opción de requerir validación humana en 1 clic antes de que el agente ejecute cualquier acción crítica.' },
-      { q: '¿Cuánto tiempo se tarda en poner en marcha un proyecto en producción?', a: 'La mayoría de despliegues iniciales están operando en producción en un plazo de 2 a 4 semanas. Empezamos auditando y resolviendo un primer proceso clave y escalamos la capacidad agéntica de forma progresiva.' },
-      { q: '¿Qué esfuerzo o dedicación requiere por parte de nuestro equipo?', a: 'Mínimo. En Involution asumimos toda la arquitectura, desarrollo, integración y calibración técnica. Tu equipo solo participa en la fase inicial de definición del proceso y en la validación del comportamiento del sistema multiagente.' },
-      { q: '¿Cómo se conecta Involution a nuestros sistemas actuales (ERP, CRM, BD)?', a: 'Nos conectamos directamente mediante APIs, conectores nativos y credenciales con permisos restringidos dentro de la infraestructura de GCP, sin necesidad de sustituir tus herramientas actuales ni interrumpir tu operativa diaria.' },
-    ];
-
-    const faqs = faqData.map((f, i) => ({
-      q: f.q, a: f.a,
-      isOpen: this.state.faq === i,
-      sign: this.state.faq === i ? '−' : '+',
-      signColor: this.state.faq === i ? accent : '#9a9a9a',
-      onClick: () => this.setState(s => ({ faq: s.faq === i ? -1 : i })),
-    }));
-
-    const footerCols = [
-      { title: 'Empresa', links: [
-        { label: 'Nuestro por qué', href: '#porque' },
-        { label: 'Red Multiagente', href: '#multiagente' },
-        { label: 'Capacidades', href: '#caracteristicas' },
-      ] },
-      { title: 'Recursos', links: [
-        { label: 'Cómo trabajamos', href: '#como' },
-        { label: 'Cómo empezar', href: '#empezar' },
-        { label: 'Contacto', href: '#cta' },
-      ] },
-    ];
-
-    return {
-      navLinks, steps, core, sectors, answer, ladder, waLink,
-      features, testimonials, faqs, faqData, footerCols, year: 2026,
-      accent, accentRing, heroPrimaryText, sectionPadV, ctaPad, cardGap,
-      heroSectionStyle, videoOpacity, gridOpacity, heroBaseBg, heroOverlayGradient,
-      heroGlowColor, heroBadgeBorder, heroBadgeBg, heroBadgeText, heroTitleColor,
-      heroBodyColor, heroSecondaryText, heroSecondaryBorder,
-    };
-  }
-}
-</script>
-<script>
-// Registra clics en CTAs (data-cta) como eventos de Vercel Analytics.
-document.addEventListener('click', function (e) {
-  var el = e.target && e.target.closest ? e.target.closest('[data-cta]') : null;
-  if (el && window.va) window.va('event', { name: 'cta_click', data: { cta: el.getAttribute('data-cta') } });
-});
-</script>
-</body>
+    <script src="main.js" defer></script>
+  </body>
 </html>
-

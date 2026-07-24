@@ -7,7 +7,11 @@
   "scripts": {
     "dev": "npx serve .",
     "start": "npx serve .",
-    "check": "node -e \"const fs=require('fs'); for (const file of ['index.html','support.js','vercel.json']) { if (!fs.existsSync(file)) throw new Error('Missing required file: '+file) }\""
+    "check": "npm run check:files && npm run check:html && npm run check:format",
+    "check:files": "node -e \"const fs=require('fs'); for (const file of ['index.html','styles.css','main.js','vercel.json']) { if (!fs.existsSync(file)) throw new Error('Missing required file: '+file) }\"",
+    "check:html": "html-validate index.html",
+    "check:format": "prettier --check .",
+    "format": "prettier --write ."
   },
   "keywords": [
     "involution",
@@ -19,6 +23,8 @@
   "author": "Involution",
   "license": "MIT",
   "devDependencies": {
+    "html-validate": "^11.5.6",
+    "prettier": "^3.9.6",
     "serve": "^14.2.4"
   }
 }

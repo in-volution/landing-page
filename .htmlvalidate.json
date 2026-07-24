@@ -1,0 +1,10 @@
+{
+  "extends": ["html-validate:recommended"],
+  "rules": {
+    "void-style": "off",
+    "no-inline-style": "error",
+    "require-sri": "off",
+    "tel-non-breaking": "off",
+    "doctype-style": ["error", { "style": "lowercase" }]
+  }
+}
