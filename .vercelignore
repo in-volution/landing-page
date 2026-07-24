@@ -1,0 +1,7 @@
+# Remotion video project — not part of the landing page deploy (~900MB)
+my-video/
+
+# Dev artifacts
+node_modules/
+.git/
+.github/
