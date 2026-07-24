@@ -1,21 +1,22 @@
 {
-  "name": "involut-landing-page",
+  "name": "involution-landing-page",
   "version": "1.0.0",
-  "description": "Involut - AI-Powered Automation para empresas",
+  "description": "Involution - AI-Powered Automation para empresas",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "npx serve .",
-    "start": "npx serve ."
+    "start": "npx serve .",
+    "check": "node -e \"const fs=require('fs'); for (const file of ['index.html','support.js','vercel.json']) { if (!fs.existsSync(file)) throw new Error('Missing required file: '+file) }\""
   },
   "keywords": [
-    "involut",
+    "involution",
     "ai-agents",
     "agentes-ia",
     "automation",
     "landing-page"
   ],
-  "author": "Involut",
+  "author": "Involution",
   "license": "MIT",
   "devDependencies": {
     "serve": "^14.2.4"

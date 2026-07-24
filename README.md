@@ -1,6 +1,6 @@
-# 🚀 Involut · AI-Powered Automation
+# 🚀 Involution · AI-Powered Automation
 
-Sitio web y plataforma interactiva de **Involut** — Automatización impulsada por agentes autónomos de IA para optimizar procesos empresariales complejos.
+Sitio web y plataforma interactiva de **Involution** — Automatización impulsada por agentes autónomos de IA para optimizar procesos empresariales complejos.
 
 ---
 
@@ -19,9 +19,9 @@ Sitio web y plataforma interactiva de **Involut** — Automatización impulsada 
 .
 ├── assets/
 │   ├── hero-bg.mp4           # Video de fondo del hero
-│   ├── involut-logo-color.png # Logotipo principal a color
-│   └── involut-logo-white.png # Logotipo variante blanco
-├── index.html                # Plantilla HTML principal con runtime de Involut
+│   ├── involution-logo-color.png # Logotipo principal a color
+│   └── involution-logo-white.png # Logotipo variante blanco
+├── index.html                # Plantilla HTML principal con runtime de Involution
 ├── support.js                # Runtime JS cliente
 ├── vercel.json               # Configuración de despliegue en Vercel
 ├── package.json              # Scripts del proyecto y dependencias
@@ -66,8 +66,23 @@ npx vercel --prod
 4. Vercel detectará automáticamente la configuración estática (`index.html`).
 5. Haz clic en **Deploy**.
 
+### CI/CD con GitHub Actions
+
+El workflow `.github/workflows/vercel.yml` valida cada cambio y crea un deployment
+preview para cada pull request. Los pushes a `main` se despliegan automáticamente
+a producción.
+
+Configura estos secrets en **GitHub → Settings → Secrets and variables → Actions**:
+
+- `VERCEL_TOKEN`: token personal creado en Vercel.
+- `VERCEL_ORG_ID`: ID del equipo o cuenta de Vercel.
+- `VERCEL_PROJECT_ID`: ID del proyecto de Vercel.
+
+Los IDs del proyecto vinculado localmente están en `.vercel/project.json` (ese
+directorio no se versiona).
+
 ---
 
 ## 📄 Licencia
 
-MIT © Involut. Todos los derechos reservados.
+MIT © Involution. Todos los derechos reservados.
