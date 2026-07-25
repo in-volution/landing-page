@@ -796,6 +796,444 @@ a {
   background: var(--brand-ui);
 }
 
+/* ------- Gráfico de escalado (dentro de "Nuestro porqué") -------
+   Forma de énfasis: una sola tinta de marca para la serie protagonista y gris de
+   deénfasis para la de contexto. El gris queda por debajo del suelo de croma a
+   propósito: no es un color categórico, es el fondo contra el que se lee el azul.
+   Separación ΔE 22,8 bajo protanopia sobre blanco, y ambas series van rotuladas
+   en el extremo, así que la identidad nunca depende solo del color. */
+.scale {
+  margin: 8px 0 28px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line-3);
+}
+.scale__head {
+  margin-bottom: 22px;
+}
+.scale__title {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  margin: 0 0 8px;
+  color: var(--ink);
+}
+.scale__head {
+  margin-bottom: 22px;
+}
+.scale__title {
+  margin-bottom: 0;
+}
+/* Conmutador de vista: una sola magnitud visible cada vez, tanto en el SVG como
+   en los textos que la acompañan. */
+.scale[data-view='tiempo'] .v-coste,
+.scale[data-view='coste'] .v-tiempo {
+  display: none;
+}
+
+.scale__bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px 24px;
+  margin-bottom: 12px;
+}
+.scale__views {
+  display: inline-flex;
+  padding: 3px;
+  border: 1px solid var(--line-2);
+  border-radius: 999px;
+  background: var(--bg-soft);
+}
+.scale__view {
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: transparent;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted-2);
+  transition:
+    background 0.18s ease,
+    color 0.18s ease;
+}
+.scale__view:hover {
+  color: var(--ink);
+}
+.scale__view.is-on {
+  background: var(--ink);
+  color: #fff;
+}
+.scale__view:focus-visible {
+  outline: 2px solid var(--brand-ui);
+  outline-offset: 2px;
+}
+
+.scale__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.scale__key {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted-2);
+}
+.scale__key-line {
+  width: 18px;
+  height: 2px;
+  border-radius: 1px;
+}
+.scale__key-line--human {
+  background: var(--muted-2);
+}
+.scale__key-line--mesh {
+  background: var(--brand-ui);
+}
+
+/* El SVG estira al ancho del contenedor y, con relación 2:1, se come demasiado
+   alto. El tope va a todo el bloque, no solo al gráfico, para que el conmutador
+   y los pies no queden flotando sobre el vacío que deja el trazado. El filete
+   superior de .scale se queda a ancho completo, haciendo de separador. */
+.scale__head,
+.scale__bar,
+.scale__plot,
+.cost,
+.scale__readout,
+.scale__insight,
+.scale__note {
+  max-width: 700px;
+}
+.scale__plot {
+  position: relative;
+  touch-action: pan-y; /* el arrastre vertical sigue haciendo scroll */
+}
+.scale__svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  font-family: var(--sans);
+  font-size: 13px; /* única palanca de tamaño: el resto del texto va en em */
+  overflow: visible;
+}
+.scale__plot:focus-visible {
+  outline: 2px solid var(--brand-ui);
+  outline-offset: 6px;
+  border-radius: 8px;
+}
+
+.scale__grid {
+  stroke: var(--line-3);
+  stroke-width: 1;
+}
+.scale__axis {
+  stroke: var(--line-2);
+  stroke-width: 1;
+}
+.scale__tick text {
+  font-size: 0.92em;
+  fill: var(--faint);
+  font-family: var(--mono);
+  font-variant-numeric: tabular-nums;
+}
+.scale__axis-name {
+  font-size: 0.92em;
+  fill: var(--faint);
+  font-family: var(--mono);
+}
+
+/* ------- Vista de coste: antes / después ------- */
+.cost {
+  display: flex;
+  align-items: center;
+  gap: 44px;
+  padding: 8px 0 4px;
+}
+.cost__hero {
+  flex: none;
+}
+/* Cifra protagonista: la misma sans que el resto, con cifras proporcionales. */
+.cost__delta {
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--brand-ui);
+}
+.cost__delta-label {
+  margin-top: 8px;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted-2);
+}
+.cost__bars {
+  flex: 1;
+  min-width: 0;
+}
+.cost__row + .cost__row {
+  margin-top: 22px;
+}
+.cost__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 9px;
+}
+.cost__label {
+  font-size: 14px;
+  color: var(--muted);
+}
+.cost__value {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+}
+/* Barras finas, extremo redondeado y origen a ras del borde izquierdo. */
+.cost__bar {
+  height: 14px;
+  border-radius: 0 4px 4px 0;
+  transform-origin: left center;
+}
+.cost__bar--now {
+  width: 100%;
+  background: var(--muted-2);
+}
+.cost__bar--inv {
+  width: 20%;
+  background: var(--brand-ui);
+}
+
+@media (max-width: 720px) {
+  .cost {
+    display: block;
+  }
+  .cost__hero {
+    margin-bottom: 26px;
+  }
+  .cost__delta {
+    font-size: 44px;
+  }
+}
+
+.scale__line {
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.scale__line--human {
+  stroke: var(--muted-2);
+}
+.scale__line--mesh {
+  stroke: var(--brand-ui);
+}
+
+/* Anillo de 2px en el color de la superficie para que los puntos se lean
+   allí donde la línea de la red se solapa con el eje. */
+.scale__end,
+.scale__dot {
+  stroke: #fff;
+  stroke-width: 2;
+}
+.scale__end--human,
+.scale__dot--human {
+  fill: var(--muted-2);
+}
+.scale__end--mesh,
+.scale__dot--mesh {
+  fill: var(--brand-ui);
+}
+/* El crosshair es una ayuda de lectura, no rejilla: tiene que verse. */
+.scale__hair {
+  stroke: var(--faint);
+  stroke-width: 1;
+}
+/* El atributo hidden no aplica display:none dentro de un SVG: hay que decirlo. */
+.scale__svg [hidden] {
+  display: none;
+}
+
+.scale__endlabel text {
+  fill: var(--muted-2);
+  font-size: 0.95em;
+}
+.scale__endvalue {
+  fill: var(--ink);
+  font-size: 1.08em;
+  font-weight: 600;
+}
+.scale__endvalue--mesh {
+  fill: var(--ink);
+}
+
+/* El trazado entra dibujándose. El estado por defecto es el final, de modo que
+   con "prefers-reduced-motion" (que anula toda animación) el gráfico se ve
+   completo en lugar de vacío. */
+.scale__line {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+}
+.scale__end {
+  opacity: 1;
+}
+.scale.is-drawing .scale__line {
+  animation: scale-draw 1.5s cubic-bezier(0.33, 0.9, 0.3, 1) both;
+}
+.scale.is-drawing .scale__end {
+  animation: scale-pop 0.4s ease-out 1.2s both;
+}
+.scale.is-drawing .cost__bar {
+  animation: cost-grow 0.9s cubic-bezier(0.33, 0.9, 0.3, 1) both;
+}
+@keyframes cost-grow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes scale-draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes scale-pop {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Lectura al pasar el puntero: el valor manda, la serie acompaña. */
+.scale__tip {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  pointer-events: none;
+  min-width: 168px;
+  padding: 10px 12px;
+  border: 1px solid var(--line-2);
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 10px 24px -12px rgba(0, 0, 0, 0.18);
+  transform: translateX(-50%);
+}
+.scale__tip-x {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--faint);
+  margin-bottom: 6px;
+}
+.scale__tip-row {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.scale__tip-row b {
+  font-size: 13px;
+  color: var(--ink);
+  font-weight: 600;
+}
+.scale__tip-key {
+  width: 12px;
+  height: 2px;
+  border-radius: 1px;
+  flex: none;
+  transform: translateY(-3px);
+}
+.scale__tip-key--human {
+  background: var(--muted-2);
+}
+.scale__tip-key--mesh {
+  background: var(--brand-ui);
+}
+
+/* Sustituye a las etiquetas del extremo cuando el SVG se queda sin sitio. */
+.scale__readout {
+  display: none;
+  margin: 18px 0 0;
+}
+.scale__readout-list {
+  margin: 0;
+}
+.scale__readout-list div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding: 9px 0;
+  border-top: 1px solid var(--line-3);
+}
+.scale__readout dt {
+  font-size: 14px;
+  color: var(--muted);
+}
+.scale__readout dd {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.scale__readout-foot {
+  margin: 8px 0 0;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--faint);
+}
+
+.scale__insight {
+  margin: 22px 0 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+.scale__insight strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+.scale__note {
+  margin: 14px 0 0;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  line-height: 1.65;
+  color: var(--faint);
+}
+
+@media (max-width: 720px) {
+  .scale__svg {
+    font-size: 21px; /* el viewBox se encoge: el texto sube para no quedar diminuto */
+  }
+  /* Se van las etiquetas del extremo, que no caben; el punto final se queda,
+     porque sin él la curva parece cortada por el borde. */
+  .scale__endlabel,
+  .scale__tick--dense,
+  .scale__axis-name {
+    display: none;
+  }
+  .scale[data-view='tiempo'] .scale__readout {
+    display: block;
+  }
+  .scale__title {
+    font-size: 20px;
+  }
+}
+
 /* ------- Red multiagente ------- */
 .mesh__dots {
   position: absolute;
