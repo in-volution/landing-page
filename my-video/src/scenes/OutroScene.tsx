@@ -32,9 +32,11 @@ export const OutroScene: React.FC<Props> = ({ headline, subline }) => {
         }}
       >
         <Img
-          src={staticFile("involution-logo-white.png")}
+          src={staticFile("involution-logo-horizontal-white-accent.png")}
           style={{
-            height: 58,
+            /* 50, no 58: el wordmark Despliegue va en Geist Bold y a igual
+               altura pesa más que el logotipo anterior. */
+            height: 50,
             width: "auto",
             opacity: interpolate(frame, [6, 32], [0, 1], {
               extrapolateLeft: "clamp",

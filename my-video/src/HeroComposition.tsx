@@ -16,16 +16,26 @@ const EASE = Easing.bezier(0.16, 1, 0.3, 1);
 const BREATHE = Easing.inOut(Easing.ease);
 
 /**
- * Wordmark geometry, measured on public/involution-logo-white.png (1469x466)
- * and scaled to a 300px-tall lockup so the mark SVG and the PNG wordmark line
- * up exactly as in the official logo.
+ * Lockup geometry, read straight off the official horizontal logo
+ * (assets/brand/despliegue/involution-logo-horizontal-color.svg, viewBox
+ * 460x128) so the animated mark and the static logo files agree exactly.
+ *
+ * In those units: the symbol occupies 16..112 on both axes, and the wordmark
+ * runs 132..457 horizontally and 35..87 vertically.
  */
-const LOCKUP_SCALE = 300 / 466;
-const LOGO_PNG_HEIGHT = 300;
-const MARK_HEIGHT = Math.round(441 * LOCKUP_SCALE);
-const WORDMARK_WIDTH = Math.round(1212 * LOCKUP_SCALE);
-const WORDMARK_OFFSET = Math.round(244 * LOCKUP_SCALE);
-const LOCKUP_GAP = Math.round(141 * LOCKUP_SCALE);
+const SYMBOL_SPAN = 96;
+const WORDMARK_SPAN = { width: 325.37, height: 51.98 };
+const LOCKUP_GAP_UNITS = 132 - 112;
+/** The wordmark sits slightly above the symbol's centre line in the real logo. */
+const WORDMARK_RISE_UNITS = 64 - (35.02 + WORDMARK_SPAN.height / 2);
+
+/** Everything below is those units scaled to a 300px-tall symbol. */
+const MARK_HEIGHT = 300;
+const LOCKUP_SCALE = MARK_HEIGHT / SYMBOL_SPAN;
+const WORDMARK_WIDTH = Math.round(WORDMARK_SPAN.width * LOCKUP_SCALE);
+const WORDMARK_HEIGHT = Math.round(WORDMARK_SPAN.height * LOCKUP_SCALE);
+const LOCKUP_GAP = Math.round(LOCKUP_GAP_UNITS * LOCKUP_SCALE);
+const WORDMARK_RISE = Math.round(WORDMARK_RISE_UNITS * LOCKUP_SCALE);
 
 /** Midpoint of the breath, so the loop inhales and exhales exactly once. */
 const BREATH_PEAK = Math.round((BEAT.settled + DURATION) / 2);
@@ -47,7 +57,7 @@ export const HeroLoop: React.FC = () => {
           never reads as a frozen image. */}
       <AbsoluteFill
         style={{
-          background: `radial-gradient(ellipse 42% 46% at 50% 50%, rgba(59,88,245,0.16), transparent 70%)`,
+          background: `radial-gradient(ellipse 42% 46% at 50% 50%, rgba(49,85,255,0.18), transparent 70%)`,
           opacity: interpolate(
             frame,
             [BEAT.accentIn, BEAT.settled, BREATH_PEAK, DURATION],
@@ -99,7 +109,8 @@ export const HeroLoop: React.FC = () => {
           <Interactive.Div
             name="Wordmark"
             style={{
-              height: LOGO_PNG_HEIGHT,
+              height: WORDMARK_HEIGHT,
+              marginBottom: WORDMARK_RISE * 2,
               overflow: "hidden",
               width: interpolate(
                 frame,
@@ -114,11 +125,11 @@ export const HeroLoop: React.FC = () => {
             }}
           >
             <Img
-              src={staticFile("involution-logo-white.png")}
+              src={staticFile("involution-wordmark-white.svg")}
               style={{
-                height: LOGO_PNG_HEIGHT,
+                height: WORDMARK_HEIGHT,
+                width: WORDMARK_WIDTH,
                 maxWidth: "none",
-                marginLeft: -WORDMARK_OFFSET,
               }}
             />
           </Interactive.Div>

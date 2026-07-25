@@ -28,6 +28,10 @@ export const colors = {
   emerald: "#10b981",
   sky: "#38bdf8",
   amber: "#f5a524",
+  /** Involution Blue, del sistema de marca Despliegue. */
+  brand: "#3155ff",
+  /** Sobre negro el azul puro se apaga; este tinte es el que se usa en pantalla. */
+  brandOnDark: "#7590ff",
 };
 
 /** Per-agent accent, so the eye can track who is acting. */

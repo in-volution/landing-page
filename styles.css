@@ -30,10 +30,13 @@
 
   /* Marca / acentos */
   --accent: #0a0a0a;
-  --green: #16a34a;
-  --green-2: #10b981;
+  --brand: #3155ff; /* Involution Blue (sistema Despliegue) */
+  --brand-on-dark: #7590ff; /* Sobre negro el azul puro se queda en 3.6:1; este llega a 6.8:1 */
+  /* Acento efectivo. Los contenedores oscuros lo reasignan más abajo, de modo
+     que cada componente lo consume sin saber sobre qué fondo se dibuja. */
+  --brand-ui: var(--brand);
   --red: #dc2626;
-  --wa: #25d366;
+  --wa: #25d366; /* Color propio de WhatsApp, ajeno a la marca */
   --wa-ink: #06341c;
 
   /* Layout */
@@ -42,6 +45,18 @@
   --radius: 14px;
   --radius-lg: 16px;
   --radius-xl: 24px;
+}
+
+/* Superficies oscuras: el azul de marca pierde legibilidad sobre negro, así que
+   aquí el acento pasa al tinte claro. */
+.hero,
+.panel,
+.section--dark,
+.card-dark,
+.cta-box,
+.mesh-demo,
+.footer {
+  --brand-ui: var(--brand-on-dark);
 }
 
 /* ------- Base ------- */
@@ -92,7 +107,7 @@ a {
 
 /* Foco visible y accesible en todos los elementos interactivos */
 :focus-visible {
-  outline: 2px solid var(--green-2);
+  outline: 2px solid var(--brand-ui);
   outline-offset: 3px;
   border-radius: 4px;
 }
@@ -117,21 +132,14 @@ a {
     opacity: 1;
   }
 }
-@keyframes drift {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(-52px, -52px);
-  }
-}
+/* Halo del botón flotante de WhatsApp: sigue al verde del propio botón. */
 @keyframes glowRing {
   0%,
   100% {
-    box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.45);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.45);
   }
   50% {
-    box-shadow: 0 0 0 10px rgba(22, 163, 74, 0);
+    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
   }
 }
 
@@ -211,8 +219,8 @@ a {
   letter-spacing: 0.05em;
   margin-bottom: 14px;
 }
-.eyebrow--green {
-  color: var(--green-2);
+.eyebrow--brand {
+  color: var(--brand-ui);
 }
 .eyebrow--upper {
   letter-spacing: 0.06em;
@@ -300,7 +308,10 @@ a {
   border-radius: 8px;
   text-decoration: none;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transition: background 0.15s, transform 0.15s, box-shadow 0.15s;
+  transition:
+    background 0.15s,
+    transform 0.15s,
+    box-shadow 0.15s;
 }
 .btn-nav:hover {
   background: #f4f4f5;
@@ -356,8 +367,10 @@ a {
   display: flex;
   align-items: center;
 }
+/* 44px, no 52: el wordmark Despliegue va en Geist Bold y a igual altura pesa
+   más que el logotipo anterior. Así el ancho y la mancha se mantienen. */
 .nav__logo {
-  height: 52px;
+  height: 44px;
   width: auto;
 }
 .nav__logo-experiment {
@@ -518,23 +531,23 @@ a {
   align-items: center;
   gap: 9px;
   padding: 6px 16px 6px 12px;
-  border: 1px solid rgba(16, 185, 129, 0.35);
+  border: 1px solid rgba(77, 107, 255, 0.35);
   border-radius: 999px;
-  background: rgba(16, 185, 129, 0.06);
+  background: rgba(77, 107, 255, 0.06);
   font-size: 13px;
-  color: var(--green-2);
+  color: var(--brand-ui);
   font-weight: 500;
   margin-bottom: 26px;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 0 16px rgba(16, 185, 129, 0.12);
+  box-shadow: 0 0 16px rgba(77, 107, 255, 0.12);
 }
 .hero__badge-dot {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: var(--green-2);
-  box-shadow: 0 0 10px var(--green-2);
+  background: var(--brand-ui);
+  box-shadow: 0 0 10px var(--brand-ui);
   animation: pulse 1.6s ease infinite;
 }
 .hero__badge-txt {
@@ -630,14 +643,14 @@ a {
   align-items: center;
   gap: 6px;
   font-size: 12px;
-  color: var(--green);
+  color: var(--brand-ui);
   font-weight: 500;
 }
 .panel__live-dot {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--green);
+  background: var(--brand-ui);
   animation: pulse 1.8s ease infinite;
 }
 .panel__video {
@@ -719,7 +732,7 @@ a {
   line-height: 1.5;
 }
 .check__mark {
-  color: var(--green);
+  color: var(--brand-ui);
   flex-shrink: 0;
 }
 .p-body {
@@ -745,7 +758,7 @@ a {
   right: 0;
   width: 300px;
   height: 300px;
-  background: radial-gradient(circle, rgba(22, 163, 74, 0.06), transparent 70%);
+  background: radial-gradient(circle, rgba(49, 85, 255, 0.06), transparent 70%);
   pointer-events: none;
 }
 .why__title {
@@ -780,18 +793,64 @@ a {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--green);
+  background: var(--brand-ui);
 }
 
 /* ------- Red multiagente ------- */
 .mesh__dots {
   position: absolute;
   inset: 0;
-  opacity: 0.4;
-  background-image: radial-gradient(#262626 1px, transparent 1px);
+  overflow: hidden;
+  pointer-events: none;
+  -webkit-mask-image: radial-gradient(ellipse 105% 95% at 50% 45%, #000 55%, transparent 92%);
+  mask-image: radial-gradient(ellipse 105% 95% at 50% 45%, #000 55%, transparent 92%);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+/* Dos capas: la rejilla que deriva y un "pulso" azul que la recorre como si
+   fuese tráfico entre agentes. Solo se animan transform/opacity (compositor). */
+.mesh__dots::before,
+.mesh__dots::after {
+  content: '';
+  position: absolute;
+  inset: -60px;
   background-size: 24px 24px;
-  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 35%, #000, transparent 75%);
-  mask-image: radial-gradient(ellipse 80% 70% at 50% 35%, #000, transparent 75%);
+  will-change: transform;
+}
+.mesh__dots::before {
+  opacity: 0.6;
+  background-image: radial-gradient(#3a3a3a 1px, transparent 1px);
+  animation: meshDrift 60s linear infinite;
+}
+.mesh__dots::after {
+  opacity: 0.75;
+  background-image: radial-gradient(var(--brand-ui) 1.4px, transparent 1.4px);
+  -webkit-mask-image: radial-gradient(ellipse 75% 80% at 50% 45%, #000 20%, transparent 85%);
+  mask-image: radial-gradient(ellipse 75% 80% at 50% 45%, #000 20%, transparent 85%);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  animation: meshSignal 18s ease-in-out infinite;
+}
+/* El desplazamiento es múltiplo de background-size (24px) para que el bucle
+   sea invisible. */
+@keyframes meshDrift {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-48px, -48px, 0);
+  }
+}
+@keyframes meshSignal {
+  0%,
+  100% {
+    transform: translate3d(-9%, 5%, 0);
+    opacity: 0.45;
+  }
+  50% {
+    transform: translate3d(10%, -6%, 0);
+    opacity: 1;
+  }
 }
 .mesh__inner {
   position: relative;
@@ -835,15 +894,15 @@ a {
   align-items: center;
   gap: 8px;
   font-size: 12px;
-  color: var(--green-2);
+  color: var(--brand-ui);
   font-family: var(--mono);
 }
 .mesh-demo__live-dot {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: var(--green-2);
-  box-shadow: 0 0 8px rgba(16, 185, 129, 0.5);
+  background: var(--brand-ui);
+  box-shadow: 0 0 8px rgba(77, 107, 255, 0.5);
   animation: pulse 1.6s ease infinite;
 }
 .mesh-demo__video {
@@ -892,7 +951,7 @@ a {
   color: var(--red);
 }
 .caso__block-label--sol {
-  color: var(--green);
+  color: var(--brand-ui);
 }
 .caso__block-label--kpi {
   color: var(--muted-2);
@@ -917,8 +976,8 @@ a {
   letter-spacing: -0.02em;
   color: var(--ink);
 }
-.kpi__v--green {
-  color: var(--green);
+.kpi__v--brand {
+  color: var(--brand-ui);
 }
 .kpi__d {
   font-size: 12.5px;
@@ -960,7 +1019,7 @@ a {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--green);
+  background: var(--brand-ui);
 }
 
 /* ------- Cómo trabajamos (steps) ------- */
@@ -1068,6 +1127,16 @@ a {
 }
 .ladder-row .badge-num {
   flex-shrink: 0;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    color 0.2s;
+}
+/* El peldaño sobre el que está el cursor se marca en azul. */
+.ladder-row:hover .badge-num {
+  background: var(--brand-ui);
+  border-color: var(--brand-ui);
+  color: #fff;
 }
 .ladder__mid {
   display: flex;
@@ -1249,7 +1318,7 @@ a {
   gap: 48px;
 }
 .footer__logo {
-  height: 44px;
+  height: 38px;
   width: auto;
   margin-bottom: 16px;
 }

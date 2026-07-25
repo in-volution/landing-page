@@ -9,14 +9,14 @@ export const FPS = 30;
 export const DURATION = 300;
 
 /**
- * The loop is deliberately unhurried: the mark assembles, the accent wipes up,
- * the wordmark reveals, and then the finished lockup simply breathes until the
- * clip fades back to the background and restarts.
+ * The loop is deliberately unhurried: the mark unfolds, the accent lands, the
+ * wordmark reveals, and then the finished lockup simply breathes until the clip
+ * fades back to the background and restarts.
  */
 export const BEAT = {
-  /** The isotype slabs drift together. */
+  /** The isotype brackets unfold from their corners, outer first then inner. */
   markIn: 0,
-  /** Blue accent wipes up inside the lower slab, once it has settled. */
+  /** Blue accent square lands inside the inner bracket, once both have settled. */
   accentIn: 56,
   /** Wordmark wipes in next to the mark. */
   wordmarkIn: 84,

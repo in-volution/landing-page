@@ -1,25 +1,35 @@
 import { useId } from "react";
 import { useCurrentFrame, interpolate, Easing } from "remotion";
+import { colors } from "../theme";
 
 /**
- * The Involution isotype, traced from assets/involution-icon.png so it can be
- * animated slab by slab instead of fading in a flat PNG.
- * Native size is 90 x 443 (viewBox units).
+ * The Involution isotype from the Despliegue brand system, rebuilt so it can be
+ * deployed arm by arm instead of fading in a flat asset.
+ *
+ * Geometry is copied verbatim from
+ * assets/brand/despliegue/involution-isotype-color.svg, so the animated mark and
+ * the static logo files are the same shape.
  */
-const TOP_SLAB = "M 0 68.6 L 90 0 L 90 162 L 0 230.6 Z";
-const BOTTOM_SLAB = "M 0 251.6 L 90 183 L 90 374 L 0 442.6 Z";
-const ACCENT = "M 31 280.3 L 59 306.3 L 59 398.3 L 31 419.3 Z";
+const OUTER = "M8 56V8h48v10H18v38H8Z";
+const INNER = "M23 49V23h26v10H33v16H23Z";
 
-export const MARK_ASPECT = 90 / 443;
+/** Each bracket unfolds from its own corner, outward along both arms. */
+const OUTER_CORNER = { x: 8, y: 8, span: 48, thickness: 10 };
+const INNER_CORNER = { x: 23, y: 23, span: 26, thickness: 10 };
+
+/** The accent square, which lands last inside the inner bracket. */
+const ACCENT = { x: 38, y: 38, size: 12, radius: 2 };
+
+export const MARK_ASPECT = 1;
 
 const EASE = Easing.bezier(0.16, 1, 0.3, 1);
 
 type Props = {
-  /** Rendered height in px; width follows the logo aspect ratio. */
+  /** Rendered height in px; the mark is square. */
   height: number;
-  /** Frame at which the two slabs start sliding together. */
+  /** Frame at which the outer bracket starts unfolding. */
   assembleAt: number;
-  /** Frame at which the blue accent wipes up inside the lower slab. */
+  /** Frame at which the blue accent square lands. */
   accentAt: number;
   /**
    * Stretches every internal beat of the assembly. 1 is the original snappy
@@ -27,7 +37,7 @@ type Props = {
    * loop wants.
    */
   pace?: number;
-  /** Slab colour — white on the dark hero background. */
+  /** Bracket colour — white on the dark hero background. */
   color?: string;
   accentColor?: string;
 };
@@ -38,81 +48,81 @@ export const InvolutionMark: React.FC<Props> = ({
   accentAt,
   pace = 1,
   color = "#ffffff",
-  accentColor = "#3b58f5",
+  accentColor = colors.brand,
 }) => {
   const frame = useCurrentFrame();
-  const clipId = useId();
+  const outerClip = useId();
+  const innerClip = useId();
 
   /** Internal beat offsets, all scaled by `pace`. */
   const step = (frames: number) => Math.round(frames * pace);
 
+  /**
+   * Both arms of a bracket grow from the shared corner at once, so it reads as
+   * one gesture unfolding rather than two lines drawing.
+   */
+  const unfold = (startAt: number, duration: number) =>
+    interpolate(frame, [startAt, startAt + step(duration)], [0, 1], {
+      extrapolateLeft: "clamp",
+      extrapolateRight: "clamp",
+      easing: EASE,
+    });
+
+  /* El ángulo interior arranca a mitad del exterior, y ambos cierran justo
+     antes de `accentAt`, para que el cuadrado sea el último gesto. */
+  const outer = unfold(assembleAt, 16);
+  const inner = unfold(assembleAt + step(9), 16);
+
+  /** The square lands with a small overshoot so it reads as a click into place. */
+  const accentScale = interpolate(
+    frame,
+    [accentAt, accentAt + step(9), accentAt + step(16)],
+    [0, 1.18, 1],
+    {
+      extrapolateLeft: "clamp",
+      extrapolateRight: "clamp",
+      easing: EASE,
+    },
+  );
+
+  const bracketClip = (
+    id: string,
+    { x, y, span, thickness }: typeof OUTER_CORNER,
+    progress: number,
+  ) => (
+    <clipPath id={id}>
+      {/* Horizontal arm, growing right from the corner. */}
+      <rect x={x} y={y} width={span * progress} height={thickness} />
+      {/* Vertical arm, growing down from the same corner. */}
+      <rect x={x} y={y} width={thickness} height={span * progress} />
+    </clipPath>
+  );
+
   return (
     <svg
-      viewBox="0 0 90 443"
+      viewBox="0 0 64 64"
       style={{ height, width: height * MARK_ASPECT, overflow: "visible" }}
     >
       <defs>
-        <clipPath id={clipId}>
-          <rect
-            x={0}
-            width={90}
-            y={interpolate(frame, [accentAt, accentAt + step(18)], [443, 260], {
-              extrapolateLeft: "clamp",
-              extrapolateRight: "clamp",
-              easing: EASE,
-            })}
-            height={443}
-          />
-        </clipPath>
+        {bracketClip(outerClip, OUTER_CORNER, outer)}
+        {bracketClip(innerClip, INNER_CORNER, inner)}
       </defs>
 
-      <path
-        d={TOP_SLAB}
-        fill={color}
+      <path d={OUTER} fill={color} clipPath={`url(#${outerClip})`} />
+      <path d={INNER} fill={color} clipPath={`url(#${innerClip})`} />
+
+      <rect
+        x={ACCENT.x}
+        y={ACCENT.y}
+        width={ACCENT.size}
+        height={ACCENT.size}
+        rx={ACCENT.radius}
+        fill={accentColor}
         style={{
-          opacity: interpolate(
-            frame,
-            [assembleAt, assembleAt + step(10)],
-            [0, 1],
-            { extrapolateLeft: "clamp", extrapolateRight: "clamp" },
-          ),
-          translate: interpolate(
-            frame,
-            [assembleAt, assembleAt + step(22)],
-            ["46px -60px", "0px 0px"],
-            {
-              extrapolateLeft: "clamp",
-              extrapolateRight: "clamp",
-              easing: EASE,
-            },
-          ),
+          transformOrigin: `${ACCENT.x + ACCENT.size / 2}px ${ACCENT.y + ACCENT.size / 2}px`,
+          transform: `scale(${accentScale})`,
         }}
       />
-
-      <path
-        d={BOTTOM_SLAB}
-        fill={color}
-        style={{
-          opacity: interpolate(
-            frame,
-            [assembleAt + step(4), assembleAt + step(14)],
-            [0, 1],
-            { extrapolateLeft: "clamp", extrapolateRight: "clamp" },
-          ),
-          translate: interpolate(
-            frame,
-            [assembleAt + step(4), assembleAt + step(26)],
-            ["-46px 60px", "0px 0px"],
-            {
-              extrapolateLeft: "clamp",
-              extrapolateRight: "clamp",
-              easing: EASE,
-            },
-          ),
-        }}
-      />
-
-      <path d={ACCENT} fill={accentColor} clipPath={`url(#${clipId})`} />
     </svg>
   );
 };

@@ -1,6 +1,10 @@
 {
   "name": "Involution",
   "short_name": "Involution",
+  "description": "Equipos de agentes autónomos de IA que asumen la carga operativa de tu negocio.",
+  "lang": "es",
+  "start_url": "/",
+  "scope": "/",
   "icons": [
     {
       "src": "png/involution-app-icon-light-512.png",

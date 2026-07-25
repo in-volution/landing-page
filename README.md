@@ -18,12 +18,17 @@ Sitio web y plataforma interactiva de **Involution** — Automatización impulsa
 
 ```text
 .
-├── assets/                   # Vídeos, logos e imágenes (OG, favicon, apple-touch)
+├── assets/
+│   ├── brand/despliegue/     # Sistema de marca: logos, iconos, favicon, OG, manifest
+│   └── *.mp4 / *.jpg         # Vídeos de la landing y sus pósters
 ├── docs/
 │   └── plan-refactorizacion.md
-├── index.html                # Página (HTML estático, contenido incluido)
-├── styles.css                # Tokens de diseño + componentes
-├── main.js                   # Interactividad (JS vanilla)
+├── index.html                # Landing page principal (HTML estático)
+├── logo-lab.html             # Laboratorio de experimentación de marca/logo
+├── logo-lab.css              # Estilos del laboratorio de logos
+├── logo-lab.js               # Lógica del laboratorio de logos
+├── styles.css                # Tokens de diseño, tipografía Geist y componentes B2B
+├── main.js                   # Interactividad (JS vanilla), autoplay por viewport y tracking
 ├── robots.txt                # SEO
 ├── sitemap.xml               # SEO
 ├── vercel.json               # Configuración de despliegue en Vercel
