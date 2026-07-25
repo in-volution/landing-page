@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
-  <title id="title">Icono de aplicación Involution Despliegue oscuro</title>
-  <rect width="512" height="512" rx="112" fill="#0a0a0a"/>
-  <g transform="translate(16 16) scale(7.5)">
+  <title id="title">Icono de aplicación Involution Despliegue enmascarable</title>
+  <rect width="512" height="512" fill="#0a0a0a"/>
+  <g transform="translate(70.4 70.4) scale(5.8)">
     <path d="M8 56V8h48v10H18v38H8Z" fill="#fff"/>
     <path d="M23 49V23h26v10H33v16H23Z" fill="#fff"/>
     <rect x="38" y="38" width="12" height="12" rx="2" fill="#3155ff"/>

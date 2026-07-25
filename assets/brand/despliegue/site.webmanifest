@@ -13,7 +13,13 @@
       "purpose": "any"
     },
     {
-      "src": "png/involution-app-icon-dark-512.png",
+      "src": "png/involution-app-icon-light-1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "png/involution-app-icon-maskable-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
