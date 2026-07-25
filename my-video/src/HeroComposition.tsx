@@ -1,73 +1,141 @@
-import { AbsoluteFill } from "remotion";
-import { TransitionSeries, linearTiming } from "@remotion/transitions";
-import { fade } from "@remotion/transitions/fade";
-import { z } from "zod";
-import { S1ViejoModelo } from "./scenes/hero/S1ViejoModelo";
-import { S2Anuncio } from "./scenes/hero/S2Anuncio";
-import { S3Giro } from "./scenes/hero/S3Giro";
-import { S4Pasos } from "./scenes/hero/S4Pasos";
-import { S5Operacion } from "./scenes/hero/S5Operacion";
-import { S6Cierre } from "./scenes/hero/S6Cierre";
-import { SCENE, TRANSITION } from "./lib/heroChoreography";
+import {
+  AbsoluteFill,
+  Img,
+  staticFile,
+  useCurrentFrame,
+  interpolate,
+  Easing,
+  Interactive,
+} from "remotion";
+import { DotGridBackground } from "./components/DotGridBackground";
+import { InvolutionMark } from "./components/InvolutionMark";
+import { BEAT, DURATION, MARK_PACE } from "./lib/heroLoop";
 import { colors } from "./theme";
 
-export const heroSchema = z.object({
-  anuncioHeadline: z.string(),
-  anuncioSubline: z.string(),
-  cierreTagline: z.string(),
-});
+const EASE = Easing.bezier(0.16, 1, 0.3, 1);
+const BREATHE = Easing.inOut(Easing.ease);
 
-export type HeroProps = z.infer<typeof heroSchema>;
+/**
+ * Wordmark geometry, measured on public/involution-logo-white.png (1469x466)
+ * and scaled to a 300px-tall lockup so the mark SVG and the PNG wordmark line
+ * up exactly as in the official logo.
+ */
+const LOCKUP_SCALE = 300 / 466;
+const LOGO_PNG_HEIGHT = 300;
+const MARK_HEIGHT = Math.round(441 * LOCKUP_SCALE);
+const WORDMARK_WIDTH = Math.round(1212 * LOCKUP_SCALE);
+const WORDMARK_OFFSET = Math.round(244 * LOCKUP_SCALE);
+const LOCKUP_GAP = Math.round(141 * LOCKUP_SCALE);
 
-const transition = () => (
-  <TransitionSeries.Transition
-    presentation={fade()}
-    timing={linearTiming({ durationInFrames: TRANSITION })}
-  />
-);
+/** Midpoint of the breath, so the loop inhales and exhales exactly once. */
+const BREATH_PEAK = Math.round((BEAT.settled + DURATION) / 2);
 
-export const HeroFuerzaLaboral: React.FC<HeroProps> = ({
-  anuncioHeadline,
-  anuncioSubline,
-  cierreTagline,
-}) => {
+/**
+ * Hero background loop: nothing but the logo. The mark assembles, the accent
+ * wipes up, the wordmark reveals, and then the finished lockup breathes for the
+ * rest of the clip before fading back to the background so the loop restarts
+ * invisibly.
+ */
+export const HeroLoop: React.FC = () => {
+  const frame = useCurrentFrame();
+
   return (
     <AbsoluteFill style={{ backgroundColor: colors.bg }}>
-      <TransitionSeries>
-        <TransitionSeries.Sequence durationInFrames={SCENE.viejoModelo}>
-          <S1ViejoModelo />
-        </TransitionSeries.Sequence>
+      <DotGridBackground drift />
 
-        {transition()}
+      {/* Soft pool of light that swells with the breath, so the held frame
+          never reads as a frozen image. */}
+      <AbsoluteFill
+        style={{
+          background: `radial-gradient(ellipse 42% 46% at 50% 50%, rgba(59,88,245,0.16), transparent 70%)`,
+          opacity: interpolate(
+            frame,
+            [BEAT.accentIn, BEAT.settled, BREATH_PEAK, DURATION],
+            [0, 0.6, 1, 0.6],
+            {
+              extrapolateLeft: "clamp",
+              extrapolateRight: "clamp",
+              easing: BREATHE,
+            },
+          ),
+        }}
+      />
 
-        <TransitionSeries.Sequence durationInFrames={SCENE.anuncio}>
-          <S2Anuncio headline={anuncioHeadline} subline={anuncioSubline} />
-        </TransitionSeries.Sequence>
+      <AbsoluteFill style={{ alignItems: "center", justifyContent: "center" }}>
+        <Interactive.Div
+          name="Logo lockup"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: interpolate(
+              frame,
+              [BEAT.wordmarkIn, BEAT.settled],
+              [0, LOCKUP_GAP],
+              {
+                extrapolateLeft: "clamp",
+                extrapolateRight: "clamp",
+                easing: EASE,
+              },
+            ),
+            scale: interpolate(
+              frame,
+              [BEAT.settled, BREATH_PEAK, DURATION],
+              [1, 1.022, 1],
+              {
+                extrapolateLeft: "clamp",
+                extrapolateRight: "clamp",
+                easing: BREATHE,
+              },
+            ),
+          }}
+        >
+          <InvolutionMark
+            height={MARK_HEIGHT}
+            assembleAt={BEAT.markIn}
+            accentAt={BEAT.accentIn}
+            pace={MARK_PACE}
+          />
 
-        {transition()}
+          <Interactive.Div
+            name="Wordmark"
+            style={{
+              height: LOGO_PNG_HEIGHT,
+              overflow: "hidden",
+              width: interpolate(
+                frame,
+                [BEAT.wordmarkIn, BEAT.settled],
+                [0, WORDMARK_WIDTH],
+                {
+                  extrapolateLeft: "clamp",
+                  extrapolateRight: "clamp",
+                  easing: EASE,
+                },
+              ),
+            }}
+          >
+            <Img
+              src={staticFile("involution-logo-white.png")}
+              style={{
+                height: LOGO_PNG_HEIGHT,
+                maxWidth: "none",
+                marginLeft: -WORDMARK_OFFSET,
+              }}
+            />
+          </Interactive.Div>
+        </Interactive.Div>
+      </AbsoluteFill>
 
-        <TransitionSeries.Sequence durationInFrames={SCENE.giro}>
-          <S3Giro />
-        </TransitionSeries.Sequence>
-
-        {transition()}
-
-        <TransitionSeries.Sequence durationInFrames={SCENE.pasos}>
-          <S4Pasos />
-        </TransitionSeries.Sequence>
-
-        {transition()}
-
-        <TransitionSeries.Sequence durationInFrames={SCENE.operacion}>
-          <S5Operacion />
-        </TransitionSeries.Sequence>
-
-        {transition()}
-
-        <TransitionSeries.Sequence durationInFrames={SCENE.cierre}>
-          <S6Cierre tagline={cierreTagline} />
-        </TransitionSeries.Sequence>
-      </TransitionSeries>
+      {/* Fade back to the empty background so the loop restarts invisibly. */}
+      <AbsoluteFill
+        style={{
+          backgroundColor: colors.bg,
+          opacity: interpolate(frame, [BEAT.loopOut, DURATION], [0, 1], {
+            extrapolateLeft: "clamp",
+            extrapolateRight: "clamp",
+            easing: EASE,
+          }),
+        }}
+      />
     </AbsoluteFill>
   );
 };

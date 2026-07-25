@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Involution Umbral</title>
+  <path
+    fill="#0a0a0a"
+    fill-rule="evenodd"
+    d="M15 7h34a8 8 0 0 1 8 8v18H45V19H19v26h26v-7h12v11a8 8 0 0 1-8 8H15a8 8 0 0 1-8-8V15a8 8 0 0 1 8-8Zm10 18h14v14H25V25Z"
+  />
+  <path d="m43 16 9 9-9 9-9-9 9-9Z" fill="#3155ff" />
+</svg>

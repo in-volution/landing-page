@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Sistema de marca Involution Despliegue</title>
+  <desc id="desc">Lámina con versiones horizontal, apilada, clara, oscura y de aplicación.</desc>
+  <style>
+    @font-face{font-family:GeistBrand;src:url("fonts/Geist-Bold.ttf")} .title{font-family:GeistBrand,Geist,Arial,sans-serif;font-weight:700}.meta{font-family:monospace;letter-spacing:2px}
+  </style>
+  <rect width="1600" height="1000" fill="#eef1f6"/>
+  <text class="meta" x="48" y="52" fill="#3155ff" font-size="18">INVOLUTION / BRAND SYSTEM / DESPLIEGUE</text>
+  <text class="meta" x="1552" y="52" fill="#606774" font-size="15" text-anchor="end">V01</text>
+
+  <rect x="40" y="88" width="1000" height="390" rx="4" fill="#fff"/>
+  <text class="meta" x="74" y="130" fill="#6b7280" font-size="14">PRIMARY / LIGHT</text>
+  <image href="involution-logo-horizontal-color.svg" x="104" y="182" width="830" height="230"/>
+
+  <rect x="1060" y="88" width="500" height="390" rx="4" fill="#07090e"/>
+  <text class="meta" x="1094" y="130" fill="#aeb5c2" font-size="14">PRIMARY / DARK</text>
+  <image href="involution-logo-horizontal-white-accent.svg" x="1094" y="215" width="432" height="120"/>
+
+  <rect x="40" y="498" width="500" height="454" rx="4" fill="#fff"/>
+  <text class="meta" x="74" y="540" fill="#6b7280" font-size="14">STACKED / LIGHT</text>
+  <image href="involution-logo-stacked-color.svg" x="110" y="570" width="360" height="292"/>
+
+  <rect x="560" y="498" width="500" height="454" rx="4" fill="#3155ff"/>
+  <text class="meta" x="594" y="540" fill="#dce2ff" font-size="14">MONO / BRAND BLUE</text>
+  <image href="involution-logo-stacked-white.svg" x="630" y="570" width="360" height="292"/>
+
+  <rect x="1080" y="498" width="480" height="454" rx="4" fill="#fff"/>
+  <text class="meta" x="1114" y="540" fill="#6b7280" font-size="14">APP / AVATAR</text>
+  <image href="involution-app-icon-light.svg" x="1120" y="584" width="184" height="184"/>
+  <image href="involution-app-icon-dark.svg" x="1334" y="584" width="184" height="184"/>
+  <image href="involution-isotype-color.svg" x="1120" y="820" width="84" height="84"/>
+  <text class="title" x="1232" y="876" fill="#0a0a0a" font-size="58" letter-spacing="-3">involution</text>
+</svg>

@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Involution — Laboratorio de marca</title>
+    <meta name="description" content="Comparativa interactiva de nuevas rutas de identidad visual para Involution." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="logo-lab.css" />
+  </head>
+  <body>
+    <svg class="sprite" aria-hidden="true">
+      <symbol id="mark-origen" viewBox="0 0 64 64">
+        <path
+          class="mark-ink"
+          d="M34 8h13a9 9 0 0 1 9 9v30a9 9 0 0 1-9 9H17a9 9 0 0 1-9-9V25a9 9 0 0 1 9-9h22a9 9 0 0 1 9 9v14a9 9 0 0 1-9 9H25a9 9 0 0 1-9-9v-6a9 9 0 0 1 9-9h6a9 9 0 0 1 9 9"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="8"
+          stroke-linecap="square"
+          stroke-linejoin="round"
+        />
+        <circle class="mark-accent" cx="40" cy="33" r="5" />
+      </symbol>
+      <symbol id="mark-despliegue" viewBox="0 0 64 64">
+        <path class="mark-ink" d="M8 56V8h48v10H18v38H8Z" fill="currentColor" />
+        <path class="mark-ink" d="M23 49V23h26v10H33v16H23Z" fill="currentColor" />
+        <rect class="mark-accent" x="38" y="38" width="12" height="12" rx="2" />
+      </symbol>
+      <symbol id="mark-umbral" viewBox="0 0 64 64">
+        <path class="mark-ink" fill="currentColor" fill-rule="evenodd" d="M15 7h34a8 8 0 0 1 8 8v18H45V19H19v26h26v-7h12v11a8 8 0 0 1-8 8H15a8 8 0 0 1-8-8V15a8 8 0 0 1 8-8Zm10 18h14v14H25V25Z" />
+        <path class="mark-accent" d="m43 16 9 9-9 9-9-9 9-9Z" />
+      </symbol>
+    </svg>
+
+    <header class="lab-header">
+      <a class="back-link" href="index.html" aria-label="Volver a la web de Involution">
+        <span aria-hidden="true">←</span>
+        Web actual
+      </a>
+      <span class="lab-meta">Brand lab · v01</span>
+    </header>
+
+    <main>
+      <section class="intro">
+        <div>
+          <p class="eyebrow">In + volution</p>
+          <h1>Desarrollar<br />desde dentro.</h1>
+        </div>
+        <div class="intro-copy">
+          <p>El nuevo símbolo debe contar una sola idea: la capacidad nace en el interior y se despliega hasta transformar el sistema completo.</p>
+          <p class="hint">Selecciona una ruta para verla aplicada en los contextos reales de la marca.</p>
+        </div>
+      </section>
+
+      <section class="concepts" aria-labelledby="concepts-title">
+        <div class="section-heading">
+          <h2 id="concepts-title">Tres rutas</h2>
+          <span>01 — Selección</span>
+        </div>
+        <ul class="concept-grid">
+          <li>
+            <button class="concept-card" type="button" data-concept="origen" aria-pressed="false">
+              <span class="concept-card__top">
+                <span class="concept-number">A</span>
+                <span class="concept-status">Seleccionar</span>
+              </span>
+              <svg class="concept-mark" aria-hidden="true"><use href="#mark-origen"></use></svg>
+              <span class="concept-card__body">
+                <strong>Origen</strong>
+                <span>Un único trazo se desarrolla desde el núcleo hasta construir el sistema.</span>
+              </span>
+            </button>
+          </li>
+
+          <li>
+            <button class="concept-card is-selected" type="button" data-concept="despliegue" aria-pressed="true">
+              <span class="concept-card__top">
+                <span class="concept-number">B</span>
+                <span class="concept-status">Seleccionado</span>
+              </span>
+              <svg class="concept-mark" aria-hidden="true"><use href="#mark-despliegue"></use></svg>
+              <span class="concept-card__body">
+                <strong>Despliegue</strong>
+                <span>Capas de capacidad que crecen desde una unidad interior.</span>
+              </span>
+            </button>
+          </li>
+
+          <li>
+            <button class="concept-card" type="button" data-concept="umbral" aria-pressed="false">
+              <span class="concept-card__top">
+                <span class="concept-number">C</span>
+                <span class="concept-status">Seleccionar</span>
+              </span>
+              <svg class="concept-mark" aria-hidden="true"><use href="#mark-umbral"></use></svg>
+              <span class="concept-card__body">
+                <strong>Umbral</strong>
+                <span>La inteligencia interior atraviesa el límite y transforma lo que la contiene.</span>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </section>
+
+      <section class="applications" aria-labelledby="applications-title">
+        <div class="section-heading">
+          <h2 id="applications-title">En contexto</h2>
+          <span>02 — Validación</span>
+        </div>
+
+        <article class="nav-preview">
+          <a class="brand-lockup" href="#" aria-label="Involution">
+            <svg class="brand-mark" data-mark-slot aria-hidden="true"><use href="#mark-despliegue"></use></svg>
+            <span>involution</span>
+          </a>
+          <div class="nav-preview__links" aria-hidden="true">
+            <span>Nuestro por qué</span>
+            <span>Red Multiagente</span>
+            <span>Capacidades</span>
+          </div>
+          <span class="nav-preview__cta">Hablemos</span>
+        </article>
+
+        <div class="application-grid">
+          <article class="hero-preview">
+            <div class="hero-preview__glow"></div>
+            <div class="hero-preview__brand">
+              <svg class="brand-mark brand-mark--light" data-mark-slot aria-hidden="true"><use href="#mark-despliegue"></use></svg>
+              <span>involution</span>
+            </div>
+            <div class="hero-preview__copy">
+              <span class="preview-label">AI-powered automation</span>
+              <h3>La capacidad<br />nace dentro.</h3>
+              <p>Equipos de agentes autónomos que transforman tu operativa desde el núcleo.</p>
+            </div>
+          </article>
+
+          <div class="small-previews">
+            <article class="icon-preview">
+              <div>
+                <span class="preview-label">App icon · 64 px</span>
+                <div class="app-icon">
+                  <svg data-mark-slot aria-hidden="true"><use href="#mark-despliegue"></use></svg>
+                </div>
+              </div>
+              <div>
+                <span class="preview-label">Favicon · 16 px</span>
+                <div class="favicon-line">
+                  <span class="favicon">
+                    <svg data-mark-slot aria-hidden="true"><use href="#mark-despliegue"></use></svg>
+                  </span>
+                  <span>Involution | AI Automation</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="mono-preview">
+              <span class="preview-label">Prueba monocroma</span>
+              <svg class="mono-mark" data-mark-slot aria-hidden="true"><use href="#mark-despliegue"></use></svg>
+              <p>Debe conservar su lectura sin depender del azul.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="rationale" aria-live="polite">
+        <div class="section-heading">
+          <h2>Lectura de marca</h2>
+          <span>03 — Criterio</span>
+        </div>
+        <div class="rationale-grid">
+          <p class="rationale-name" id="selected-name">B · Despliegue</p>
+          <p class="rationale-copy" id="selected-rationale">
+            La unidad azul funciona como capacidad inicial. Los dos ángulos que la contienen amplían su escala de forma modular: una lectura más técnica, sistemática y ligada a la orquestación de
+            agentes.
+          </p>
+          <dl class="scorecard">
+            <div>
+              <dt>Idea</dt>
+              <dd id="score-idea">8.5</dd>
+            </div>
+            <div>
+              <dt>Memoria</dt>
+              <dd id="score-memory">8.0</dd>
+            </div>
+            <div>
+              <dt>16 px</dt>
+              <dd id="score-small">9.5</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="rationale-actions">
+          <a class="brand-pack-link" href="assets/brand/involution-despliegue-brand-pack.zip" download>Descargar identidad completa <span aria-hidden="true">↓</span></a>
+          <a class="live-preview-link" id="live-preview-link" href="./?logo=despliegue">Ver Despliegue en la web completa <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>Involution · Laboratorio interno de identidad</span>
+      <span id="footer-selection">Ruta activa: Despliegue</span>
+    </footer>
+
+    <script src="logo-lab.js"></script>
+  </body>
+</html>

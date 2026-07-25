@@ -331,6 +331,40 @@ a {
   height: 52px;
   width: auto;
 }
+.nav__logo-experiment {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.nav__logo-experiment-mark {
+  width: 32px;
+  height: 32px;
+}
+.nav__logo-experiment span {
+  font-size: 27px;
+  font-weight: 650;
+  letter-spacing: -0.055em;
+}
+.logo-experiment-return {
+  position: fixed;
+  left: 18px;
+  bottom: 18px;
+  z-index: 100;
+  padding: 9px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(5, 5, 5, 0.82);
+  color: #fff;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.logo-experiment-return:hover {
+  background: #3155ff;
+}
 .nav__links {
   display: flex;
   align-items: center;
@@ -443,6 +477,11 @@ a {
   grid-template-columns: 1.05fr 1fr;
   align-items: center;
   gap: 52px;
+}
+/* Sin esto, el mínimo automático de un elemento de grid es su min-content y
+   la columna no puede encogerse por debajo del contenido más ancho. */
+.hero__grid > * {
+  min-width: 0;
 }
 
 .hero__badge {
@@ -1278,6 +1317,14 @@ a {
   .nav__links {
     display: none;
   }
+  /* Logo + "Llámanos" + botón de WhatsApp no caben a la vez: el teléfono
+     sigue accesible desde el hero, el footer y el botón flotante. */
+  .nav__tel {
+    display: none;
+  }
+  .nav__logo {
+    height: 40px;
+  }
   .hero {
     padding-top: 32px;
   }
@@ -1301,6 +1348,18 @@ a {
   }
   .hero__stats {
     gap: 20px;
+  }
+  /* La barra del panel no tiene ancho para las dos etiquetas: el título se
+     recorta y el indicador "En vivo" se mantiene en una línea. */
+  .panel__title {
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .panel__live {
+    flex: none;
+    white-space: nowrap;
   }
   .ladder-row {
     grid-template-columns: auto 1fr;

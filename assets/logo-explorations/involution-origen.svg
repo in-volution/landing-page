@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Involution Origen</title>
+  <path
+    d="M34 8h13a9 9 0 0 1 9 9v30a9 9 0 0 1-9 9H17a9 9 0 0 1-9-9V25a9 9 0 0 1 9-9h22a9 9 0 0 1 9 9v14a9 9 0 0 1-9 9H25a9 9 0 0 1-9-9v-6a9 9 0 0 1 9-9h6a9 9 0 0 1 9 9"
+    fill="none"
+    stroke="#0a0a0a"
+    stroke-width="8"
+    stroke-linecap="square"
+    stroke-linejoin="round"
+  />
+  <circle cx="40" cy="33" r="5" fill="#3155ff" />
+</svg>

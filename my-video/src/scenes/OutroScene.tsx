@@ -32,7 +32,7 @@ export const OutroScene: React.FC<Props> = ({ headline, subline }) => {
         }}
       >
         <Img
-          src={staticFile("involut-logo-white.png")}
+          src={staticFile("involution-logo-white.png")}
           style={{
             height: 58,
             width: "auto",
@@ -107,7 +107,7 @@ export const OutroScene: React.FC<Props> = ({ headline, subline }) => {
             letterSpacing: "0.06em",
           }}
         >
-          involut.es · agentes de IA en producción
+          involution.es · agentes de IA en producción
         </Interactive.Div>
       </AbsoluteFill>
     </AbsoluteFill>

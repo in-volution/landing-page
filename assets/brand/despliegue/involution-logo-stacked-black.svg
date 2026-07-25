@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 340" role="img" aria-labelledby="title">
+  <title id="title">Logo apilado Involution Despliegue negro</title>
+  <style>
+    @font-face{font-family:GeistBrand;src:url("fonts/Geist-Bold.ttf")} .wordmark{font-family:GeistBrand,Geist,Arial,sans-serif;font-weight:700;letter-spacing:-3.6px}
+  </style>
+  <g transform="translate(130 34) scale(2.5)" fill="#0a0a0a">
+    <path d="M8 56V8h48v10H18v38H8Z"/>
+    <path d="M23 49V23h26v10H33v16H23Z"/>
+    <rect x="38" y="38" width="12" height="12" rx="2"/>
+  </g>
+  <text class="wordmark" x="210" y="286" fill="#0a0a0a" font-size="70" text-anchor="middle">involution</text>
+</svg>

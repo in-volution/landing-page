@@ -44,7 +44,7 @@ export const ColdOpenScene: React.FC<Props> = ({ timestamp, hookLine }) => {
             marginBottom: 40,
           }}
         >
-          involut-mesh · {promptText.slice(0, promptChars)}
+          involution-mesh · {promptText.slice(0, promptChars)}
         </Interactive.Div>
 
         <Interactive.Div

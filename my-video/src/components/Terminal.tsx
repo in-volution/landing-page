@@ -47,7 +47,7 @@ export const Terminal: React.FC = () => {
           color: colors.faint,
         }}
       >
-        <span>involut-mesh · runtime</span>
+        <span>involution-mesh · runtime</span>
         <span style={{ color: colors.muted }}>
           t+{elapsedSeconds.toFixed(2)}s
         </span>

@@ -1,8 +1,8 @@
 import "./index.css";
 import { Composition } from "remotion";
 import { MultiAgentSystem, multiAgentSchema } from "./Composition";
-import { HeroFuerzaLaboral, heroSchema } from "./HeroComposition";
-import { TOTAL } from "./lib/heroChoreography";
+import { HeroLoop } from "./HeroComposition";
+import { DURATION, FPS } from "./lib/heroLoop";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -27,18 +27,12 @@ export const RemotionRoot: React.FC = () => {
       />
 
       <Composition
-        id="HeroFuerzaLaboral"
-        component={HeroFuerzaLaboral}
-        durationInFrames={TOTAL}
-        fps={30}
+        id="HeroLoop"
+        component={HeroLoop}
+        durationInFrames={DURATION}
+        fps={FPS}
         width={1920}
         height={1080}
-        schema={heroSchema}
-        defaultProps={{
-          anuncioHeadline: "La nueva fuerza laboral ha llegado.",
-          anuncioSubline: "y no se contrata — se despliega.",
-          cierreTagline: "Tecnología al servicio del potencial humano.",
-        }}
       />
     </>
   );
