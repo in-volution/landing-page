@@ -81,7 +81,7 @@
             "name": "¿Cómo funciona la contratación y propiedad de los agentes?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Los agentes son propiedad tecnológica de Involution y pagas una cuota mensual por cada agente activo en producción, con soporte, actualizaciones e infraestructura en Google Cloud (GCP) incluidos. Tus datos son 100% tuyos."
+              "text": "Los agentes son propiedad tecnológica de Involution y pagas una cuota mensual por agente activo, ajustada al volumen que procesa, con soporte, actualizaciones e infraestructura en Google Cloud (GCP) incluidos. Tus datos son 100% tuyos."
             }
           },
           {
@@ -105,7 +105,7 @@
             "name": "¿Cuánto tiempo se tarda en poner en marcha un proyecto en producción?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "La mayoría de despliegues están operando en producción en 2-4 semanas. Empezamos por un primer proceso clave y escalamos de forma progresiva."
+              "text": "Ponemos tu primer proceso en producción en 2-4 semanas. Empezamos por un proceso clave y escalamos de forma progresiva."
             }
           },
           {
@@ -157,6 +157,7 @@
         <div class="nav__links">
           <a class="nav__link" href="#porque">Nuestro por qué</a>
           <a class="nav__link" href="#multiagente">Red Multiagente</a>
+          <a class="nav__link" href="#procesos">Qué automatizamos</a>
           <a class="nav__link" href="#caracteristicas">Capacidades</a>
           <a class="nav__link" href="#empezar">Cómo empezar</a>
           <a class="nav__link" href="#cta">Contacto</a>
@@ -192,8 +193,8 @@
               </div>
               <div class="hero__stats reveal">
                 <div>
-                  <div class="stat__v">2–3 sem</div>
-                  <div class="stat__k">del piloto a producción</div>
+                  <div class="stat__v">2–4 sem</div>
+                  <div class="stat__k">tu primer proceso en producción</div>
                 </div>
                 <div>
                   <div class="stat__v">24/7</div>
@@ -270,33 +271,28 @@
               El tiempo es el recurso más valioso. Por eso desplegamos una <strong>fuerza laboral tecnológica de agentes de IA</strong> que supera a cualquier proceso manual en velocidad y precisión,
               a un coste mínimo.
             </p>
-            <!-- Gráfico de escalado, dos vistas. Tiempo: curva con eje X logarítmico
-                 (1 → 10.000 tareas), geometría calculada y no dibujada a mano. Coste: un
-                 antes/después, que no pide curva sino dos barras. Las asunciones van al pie. -->
-            <figure class="scale" id="inv-scale" data-view="tiempo">
+            <!-- Gráfico de escalado: curva con eje X logarítmico (1 → 10.000 tareas),
+                 geometría calculada y no dibujada a mano. Medimos tiempo, no dinero: el
+                 coste lo pone el cliente sobre sus propias horas. Asunciones, al pie. -->
+            <figure class="scale" id="inv-scale">
               <figcaption class="scale__head">
                 <div class="eyebrow eyebrow--brand eyebrow--upper">/ Escalado</div>
                 <h3 class="scale__title">La ventaja no es la velocidad. Es el volumen.</h3>
               </figcaption>
 
               <div class="scale__bar">
-                <div class="scale__legend v-tiempo">
+                <div class="scale__legend">
                   <span class="scale__key"><span class="scale__key-line scale__key-line--human"></span>Operador humano</span>
                   <span class="scale__key"><span class="scale__key-line scale__key-line--mesh"></span>Red multiagente</span>
                 </div>
-                <div class="scale__legend v-coste"><span class="scale__key">Coste mensual de un proceso operativo</span></div>
-                <div class="scale__views" role="group" aria-label="Magnitud representada">
-                  <button type="button" class="scale__view is-on" data-view="tiempo" aria-pressed="true">Tiempo</button>
-                  <button type="button" class="scale__view" data-view="coste" aria-pressed="false">Coste</button>
-                </div>
               </div>
 
-              <div class="scale__plot v-tiempo">
+              <div class="scale__plot">
                 <svg
                   class="scale__svg"
                   viewBox="0 0 760 380"
                   role="img"
-                  aria-label="Gráfico: el tiempo del operador humano crece con el número de tareas hasta 125 jornadas para 10.000 tareas, mientras la red multiagente resuelve esas mismas 10.000 tareas en 6,7 minutos."
+                  aria-label="Gráfico: el tiempo del operador humano crece con el número de tareas hasta 125 jornadas para 10.000 tareas, mientras la red multiagente resuelve esas mismas 10.000 tareas en 5 horas."
                 >
                   <line class="scale__grid" x1="76" y1="92.3" x2="560" y2="92.3" />
                   <line class="scale__axis" x1="76" y1="300" x2="560" y2="300" />
@@ -324,16 +320,16 @@
                   <polyline
                     class="scale__line scale__line--mesh"
                     pathLength="1"
-                    points="76.0,300.00 130.4,300.00 184.9,300.00 239.4,300.00 293.8,300.00 348.3,300.00 402.7,300.00 457.1,300.00 469.2,299.99 493.4,299.99 517.6,299.99 529.7,299.98 541.8,299.98 553.9,299.97 560.0,299.97"
+                    points="76.0,300.00 82.0,300.00 88.1,300.00 94.2,300.00 100.2,300.00 106.3,300.00 112.3,300.00 118.3,300.00 124.4,300.00 130.4,300.00 136.5,300.00 142.6,300.00 148.6,300.00 154.7,300.00 160.7,300.00 166.8,300.00 172.8,300.00 178.8,300.00 184.9,300.00 190.9,300.00 197.0,300.00 203.1,300.00 209.1,300.00 215.2,300.00 221.2,300.00 227.3,300.00 233.3,300.00 239.3,300.00 245.4,299.99 251.4,299.99 257.5,299.99 263.6,299.99 269.6,299.99 275.6,299.99 281.7,299.99 287.8,299.99 293.8,299.99 299.9,299.99 305.9,299.99 311.9,299.99 318.0,299.99 324.1,299.98 330.1,299.98 336.1,299.98 342.2,299.98 348.3,299.97 354.3,299.97 360.4,299.97 366.4,299.96 372.4,299.96 378.5,299.96 384.6,299.95 390.6,299.95 396.6,299.94 402.7,299.93 408.8,299.93 414.8,299.92 420.9,299.91 426.9,299.90 432.9,299.88 439.0,299.87 445.1,299.85 451.1,299.83 457.1,299.82 463.2,299.79 469.3,299.77 475.3,299.74 481.4,299.71 487.4,299.67 493.4,299.63 499.5,299.59 505.6,299.54 511.6,299.48 517.6,299.42 523.7,299.35 529.8,299.27 535.8,299.18 541.9,299.08 547.9,298.97 554.0,298.84 560.0,298.70"
                   />
 
                   <circle class="scale__end scale__end--human" cx="560" cy="40.38" r="4.5" />
-                  <circle class="scale__end scale__end--mesh" cx="560" cy="299.97" r="4.5" />
+                  <circle class="scale__end scale__end--mesh" cx="560" cy="298.7" r="4.5" />
                   <g class="scale__endlabel">
                     <text x="574" y="36">Operador humano</text>
                     <text x="574" y="55" class="scale__endvalue">125 jornadas</text>
                     <text x="574" y="294">Red multiagente</text>
-                    <text x="574" y="313" class="scale__endvalue">6,7 minutos</text>
+                    <text x="574" y="313" class="scale__endvalue">5 horas</text>
                   </g>
 
                   <!-- Puntos de lectura, con anillo de 2px en el color del fondo -->
@@ -348,26 +344,7 @@
                 </div>
               </div>
 
-              <!-- Antes/después: dos barras y una cifra. Un log de cuatro décadas aquí
-                   sería ruido; el dato es un único cociente. -->
-              <div class="cost v-coste">
-                <div class="cost__hero">
-                  <div class="cost__delta">−80%</div>
-                  <div class="cost__delta-label">menos coste cada mes</div>
-                </div>
-                <div class="cost__bars">
-                  <div class="cost__row">
-                    <div class="cost__meta"><span class="cost__label">Hoy</span><span class="cost__value">10.000 €/mes</span></div>
-                    <div class="cost__bar cost__bar--now"></div>
-                  </div>
-                  <div class="cost__row">
-                    <div class="cost__meta"><span class="cost__label">Con Involution</span><span class="cost__value cost__value--mesh">2.000 €/mes</span></div>
-                    <div class="cost__bar cost__bar--inv"></div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="scale__readout v-tiempo">
+              <div class="scale__readout">
                 <dl class="scale__readout-list">
                   <div>
                     <dt>Operador humano</dt>
@@ -375,17 +352,15 @@
                   </div>
                   <div>
                     <dt>Red multiagente</dt>
-                    <dd>6,7 minutos</dd>
+                    <dd>5 horas</dd>
                   </div>
                 </dl>
                 <p class="scale__readout-foot">para las mismas 10.000 tareas</p>
               </div>
 
-              <p class="scale__insight v-tiempo"><strong>10.000 tareas en 6,7 minutos</strong>: lo que un operador tarda en resolver una sola.</p>
-              <p class="scale__insight v-coste"><strong>8.000 € liberados cada mes</strong>, sobre el mismo proceso y el mismo volumen.</p>
+              <p class="scale__insight"><strong>10.000 tareas en 5 horas</strong>: lo que un operador tarda en resolver cincuenta.</p>
 
-              <p class="scale__note v-tiempo">Escala logarítmica. 6 min por tarea y 200 agentes en paralelo. Cifras ilustrativas.</p>
-              <p class="scale__note v-coste">Ejemplo sobre un proceso de 10.000 €/mes. Tu ahorro se calcula en el diagnóstico.</p>
+              <p class="scale__note">Escala logarítmica. 6 min por tarea en manual, 45 s por tarea agéntica y 25 agentes en paralelo. Cifras ilustrativas.</p>
 
               <table class="visually-hidden">
                 <caption>
@@ -402,27 +377,27 @@
                   <tr>
                     <th scope="row">1</th>
                     <td>6 min</td>
-                    <td>8 s</td>
+                    <td>45 s</td>
                   </tr>
                   <tr>
                     <th scope="row">10</th>
                     <td>1 h</td>
-                    <td>8 s</td>
+                    <td>45 s</td>
                   </tr>
                   <tr>
                     <th scope="row">100</th>
-                    <td>10 h</td>
-                    <td>8 s</td>
+                    <td>1,3 jornadas</td>
+                    <td>3 min</td>
                   </tr>
                   <tr>
                     <th scope="row">1.000</th>
                     <td>12,5 jornadas</td>
-                    <td>40 s</td>
+                    <td>30 min</td>
                   </tr>
                   <tr>
                     <th scope="row">10.000</th>
                     <td>125 jornadas</td>
-                    <td>6,7 min</td>
+                    <td>5 h</td>
                   </tr>
                 </tbody>
               </table>
@@ -458,8 +433,31 @@
               </div>
             </div>
             <video id="inv-mesh-video" src="assets/sistema-multiagente.mp4" muted loop playsinline preload="metadata" class="mesh-demo__video"></video>
-            <figcaption class="visually-hidden">Demostración del sistema multiagente de Involution resolviendo un pedido urgente de extremo a extremo.</figcaption>
+            <figcaption class="mesh-demo__caption">
+              <strong>Pedido urgente:</strong> la red detecta la incidencia, reclama al proveedor, reajusta la ruta e informa al cliente. Sin intervención humana.
+            </figcaption>
           </figure>
+        </div>
+      </section>
+
+      <!-- QUÉ AUTOMATIZAMOS · los procesos, nombrados. Sin cifras: aquí solo se
+           responde "¿sobre qué trabajáis?", que es lo que falta antes de las fases. -->
+      <section class="section section--soft" id="procesos">
+        <div class="wrap-1040">
+          <div class="section-head--center on-scroll-c">
+            <div class="eyebrow">/ QUÉ AUTOMATIZAMOS</div>
+            <h2 class="h2-sm">Procesos completos, no tareas sueltas</h2>
+            <p class="lead">Cualquier proceso que implique datos, decisiones y acciones repartidas entre varios sistemas.</p>
+          </div>
+          <ul class="procesos on-scroll-c">
+            <li class="chip"><span class="chip__dot"></span>Gestión de pedidos</li>
+            <li class="chip"><span class="chip__dot"></span>Incidencias con proveedores</li>
+            <li class="chip"><span class="chip__dot"></span>Conciliación financiera</li>
+            <li class="chip"><span class="chip__dot"></span>Facturación y cobros</li>
+            <li class="chip"><span class="chip__dot"></span>Cualificación de leads B2B</li>
+            <li class="chip"><span class="chip__dot"></span>Atención al cliente</li>
+          </ul>
+          <p class="procesos__foot">¿El tuyo no está en la lista? Suele ser el que más margen tiene.</p>
         </div>
       </section>
 
@@ -603,7 +601,7 @@
             <div class="step on-scroll-sm">
               <div class="badge-num">04</div>
               <h3 class="step__title">Operación y mantenimiento 24/7</h3>
-              <p class="step__desc">Una cuota mensual por agente activo que cubre operación, soporte y mantenimiento.</p>
+              <p class="step__desc">Una cuota mensual por agente activo, ajustada al volumen que procesa, que cubre operación, soporte y mantenimiento.</p>
             </div>
           </div>
         </div>
@@ -683,7 +681,7 @@
                 <div class="chip"><span class="chip__dot"></span>Punto de entrada</div>
                 <h3 class="ladder__title">Piloto</h3>
               </div>
-              <p class="ladder__desc">Un agente resolviendo un proceso real en producción en 2-3 semanas, con métricas visibles desde el primer día.</p>
+              <p class="ladder__desc">Un agente resolviendo un proceso real en producción en 2-4 semanas, con métricas visibles desde el primer día.</p>
             </div>
             <div class="ladder-row on-scroll-sm">
               <div class="badge-num">04</div>
@@ -691,7 +689,7 @@
                 <div class="chip"><span class="chip__dot"></span>Recurrente</div>
                 <h3 class="ladder__title">Retainer operativo</h3>
               </div>
-              <p class="ladder__desc">Operamos y ampliamos tus agentes por una cuota mensual que cubre soporte, mantenimiento e infraestructura.</p>
+              <p class="ladder__desc">Operamos y ampliamos tus agentes por una cuota mensual ajustada al volumen que procesan, que cubre soporte, mantenimiento e infraestructura.</p>
             </div>
             <div class="ladder-row on-scroll-sm">
               <div class="badge-num">05</div>
@@ -703,7 +701,7 @@
             </div>
           </div>
           <div class="cta-inline">
-            <span>Habla con nuestro equipo técnico sobre tu caso.</span>
+            <span>Habla directamente con quien va a construirlo.</span>
             <a href="#cta" data-cta="ladder-contacto">Contáctanos →</a>
           </div>
         </div>
@@ -727,8 +725,8 @@
             <details class="faq">
               <summary class="faq__summary"><span>¿Cómo funciona la contratación y propiedad de los agentes?</span><span class="faq__icon">+</span></summary>
               <div class="faq__body">
-                Los agentes son propiedad tecnológica de Involution y pagas una cuota mensual por cada agente activo en producción, con soporte, actualizaciones e infraestructura en Google Cloud (GCP)
-                incluidos. Tus datos son 100% tuyos.
+                Los agentes son propiedad tecnológica de Involution y pagas una cuota mensual por agente activo, ajustada al volumen que procesa, con soporte, actualizaciones e infraestructura en
+                Google Cloud (GCP) incluidos. Tus datos son 100% tuyos.
               </div>
             </details>
             <details class="faq">
@@ -747,7 +745,7 @@
             </details>
             <details class="faq">
               <summary class="faq__summary"><span>¿Cuánto tiempo se tarda en poner en marcha un proyecto en producción?</span><span class="faq__icon">+</span></summary>
-              <div class="faq__body">La mayoría de despliegues están operando en producción en 2-4 semanas. Empezamos por un primer proceso clave y escalamos de forma progresiva.</div>
+              <div class="faq__body">Ponemos tu primer proceso en producción en 2-4 semanas. Empezamos por un proceso clave y escalamos de forma progresiva.</div>
             </details>
             <details class="faq">
               <summary class="faq__summary"><span>¿Qué esfuerzo o dedicación requiere por parte de nuestro equipo?</span><span class="faq__icon">+</span></summary>
@@ -823,6 +821,7 @@
         </div>
         <div class="footer__bottom">
           <span class="footer__copy">© 2026 Involution. Todos los derechos reservados.</span>
+          <span class="footer__legal"><a href="/aviso-legal">Aviso legal</a><a href="/privacidad">Política de privacidad</a></span>
           <a class="footer__mail" href="mailto:hola@involution.es">hola@involution.es</a>
         </div>
       </footer>

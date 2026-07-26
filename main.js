@@ -88,8 +88,8 @@
     }
   });
 
-  // 4) Gráfico de escalado: se dibuja al entrar en pantalla, conmuta entre tiempo y
-  //    coste, y deja leer cualquier volumen de tareas con el puntero o el teclado.
+  // 4) Gráfico de escalado: se dibuja al entrar en pantalla y deja leer cualquier
+  //    volumen de tareas con el puntero o el teclado.
   var scale = document.getElementById('inv-scale');
   if (scale) {
     var plot = scale.querySelector('.scale__plot');
@@ -125,14 +125,13 @@
       var txt = nf(s / 28800, s / 28800 < 100 ? 1 : 0);
       return txt + (txt === '1' ? ' jornada' : ' jornadas');
     };
-    // Las mismas cifras declaradas al pie del gráfico. Solo la vista de tiempo
-    // tiene curva: la de coste es un antes/después con los dos valores impresos.
+    // Las mismas cifras declaradas al pie del gráfico.
     var Y_MAX = 130 * 28800; // 130 jornadas de 8 h, en segundos
     var humanSec = function (n) {
       return n * 360; // 6 min por tarea
     };
     var meshSec = function (n) {
-      return Math.ceil(n / 200) * 8; // 8 s por tarea, 200 en paralelo
+      return Math.ceil(n / 25) * 45; // 45 s por tarea, 25 en paralelo
     };
 
     var xOf = function (n) {
@@ -217,31 +216,6 @@
       kbTasks = readTasks(Math.max(1, Math.min(10000, kbTasks * Math.pow(10, dir * 0.1))));
     });
 
-    // El estado por defecto del CSS ya es el gráfico completo: la animación solo
-    // se añade cuando el usuario no ha pedido reducir movimiento.
-    var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var draw = function () {
-      if (still) return;
-      scale.classList.remove('is-drawing');
-      void scale.offsetWidth; // reinicia la animación al cambiar de vista
-      scale.classList.add('is-drawing');
-    };
-
-    scale.querySelectorAll('.scale__view').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var name = btn.getAttribute('data-view');
-        if (scale.getAttribute('data-view') === name) return;
-        scale.setAttribute('data-view', name);
-        scale.querySelectorAll('.scale__view').forEach(function (other) {
-          var on = other === btn;
-          other.classList.toggle('is-on', on);
-          other.setAttribute('aria-pressed', on ? 'true' : 'false');
-        });
-        clear();
-        draw();
-      });
-    });
-
     // En pantallas estrechas se ocultan las etiquetas del extremo, así que el
     // viewBox se recorta para que el trazado ocupe todo el ancho disponible.
     var fitViewBox = function () {
@@ -250,12 +224,15 @@
     fitViewBox();
     window.addEventListener('resize', fitViewBox, { passive: true });
 
+    // El estado por defecto del CSS ya es el gráfico completo: el trazado solo se
+    // anima cuando el usuario no ha pedido reducir movimiento.
+    var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (!still && 'IntersectionObserver' in window) {
       var drawObserver = new IntersectionObserver(
         function (entries) {
           entries.forEach(function (entry) {
             if (entry.isIntersecting) {
-              draw();
+              scale.classList.add('is-drawing');
               drawObserver.disconnect();
             }
           });

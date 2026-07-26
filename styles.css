@@ -824,52 +824,12 @@ a {
 .scale__title {
   margin-bottom: 0;
 }
-/* Conmutador de vista: una sola magnitud visible cada vez, tanto en el SVG como
-   en los textos que la acompañan. */
-.scale[data-view='tiempo'] .v-coste,
-.scale[data-view='coste'] .v-tiempo {
-  display: none;
-}
-
 .scale__bar {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
   gap: 14px 24px;
   margin-bottom: 12px;
-}
-.scale__views {
-  display: inline-flex;
-  padding: 3px;
-  border: 1px solid var(--line-2);
-  border-radius: 999px;
-  background: var(--bg-soft);
-}
-.scale__view {
-  appearance: none;
-  border: 0;
-  cursor: pointer;
-  padding: 6px 16px;
-  border-radius: 999px;
-  background: transparent;
-  font-family: var(--mono);
-  font-size: 12px;
-  color: var(--muted-2);
-  transition:
-    background 0.18s ease,
-    color 0.18s ease;
-}
-.scale__view:hover {
-  color: var(--ink);
-}
-.scale__view.is-on {
-  background: var(--ink);
-  color: #fff;
-}
-.scale__view:focus-visible {
-  outline: 2px solid var(--brand-ui);
-  outline-offset: 2px;
 }
 
 .scale__legend {
@@ -898,13 +858,12 @@ a {
 }
 
 /* El SVG estira al ancho del contenedor y, con relación 2:1, se come demasiado
-   alto. El tope va a todo el bloque, no solo al gráfico, para que el conmutador
-   y los pies no queden flotando sobre el vacío que deja el trazado. El filete
+   alto. El tope va a todo el bloque, no solo al gráfico, para que la leyenda y
+   los pies no queden flotando sobre el vacío que deja el trazado. El filete
    superior de .scale se queda a ancho completo, haciendo de separador. */
 .scale__head,
 .scale__bar,
 .scale__plot,
-.cost,
 .scale__readout,
 .scale__insight,
 .scale__note {
@@ -946,80 +905,6 @@ a {
   font-size: 0.92em;
   fill: var(--faint);
   font-family: var(--mono);
-}
-
-/* ------- Vista de coste: antes / después ------- */
-.cost {
-  display: flex;
-  align-items: center;
-  gap: 44px;
-  padding: 8px 0 4px;
-}
-.cost__hero {
-  flex: none;
-}
-/* Cifra protagonista: la misma sans que el resto, con cifras proporcionales. */
-.cost__delta {
-  font-size: 48px;
-  font-weight: 600;
-  letter-spacing: -0.04em;
-  line-height: 1;
-  color: var(--brand-ui);
-}
-.cost__delta-label {
-  margin-top: 8px;
-  font-family: var(--mono);
-  font-size: 12px;
-  color: var(--muted-2);
-}
-.cost__bars {
-  flex: 1;
-  min-width: 0;
-}
-.cost__row + .cost__row {
-  margin-top: 22px;
-}
-.cost__meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 16px;
-  margin-bottom: 9px;
-}
-.cost__label {
-  font-size: 14px;
-  color: var(--muted);
-}
-.cost__value {
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--ink);
-}
-/* Barras finas, extremo redondeado y origen a ras del borde izquierdo. */
-.cost__bar {
-  height: 14px;
-  border-radius: 0 4px 4px 0;
-  transform-origin: left center;
-}
-.cost__bar--now {
-  width: 100%;
-  background: var(--muted-2);
-}
-.cost__bar--inv {
-  width: 20%;
-  background: var(--brand-ui);
-}
-
-@media (max-width: 720px) {
-  .cost {
-    display: block;
-  }
-  .cost__hero {
-    margin-bottom: 26px;
-  }
-  .cost__delta {
-    font-size: 44px;
-  }
 }
 
 .scale__line {
@@ -1088,17 +973,6 @@ a {
 }
 .scale.is-drawing .scale__end {
   animation: scale-pop 0.4s ease-out 1.2s both;
-}
-.scale.is-drawing .cost__bar {
-  animation: cost-grow 0.9s cubic-bezier(0.33, 0.9, 0.3, 1) both;
-}
-@keyframes cost-grow {
-  from {
-    transform: scaleX(0);
-  }
-  to {
-    transform: scaleX(1);
-  }
 }
 @keyframes scale-draw {
   from {
@@ -1226,7 +1100,7 @@ a {
   .scale__axis-name {
     display: none;
   }
-  .scale[data-view='tiempo'] .scale__readout {
+  .scale__readout {
     display: block;
   }
   .scale__title {
@@ -1349,6 +1223,27 @@ a {
   object-fit: cover;
   background: #08080a;
 }
+/* El pie dice qué se está viendo. Va dentro del marco, separado por el mismo
+   filete que la barra superior, para que se lea como parte del demo y no como
+   texto suelto de la sección. */
+.mesh-demo__caption {
+  padding: 16px 20px;
+  border-top: 1px solid #18181b;
+  background: #121215;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #a1a1aa;
+}
+.mesh-demo__caption strong {
+  color: #fafafa;
+  font-weight: 600;
+}
+@media (max-width: 720px) {
+  .mesh-demo__caption {
+    font-size: 13.5px;
+    padding: 14px 16px;
+  }
+}
 
 /* ------- Casos de uso ------- */
 .casos-grid {
@@ -1458,6 +1353,31 @@ a {
   height: 6px;
   border-radius: 50%;
   background: var(--brand-ui);
+}
+
+/* ------- Qué automatizamos ------- */
+/* Los chips van en lista porque son un inventario, no decoración. El centrado
+   con align-self:center anula el flex-start que .chip trae de las tarjetas. */
+.procesos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.procesos .chip {
+  align-self: center;
+  font-size: 13px;
+  padding: 8px 16px;
+  background: var(--bg);
+}
+.procesos__foot {
+  margin: 28px 0 0;
+  text-align: center;
+  font-size: 15px;
+  color: var(--muted);
 }
 
 /* ------- Cómo trabajamos (steps) ------- */
@@ -1854,12 +1774,28 @@ a {
 /* ==========================================================================
    Responsive
    ========================================================================== */
+/* El nav se estrecha en dos pasos. Primero se aprieta la separación, y por
+   debajo de 1000px los enlaces se ocultan: no caben sin partirse en dos líneas
+   y solaparse con el logo y el botón. El contacto sigue disponible en el hero,
+   el footer y el CTA final. */
+@media (max-width: 1200px) {
+  .nav__links {
+    gap: 18px;
+  }
+  .nav__link {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 999px) {
+  .nav__links {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .nav {
     padding: 0 16px;
-  }
-  .nav__links {
-    display: none;
   }
   /* Logo + "Llámanos" + botón de WhatsApp no caben a la vez: el teléfono
      sigue accesible desde el hero, el footer y el botón flotante. */
@@ -1913,4 +1849,185 @@ a {
   .ladder__desc {
     grid-column: 1 / -1;
   }
+}
+
+/* ==========================================================================
+   Páginas legales (aviso legal, privacidad)
+   Documentos de lectura larga: columna estrecha, jerarquía plana y ningún
+   adorno. Reutilizan los tokens de la landing para que no parezcan otra web.
+   ========================================================================== */
+.legal-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  height: 76px;
+  padding: 0 40px;
+  border-bottom: 1px solid var(--line);
+}
+.legal-nav__logo {
+  height: 34px;
+  width: auto;
+}
+.legal-nav__back {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: none;
+}
+.legal-nav__back:hover {
+  color: var(--ink);
+}
+
+.legal {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 72px 24px 96px;
+}
+.legal__title {
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin: 0 0 12px;
+  color: var(--ink);
+}
+.legal__updated {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--faint);
+  margin: 0 0 8px;
+}
+.legal h2 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 48px 0 14px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+  color: var(--ink);
+}
+.legal h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 28px 0 10px;
+  color: var(--ink);
+}
+.legal p,
+.legal li {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--body);
+}
+.legal p {
+  margin: 0 0 16px;
+}
+.legal ul {
+  margin: 0 0 16px;
+  padding-left: 22px;
+}
+.legal li {
+  margin-bottom: 9px;
+}
+.legal a {
+  color: var(--brand-ui);
+}
+.legal strong {
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+/* Ficha de datos identificativos: es el contenido que exige la LSSI, así que
+   se lee como ficha y no como párrafo. */
+.legal__data {
+  margin: 0 0 16px;
+  padding: 22px 24px;
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius);
+  background: var(--bg-soft);
+}
+.legal__data div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  padding: 7px 0;
+}
+.legal__data div + div {
+  border-top: 1px solid var(--line);
+}
+.legal__data dt {
+  flex: none;
+  min-width: 150px;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  color: var(--muted);
+  padding-top: 2px;
+}
+.legal__data dd {
+  margin: 0;
+  font-size: 15.5px;
+  color: var(--ink);
+}
+/* Marcador de dato pendiente. Chirría a propósito: tiene que ser imposible
+   publicar la página sin verlo. */
+.legal__todo {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+  background: var(--red);
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .legal-nav {
+    padding: 0 16px;
+    height: 64px;
+  }
+  .legal {
+    padding: 48px 20px 72px;
+  }
+  .legal__title {
+    font-size: 31px;
+  }
+  .legal__data {
+    padding: 18px 18px;
+  }
+  .legal__data dt {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+/* Pie reducido para las páginas legales: sin rejilla superior, el filete de
+   .footer__bottom sobraría al ser el único bloque. */
+.footer--legal {
+  padding: 32px;
+}
+.footer--legal .footer__bottom {
+  border-top: 0;
+  padding-top: 0;
+}
+.footer--legal a {
+  color: #8a8a8a;
+  text-decoration: none;
+  font-size: 13px;
+}
+.footer--legal a:hover {
+  color: #fff;
+}
+
+/* Enlaces legales del pie de la landing. */
+.footer__legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.footer__legal a {
+  font-size: 13px;
+  color: #6b6b6b;
+  text-decoration: none;
+}
+.footer__legal a:hover {
+  color: #fff;
 }
