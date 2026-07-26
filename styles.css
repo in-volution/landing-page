@@ -36,6 +36,7 @@
      que cada componente lo consume sin saber sobre qué fondo se dibuja. */
   --brand-ui: var(--brand);
   --red: #dc2626;
+  --green: #10b981; /* Estado "en marcha". Es el emerald con el que el auditor da conforme en los vídeos */
   --wa: #25d366; /* Color propio de WhatsApp, ajeno a la marca */
   --wa-ink: #06341c;
 
@@ -643,14 +644,14 @@ a {
   align-items: center;
   gap: 6px;
   font-size: 12px;
-  color: var(--brand-ui);
+  color: var(--green);
   font-weight: 500;
 }
 .panel__live-dot {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--brand-ui);
+  background: var(--green);
   animation: pulse 1.8s ease infinite;
 }
 .panel__video {
@@ -1206,15 +1207,15 @@ a {
   align-items: center;
   gap: 8px;
   font-size: 12px;
-  color: var(--brand-ui);
+  color: var(--green);
   font-family: var(--mono);
 }
 .mesh-demo__live-dot {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: var(--brand-ui);
-  box-shadow: 0 0 8px rgba(77, 107, 255, 0.5);
+  background: var(--green);
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.5);
   animation: pulse 1.6s ease infinite;
 }
 .mesh-demo__video {
