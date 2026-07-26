@@ -107,7 +107,7 @@
     var PLOT_R = 560;
     var PLOT_B = 300;
     var PLOT_H = 270;
-    var PX_PER_DECADE = (PLOT_R - PLOT_L) / 4;
+    var PX_PER_DECADE = (PLOT_R - PLOT_L) / Math.log10(15000);
 
     // Formato español fijo. toLocaleString depende de los datos de locale que
     // traiga el navegador, y sin ellos "1.000" se queda en "1000".
@@ -126,7 +126,7 @@
       return txt + (txt === '1' ? ' jornada' : ' jornadas');
     };
     // Las mismas cifras declaradas al pie del gráfico.
-    var Y_MAX = 130 * 28800; // 130 jornadas de 8 h, en segundos
+    var Y_MAX = 200 * 28800; // 200 jornadas de 8 h, en segundos
     var humanSec = function (n) {
       return n * 360; // 6 min por tarea
     };
@@ -213,7 +213,7 @@
       var dir = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
       if (!dir) return;
       e.preventDefault();
-      kbTasks = readTasks(Math.max(1, Math.min(10000, kbTasks * Math.pow(10, dir * 0.1))));
+      kbTasks = readTasks(Math.max(1, Math.min(15000, kbTasks * Math.pow(10, dir * 0.1))));
     });
 
     // En pantallas estrechas se ocultan las etiquetas del extremo, así que el

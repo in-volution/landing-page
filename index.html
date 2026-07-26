@@ -157,7 +157,7 @@
         <div class="nav__links">
           <a class="nav__link" href="#porque">Nuestro por qué</a>
           <a class="nav__link" href="#multiagente">Red Multiagente</a>
-          <a class="nav__link" href="#procesos">Qué automatizamos</a>
+          <a class="nav__link is-hidden" href="#procesos">Qué automatizamos</a>
           <a class="nav__link" href="#caracteristicas">Capacidades</a>
           <a class="nav__link" href="#empezar">Cómo empezar</a>
           <a class="nav__link" href="#cta">Contacto</a>
@@ -271,13 +271,13 @@
               El tiempo es el recurso más valioso. Por eso desplegamos una <strong>fuerza laboral tecnológica de agentes de IA</strong> que supera a cualquier proceso manual en velocidad y precisión,
               a un coste mínimo.
             </p>
-            <!-- Gráfico de escalado: curva con eje X logarítmico (1 → 10.000 tareas),
+            <!-- Gráfico de escalado: curva con eje X logarítmico (1 → 15.000 tareas),
                  geometría calculada y no dibujada a mano. Medimos tiempo, no dinero: el
                  coste lo pone el cliente sobre sus propias horas. Asunciones, al pie. -->
             <figure class="scale" id="inv-scale">
               <figcaption class="scale__head">
                 <div class="eyebrow eyebrow--brand eyebrow--upper">/ Escalado</div>
-                <h3 class="scale__title">La ventaja no es la velocidad. Es el volumen.</h3>
+                <h3 class="scale__title">La ventaja no solo es la velocidad. Es el volumen.</h3>
               </figcaption>
 
               <div class="scale__bar">
@@ -292,7 +292,7 @@
                   class="scale__svg"
                   viewBox="0 0 760 380"
                   role="img"
-                  aria-label="Gráfico: el tiempo del operador humano crece con el número de tareas hasta 125 jornadas para 10.000 tareas, mientras la red multiagente resuelve esas mismas 10.000 tareas en 5 horas."
+                  aria-label="Gráfico: el tiempo del operador humano crece con el número de tareas hasta 187,5 jornadas para 15.000 tareas, mientras la red multiagente resuelve esas mismas 15.000 tareas en 7,5 horas."
                 >
                   <line class="scale__grid" x1="76" y1="92.3" x2="560" y2="92.3" />
                   <line class="scale__axis" x1="76" y1="300" x2="560" y2="300" />
@@ -301,10 +301,10 @@
                     <text x="64" y="96.3" text-anchor="end">100</text>
                     <text x="64" y="304" text-anchor="end">0</text>
                     <text x="76" y="326" text-anchor="middle">1</text>
-                    <text x="197" y="326" text-anchor="middle" class="scale__tick--dense">10</text>
-                    <text x="318" y="326" text-anchor="middle">100</text>
-                    <text x="439" y="326" text-anchor="middle" class="scale__tick--dense">1.000</text>
-                    <text x="560" y="326" text-anchor="middle">10.000</text>
+                    <text x="192" y="326" text-anchor="middle" class="scale__tick--dense">10</text>
+                    <text x="308" y="326" text-anchor="middle">100</text>
+                    <text x="424" y="326" text-anchor="middle" class="scale__tick--dense">1.000</text>
+                    <text x="560" y="326" text-anchor="middle">15.000</text>
                   </g>
                   <text class="scale__axis-name" x="318" y="352" text-anchor="middle">tareas</text>
 
@@ -315,21 +315,21 @@
                   <polyline
                     class="scale__line scale__line--human"
                     pathLength="1"
-                    points="76.0,299.97 82.0,299.97 88.1,299.97 94.2,299.96 100.2,299.96 106.3,299.95 112.3,299.95 118.3,299.94 124.4,299.93 130.4,299.93 136.5,299.92 142.6,299.91 148.6,299.90 154.7,299.88 160.7,299.87 166.8,299.85 172.8,299.84 178.9,299.82 184.9,299.79 191.0,299.77 197.0,299.74 203.1,299.71 209.1,299.67 215.2,299.63 221.2,299.59 227.3,299.54 233.3,299.48 239.4,299.42 245.4,299.35 251.5,299.27 257.5,299.18 263.6,299.08 269.6,298.97 275.7,298.84 281.7,298.70 287.8,298.54 293.8,298.36 299.9,298.16 305.9,297.94 312.0,297.69 318.0,297.40 324.1,297.09 330.1,296.73 336.2,296.33 342.2,295.89 348.3,295.38 354.3,294.82 360.3,294.19 366.4,293.48 372.4,292.68 378.5,291.79 384.5,290.79 390.6,289.66 396.6,288.40 402.7,286.99 408.7,285.40 414.8,283.62 420.8,281.62 426.9,279.38 432.9,276.86 439.0,274.04 445.0,270.87 451.1,267.32 457.1,263.33 463.2,258.85 469.2,253.83 475.3,248.20 481.3,241.88 487.4,234.79 493.4,226.83 499.5,217.90 505.5,207.88 511.6,196.65 517.6,184.03 523.7,169.88 529.7,154.01 535.8,136.19 541.8,116.21 547.9,93.78 553.9,68.62 560.0,40.38"
+                    points="76.0,299.98 82.0,299.98 88.1,299.98 94.2,299.98 100.2,299.97 106.3,299.97 112.3,299.97 118.3,299.96 124.4,299.96 130.4,299.95 136.5,299.94 142.6,299.94 148.6,299.93 154.7,299.92 160.7,299.91 166.8,299.90 172.8,299.88 178.8,299.87 184.9,299.85 190.9,299.83 197.0,299.81 203.1,299.79 209.1,299.76 215.1,299.73 221.2,299.70 227.3,299.66 233.3,299.62 239.4,299.57 245.4,299.51 251.4,299.45 257.5,299.38 263.6,299.30 269.6,299.21 275.6,299.11 281.7,299.00 287.8,298.87 293.8,298.72 299.9,298.56 305.9,298.37 311.9,298.17 318.0,297.93 324.0,297.67 330.1,297.37 336.1,297.04 342.2,296.66 348.3,296.23 354.3,295.75 360.4,295.21 366.4,294.59 372.5,293.90 378.5,293.12 384.5,292.25 390.6,291.26 396.6,290.14 402.7,288.88 408.8,287.46 414.8,285.86 420.9,284.05 426.9,282.02 433.0,279.72 439.0,277.13 445.0,274.21 451.1,270.91 457.1,267.20 463.2,263.01 469.3,258.28 475.3,252.95 481.4,246.95 487.4,240.17 493.5,232.53 499.5,223.91 505.5,214.19 511.6,203.23 517.6,190.87 523.7,176.94 529.8,161.22 535.8,143.49 541.9,123.51 547.9,100.96 554.0,75.54 560.0,46.87"
                   />
                   <polyline
                     class="scale__line scale__line--mesh"
                     pathLength="1"
-                    points="76.0,300.00 82.0,300.00 88.1,300.00 94.2,300.00 100.2,300.00 106.3,300.00 112.3,300.00 118.3,300.00 124.4,300.00 130.4,300.00 136.5,300.00 142.6,300.00 148.6,300.00 154.7,300.00 160.7,300.00 166.8,300.00 172.8,300.00 178.8,300.00 184.9,300.00 190.9,300.00 197.0,300.00 203.1,300.00 209.1,300.00 215.2,300.00 221.2,300.00 227.3,300.00 233.3,300.00 239.3,300.00 245.4,299.99 251.4,299.99 257.5,299.99 263.6,299.99 269.6,299.99 275.6,299.99 281.7,299.99 287.8,299.99 293.8,299.99 299.9,299.99 305.9,299.99 311.9,299.99 318.0,299.99 324.1,299.98 330.1,299.98 336.1,299.98 342.2,299.98 348.3,299.97 354.3,299.97 360.4,299.97 366.4,299.96 372.4,299.96 378.5,299.96 384.6,299.95 390.6,299.95 396.6,299.94 402.7,299.93 408.8,299.93 414.8,299.92 420.9,299.91 426.9,299.90 432.9,299.88 439.0,299.87 445.1,299.85 451.1,299.83 457.1,299.82 463.2,299.79 469.3,299.77 475.3,299.74 481.4,299.71 487.4,299.67 493.4,299.63 499.5,299.59 505.6,299.54 511.6,299.48 517.6,299.42 523.7,299.35 529.8,299.27 535.8,299.18 541.9,299.08 547.9,298.97 554.0,298.84 560.0,298.70"
+                    points="76.0,300.00 82.0,300.00 88.1,300.00 94.2,300.00 100.2,300.00 106.3,300.00 112.3,300.00 118.3,300.00 124.4,300.00 130.4,300.00 136.5,300.00 142.6,300.00 148.6,300.00 154.7,300.00 160.7,300.00 166.8,300.00 172.8,300.00 178.8,300.00 184.9,300.00 190.9,300.00 197.0,300.00 203.1,300.00 209.1,300.00 215.1,300.00 221.2,300.00 227.3,300.00 233.3,300.00 239.4,300.00 245.4,300.00 251.4,300.00 257.5,300.00 263.6,300.00 269.6,300.00 275.6,299.99 281.7,299.99 287.8,299.99 293.8,299.99 299.9,299.99 305.9,299.99 311.9,299.99 318.0,299.99 324.0,299.99 330.1,299.99 336.1,299.98 342.2,299.98 348.3,299.98 354.3,299.98 360.4,299.97 366.4,299.97 372.5,299.97 378.5,299.96 384.5,299.96 390.6,299.96 396.6,299.95 402.7,299.94 408.8,299.94 414.8,299.93 420.9,299.92 426.9,299.91 433.0,299.90 439.0,299.88 445.0,299.87 451.1,299.85 457.1,299.84 463.2,299.81 469.3,299.79 475.3,299.76 481.4,299.73 487.4,299.70 493.5,299.66 499.5,299.62 505.5,299.57 511.6,299.51 517.6,299.45 523.7,299.38 529.8,299.31 535.8,299.22 541.9,299.12 547.9,299.00 554.0,298.88 560.0,298.73"
                   />
 
-                  <circle class="scale__end scale__end--human" cx="560" cy="40.38" r="4.5" />
-                  <circle class="scale__end scale__end--mesh" cx="560" cy="298.7" r="4.5" />
+                  <circle class="scale__end scale__end--human" cx="560" cy="46.87" r="4.5" />
+                  <circle class="scale__end scale__end--mesh" cx="560" cy="298.73" r="4.5" />
                   <g class="scale__endlabel">
-                    <text x="574" y="36">Operador humano</text>
-                    <text x="574" y="55" class="scale__endvalue">125 jornadas</text>
+                    <text x="574" y="42">Operador humano</text>
+                    <text x="574" y="61" class="scale__endvalue">187,5 jornadas</text>
                     <text x="574" y="294">Red multiagente</text>
-                    <text x="574" y="313" class="scale__endvalue">5 horas</text>
+                    <text x="574" y="313" class="scale__endvalue">7,5 horas</text>
                   </g>
 
                   <!-- Puntos de lectura, con anillo de 2px en el color del fondo -->
@@ -348,17 +348,17 @@
                 <dl class="scale__readout-list">
                   <div>
                     <dt>Operador humano</dt>
-                    <dd>125 jornadas</dd>
+                    <dd>187,5 jornadas</dd>
                   </div>
                   <div>
                     <dt>Red multiagente</dt>
-                    <dd>5 horas</dd>
+                    <dd>7,5 horas</dd>
                   </div>
                 </dl>
-                <p class="scale__readout-foot">para las mismas 10.000 tareas</p>
+                <p class="scale__readout-foot">para las mismas 15.000 tareas</p>
               </div>
 
-              <p class="scale__insight"><strong>10.000 tareas en 5 horas</strong>: lo que un operador tarda en resolver cincuenta.</p>
+              <p class="scale__insight"><strong>15.000 tareas en 7,5 horas</strong>: lo que un operador tarda en resolver setenta y cinco.</p>
 
               <p class="scale__note">Escala logarítmica. 6 min por tarea en manual, 45 s por tarea agéntica y 25 agentes en paralelo. Cifras ilustrativas.</p>
 
@@ -395,9 +395,9 @@
                     <td>30 min</td>
                   </tr>
                   <tr>
-                    <th scope="row">10.000</th>
-                    <td>125 jornadas</td>
-                    <td>5 h</td>
+                    <th scope="row">15.000</th>
+                    <td>187,5 jornadas</td>
+                    <td>7,5 h</td>
                   </tr>
                 </tbody>
               </table>
@@ -405,7 +405,7 @@
 
             <div class="why__foot">
               <span class="why__foot-dot"></span>
-              <span>Tecnología al servicio del potencial humano</span>
+              <span>Tecnología al servicio de tu negocio</span>
             </div>
           </div>
         </div>
@@ -442,7 +442,7 @@
 
       <!-- QUÉ AUTOMATIZAMOS · los procesos, nombrados. Sin cifras: aquí solo se
            responde "¿sobre qué trabajáis?", que es lo que falta antes de las fases. -->
-      <section class="section section--soft" id="procesos">
+      <section class="section section--soft is-hidden" id="procesos">
         <div class="wrap-1040">
           <div class="section-head--center on-scroll-c">
             <div class="eyebrow">/ QUÉ AUTOMATIZAMOS</div>
@@ -662,18 +662,18 @@
             <div class="ladder-row on-scroll-sm">
               <div class="badge-num">01</div>
               <div class="ladder__mid">
-                <div class="chip"><span class="chip__dot"></span>Sin coste</div>
+                <div class="chip"><span class="chip__dot"></span>Análisis inicial</div>
                 <h3 class="ladder__title">Diagnóstico</h3>
               </div>
-              <p class="ladder__desc">Detectamos 1-3 procesos automatizables y cuantificamos las horas y el coste que pierdes hoy en ellos.</p>
+              <p class="ladder__desc">Detectamos 1-3 procesos automatizables y cuantificamos el tiempo e impacto operativo que recuperas.</p>
             </div>
             <div class="ladder-row on-scroll-sm">
               <div class="badge-num">02</div>
               <div class="ladder__mid">
-                <div class="chip"><span class="chip__dot"></span>Sin coste</div>
+                <div class="chip"><span class="chip__dot"></span>Planificación</div>
                 <h3 class="ladder__title">Blueprint</h3>
               </div>
-              <p class="ladder__desc">Un informe con el mapa de automatización priorizado y el ROI estimado de cada proceso.</p>
+              <p class="ladder__desc">Un informe con el mapa de automatización priorizado y el plan de implementación para cada proceso.</p>
             </div>
             <div class="ladder-row on-scroll-sm">
               <div class="badge-num">03</div>
@@ -686,10 +686,10 @@
             <div class="ladder-row on-scroll-sm">
               <div class="badge-num">04</div>
               <div class="ladder__mid">
-                <div class="chip"><span class="chip__dot"></span>Recurrente</div>
+                <div class="chip"><span class="chip__dot"></span>Operación continua</div>
                 <h3 class="ladder__title">Retainer operativo</h3>
               </div>
-              <p class="ladder__desc">Operamos y ampliamos tus agentes por una cuota mensual ajustada al volumen que procesan, que cubre soporte, mantenimiento e infraestructura.</p>
+              <p class="ladder__desc">Operamos y ampliamos tus agentes según las necesidades del negocio, incluyendo soporte continuo, mantenimiento e infraestructura.</p>
             </div>
             <div class="ladder-row on-scroll-sm">
               <div class="badge-num">05</div>

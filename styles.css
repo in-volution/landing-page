@@ -868,7 +868,7 @@ a {
 .scale__readout,
 .scale__insight,
 .scale__note {
-  max-width: 700px;
+  max-width: 100%;
 }
 .scale__plot {
   position: relative;
