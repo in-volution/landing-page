@@ -242,12 +242,4 @@
       drawObserver.observe(scale);
     }
   }
-
-  // 5) Tracking de clics en CTAs (data-cta) como eventos de Vercel Analytics.
-  document.addEventListener('click', function (e) {
-    var el = e.target && e.target.closest ? e.target.closest('[data-cta]') : null;
-    if (el && window.va) {
-      window.va('event', { name: 'cta_click', data: { cta: el.getAttribute('data-cta') } });
-    }
-  });
 })();
