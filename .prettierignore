@@ -1,5 +1,4 @@
 node_modules/
 my-video/
 assets/
-.vercel/
 package-lock.json

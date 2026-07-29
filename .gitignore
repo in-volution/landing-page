@@ -4,6 +4,8 @@ node_modules
 jspm_packages
 bower_components
 
+docs
+
 # Build outputs
 dist
 build

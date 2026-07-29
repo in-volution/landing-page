@@ -10,7 +10,7 @@ Sitio web y plataforma interactiva de **Involution** — Automatización impulsa
 - **CSS con tokens de diseño**: `styles.css` con custom properties y clases reutilizables.
 - **JS vanilla**: `main.js` para el glow del hero, autoplay de vídeos por visibilidad y tracking de CTAs.
 - **Optimización de Assets**: vídeos comprimidos en MP4 e imágenes optimizadas.
-- **Despliegue**: **Vercel** (`vercel.json`), sitio estático.
+- **Despliegue**: **GitHub Pages** mediante GitHub Actions (`.github/workflows/deploy.yml`), sitio estático.
 
 ---
 
@@ -21,20 +21,27 @@ Sitio web y plataforma interactiva de **Involution** — Automatización impulsa
 ├── assets/
 │   ├── brand/despliegue/     # Sistema de marca: logos, iconos, favicon, OG, manifest
 │   └── *.mp4 / *.jpg         # Vídeos de la landing y sus pósters
-├── docs/
-│   └── plan-refactorizacion.md
+├── .github/workflows/
+│   └── deploy.yml            # Build y despliegue en GitHub Pages
+├── aviso-legal/index.html    # Aviso legal → /aviso-legal/
+├── privacidad/index.html     # Política de privacidad → /privacidad/
 ├── index.html                # Landing page principal (HTML estático)
-├── logo-lab.html             # Laboratorio de experimentación de marca/logo
+├── 404.html                  # Página de error de GitHub Pages
+├── logo-lab.html             # Laboratorio de marca/logo (sólo local, no se publica)
 ├── logo-lab.css              # Estilos del laboratorio de logos
 ├── logo-lab.js               # Lógica del laboratorio de logos
 ├── styles.css                # Tokens de diseño, tipografía Geist y componentes B2B
 ├── main.js                   # Interactividad (JS vanilla), autoplay por viewport y tracking
 ├── robots.txt                # SEO
 ├── sitemap.xml               # SEO
-├── vercel.json               # Configuración de despliegue en Vercel
+├── CNAME                     # Dominio propio de GitHub Pages (involution.es)
 ├── package.json              # Scripts del proyecto y dependencias
 └── README.md                 # Documentación del repositorio
 ```
+
+> Las páginas legales viven en carpetas con `index.html` porque GitHub Pages no
+> recorta la extensión `.html` como hacía `cleanUrls` en Vercel. Así `/aviso-legal`
+> sigue funcionando: Pages responde con un 301 hacia `/aviso-legal/`.
 
 ---
 
@@ -60,29 +67,44 @@ Para ejecutar el proyecto localmente:
 
 ---
 
-## 🚀 Despliegue en Vercel
+## 🚀 Despliegue en GitHub Pages
 
-### Opción 1: Vercel CLI (Línea de comandos)
+Cada push a `main` dispara `.github/workflows/deploy.yml`, que ejecuta `npm run check`,
+arma el directorio `_site` con lo que se publica y lo despliega. También se puede lanzar
+a mano desde la pestaña **Actions** (`workflow_dispatch`).
 
-```bash
-npx vercel
+El workflow copia **sólo** la landing: `my-video/`, `docs/`, `node_modules/` y los
+ficheros `logo-lab.*` se quedan fuera.
+
+### Configuración del repositorio
+
+En **Settings → Pages**, el origen (_Source_) debe ser **GitHub Actions**, no
+«Deploy from a branch».
+
+### Dominio propio
+
+El fichero `CNAME` fija `involution.es`. En el DNS del dominio hacen falta los
+registros apex de GitHub:
+
+```text
+A     @    185.199.108.153
+A     @    185.199.109.153
+A     @    185.199.110.153
+A     @    185.199.111.153
+AAAA  @    2606:50c0:8000::153
+AAAA  @    2606:50c0:8001::153
+AAAA  @    2606:50c0:8002::153
+AAAA  @    2606:50c0:8003::153
 ```
 
-Para desplegar a producción:
+Cuando el certificado de Let's Encrypt esté emitido, activa **Enforce HTTPS**.
 
-```bash
-npx vercel --prod
-```
+### Limitaciones respecto a Vercel
 
-### Opción 2: Integración con GitHub / GitLab / Bitbucket
-
-1. Sube este repositorio a tu plataforma de Git favorita.
-2. Ve a [Vercel Dashboard](https://vercel.com/new).
-3. Importa el repositorio.
-4. Vercel detectará automáticamente la configuración estática (`index.html`).
-5. Haz clic en **Deploy**. A partir de ahí, cada push a `main` se despliega solo.
-
-> El despliegue por GitHub Actions se retiró; se usa la integración Git nativa de Vercel.
+- **No hay cabeceras propias.** El `Cache-Control: immutable` que definía
+  `vercel.json` para `/assets/*` no tiene equivalente: Pages sirve todo con una
+  caché de ~10 minutos.
+- **No hay analítica.** Se retiró Vercel Web Analytics y no se sustituyó.
 
 ---
 

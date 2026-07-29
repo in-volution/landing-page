@@ -1,0 +1,63 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Permite al workflow publicar en Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Un despliegue a la vez; no cancelamos el que ya está en curso
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+      - run: npm run check
+
+      # Sólo se publica la landing: fuera my-video/, docs/, node_modules/ y logo-lab
+      - name: Preparar _site
+        run: |
+          mkdir -p _site
+          cp -R \
+            index.html \
+            styles.css \
+            main.js \
+            assets \
+            aviso-legal \
+            privacidad \
+            404.html \
+            robots.txt \
+            sitemap.xml \
+            CNAME \
+            _site/
+          touch _site/.nojekyll
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
