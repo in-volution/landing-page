@@ -57,3 +57,6 @@ logs
 *.tsbuildinfo
 coverage
 .eslintcache
+
+# SEO audit cache (local, generated)
+.seo-cache/
