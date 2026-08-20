@@ -59,35 +59,6 @@
     playBg();
   }
 
-  // 3) Vídeos demo: reproducir solo cuando están en pantalla, desde el inicio.
-  ['inv-labor-video', 'inv-mesh-video'].forEach(function (id) {
-    var el = document.getElementById(id);
-    if (!el) return;
-    var play = function () {
-      var p = el.play();
-      if (p && p.catch) p.catch(function () {});
-    };
-    if ('IntersectionObserver' in window) {
-      new IntersectionObserver(
-        function (entries) {
-          entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-              if (el.paused) {
-                el.currentTime = 0;
-                play();
-              }
-            } else {
-              el.pause();
-            }
-          });
-        },
-        { threshold: 0.35 }
-      ).observe(el);
-    } else {
-      play();
-    }
-  });
-
   // 4) Gráfico de escalado: se dibuja al entrar en pantalla y deja leer cualquier
   //    volumen de tareas con el puntero o el teclado.
   var scale = document.getElementById('inv-scale');
