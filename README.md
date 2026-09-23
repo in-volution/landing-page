@@ -9,7 +9,7 @@ Landing de **Involution**: un asistente de voz con IA en tiempo real para negoci
 - **Landing HTML/CSS/JS**: el contenido principal permanece en HTML y funciona sin React.
 - **CSS con tokens de diseño**: `styles.css` con custom properties y clases reutilizables.
 - **JS vanilla**: `main.js` para el glow del hero, reproducción del vídeo de fondo y previsualización de logotipos.
-- **Demo de voz del hero**: isla React en `voice-widget/` con el componente oficial AgentAudioVisualizerAura de LiveKit. Vite la compila a `assets/voice-widget/` antes de servir o publicar la landing.
+- **Aura del hero**: isla React en `voice-widget/` con el componente AgentAudioVisualizerAura. Vite la compila a `assets/voice-widget/` antes de servir o publicar la landing.
 - **Optimización de Assets**: vídeos comprimidos en MP4 e imágenes optimizadas.
 - **Despliegue**: **GitHub Pages** mediante GitHub Actions (`.github/workflows/deploy.yml`), sitio estático.
 
@@ -34,7 +34,7 @@ Landing de **Involution**: un asistente de voz con IA en tiempo real para negoci
 ├── PRODUCTO.md               # Definición inicial del producto y decisiones pendientes
 ├── styles.css                # Tokens de diseño, tipografía Geist y componentes B2B
 ├── main.js                   # Interactividad del hero y previsualización de logotipos
-├── voice-widget/             # Fuente React de la demo guiada de voz
+├── voice-widget/             # Fuente React del aura del hero
 ├── robots.txt                # SEO
 ├── sitemap.xml               # SEO
 ├── CNAME                     # Dominio propio de GitHub Pages (involution.es)
@@ -65,9 +65,7 @@ Para ejecutar el proyecto localmente:
    npm run dev
    ```
 
-3. Abrir en el navegador la URL que indique `serve` (por defecto `http://localhost:3000`). `npm run dev` compila la demo de voz antes de iniciar el servidor.
-
-La demo del hero es ilustrativa: reproduce una conversación genérica con voz sintetizada del navegador. No conecta con un agente real ni solicita acceso al micrófono. El asistente podría ofrecerse desde web, app o teléfono según la integración elegida. El código de Aura queda instalado en `voice-widget/src/components/agents-ui/` para conectarlo a LiveKit cuando exista un agente y un endpoint de tokens.
+3. Abrir en el navegador la URL que indique `serve` (por defecto `http://localhost:3000`). `npm run dev` compila el aura antes de iniciar el servidor.
 
 > Nota: ábrelo siempre con un servidor local, no con `file://`, para que el vídeo con autoplay y las rutas relativas funcionen.
 

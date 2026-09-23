@@ -539,18 +539,9 @@ a {
 .hero__grid > * {
   min-width: 0;
 }
-.hero__voice-demo {
+.hero__aura {
   width: 100%;
   min-width: 0;
-}
-.hero__voice-demo-fallback {
-  margin: 0;
-  padding: 50px 30px;
-  border: 1px solid rgba(117, 144, 255, 0.28);
-  border-radius: 22px;
-  color: #b8c4fa;
-  background: #10172b;
-  text-align: center;
 }
 
 .hero__badge {
@@ -665,7 +656,7 @@ a {
   margin-top: 3px;
 }
 
-/* Panel demo (hero derecha) */
+/* UI de paneles */
 .panel {
   margin: 0;
   border: 1px solid #1f1f1f;
@@ -1555,7 +1546,7 @@ a {
     max-width: 680px;
     grid-template-columns: 1fr;
   }
-  .hero__voice-demo {
+  .hero__aura {
     max-width: 520px;
   }
 }
