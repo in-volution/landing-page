@@ -12,9 +12,20 @@ export function VoiceAura() {
         className="hero-aura__visual"
         aria-hidden="true"
       />
-      <p className="hero-aura__speech" aria-label="El asistente dice: ¿En qué te ayudo?">
-        <span aria-hidden="true">¿En qué te ayudo?</span>
-      </p>
+      <div
+        className="hero-aura__conversation"
+        role="group"
+        aria-label="Ejemplo de conversación entre cliente y asistente"
+      >
+        <div className="hero-aura__turn hero-aura__turn--client">
+          <span className="hero-aura__speaker">Cliente</span>
+          <span className="hero-aura__text">¿Tenéis hueco mañana?</span>
+        </div>
+        <div className="hero-aura__turn hero-aura__turn--assistant">
+          <span className="hero-aura__speaker">Asistente</span>
+          <span className="hero-aura__text">Sí, ¿a qué hora?</span>
+        </div>
+      </div>
     </div>
   );
 }

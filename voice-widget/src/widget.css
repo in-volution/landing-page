@@ -15,77 +15,153 @@
   aspect-ratio: 1;
 }
 
-.hero-aura__speech {
-  box-sizing: border-box;
+.hero-aura__conversation {
   position: absolute;
   z-index: 1;
-  right: 50%;
-  bottom: 8%;
-  width: calc(17ch + 32px);
-  min-height: 40px;
+  right: 4%;
+  bottom: 5%;
+  left: 4%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  padding: 8px 15px;
-  transform: translateX(50%);
-  border: 1px solid rgba(137, 158, 255, 0.34);
-  border-radius: 999px;
-  color: #e7ebff;
-  background: rgba(9, 13, 28, 0.76);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.26);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  font: 500 13px/1.2 var(--sans, system-ui, sans-serif);
-  white-space: nowrap;
-  animation: hero-aura-caption 6.4s ease-in-out infinite;
+  flex-direction: column;
+  gap: 8px;
+  pointer-events: none;
 }
 
-.hero-aura__speech span {
-  display: inline-block;
-  box-sizing: content-box;
+.hero-aura__turn {
+  display: flex;
+  width: fit-content;
+  max-width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px 11px 9px;
+  overflow: hidden;
+  border: 1px solid rgba(137, 158, 255, 0.3);
+  border-radius: 14px;
+  color: #e7ebff;
+  background: rgba(9, 13, 28, 0.82);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  opacity: 0;
+}
+
+.hero-aura__turn--client {
+  align-self: flex-start;
+  animation: hero-aura-client 12s ease-in-out infinite;
+}
+
+.hero-aura__turn--assistant {
+  align-self: flex-end;
+  align-items: flex-end;
+  border-color: rgba(117, 144, 255, 0.48);
+  background: rgba(28, 39, 76, 0.88);
+  animation: hero-aura-assistant 12s ease-in-out infinite;
+}
+
+.hero-aura__speaker {
+  margin-bottom: 4px;
+  color: #aebeff;
+  font: 600 9px/1.2 var(--mono, ui-monospace, monospace);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.hero-aura__text {
+  display: block;
   width: 0;
   overflow: hidden;
   border-right: 1px solid transparent;
+  font: 500 12px/1.35 var(--sans, system-ui, sans-serif);
   white-space: nowrap;
-  animation: hero-aura-speak 6.4s infinite;
 }
 
-@keyframes hero-aura-caption {
+.hero-aura__turn--client .hero-aura__text {
+  animation: hero-aura-client-text 12s infinite;
+}
+
+.hero-aura__turn--assistant .hero-aura__text {
+  animation: hero-aura-assistant-text 12s infinite;
+}
+
+@keyframes hero-aura-client {
   0%,
-  7%,
-  93%,
+  5%,
+  44%,
   100% {
     opacity: 0;
+    transform: translateY(5px);
   }
-  10%,
-  90% {
+  8%,
+  39% {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@keyframes hero-aura-speak {
+@keyframes hero-aura-assistant {
   0%,
-  8% {
+  40%,
+  100% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  44%,
+  76% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-aura-client-text {
+  0%,
+  7% {
     width: 0;
     border-color: transparent;
   }
-  9% {
+  8% {
     width: 0;
     border-color: currentColor;
-    animation-timing-function: steps(17, end);
+    animation-timing-function: steps(21, end);
   }
-  43%,
-  68% {
-    width: 17ch;
+  34%,
+  39% {
+    width: 21ch;
     border-color: currentColor;
   }
+  40% {
+    width: 21ch;
+    border-color: currentColor;
+    animation-timing-function: steps(21, start);
+  }
+  48%,
+  100% {
+    width: 0;
+    border-color: transparent;
+  }
+}
+
+@keyframes hero-aura-assistant-text {
+  0%,
+  42% {
+    width: 0;
+    border-color: transparent;
+  }
+  43% {
+    width: 0;
+    border-color: currentColor;
+    animation-timing-function: steps(16, end);
+  }
+  64%,
   69% {
-    width: 17ch;
+    width: 16ch;
     border-color: currentColor;
-    animation-timing-function: steps(17, start);
   }
-  91%,
+  70% {
+    width: 16ch;
+    border-color: currentColor;
+    animation-timing-function: steps(16, start);
+  }
+  78%,
   100% {
     width: 0;
     border-color: transparent;
@@ -99,13 +175,14 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-aura__speech {
+  .hero-aura__turn {
     opacity: 1;
     animation: none;
+    transform: none;
   }
 
-  .hero-aura__speech span {
-    width: 17ch;
+  .hero-aura__text {
+    width: max-content;
     border: 0;
     animation: none;
   }
