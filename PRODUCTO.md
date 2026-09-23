@@ -13,7 +13,7 @@ Un único asistente recibe consultas, responde dentro del alcance aprobado y rec
 ## Alcance funcional propuesto
 
 1. Permitir que el cliente hable desde la web, una app o por teléfono, según el canal elegido.
-2. Transmitir voz o vídeo en tiempo real; para vídeo se pueden usar tecnologías como LiveKit.
+2. Transmitir voz o vídeo en tiempo real, según el canal y el caso de uso.
 3. Analizar imágenes o fotogramas de vídeo con modelos compatibles y dentro del alcance acordado.
 4. Reconocer el motivo y consultar documentación o fuentes aprobadas por el negocio.
 5. Responder por voz o texto y recoger los datos necesarios para el caso de uso elegido.
