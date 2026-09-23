@@ -1,4 +1,5 @@
 .hero-aura {
+  position: relative;
   width: clamp(260px, 34vw, 440px);
   height: auto;
   max-width: 100%;
@@ -6,8 +7,106 @@
   aspect-ratio: 1;
 }
 
+.hero-aura__visual {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  aspect-ratio: 1;
+}
+
+.hero-aura__speech {
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 1;
+  right: 50%;
+  bottom: 8%;
+  width: calc(17ch + 32px);
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 8px 15px;
+  transform: translateX(50%);
+  border: 1px solid rgba(137, 158, 255, 0.34);
+  border-radius: 999px;
+  color: #e7ebff;
+  background: rgba(9, 13, 28, 0.76);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.26);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  font: 500 13px/1.2 var(--sans, system-ui, sans-serif);
+  white-space: nowrap;
+  animation: hero-aura-caption 6.4s ease-in-out infinite;
+}
+
+.hero-aura__speech span {
+  display: inline-block;
+  box-sizing: content-box;
+  width: 0;
+  overflow: hidden;
+  border-right: 1px solid transparent;
+  white-space: nowrap;
+  animation: hero-aura-speak 6.4s infinite;
+}
+
+@keyframes hero-aura-caption {
+  0%,
+  7%,
+  93%,
+  100% {
+    opacity: 0;
+  }
+  10%,
+  90% {
+    opacity: 1;
+  }
+}
+
+@keyframes hero-aura-speak {
+  0%,
+  8% {
+    width: 0;
+    border-color: transparent;
+  }
+  9% {
+    width: 0;
+    border-color: currentColor;
+    animation-timing-function: steps(17, end);
+  }
+  43%,
+  68% {
+    width: 17ch;
+    border-color: currentColor;
+  }
+  69% {
+    width: 17ch;
+    border-color: currentColor;
+    animation-timing-function: steps(17, start);
+  }
+  91%,
+  100% {
+    width: 0;
+    border-color: transparent;
+  }
+}
+
 @media (max-width: 999px) {
   .hero-aura {
     width: min(440px, 82vw);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-aura__speech {
+    opacity: 1;
+    animation: none;
+  }
+
+  .hero-aura__speech span {
+    width: 17ch;
+    border: 0;
+    animation: none;
   }
 }
