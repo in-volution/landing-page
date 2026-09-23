@@ -9,6 +9,7 @@ docs
 # Build outputs
 dist
 build
+assets/voice-widget/
 out
 .vercel
 .next

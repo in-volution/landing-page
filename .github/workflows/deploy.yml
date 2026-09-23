@@ -28,6 +28,7 @@ jobs:
           cache: npm
 
       - run: npm ci
+      - run: npm --prefix voice-widget ci
       - run: npm run check
 
       # Sólo se publica la landing: fuera my-video/, docs/, node_modules/ y logo-lab

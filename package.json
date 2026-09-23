@@ -1,23 +1,25 @@
 {
   "name": "involution-landing-page",
   "version": "1.0.0",
-  "description": "Involution - AI-Powered Automation para empresas",
+  "description": "Involution - asistentes de voz con IA en tiempo real para negocios",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "npx serve .",
-    "start": "npx serve .",
-    "check": "npm run check:files && npm run check:html && npm run check:format",
+    "dev": "npm run build:voice-widget && npx serve .",
+    "start": "npm run build:voice-widget && npx serve .",
+    "build:voice-widget": "npm --prefix voice-widget run build",
+    "check": "npm run check:files && npm run check:html && npm run check:widget && npm run check:format",
     "check:files": "node -e \"const fs=require('fs'); for (const file of ['index.html','styles.css','main.js','404.html','CNAME','aviso-legal/index.html','privacidad/index.html']) { if (!fs.existsSync(file)) throw new Error('Missing required file: '+file) }\"",
     "check:html": "html-validate index.html logo-lab.html 404.html aviso-legal/index.html privacidad/index.html",
+    "check:widget": "npm --prefix voice-widget run typecheck && npm run build:voice-widget",
     "check:format": "prettier --check .",
     "format": "prettier --write ."
   },
   "keywords": [
     "involution",
-    "ai-agents",
-    "agentes-ia",
-    "automation",
+    "voice-ai",
+    "asistentes-de-voz",
+    "atencion-telefonica",
     "landing-page"
   ],
   "author": "Involution",
