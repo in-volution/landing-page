@@ -1,6 +1,6 @@
-# Involution · Asistentes de voz con IA
+# Involution · Voz, vídeo e IA en tiempo real
 
-Landing de **Involution**: un asistente de voz con IA en tiempo real para negocios. Presenta conversaciones que pueden empezar en la web, una app o por teléfono, y la forma de poner en marcha el asistente.
+Landing de **Involution**: asistentes de voz con IA y sistemas de vídeo en tiempo real con análisis de imagen para negocios. Presenta los canales disponibles y la forma de poner en marcha cada sistema.
 
 ---
 

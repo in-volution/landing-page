@@ -15,15 +15,15 @@ export function VoiceAura() {
       <div
         className="hero-aura__conversation"
         role="group"
-        aria-label="Ejemplo de conversación entre cliente y asistente"
+        aria-label="Ejemplo de conversación sobre análisis de vídeo e imagen"
       >
         <div className="hero-aura__turn hero-aura__turn--client">
           <span className="hero-aura__speaker">Cliente</span>
-          <span className="hero-aura__text">¿Tenéis hueco mañana?</span>
+          <span className="hero-aura__text">¿Analizáis vídeo en directo?</span>
         </div>
         <div className="hero-aura__turn hero-aura__turn--assistant">
           <span className="hero-aura__speaker">Asistente</span>
-          <span className="hero-aura__text">Sí, ¿a qué hora?</span>
+          <span className="hero-aura__text">Sí, y analizo imágenes.</span>
         </div>
       </div>
     </div>

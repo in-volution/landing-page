@@ -121,17 +121,17 @@
   8% {
     width: 0;
     border-color: currentColor;
-    animation-timing-function: steps(21, end);
+    animation-timing-function: steps(28, end);
   }
   34%,
   39% {
-    width: 21ch;
+    width: 28ch;
     border-color: currentColor;
   }
   40% {
-    width: 21ch;
+    width: 28ch;
     border-color: currentColor;
-    animation-timing-function: steps(21, start);
+    animation-timing-function: steps(28, start);
   }
   48%,
   100% {
@@ -149,17 +149,17 @@
   43% {
     width: 0;
     border-color: currentColor;
-    animation-timing-function: steps(16, end);
+    animation-timing-function: steps(23, end);
   }
   64%,
   69% {
-    width: 16ch;
+    width: 23ch;
     border-color: currentColor;
   }
   70% {
-    width: 16ch;
+    width: 23ch;
     border-color: currentColor;
-    animation-timing-function: steps(16, start);
+    animation-timing-function: steps(23, start);
   }
   78%,
   100% {
