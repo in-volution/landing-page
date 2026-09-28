@@ -1102,7 +1102,7 @@ button {
   justify-content: space-between;
   padding: 28px var(--gutter) 36px;
   border-top: 1px solid var(--line);
-  color: var(--faint);
+  color: var(--muted);
   font-size: 13px;
   font-family: var(--mono);
 }
@@ -1126,7 +1126,17 @@ body {
 }
 .brand-logo {
   display: block;
-  width: clamp(132px, 12vw, 170px);
+  width: clamp(148px, 14vw, 194px);
+  height: auto;
+}
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  margin-right: auto;
+}
+.footer-brand img {
+  display: block;
+  width: 150px;
   height: auto;
 }
 .nav .btn-sm {
@@ -1179,7 +1189,10 @@ html:not(.js) .arch-steps[hidden] {
     padding: 9px 13px;
   }
   .brand-logo {
-    width: 128px;
+    width: 148px;
+  }
+  .footer-brand {
+    flex-basis: 100%;
   }
   .footer {
     justify-content: flex-start;

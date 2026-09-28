@@ -1,6 +1,6 @@
-# Involution · Voz, vídeo e IA en tiempo real
+# Involution · Asistentes de voz con IA
 
-Landing estática de Involution. Presenta asistentes de voz para web, app o teléfono y sistemas de vídeo con análisis de imagen para experiencias web y móviles. La página usa la dirección visual del frontend de `Involution_web-main`: núcleo de partículas 3D, tarjetas, diagrama animado y ejemplos de conversación. Los ejemplos son ilustrativos; la web no inicia conversaciones con un agente ni reserva reuniones.
+Landing estática de Involution. Presenta asistentes de voz para web, app o teléfono. La página usa la dirección visual del frontend de `Involution_web-main`: núcleo de partículas 3D, tarjetas, diagrama animado y ejemplos de conversación. Los ejemplos son ilustrativos; la web no inicia conversaciones con un agente ni reserva reuniones.
 
 ## Estructura
 
