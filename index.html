@@ -1,45 +1,40 @@
 <!doctype html>
+
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>IA de voz, vídeo y análisis de imagen | Involution</title>
-    <meta name="description" content="Diseñamos asistentes de voz en tiempo real para web, apps o teléfono, y sistemas de vídeo con análisis de imagen para experiencias web y móviles." />
-    <meta name="keywords" content="Involution, asistente de voz con IA, vídeo en tiempo real, análisis de imagen, IA multimodal, atención al cliente" />
-    <meta name="author" content="Involution" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://involution.es/" />
-
+    <meta content="Diseñamos asistentes de voz en tiempo real para web, apps o teléfono, y sistemas de vídeo con análisis de imagen para experiencias web y móviles." name="description" />
+    <meta content="Involution, asistente de voz con IA, vídeo en tiempo real, análisis de imagen, IA multimodal, atención al cliente" name="keywords" />
+    <meta content="Involution" name="author" />
+    <meta content="index, follow" name="robots" />
+    <link href="https://involution.es/" rel="canonical" />
     <!-- Favicon e iconos de aplicación (sistema de marca Despliegue) -->
-    <link rel="icon" type="image/svg+xml" href="assets/brand/despliegue/involution-app-icon-light.svg" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/despliegue/png/involution-favicon-32.png" />
-    <link rel="apple-touch-icon" href="assets/brand/despliegue/png/involution-apple-touch-icon-180.png" />
-    <link rel="manifest" href="assets/brand/despliegue/site.webmanifest" />
-    <meta name="theme-color" content="#0a0a0a" />
-
+    <link href="assets/brand/despliegue/involution-app-icon-light.svg" rel="icon" type="image/svg+xml" />
+    <link href="assets/brand/despliegue/png/involution-favicon-32.png" rel="icon" sizes="32x32" type="image/png" />
+    <link href="assets/brand/despliegue/png/involution-apple-touch-icon-180.png" rel="apple-touch-icon" />
+    <link href="assets/brand/despliegue/site.webmanifest" rel="manifest" />
+    <meta content="#05060a" name="theme-color" />
     <!-- Open Graph / Facebook / WhatsApp / LinkedIn -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://involution.es/" />
-    <meta property="og:locale" content="es_ES" />
-    <meta property="og:site_name" content="Involution" />
-    <meta property="og:title" content="IA de voz, vídeo y análisis de imagen | Involution" />
-    <meta property="og:description" content="Asistentes de voz y sistemas de vídeo con IA en tiempo real, con análisis de imagen para negocios." />
-    <meta property="og:image" content="https://involution.es/assets/brand/despliegue/png/involution-og-image.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-
+    <meta content="website" property="og:type" />
+    <meta content="https://involution.es/" property="og:url" />
+    <meta content="es_ES" property="og:locale" />
+    <meta content="Involution" property="og:site_name" />
+    <meta content="IA de voz, vídeo y análisis de imagen | Involution" property="og:title" />
+    <meta content="Asistentes de voz y sistemas de vídeo con IA en tiempo real, con análisis de imagen para negocios." property="og:description" />
+    <meta content="https://involution.es/assets/brand/despliegue/png/involution-og-image.png" property="og:image" />
+    <meta content="1200" property="og:image:width" />
+    <meta content="630" property="og:image:height" />
     <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="IA de voz, vídeo y análisis de imagen | Involution" />
-    <meta name="twitter:description" content="Asistentes de voz y sistemas de vídeo con IA en tiempo real, con análisis de imagen para negocios." />
-    <meta name="twitter:image" content="https://involution.es/assets/brand/despliegue/png/involution-og-image.png" />
-
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="IA de voz, vídeo y análisis de imagen | Involution" name="twitter:title" />
+    <meta content="Asistentes de voz y sistemas de vídeo con IA en tiempo real, con análisis de imagen para negocios." name="twitter:description" />
+    <meta content="https://involution.es/assets/brand/despliegue/png/involution-og-image.png" name="twitter:image" />
     <!-- Fuentes -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="assets/voice-widget/voice-widget.css" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&amp;family=JetBrains+Mono:wght@400;500&amp;family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet" />
 
     <!-- Datos estructurados -->
     <script type="application/ld+json">
@@ -133,436 +128,381 @@
         ]
       }
     </script>
+    <link href="assets/experience/style.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- Sprite SVG (icono WhatsApp, definido una sola vez) -->
-    <svg class="svg-sprite" width="0" height="0" aria-hidden="true" focusable="false">
-      <symbol id="ico-wa" viewBox="0 0 24 24">
-        <path
-          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
-        />
-      </symbol>
-    </svg>
-
-    <div class="page">
-      <!-- NAV -->
-      <nav class="nav" aria-label="Navegación principal">
-        <div class="nav__brand">
-          <a href="#" aria-label="Involution — inicio"><img class="nav__logo" src="assets/brand/despliegue/involution-logo-horizontal-color.svg" width="460" height="128" alt="Involution" /></a>
-        </div>
-        <div class="nav__links">
-          <a class="nav__link" href="#problema">Para tu equipo</a>
-          <a class="nav__link" href="#como-funciona">Cómo funciona</a>
-          <a class="nav__link" href="#herramientas">Herramientas</a>
-          <a class="nav__link" href="#puesta-en-marcha">Cómo se hace</a>
-        </div>
-        <div class="nav__actions">
+    <canvas aria-hidden="true" id="gl"></canvas>
+    <div aria-hidden="true" class="grain"></div>
+    <div aria-hidden="true" class="cursor"></div>
+    <!-- ================= PAGE ================= -->
+    <div id="stage">
+      <div id="page">
+        <header class="nav">
+          <a aria-label="Involution" class="brand" href="#top"
+            ><img alt="Involution" class="brand-logo" height="128" src="assets/brand/despliegue/involution-logo-horizontal-white-accent.svg" width="460"
+          /></a>
+          <nav aria-label="Principal" class="nav-links">
+            <a href="#capacidades">Capacidades</a>
+            <a href="#arquitectura">Arquitectura</a>
+            <a href="#casos">Casos</a>
+            <a href="#proceso">Proceso</a>
+            <a href="#faq">FAQ</a>
+          </nav>
           <a
-            class="btn btn-nav"
+            class="btn btn-ghost btn-sm"
+            data-cta="contacto"
             href="https://wa.me/34639904072?text=Hola%2C%20quiero%20valorar%20un%20sistema%20de%20IA%20de%20voz%2C%20v%C3%ADdeo%20y%20an%C3%A1lisis%20de%20imagen%20para%20mi%20negocio.%0A%0ANegocio%3A%0ACanal%20%28web%2C%20app%20o%20tel%C3%A9fono%29%3A%0ANecesidad%20principal%3A"
-            target="_blank"
             rel="noopener"
-            data-cta="nav-contacto"
+            target="_blank"
             >Hablemos</a
           >
-        </div>
-      </nav>
-
-      <main>
-        <!-- HERO -->
-        <header class="hero" id="inv-hero">
-          <div class="hero__bg">
-            <video id="inv-hero-video" loop muted playsinline preload="auto" poster="assets/hero-poster.jpg" src="assets/hero-bg.mp4" class="hero__video"></video>
-            <div id="inv-hero-glow" class="hero__glow"></div>
-            <div class="hero__overlay"></div>
-            <div class="hero__fade"></div>
-          </div>
-          <div class="hero__inner">
-            <div class="hero__grid">
-              <div>
-                <div class="hero__badge reveal">
-                  <span class="hero__badge-dot"></span>
-                  <span class="hero__badge-txt">Voz, vídeo y análisis de imagen con IA</span>
-                </div>
-                <h1 class="hero__title reveal">
-                  Atiende con IA de voz y vídeo.<br />
-                  <span class="hero__title-emphasis">En tiempo real.</span>
-                </h1>
-                <p class="hero__lead reveal">
-                  Diseñamos asistentes de voz y sistemas de vídeo en tiempo real, con análisis de imagen para interpretar lo que ocurre y responder según la lógica de tu negocio.
-                </p>
-                <div class="hero__cta-row reveal">
-                  <a
-                    class="btn btn-primary"
-                    href="https://wa.me/34639904072?text=Hola%2C%20quiero%20valorar%20un%20sistema%20de%20IA%20de%20voz%2C%20v%C3%ADdeo%20y%20an%C3%A1lisis%20de%20imagen%20para%20mi%20negocio.%0A%0ANegocio%3A%0ACanal%20%28web%2C%20app%20o%20tel%C3%A9fono%29%3A%0ANecesidad%20principal%3A"
-                    target="_blank"
-                    rel="noopener"
-                    data-cta="hero-contacto"
-                  >
-                    Hablemos de tu caso
-                    <span class="arrow">→</span>
-                  </a>
-                  <a class="btn btn-outline" href="#como-funciona">Cómo funciona</a>
-                </div>
-              </div>
-              <div class="hero__aura reveal" id="hero-aura"></div>
-            </div>
-          </div>
         </header>
-
-        <!-- VALOR PARA EL EQUIPO -->
-        <section class="section section--soft" id="problema">
-          <div class="wrap split">
-            <div class="on-scroll">
-              <div class="eyebrow">/ EL VALOR PARA TU EQUIPO</div>
-              <h2 class="h2-sm">Atiende mejor cada consulta sin interrumpir cada tarea.</h2>
-              <div class="problem-points">
-                <article class="problem-point">
-                  <span class="problem-point__dot" aria-hidden="true"></span>
-                  <div>
-                    <h3 class="problem-point__title">Menos consultas sin contexto</h3>
-                    <p class="problem-point__text">El asistente pregunta por el motivo de la conversación y recoge la información necesaria para continuar.</p>
-                  </div>
-                </article>
-                <article class="problem-point">
-                  <span class="problem-point__dot" aria-hidden="true"></span>
-                  <div>
-                    <h3 class="problem-point__title">Tu equipo mantiene el foco</h3>
-                    <p class="problem-point__text">Las consultas habituales pueden empezar a resolverse mientras las personas atienden los casos que requieren su criterio.</p>
-                  </div>
-                </article>
-                <article class="problem-point">
-                  <span class="problem-point__dot" aria-hidden="true"></span>
-                  <div>
-                    <h3 class="problem-point__title">Cada conversación tiene continuidad</h3>
-                    <p class="problem-point__text">Definimos cuándo responder, cuándo registrar una solicitud y cuándo pasar el caso al equipo.</p>
-                  </div>
-                </article>
+        <main id="top">
+          <!-- HERO -->
+          <section class="hero">
+            <div class="hero-copy">
+              <p class="eyebrow reveal">Voz · vídeo · análisis visual</p>
+              <h1 class="hero-title">
+                <span class="line"><span>IA de voz</span></span>
+                <span class="line"><span>y vídeo</span></span>
+                <span class="line"
+                  ><span>en <em class="grad">tiempo real.</em></span></span
+                >
+              </h1>
+              <p class="hero-sub reveal">Diseñamos asistentes de voz y sistemas de vídeo con análisis de imagen para negocios. Elegimos el canal, las respuestas y los límites según cada caso.</p>
+              <div class="hero-ctas reveal">
+                <a
+                  class="btn btn-primary btn-lg magnetic"
+                  data-cta="contacto"
+                  href="https://wa.me/34639904072?text=Hola%2C%20quiero%20valorar%20un%20sistema%20de%20IA%20de%20voz%2C%20v%C3%ADdeo%20y%20an%C3%A1lisis%20de%20imagen%20para%20mi%20negocio.%0A%0ANegocio%3A%0ACanal%20%28web%2C%20app%20o%20tel%C3%A9fono%29%3A%0ANecesidad%20principal%3A"
+                  rel="noopener"
+                  target="_blank"
+                  >Valorar mi caso</a
+                >
+                <a class="btn btn-ghost btn-lg" href="#capacidades">Ver capacidades</a>
               </div>
+              <p class="hero-note reveal">Cuéntanos qué necesitas resolver. Empezamos por un caso concreto.</p>
             </div>
-            <div class="card-dark card-dark--operating on-scroll">
-              <div class="eyebrow eyebrow--brand eyebrow--upper">/ VOZ, VÍDEO Y VISIÓN</div>
-              <p class="card-dark__lead">Sistemas de IA adaptados a cómo atiendes y a lo que necesitas analizar.</p>
-              <div class="check-list">
-                <div class="check"><span class="check__mark">✓</span>Voz en tiempo real desde web, app o teléfono</div>
-                <div class="check"><span class="check__mark">✓</span>Vídeo en tiempo real integrado a tu caso de uso</div>
-                <div class="check"><span class="check__mark">✓</span>Análisis de imagen con modelos compatibles</div>
-                <div class="check"><span class="check__mark">✓</span>Respuestas y límites definidos contigo</div>
-              </div>
+            <ul aria-label="Datos clave" class="hero-stats reveal">
+              <li><strong>Voz</strong><span>web · app · teléfono</span></li>
+              <li><strong>Vídeo</strong><span>web · app</span></li>
+              <li><strong>Imagen</strong><span>análisis visual</span></li>
+              <li><strong>Acción</strong><span>según tus reglas</span></li>
+            </ul>
+            <div aria-hidden="true" class="scroll-hint"><span></span></div>
+          </section>
+          <!-- TICKER -->
+          <section aria-label="Ejemplos de conversaciones" class="ticker">
+            <div class="ticker-track">
+              <span>El cliente pregunta <b>→ El asistente recoge el contexto</b></span
+              ><span>Comparte vídeo en directo <b>→ La IA interpreta la escena</b></span
+              ><span>El caso necesita seguimiento <b>→ Se prepara la derivación</b></span
+              ><span>Hay una integración acordada <b>→ El sistema consulta tus datos</b></span
+              ><span>El cliente pregunta <b>→ El asistente recoge el contexto</b></span
+              ><span>Comparte vídeo en directo <b>→ La IA interpreta la escena</b></span
+              ><span>El caso necesita seguimiento <b>→ Se prepara la derivación</b></span
+              ><span>Hay una integración acordada <b>→ El sistema consulta tus datos</b></span>
             </div>
-          </div>
-        </section>
-
-        <!-- CÓMO FUNCIONA -->
-        <section class="section" id="como-funciona">
-          <div class="wrap-1040">
-            <div class="channel-map on-scroll">
-              <div class="channel-map__head">
-                <div class="eyebrow">/ DÓNDE EMPIEZA LA CONVERSACIÓN</div>
-                <h2 class="channel-map__title">Tu asistente, en el canal que elijas.</h2>
-                <p>La voz puede llegar por web, app o teléfono; el vídeo y el análisis de imagen se integran en experiencias web y móviles.</p>
-              </div>
-              <ul class="channel-map__routes">
-                <li class="channel-map__route">
-                  <span class="channel-map__icon" aria-hidden="true">
-                    <svg viewBox="0 0 48 48" fill="none">
-                      <rect x="6" y="9" width="36" height="29" rx="4" stroke="currentColor" stroke-width="2" />
-                      <path d="M6 17h36M12 13h1M17 13h1M21 29l4-8 3 7 2-4 2 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                  </span>
-                  <span><strong>Web</strong><small>Voz y vídeo</small></span>
-                </li>
-                <li class="channel-map__route">
-                  <span class="channel-map__icon" aria-hidden="true">
-                    <svg viewBox="0 0 48 48" fill="none">
-                      <rect x="13" y="5" width="22" height="38" rx="5" stroke="currentColor" stroke-width="2" />
-                      <path d="M21 9h6M22 38h4M18 26l3-5 3 7 3-9 3 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                  </span>
-                  <span><strong>App</strong><small>Voz y vídeo</small></span>
-                </li>
-                <li class="channel-map__route">
-                  <span class="channel-map__icon" aria-hidden="true">
-                    <svg viewBox="0 0 48 48" fill="none">
-                      <path
-                        d="M14.8 7.5 9.7 12a5 5 0 0 0-1.5 4.7c2.5 11.5 11.6 20.6 23.1 23.1a5 5 0 0 0 4.7-1.5l4.5-5.1-9.7-6.5-4.1 4.1a24 24 0 0 1-9.5-9.5l4.1-4.1-6.5-9.7Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path d="M28 9c5.9.4 10.6 5.1 11 11M28 15c2.6.3 4.7 2.4 5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                    </svg>
-                  </span>
-                  <span><strong>Teléfono</strong><small>En una llamada</small></span>
-                </li>
-              </ul>
-              <div class="channel-map__paths" aria-hidden="true"><span></span><span></span><span></span></div>
-              <div class="channel-map__core">
-                <span class="channel-map__core-symbol" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
-                <span><strong>Un sistema de IA adaptable</strong><small>Voz · vídeo · análisis visual</small></span>
-              </div>
-            </div>
-            <div class="why on-scroll">
-              <div class="why__glow"></div>
-              <div class="why__copy">
-                <div class="eyebrow eyebrow--upper">/ MÁS QUE UN AGENTE AISLADO</div>
-                <h3 class="why__title">Voz, vídeo y visión en un mismo flujo de atención.</h3>
-                <p class="why__p">En web y app, el sistema puede recibir vídeo en tiempo real y analizar imágenes con modelos compatibles; por teléfono, la interacción se centra en la voz.</p>
-              </div>
-              <div class="voice-flow">
-                <div class="eyebrow eyebrow--brand eyebrow--upper">/ DE VOZ E IMAGEN A LA ACCIÓN</div>
-                <ol class="voice-flow__list">
-                  <li><strong>El cliente habla o comparte vídeo</strong><span>Desde web o app; por teléfono, mediante una llamada.</span></li>
-                  <li><strong>La señal llega en tiempo real</strong><span>El sistema recibe audio y vídeo según el canal elegido.</span></li>
-                  <li><strong>La IA interpreta voz e imagen</strong><span>Usa modelos compatibles y aplica las reglas de tu negocio.</span></li>
-                  <li><strong>Responde y da continuidad</strong><span>Contesta, recoge o deriva el caso cuando corresponde.</span></li>
-                </ol>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- HERRAMIENTAS E INTEGRACIONES -->
-        <section class="section section--soft" id="herramientas">
-          <div class="wrap-1040">
-            <div class="section-head--center on-scroll-c">
-              <div class="eyebrow">/ HERRAMIENTAS Y CONEXIONES</div>
-              <h2 class="h2-sm">Un asistente que consulta y actúa en tus sistemas.</h2>
-              <p class="lead">Además de conversar, puede usar herramientas para encontrar información y completar tareas concretas.</p>
-            </div>
-            <div class="control-grid">
-              <article class="control-card on-scroll-sm">
-                <span class="control-card__icon" aria-hidden="true">
-                  <svg viewBox="0 0 32 32" fill="none">
-                    <path d="M9 4h10l5 5v19H9a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
-                    <path d="M19 4v6h5M11 16h10M11 21h8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </span>
-                <h3 class="control-card__title">Consulta tu documentación</h3>
-                <p class="control-card__text">Busca respuestas en documentos sobre tus servicios, políticas y preguntas frecuentes.</p>
+          </section>
+          <!-- CAPABILITIES -->
+          <section class="section" id="capacidades">
+            <header class="section-head">
+              <p class="kicker">01 — Capacidades</p>
+              <h2 class="section-title split">Una IA que atiende. En el canal que elijas.</h2>
+            </header>
+            <div class="cards">
+              <article class="card tilt">
+                <div class="card-ico">
+                  <svg viewbox="0 0 24 24"><path d="M3 12h2l2-6 3 12 3-9 2 5 2-2h4"></path></svg>
+                </div>
+                <h3>Voz en tiempo real</h3>
+                <p>Conversaciones por voz en web, app o teléfono, diseñadas alrededor de las preguntas y respuestas de tu negocio.</p>
+                <span class="card-tag">Web · app · teléfono</span>
               </article>
-              <article class="control-card on-scroll-sm">
-                <span class="control-card__icon" aria-hidden="true">
-                  <svg viewBox="0 0 32 32" fill="none">
-                    <rect x="3" y="11" width="8" height="10" rx="2" stroke="currentColor" stroke-width="2" />
-                    <rect x="21" y="3" width="8" height="10" rx="2" stroke="currentColor" stroke-width="2" />
-                    <rect x="21" y="19" width="8" height="10" rx="2" stroke="currentColor" stroke-width="2" />
-                    <path d="M11 16h5m0 0V8h5m-5 8v8h5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </span>
-                <h3 class="control-card__title">Se conecta a tu software</h3>
-                <p class="control-card__text">Consulta datos de tu agenda, CRM u otras aplicaciones mediante herramientas MCP o integraciones a medida.</p>
+              <article class="card tilt">
+                <div class="card-ico">
+                  <svg viewbox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"></path></svg>
+                </div>
+                <h3>Vídeo en directo</h3>
+                <p>Experiencias web o móviles que reciben vídeo cuando el caso requiere ver lo que está ocurriendo.</p>
+                <span class="card-tag">Web · app</span>
               </article>
-              <article class="control-card on-scroll-sm">
-                <span class="control-card__icon" aria-hidden="true">
-                  <svg viewBox="0 0 32 32" fill="none">
-                    <path d="M6 8h17a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H13l-6 5v-5H6a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
-                    <path d="m11 16 3 3 6-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <article class="card tilt">
+                <div class="card-ico">
+                  <svg viewbox="0 0 24 24"><path d="M14 7l3-3 3 3-3 3M4 20l7-7M10 4H6a2 2 0 0 0-2 2v4M20 14v4a2 2 0 0 1-2 2h-4"></path></svg>
+                </div>
+                <h3>Análisis de imagen</h3>
+                <p>Modelos compatibles interpretan imágenes o fotogramas dentro de un alcance y unas reglas definidos contigo.</p>
+                <span class="card-tag">Visión · contexto</span>
+              </article>
+              <article class="card tilt">
+                <div class="card-ico">
+                  <svg viewbox="0 0 24 24">
+                    <circle cx="12" cy="12" r="9"></circle>
+                    <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path>
                   </svg>
-                </span>
-                <h3 class="control-card__title">Completa tareas</h3>
-                <p class="control-card__text">Puede crear solicitudes, actualizar registros o coordinar citas cuando esas acciones estén conectadas y autorizadas.</p>
+                </div>
+                <h3>Conocimiento útil</h3>
+                <p>El asistente puede consultar documentación aprobada para responder con información pertinente.</p>
+                <span class="card-tag">Fuentes autorizadas</span>
+              </article>
+              <article class="card tilt">
+                <div class="card-ico">
+                  <svg viewbox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"></path></svg>
+                </div>
+                <h3>Conexiones a tus sistemas</h3>
+                <p>Podemos integrar agenda, CRM u otras herramientas para consultar datos o completar acciones concretas.</p>
+                <span class="card-tag">Según integración y permisos</span>
+              </article>
+              <article class="card tilt">
+                <div class="card-ico">
+                  <svg viewbox="0 0 24 24">
+                    <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3Z"></path>
+                    <path d="M9 12l2 2 4-4"></path>
+                  </svg>
+                </div>
+                <h3>Continuidad del caso</h3>
+                <p>Acordamos cuándo responder, recoger una solicitud o pasar la conversación a una persona.</p>
+                <span class="card-tag">Límites · derivación</span>
               </article>
             </div>
-            <p class="control-grid__note">Definimos contigo qué puede consultar o modificar y los permisos de cada integración.</p>
-          </div>
-        </section>
-
-        <!-- CÓMO LO HACEMOS -->
-        <section class="section" id="puesta-en-marcha">
-          <div class="wrap-1040">
-            <div class="section-head section-head--md on-scroll">
-              <div class="eyebrow">/ PUESTA EN MARCHA</div>
-              <h2 class="h2">Un caso concreto, cuatro fases.</h2>
-              <p class="lead">Elegimos un caso de uso, diseñamos la conversación y validamos cómo debe actuar antes de ampliar el alcance.</p>
+          </section>
+          <!-- ARCHITECTURE -->
+          <section class="arch" id="arquitectura">
+            <div class="arch-pin">
+              <header class="section-head arch-head">
+                <p class="kicker">02 — Arquitectura</p>
+                <h2 class="section-title">Del canal a una respuesta útil.</h2>
+                <p aria-live="polite" class="arch-caption">
+                  <span class="arch-step-n">01</span>
+                  <span class="arch-step-t">El cliente habla desde web, app o teléfono; también puede compartir vídeo en web o app.</span>
+                </p>
+              </header>
+              <div aria-hidden="true" class="arch-scene">
+                <div class="arch-plane">
+                  <svg class="arch-lines" preserveaspectratio="none" viewbox="0 0 1000 600">
+                    <defs>
+                      <lineargradient gradientunits="userSpaceOnUse" id="lg" x1="100" x2="900" y1="0" y2="0">
+                        <stop offset="0" stop-color="#5ef2ff"></stop>
+                        <stop offset="1" stop-color="#a77bff"></stop>
+                      </lineargradient>
+                    </defs>
+                    <path d="M120 300 C 220 300, 240 300, 330 300" id="p1"></path>
+                    <path d="M330 300 C 420 300, 440 300, 520 300" id="p2"></path>
+                    <path d="M520 300 C 600 300, 620 160, 700 150" id="p3"></path>
+                    <path d="M520 300 C 640 300, 700 450, 860 450" id="p4"></path>
+                    <path d="M700 150 C 800 150, 820 150, 880 150" id="p5"></path>
+                  </svg>
+                  <div class="node" data-step="0" style="--x: 12%; --y: 50%">
+                    <div class="node-ring"></div>
+                    <div class="node-body">
+                      <svg viewbox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"></path></svg>
+                    </div>
+                    <span class="node-label">Web · App · Teléfono</span>
+                  </div>
+                  <div class="node" data-step="1" style="--x: 33%; --y: 50%">
+                    <div class="node-ring"></div>
+                    <div class="node-body mono">A/V</div>
+                    <span class="node-label">Audio · Vídeo</span>
+                  </div>
+                  <div class="node node-xl" data-step="2" style="--x: 52%; --y: 50%">
+                    <div class="node-ring"></div>
+                    <div class="node-body mono">IA</div>
+                    <span class="node-label">Sistema de IA</span>
+                  </div>
+                  <div class="node" data-step="3" style="--x: 70%; --y: 25%">
+                    <div class="node-ring"></div>
+                    <div class="node-body">
+                      <svg viewbox="0 0 24 24"><path d="M12 2c.6 5.4 4.6 9.4 10 10-5.4.6-9.4 4.6-10 10-.6-5.4-4.6-9.4-10-10 5.4-.6 9.4-4.6 10-10Z"></path></svg>
+                    </div>
+                    <span class="node-label">Interpretación</span>
+                  </div>
+                  <div class="node" data-step="3" style="--x: 88%; --y: 25%">
+                    <div class="node-ring"></div>
+                    <div class="node-body">
+                      <svg viewbox="0 0 24 24"><path d="M3 12h2l2-6 3 12 3-9 2 5 2-2h4"></path></svg>
+                    </div>
+                    <span class="node-label">Respuesta</span>
+                  </div>
+                  <div class="node" data-step="4" style="--x: 86%; --y: 75%">
+                    <div class="node-ring"></div>
+                    <div class="node-body stack"><i>CRM</i><i>Agenda</i><i>Datos</i></div>
+                    <span class="node-label">Tus herramientas</span>
+                  </div>
+                </div>
+              </div>
+              <ol class="arch-steps" hidden>
+                <li>El cliente habla desde web, app o teléfono; también puede compartir vídeo en web o app.</li>
+                <li>El sistema recibe la señal en tiempo real, según el canal elegido.</li>
+                <li>La IA interpreta la voz y, cuando corresponde, las imágenes.</li>
+                <li>Las reglas acordadas determinan la respuesta y los límites del asistente.</li>
+                <li>El sistema responde, recoge una solicitud o deriva; usa herramientas si están conectadas.</li>
+              </ol>
             </div>
-            <div class="grid-lines ladder">
-              <div class="ladder-row on-scroll-sm">
-                <div class="badge-num">01</div>
-                <div class="ladder__mid">
-                  <div class="chip"><span class="chip__dot"></span>01 / Punto de partida</div>
-                  <h3 class="ladder__title">Canal y necesidades</h3>
-                </div>
-                <p class="ladder__desc">Revisamos qué consultas recibes, si llegan por web, app o teléfono, y dónde se pierde tiempo o continuidad.</p>
-              </div>
-              <div class="ladder-row on-scroll-sm">
-                <div class="badge-num">02</div>
-                <div class="ladder__mid">
-                  <div class="chip"><span class="chip__dot"></span>02 / Diseño</div>
-                  <h3 class="ladder__title">Conversación y límites</h3>
-                </div>
-                <p class="ladder__desc">Definimos respuestas, datos necesarios, criterios de derivación y el siguiente paso tras la conversación.</p>
-              </div>
-              <div class="ladder-row on-scroll-sm">
-                <div class="badge-num">03</div>
-                <div class="ladder__mid">
-                  <div class="chip"><span class="chip__dot"></span>03 / Validación</div>
-                  <h3 class="ladder__title">Pruebas con casos reales</h3>
-                </div>
-                <p class="ladder__desc">Probamos conversaciones representativas en el canal elegido y ajustamos el asistente antes de ponerlo en servicio.</p>
-              </div>
-              <div class="ladder-row on-scroll-sm">
-                <div class="badge-num">04</div>
-                <div class="ladder__mid">
-                  <div class="chip"><span class="chip__dot"></span>04 / Operación</div>
-                  <h3 class="ladder__title">Seguimiento y mejora</h3>
-                </div>
-                <p class="ladder__desc">Revisamos las consultas que llegan y ampliamos el alcance cuando el primer caso funciona bien.</p>
-              </div>
+          </section>
+          <!-- USE CASES -->
+          <section class="section" id="casos">
+            <header class="section-head">
+              <p class="kicker">03 — Casos de uso</p>
+              <h2 class="section-title split">Ejemplos de interacción<br /><span class="muted">según el canal y la necesidad.</span></h2>
+            </header>
+            <div class="cases">
+              <article class="case tilt" data-convo='[["u", "Tengo una duda sobre vuestro servicio."], ["a", "Claro. Cuéntame qué necesitas y buscaré la información aprobada para ayudarte."]]'>
+                <h3>Atención por voz</h3>
+                <p class="case-sub">Una pregunta frecuente desde web, app o teléfono.</p>
+                <div class="convo"></div>
+              </article>
+              <article class="case tilt" data-convo='[["u", "Necesito que me llaméis por una incidencia."], ["a", "De acuerdo. ¿Qué ha ocurrido y cuál es la mejor forma de contactar contigo?"]]'>
+                <h3>Solicitud con contexto</h3>
+                <p class="case-sub">Recoger lo necesario para que el equipo continúe.</p>
+                <div class="convo"></div>
+              </article>
+              <article class="case tilt" data-convo='[["u", "¿Cuál es vuestra política de cambios?"], ["a", "Puedo consultar la política vigente y explicarte los pasos aplicables."]]'>
+                <h3>Consulta documental</h3>
+                <p class="case-sub">Responder con fuentes que el negocio autorice.</p>
+                <div class="convo"></div>
+              </article>
+              <article class="case tilt" data-convo='[["u", "Quisiera concertar una reunión."], ["a", "Si la agenda está conectada, puedo consultar los huecos disponibles."]]'>
+                <h3>Agenda conectada</h3>
+                <p class="case-sub">Ofrecer opciones si existe una integración autorizada.</p>
+                <div class="convo"></div>
+              </article>
+              <article class="case tilt" data-convo='[["u", "Voy a mostrarte la pieza con la cámara."], ["a", "Perfecto. Te indicaré qué se ve y si necesito otro ángulo."]]'>
+                <h3>Vídeo guiado</h3>
+                <p class="case-sub">Añadir contexto visual en una experiencia web o móvil.</p>
+                <div class="convo"></div>
+              </article>
+              <article class="case tilt" data-convo='[["u", "¿Qué aparece en esta imagen?"], ["a", "Puedo analizarla según las categorías definidas para este servicio."]]'>
+                <h3>Análisis visual</h3>
+                <p class="case-sub">Interpretar imágenes dentro del alcance acordado.</p>
+                <div class="convo"></div>
+              </article>
             </div>
-          </div>
-        </section>
-
-        <!-- FAQS -->
-        <section class="section" id="faq">
-          <div class="wrap-800">
-            <div class="section-head--center on-scroll-c">
-              <div class="eyebrow">/ PREGUNTAS FRECUENTES</div>
-              <h2 class="h2-sm h2--flush">Lo que suelen preguntarnos</h2>
-            </div>
+            <p class="cases-note">Conversaciones ilustrativas. Las respuestas y acciones reales dependen de cada configuración e integración.</p>
+          </section>
+          <!-- PROCESS -->
+          <section class="section" id="proceso">
+            <header class="section-head">
+              <p class="kicker">04 — Proceso</p>
+              <h2 class="section-title split">Un caso concreto.<br /><span class="muted">Cuatro fases para ponerlo en marcha.</span></h2>
+            </header>
+            <ol class="process">
+              <li>
+                <span class="p-n">01</span>
+                <h3>Canal y necesidades</h3>
+                <p>Revisamos qué consultas llegan, por dónde llegan y dónde se pierde tiempo o continuidad.</p>
+              </li>
+              <li>
+                <span class="p-n">02</span>
+                <h3>Conversación y límites</h3>
+                <p>Definimos respuestas, datos necesarios, criterios de derivación y el siguiente paso.</p>
+              </li>
+              <li>
+                <span class="p-n">03</span>
+                <h3>Pruebas con casos reales</h3>
+                <p>Probamos conversaciones representativas en el canal elegido antes de ponerlo en servicio.</p>
+              </li>
+              <li>
+                <span class="p-n">04</span>
+                <h3>Seguimiento y mejora</h3>
+                <p>Revisamos las consultas y ampliamos el alcance cuando el primer caso funciona bien.</p>
+              </li>
+            </ol>
+            <div aria-hidden="true" class="process-line"><span></span></div>
+          </section>
+          <!-- STACK -->
+          <section aria-label="Tecnología" class="stack-strip">
+            <p class="kicker">Canales y capacidades</p>
+            <ul>
+              <li>Web</li>
+              <li>App</li>
+              <li>Teléfono</li>
+              <li>Voz en tiempo real</li>
+              <li>Vídeo en directo</li>
+              <li>Análisis visual</li>
+              <li>Integraciones a medida</li>
+              <li>Derivación al equipo</li>
+            </ul>
+          </section>
+          <!-- FAQ -->
+          <section class="section faq" id="faq">
+            <header class="section-head">
+              <p class="kicker">05 — Preguntas frecuentes</p>
+              <h2 class="section-title">Lo que nos suelen preguntar.</h2>
+            </header>
             <div class="faq-list">
-              <details class="faq">
-                <summary class="faq__summary"><span>¿Qué sistemas de IA diseñáis?</span><span class="faq__icon">+</span></summary>
-                <div class="faq__body">Diseñamos asistentes de voz para web, apps o teléfono, y sistemas de vídeo con análisis de imagen para experiencias web y móviles.</div>
+              <details>
+                <summary>¿Qué sistemas de IA diseñáis?</summary>
+                <p>Diseñamos asistentes de voz para web, apps o teléfono, y sistemas de vídeo con análisis de imagen para experiencias web y móviles.</p>
               </details>
-              <details class="faq">
-                <summary class="faq__summary"><span>¿Dónde puede hablar el cliente con el asistente?</span><span class="faq__icon">+</span></summary>
-                <div class="faq__body">
+              <details>
+                <summary>¿Dónde puede hablar el cliente con el asistente?</summary>
+                <p>
                   La voz puede integrarse en una web, app o llamada telefónica; el vídeo y el análisis de imagen, en experiencias web y móviles. Elegimos el canal según el caso de uso y la integración
                   disponible.
-                </div>
+                </p>
               </details>
-              <details class="faq">
-                <summary class="faq__summary"><span>¿Podéis analizar imágenes o vídeo en tiempo real?</span><span class="faq__icon">+</span></summary>
-                <div class="faq__body">
-                  Sí. Montamos sistemas de vídeo en tiempo real y añadimos análisis de imagen con modelos compatibles. El alcance se define según el caso de uso y la integración necesaria.
-                </div>
+              <details>
+                <summary>¿Podéis analizar imágenes o vídeo en tiempo real?</summary>
+                <p>Sí. Montamos sistemas de vídeo en tiempo real y añadimos análisis de imagen con modelos compatibles. El alcance se define según el caso de uso y la integración necesaria.</p>
               </details>
-              <details class="faq">
-                <summary class="faq__summary"><span>¿Para qué negocios puede servir?</span><span class="faq__icon">+</span></summary>
-                <div class="faq__body">
+              <details>
+                <summary>¿Para qué negocios puede servir?</summary>
+                <p>
                   Puede servir a negocios que reciben consultas frecuentes o conversaciones que el equipo no puede atender al momento. Definimos con cada negocio qué debe responder el asistente, qué
                   información recoger y cuándo derivar a una persona.
-                </div>
+                </p>
               </details>
-              <details class="faq">
-                <summary class="faq__summary"><span>¿Puede derivar una conversación a una persona?</span><span class="faq__icon">+</span></summary>
-                <div class="faq__body">Sí. Definimos cuándo debe intervenir el equipo y cómo darle continuidad al caso. La derivación concreta depende del canal y de las integraciones acordadas.</div>
+              <details>
+                <summary>¿Puede derivar una conversación a una persona?</summary>
+                <p>Sí. Definimos cuándo debe intervenir el equipo y cómo darle continuidad al caso. La derivación concreta depende del canal y de las integraciones acordadas.</p>
               </details>
-              <details class="faq">
-                <summary class="faq__summary"><span>¿Cómo se adapta a la forma de atender de mi negocio?</span><span class="faq__icon">+</span></summary>
-                <div class="faq__body">
+              <details>
+                <summary>¿Cómo se adapta a la forma de atender de mi negocio?</summary>
+                <p>
                   Diseñamos el guion conversacional a partir de tus preguntas frecuentes, horarios, servicios y criterios de derivación. Acordamos qué información puede dar y qué casos requieren
                   revisión humana.
-                </div>
+                </p>
               </details>
-              <details class="faq">
-                <summary class="faq__summary"><span>¿Puede conectarse con mi agenda o mi software?</span><span class="faq__icon">+</span></summary>
-                <div class="faq__body">
+              <details>
+                <summary>¿Puede conectarse con mi agenda o mi software?</summary>
+                <p>
                   Podemos conectar herramientas MCP o integraciones a medida para consultar documentación, agendas, CRM u otros sistemas y realizar acciones concretas. El acceso y las acciones
                   disponibles dependen del software y de los permisos acordados.
-                </div>
+                </p>
               </details>
-              <details class="faq">
-                <summary class="faq__summary"><span>¿Qué necesito para empezar?</span><span class="faq__icon">+</span></summary>
-                <div class="faq__body">
+              <details>
+                <summary>¿Qué necesito para empezar?</summary>
+                <p>
                   Cuéntanos qué consultas quieres atender, por qué canal llegan y qué debería ocurrir al terminar cada conversación. Con eso podemos proponer un primer caso de uso y valorar su
                   integración.
-                </div>
+                </p>
               </details>
             </div>
-          </div>
-        </section>
-
-        <!-- CTA FINAL -->
-        <section class="section" id="cta">
-          <div class="wrap">
-            <div class="cta-box">
-              <div class="cta-box__dots"></div>
-              <div class="cta-box__inner">
-                <div class="cta-box__eyebrow">/ EMPIEZA POR UNA CONVERSACIÓN</div>
-                <h2 class="cta-box__title">Hablemos del sistema de IA que necesita tu negocio.</h2>
-                <p class="cta-box__lead">Cuéntanos qué quieres resolver con voz, vídeo o análisis de imagen, por qué canal y qué debería ocurrir después. Te propondremos un primer caso de uso.</p>
-                <div class="cta-box__actions">
-                  <a
-                    class="btn btn-primary btn-white"
-                    href="https://wa.me/34639904072?text=Hola%2C%20quiero%20valorar%20un%20sistema%20de%20IA%20de%20voz%2C%20v%C3%ADdeo%20y%20an%C3%A1lisis%20de%20imagen%20para%20mi%20negocio.%0A%0ANegocio%3A%0ACanal%20%28web%2C%20app%20o%20tel%C3%A9fono%29%3A%0ANecesidad%20principal%3A"
-                    target="_blank"
-                    rel="noopener"
-                    data-cta="cta-final-contacto"
-                  >
-                    <span>Valorar mi caso de uso</span>
-                    <span class="arrow">→</span>
-                  </a>
-                </div>
-                <p class="cta-box__micro">Puedes empezar con una necesidad concreta de atención, vídeo en directo o análisis visual.</p>
-                <p class="cta-box__foot">
-                  <a class="u" href="mailto:hola@involution.es">hola@involution.es</a> &nbsp;·&nbsp; <a href="tel:+34639904072" data-cta="cta-final-tel">+34 639 90 40 72</a> &nbsp;·&nbsp;
-                  <a
-                    class="cta-wa-link"
-                    href="https://wa.me/34639904072?text=Hola%2C%20quiero%20valorar%20un%20sistema%20de%20IA%20de%20voz%2C%20v%C3%ADdeo%20y%20an%C3%A1lisis%20de%20imagen%20para%20mi%20negocio.%0A%0ANegocio%3A%0ACanal%20%28web%2C%20app%20o%20tel%C3%A9fono%29%3A%0ANecesidad%20principal%3A"
-                    target="_blank"
-                    rel="noopener"
-                    data-cta="cta-final-whatsapp"
-                    >Escríbenos por WhatsApp</a
-                  >
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <!-- FOOTER -->
-      <footer class="footer">
-        <div class="footer-grid">
-          <div>
-            <img class="footer__logo" src="assets/brand/despliegue/involution-logo-horizontal-white-accent.svg" width="460" height="128" alt="Involution" />
-            <div class="footer__partner">/ Voz, vídeo e IA para negocios</div>
-            <p class="footer__about">Diseñamos asistentes de voz y sistemas de vídeo en tiempo real con análisis de imagen, adaptados a los canales y procesos de cada negocio.</p>
-            <div class="footer__meta">
-              <span>Voz en tiempo real</span>
-              <span>Vídeo y análisis visual</span>
-              <span>Adaptado a tu negocio</span>
-            </div>
-          </div>
-          <div>
-            <div class="footer-col__title">Propuesta</div>
-            <div class="footer-col__links">
-              <a href="#problema">Valor para tu equipo</a>
-              <a href="#como-funciona">Cómo funciona</a>
-            </div>
-          </div>
-          <div>
-            <div class="footer-col__title">Implementación</div>
-            <div class="footer-col__links">
-              <a href="#herramientas">Herramientas e integraciones</a>
-              <a href="#puesta-en-marcha">Cómo se hace</a>
-              <a href="#faq">Preguntas frecuentes</a>
-            </div>
-          </div>
-          <div>
-            <div class="footer-col__title">Contacto</div>
-            <div class="footer-col__links">
-              <a
-                href="https://wa.me/34639904072?text=Hola%2C%20quiero%20valorar%20un%20sistema%20de%20IA%20de%20voz%2C%20v%C3%ADdeo%20y%20an%C3%A1lisis%20de%20imagen%20para%20mi%20negocio.%0A%0ANegocio%3A%0ACanal%20%28web%2C%20app%20o%20tel%C3%A9fono%29%3A%0ANecesidad%20principal%3A"
-                target="_blank"
-                rel="noopener"
-                >Escríbenos por WhatsApp</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="footer__bottom">
-          <span class="footer__copy">© 2026 Involution. Todos los derechos reservados.</span>
-          <span class="footer__legal"><a href="/aviso-legal/">Aviso legal</a><a href="/privacidad/">Política de privacidad</a></span>
-          <a class="footer__mail" href="mailto:hola@involution.es">hola@involution.es</a>
-        </div>
-      </footer>
+          </section>
+          <!-- FINAL CTA -->
+          <section class="final-cta">
+            <p class="kicker">¿Hablamos?</p>
+            <h2 class="final-title">Hablemos.</h2>
+            <p class="final-sub">Cuéntanos qué quieres resolver con voz, vídeo o análisis de imagen. Te propondremos un primer caso de uso.</p>
+            <a
+              class="btn btn-primary btn-xl magnetic"
+              data-cta="contacto"
+              href="https://wa.me/34639904072?text=Hola%2C%20quiero%20valorar%20un%20sistema%20de%20IA%20de%20voz%2C%20v%C3%ADdeo%20y%20an%C3%A1lisis%20de%20imagen%20para%20mi%20negocio.%0A%0ANegocio%3A%0ACanal%20%28web%2C%20app%20o%20tel%C3%A9fono%29%3A%0ANecesidad%20principal%3A"
+              rel="noopener"
+              target="_blank"
+              >Valorar mi caso</a
+            >
+          </section>
+        </main>
+        <footer class="footer">
+          <span>© 2026 Involution</span><a href="mailto:hola@involution.es">hola@involution.es</a><a href="tel:+34639904072">+34 639 90 40 72</a><a href="/aviso-legal/">Aviso legal</a
+          ><a href="/privacidad/">Privacidad</a>
+        </footer>
+      </div>
     </div>
+    <!-- ================= LIVE DEMO ================= -->
 
-    <script src="main.js" defer></script>
-    <script type="module" src="assets/voice-widget/voice-widget.js"></script>
+    <script src="assets/experience/experience.js" type="module"></script>
   </body>
 </html>
