@@ -1,117 +1,33 @@
-# Involution · Voz, vídeo e IA en tiempo real
+# Involution · Asistentes de voz con IA
 
-Landing de **Involution**: asistentes de voz con IA y sistemas de vídeo en tiempo real con análisis de imagen para negocios. Presenta los canales disponibles y la forma de poner en marcha cada sistema.
+Landing estática de Involution. Presenta asistentes de voz para web, app o teléfono. La página usa la dirección visual del frontend de `Involution_web-main`: núcleo de partículas 3D, tarjetas, diagrama animado y ejemplos de conversación. Los ejemplos son ilustrativos; la web no inicia conversaciones con un agente ni reserva reuniones.
 
----
+## Estructura
 
-## 🛠️ Tecnologías y Estructura
+- `index.html`: contenido de la landing y metadatos SEO.
+- `experience/`: frontend visual en TypeScript, Three.js y GSAP. Vite lo compila a `assets/experience/`.
+- `styles.css`: estilos de las páginas legales y de error existentes.
+- `assets/brand/despliegue/`: logotipos, iconos y Open Graph de Involution.
+- `aviso-legal/`, `privacidad/`, `404.html`: páginas estáticas complementarias.
+- `.github/workflows/deploy.yml`: validación y despliegue en GitHub Pages.
 
-- **Landing HTML/CSS/JS**: el contenido principal permanece en HTML y funciona sin React.
-- **CSS con tokens de diseño**: `styles.css` con custom properties y clases reutilizables.
-- **JS vanilla**: `main.js` para el glow del hero, reproducción del vídeo de fondo y previsualización de logotipos.
-- **Aura del hero**: isla React en `voice-widget/` con el componente AgentAudioVisualizerAura. Vite la compila a `assets/voice-widget/` antes de servir o publicar la landing.
-- **Optimización de Assets**: vídeos comprimidos en MP4 e imágenes optimizadas.
-- **Despliegue**: **GitHub Pages** mediante GitHub Actions (`.github/workflows/deploy.yml`), sitio estático.
+Los CTA abren WhatsApp; el footer incluye correo y teléfono. No hay backend, llamadas a `/live`, acceso al micrófono ni claves en el navegador.
 
----
+## Desarrollo local
 
-## 📂 Estructura del Proyecto
-
-```text
-.
-├── assets/
-│   ├── brand/despliegue/     # Sistema de marca: logos, iconos, favicon, OG, manifest
-│   └── *.mp4 / *.jpg         # Vídeos de la landing y sus pósters
-├── .github/workflows/
-│   └── deploy.yml            # Build y despliegue en GitHub Pages
-├── aviso-legal/index.html    # Aviso legal → /aviso-legal/
-├── privacidad/index.html     # Política de privacidad → /privacidad/
-├── index.html                # Landing page principal (HTML estático)
-├── 404.html                  # Página de error de GitHub Pages
-├── logo-lab.html             # Laboratorio de marca/logo (sólo local, no se publica)
-├── logo-lab.css              # Estilos del laboratorio de logos
-├── logo-lab.js               # Lógica del laboratorio de logos
-├── PRODUCTO.md               # Definición inicial del producto y decisiones pendientes
-├── styles.css                # Tokens de diseño, tipografía Geist y componentes B2B
-├── main.js                   # Interactividad del hero y previsualización de logotipos
-├── voice-widget/             # Fuente React del aura del hero
-├── robots.txt                # SEO
-├── sitemap.xml               # SEO
-├── CNAME                     # Dominio propio de GitHub Pages (involution.es)
-├── package.json              # Scripts del proyecto y dependencias
-└── README.md                 # Documentación del repositorio
+```bash
+npm ci
+npm run dev
 ```
 
-> Las páginas legales viven en carpetas con `index.html` porque GitHub Pages no
-> recorta la extensión `.html` como hacía `cleanUrls` en Vercel. Así `/aviso-legal`
-> sigue funcionando: Pages responde con un 301 hacia `/aviso-legal/`.
+`npm run dev` compila la experiencia visual y sirve la web en `http://localhost:3000`. Para validar los archivos, HTML, TypeScript, build y formato:
 
----
-
-## 💻 Desarrollo Local
-
-Para ejecutar el proyecto localmente:
-
-1. **Instalar dependencias**:
-
-   ```bash
-   npm install
-   npm --prefix voice-widget install
-   ```
-
-2. **Iniciar servidor de desarrollo**:
-
-   ```bash
-   npm run dev
-   ```
-
-3. Abrir en el navegador la URL que indique `serve` (por defecto `http://localhost:3000`). `npm run dev` compila el aura antes de iniciar el servidor.
-
-> Nota: ábrelo siempre con un servidor local, no con `file://`, para que el vídeo con autoplay y las rutas relativas funcionen.
-
----
-
-## 🚀 Despliegue en GitHub Pages
-
-Cada push a `main` dispara `.github/workflows/deploy.yml`, que instala las dependencias del widget, ejecuta `npm run check`,
-arma el directorio `_site` con lo que se publica y lo despliega. También se puede lanzar
-a mano desde la pestaña **Actions** (`workflow_dispatch`).
-
-El workflow copia **sólo** la landing: `my-video/`, `docs/`, `node_modules/` y los
-ficheros `logo-lab.*` se quedan fuera.
-
-### Configuración del repositorio
-
-En **Settings → Pages**, el origen (_Source_) debe ser **GitHub Actions**, no
-«Deploy from a branch».
-
-### Dominio propio
-
-El fichero `CNAME` fija `involution.es`. En el DNS del dominio hacen falta los
-registros apex de GitHub:
-
-```text
-A     @    185.199.108.153
-A     @    185.199.109.153
-A     @    185.199.110.153
-A     @    185.199.111.153
-AAAA  @    2606:50c0:8000::153
-AAAA  @    2606:50c0:8001::153
-AAAA  @    2606:50c0:8002::153
-AAAA  @    2606:50c0:8003::153
+```bash
+npm run check
 ```
 
-Cuando el certificado de Let's Encrypt esté emitido, activa **Enforce HTTPS**.
+El sitio sigue siendo legible sin JavaScript. Si WebGL no está disponible o el usuario prefiere menos movimiento, el contenido permanece visible y la visualización 3D se omite.
 
-### Limitaciones respecto a Vercel
+## Publicación
 
-- **No hay cabeceras propias.** El `Cache-Control: immutable` que definía
-  `vercel.json` para `/assets/*` no tiene equivalente: Pages sirve todo con una
-  caché de ~10 minutos.
-- **No hay analítica.** Se retiró Vercel Web Analytics y no se sustituyó.
-
----
-
-## 📄 Licencia
-
-MIT © Involution. Todos los derechos reservados.
+Cada push a `main` ejecuta el workflow de GitHub Pages. Este genera los archivos de `assets/experience/`, prepara `_site` y publica únicamente la landing y sus páginas complementarias. `CNAME` mantiene el dominio `involution.es`.

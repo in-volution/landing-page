@@ -10,6 +10,7 @@ docs
 dist
 build
 assets/voice-widget/
+assets/experience/
 out
 .vercel
 .next

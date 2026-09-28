@@ -5,13 +5,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "npm run build:voice-widget && npx serve .",
-    "start": "npm run build:voice-widget && npx serve .",
-    "build:voice-widget": "npm --prefix voice-widget run build",
-    "check": "npm run check:files && npm run check:html && npm run check:widget && npm run check:format",
-    "check:files": "node -e \"const fs=require('fs'); for (const file of ['index.html','styles.css','main.js','404.html','CNAME','aviso-legal/index.html','privacidad/index.html']) { if (!fs.existsSync(file)) throw new Error('Missing required file: '+file) }\"",
+    "dev": "npm run build:experience && npx serve .",
+    "start": "npm run build:experience && npx serve .",
+    "build:experience": "vite build --config experience/vite.config.ts",
+    "check": "npm run check:files && npm run check:html && npm run check:experience && npm run check:format",
+    "check:files": "node -e \"const fs=require('fs'); for (const file of ['index.html','styles.css','experience/main.ts','experience/style.css','404.html','CNAME','aviso-legal/index.html','privacidad/index.html']) { if (!fs.existsSync(file)) throw new Error('Missing required file: '+file) }\"",
     "check:html": "html-validate index.html logo-lab.html 404.html aviso-legal/index.html privacidad/index.html",
-    "check:widget": "npm --prefix voice-widget run typecheck && npm run build:voice-widget",
+    "check:experience": "tsc --noEmit -p experience/tsconfig.json && npm run build:experience",
     "check:format": "prettier --check .",
     "format": "prettier --write ."
   },
@@ -28,8 +28,16 @@
     "node": ">=24.8.0"
   },
   "devDependencies": {
+    "@types/node": "^26.6.3",
+    "@types/three": "^0.186.0",
     "html-validate": "^11.5.6",
     "prettier": "^3.9.6",
-    "serve": "^14.2.4"
+    "serve": "^14.2.4",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.1"
+  },
+  "dependencies": {
+    "gsap": "^3.15.0",
+    "three": "^0.186.1"
   }
 }
