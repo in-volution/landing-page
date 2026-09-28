@@ -2,7 +2,7 @@
 
 ## Objetivo y criterio de diseño
 
-Usar `involution-landing-page` como sitio principal y sumar los recursos visuales e interacciones útiles de `Involution_web-main/web`. El resultado seguirá siendo un sitio estático publicable en GitHub Pages. El alcance comercial actual es solo audio: asistentes de voz para web, app o teléfono. La portada adopta la tipografía y la paleta del frontend nuevo, mientras conserva el logotipo **Despliegue** y los metadatos de marca existentes.
+Usar `involution-landing-page` como sitio principal y sumar los recursos visuales e interacciones útiles de `Involution_web-main/web`. El resultado seguirá siendo un sitio estático publicable en GitHub Pages. El alcance comercial actual es solo audio: asistentes de voz para web, app o teléfono. La portada adopta la tipografía del frontend nuevo y la paleta de Involution (negro `#0A0A0A`, blanco `#FFFFFF` y azul `#3155FF`), mientras conserva el logotipo **Despliegue** y los metadatos de marca existentes.
 
 Tras decidir usar la apariencia de la página nueva como base, la pieza visual distintiva es su núcleo de partículas 3D. Sustituye al vídeo de fondo y al aura React. Se conservan la identidad Despliegue, el alcance comercial actual de voz y sus contactos.
 

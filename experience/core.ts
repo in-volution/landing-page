@@ -60,15 +60,14 @@ void main(){
   gl_Position = projectionMatrix * mv;
   float size = uSize * (0.35 + aRand.z * 0.9) * (1.0 + energy * 0.8 + w * 2.5);
   gl_PointSize = size * uPixelRatio * (4.0 / max(0.2, -mv.z));
-  // colour: cyan ↔ violet ↔ pink, pushed by who is talking
-  vec3 cyan = vec3(0.37, 0.95, 1.0);
-  vec3 violet = vec3(0.65, 0.48, 1.0);
-  vec3 pink = vec3(1.0, 0.48, 0.85);
+  // Brand blue and white highlights, pushed by who is talking.
+  vec3 brand = vec3(0.192, 0.333, 1.0);
+  vec3 highlight = vec3(1.0);
   float k = smoothstep(-0.6, 0.8, n + aSphere.y * 0.4);
-  vec3 col = mix(cyan, violet, k);
-  col = mix(col, pink, smoothstep(0.55, 1.0, n2) * 0.5);
-  col = mix(col, cyan * 1.15, clamp(uMic * 1.6, 0.0, 0.8));
-  col = mix(col, mix(violet, pink, k) * 1.15, clamp(uAgent * 1.4, 0.0, 0.7));
+  vec3 col = mix(brand, highlight, k * 0.55);
+  col = mix(col, highlight, smoothstep(0.55, 1.0, n2) * 0.5);
+  col = mix(col, highlight, clamp(uMic * 1.6, 0.0, 0.8));
+  col = mix(col, mix(brand, highlight, k) * 1.15, clamp(uAgent * 1.4, 0.0, 0.7));
   vColor = col;
   float depthFade = smoothstep(-9.0, -1.0, mv.z);
   vAlpha = (0.45 + aRand.w * 0.55) * mix(1.0, depthFade, 0.6) * (1.0 - w * 0.35);
@@ -92,8 +91,8 @@ varying vec2 vUv;
 void main(){
   float d = length(vUv - 0.5) * 2.0;
   float g = exp(-d * d * 4.5) * (0.32 + uEnergy * 0.7);
-  vec3 col = mix(vec3(0.35, 0.3, 0.9), vec3(0.37, 0.95, 1.0), clamp(uMic * 2.0, 0.0, 1.0));
-  col = mix(col, vec3(0.75, 0.45, 1.0), clamp(uAgent * 2.0, 0.0, 1.0));
+  vec3 col = mix(vec3(0.192, 0.333, 1.0), vec3(1.0), clamp(uMic * 2.0, 0.0, 1.0) * 0.45);
+  col = mix(col, vec3(1.0), clamp(uAgent * 2.0, 0.0, 1.0) * 0.7);
   gl_FragColor = vec4(col * g, g * uOpacity);
 }`;
 
@@ -117,7 +116,7 @@ varying float vAlpha;
 void main(){
   float d = length(gl_PointCoord - 0.5);
   float a = smoothstep(0.5, 0.0, d);
-  gl_FragColor = vec4(vec3(0.75, 0.85, 1.0) * a, a * vAlpha);
+  gl_FragColor = vec4(vec3(1.0) * a, a * vAlpha);
 }`;
 
 export type Layout = { x: number; y: number; scale: number; opacity: number };
@@ -170,7 +169,7 @@ export class VoiceCore {
       alpha: false,
       powerPreference: 'high-performance'
     });
-    this.renderer.setClearColor(0x05060a, 1);
+    this.renderer.setClearColor(0x0a0a0a, 1);
     const pr = Math.min(window.devicePixelRatio, opts.lowPower ? 1.5 : 2);
     this.renderer.setPixelRatio(pr);
     this.uniforms.uPixelRatio.value = pr;
