@@ -643,12 +643,10 @@ button {
 /* ============ ARCHITECTURE ============ */
 .arch {
   position: relative;
-  height: 420vh;
 }
-.arch-pin {
-  position: sticky;
-  top: 0;
-  height: 100vh;
+.arch-content {
+  min-height: 100vh;
+  min-height: 100svh;
   overflow: hidden;
   display: grid;
   grid-template-rows: auto 1fr;
@@ -1161,12 +1159,8 @@ body {
 #gl[hidden] {
   display: none;
 }
-html:not(.js) .arch,
-html:not(.js) .arch-pin {
-  height: auto;
-}
-html:not(.js) .arch-pin {
-  position: relative;
+html:not(.js) .arch-content {
+  min-height: 0;
 }
 html:not(.js) .arch-scene,
 html:not(.js) .convo {
@@ -1208,12 +1202,8 @@ html:not(.js) .arch-steps[hidden] {
   .cursor {
     display: none;
   }
-  .arch,
-  .arch-pin {
-    height: auto;
-  }
-  .arch-pin {
-    position: relative;
+  .arch-content {
+    min-height: 0;
   }
   .arch-scene {
     display: none;

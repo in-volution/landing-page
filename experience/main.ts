@@ -86,5 +86,5 @@ tilt();
 magnetic();
 if (!reduced) cursor();
 conversations(reduced);
-if (!reduced) architecture(false);
+if (!reduced) architecture();
 addEventListener('resize', () => ScrollTrigger.refresh());

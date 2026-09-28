@@ -157,8 +157,8 @@ export function conversations(reduced: boolean) {
 
 const wait = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
-/** Architecture: the tilted blueprint straightens while a word travels node to node. */
-export function architecture(reduced: boolean) {
+/** Architecture plays on entry without tying its progress to page scrolling. */
+export function architecture() {
   const plane = document.querySelector<HTMLElement>('.arch-plane')!;
   const nodes = $$('.node');
   const paths = $$<HTMLElement>('.arch-lines path') as unknown as SVGPathElement[];
@@ -180,7 +180,7 @@ export function architecture(reduced: boolean) {
     return { path: p, c, len: p.getTotalLength(), off: Math.random() };
   });
 
-  const setStep = (s: number) => {
+  const setStep = (s: number, animate = true) => {
     if (s === step) return;
     step = s;
     nodes.forEach((el) => el.classList.toggle('lit', Number(el.dataset.step) <= s));
@@ -188,8 +188,11 @@ export function architecture(reduced: boolean) {
     paths.forEach((p) => p.classList.toggle('lit', lit.has(p.id)));
     packets.forEach((pk) => (pk.c.style.opacity = lit.has(pk.path.id) ? '1' : '0'));
     n.textContent = String(s + 1).padStart(2, '0');
-    if (reduced) t.textContent = steps[s];
-    else
+    gsap.killTweensOf(t);
+    if (!animate) {
+      t.textContent = steps[s];
+      gsap.set(t, { opacity: 1, y: 0, filter: 'blur(0px)' });
+    } else {
       gsap.fromTo(
         t,
         { opacity: 0, y: 12, filter: 'blur(6px)' },
@@ -202,27 +205,31 @@ export function architecture(reduced: boolean) {
           onStart: () => (t.textContent = steps[s])
         }
       );
-  };
-  setStep(0);
-
-  ScrollTrigger.create({
-    trigger: '.arch',
-    start: 'top top',
-    end: 'bottom bottom',
-    scrub: reduced ? false : 0.6,
-    onUpdate: (st) => {
-      const p = st.progress;
-      setStep(Math.min(4, Math.floor(p * 5.2)));
-      if (!reduced) {
-        const m = innerWidth < 700;
-        plane.style.setProperty('--rx', `${(m ? 48 : 58) - p * (m ? 22 : 26)}deg`);
-        plane.style.setProperty('--rz', `${(m ? -12 : -22) + p * (m ? 10 : 16)}deg`);
-        plane.style.setProperty('--s', `${0.95 + p * 0.1}`);
-      }
     }
-  });
+  };
 
-  if (reduced) return;
+  const render = (p: number) => {
+    setStep(Math.min(4, Math.floor(p * 5.2)));
+    const mobile = innerWidth < 700;
+    plane.style.setProperty('--rx', `${(mobile ? 48 : 58) - p * (mobile ? 22 : 26)}deg`);
+    plane.style.setProperty('--rz', `${(mobile ? -12 : -22) + p * (mobile ? 10 : 16)}deg`);
+    plane.style.setProperty('--s', `${0.95 + p * 0.1}`);
+  };
+  const state = { progress: 0 };
+  const animation = gsap.fromTo(
+    state,
+    { progress: 0 },
+    { progress: 1, duration: 6, ease: 'none', paused: true, onUpdate: () => render(state.progress) }
+  );
+  const replay = () => {
+    step = -1;
+    setStep(0, false);
+    render(0);
+    animation.restart();
+  };
+  setStep(0, false);
+  ScrollTrigger.create({ trigger: '.arch', start: 'top 60%', end: 'bottom 40%', onEnter: replay, onEnterBack: replay });
+
   gsap.ticker.add((time) => {
     for (const pk of packets) {
       if (pk.c.style.opacity === '0') continue;
