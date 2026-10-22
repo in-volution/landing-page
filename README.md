@@ -31,3 +31,7 @@ El sitio sigue siendo legible sin JavaScript. Si WebGL no está disponible o el 
 ## Publicación
 
 Cada push a `main` ejecuta el workflow de GitHub Pages. Este genera los archivos de `assets/experience/`, prepara `_site` y publica únicamente la landing y sus páginas complementarias. `CNAME` mantiene el dominio `involution.es`.
+
+## Mantenimiento
+
+El repositorio contiene únicamente la web estática y su experiencia visual. Se han retirado el proyecto de vídeo Remotion, el laboratorio de logotipos, el widget de voz antiguo y los recursos de esos prototipos. `styles.css` conserva los estilos de las páginas legales y de error; `experience/style.css` define la landing.

@@ -10,7 +10,7 @@
     "build:experience": "vite build --config experience/vite.config.ts",
     "check": "npm run check:files && npm run check:html && npm run check:experience && npm run check:format",
     "check:files": "node -e \"const fs=require('fs'); for (const file of ['index.html','styles.css','experience/main.ts','experience/style.css','404.html','CNAME','aviso-legal/index.html','privacidad/index.html']) { if (!fs.existsSync(file)) throw new Error('Missing required file: '+file) }\"",
-    "check:html": "html-validate index.html logo-lab.html 404.html aviso-legal/index.html privacidad/index.html",
+    "check:html": "html-validate index.html 404.html aviso-legal/index.html privacidad/index.html",
     "check:experience": "tsc --noEmit -p experience/tsconfig.json && npm run build:experience",
     "check:format": "prettier --check .",
     "format": "prettier --write ."

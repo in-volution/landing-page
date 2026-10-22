@@ -9,7 +9,6 @@ docs
 # Build outputs
 dist
 build
-assets/voice-widget/
 assets/experience/
 out
 .vercel
@@ -18,9 +17,6 @@ out
 .cache
 .parcel-cache
 .turbo
-
-# Remotion
-my-video/out
 
 # System & OS files
 .DS_Store

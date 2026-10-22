@@ -30,7 +30,7 @@ jobs:
       - run: npm ci
       - run: npm run check
 
-      # Sólo se publica la landing: fuera my-video/, docs/, node_modules/ y logo-lab
+      # Sólo se publican los archivos de la landing y sus páginas complementarias.
       - name: Preparar _site
         run: |
           mkdir -p _site
