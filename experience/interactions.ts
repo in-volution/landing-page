@@ -159,7 +159,8 @@ const wait = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 /** Architecture plays on entry without tying its progress to page scrolling. */
 export function architecture() {
-  const plane = document.querySelector<HTMLElement>('.arch-plane')!;
+  const plane = document.querySelector<HTMLElement>('.arch-plane');
+  if (!plane) return;
   const nodes = $$('.node');
   const paths = $$<HTMLElement>('.arch-lines path') as unknown as SVGPathElement[];
   const steps = $$('.arch-steps li').map((li) => li.textContent ?? '');

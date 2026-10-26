@@ -36,6 +36,7 @@ jobs:
           mkdir -p _site
           cp -R \
             index.html \
+            asistentes-de-voz \
             styles.css \
             assets \
             aviso-legal \

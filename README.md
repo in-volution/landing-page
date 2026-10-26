@@ -1,14 +1,14 @@
-# Involution · Asistentes de voz con IA
+# Involution · Consultoría tecnológica y automatización
 
-Web de [Involution](https://involution.es): asistentes de voz con IA para negocios, disponibles desde web, app o teléfono. Responden con información aprobada, recogen el contexto de cada consulta y dan el siguiente paso según las reglas e integraciones de cada proyecto.
+Web de [Involution](https://involution.es): consultoría tecnológica para empresas. Auditamos procesos y sistemas, y los mejoramos con automatización, integraciones, IA aplicada, datos y desarrollo a medida. Como línea especializada, diseñamos asistentes de voz con IA para web, app y teléfono.
 
-Este repositorio contiene la landing pública: presentación del servicio, casos de uso, proceso de trabajo, preguntas frecuentes y contacto por WhatsApp, correo y teléfono. Las conversaciones mostradas son ejemplos ilustrativos. El alcance del producto está documentado en [PRODUCTO.md](PRODUCTO.md).
+Este repositorio contiene la web pública: la portada de consultoría (servicios, método, ejemplos, proceso, preguntas frecuentes y contacto) y la página de asistentes de voz en `/asistentes-de-voz/`. Los ejemplos y conversaciones mostrados son ilustrativos. El alcance de la oferta está documentado en [PRODUCTO.md](PRODUCTO.md).
 
 ## Tecnología
 
 HTML y CSS estáticos, con TypeScript, Three.js y GSAP para el núcleo de partículas 3D y las animaciones. Vite compila la experiencia visual y GitHub Pages aloja la web.
 
-La landing no incorpora backend ni un asistente de voz conectado. El contenido permanece accesible sin JavaScript; la visualización 3D se omite cuando WebGL no está disponible o el usuario prefiere reducir el movimiento.
+La web no incorpora backend ni un asistente de voz conectado. El contenido permanece accesible sin JavaScript; la visualización 3D se omite cuando WebGL no está disponible o el usuario prefiere reducir el movimiento.
 
 ## Desarrollo local
 
@@ -33,21 +33,22 @@ Abre `http://localhost:3000`. El comando compila la experiencia y sirve los arch
 
 ## Estructura
 
-| Ruta                                      | Contenido                                              |
-| ----------------------------------------- | ------------------------------------------------------ |
-| `index.html`                              | Landing, contenido, metadatos y datos estructurados.   |
-| `experience/main.ts`                      | Inicialización de la experiencia visual.               |
-| `experience/core.ts`                      | Núcleo de partículas y renderizado con Three.js.       |
-| `experience/interactions.ts`              | Animaciones e interacciones con GSAP.                  |
-| `experience/style.css`                    | Estilos de la landing.                                 |
-| `experience/vite.config.ts`               | Configuración de compilación.                          |
-| `assets/experience/`                      | Archivos generados; no se versionan.                   |
-| `assets/brand/despliegue/`                | Identidad visual, logotipos, iconos e imagen social.   |
-| `styles.css`                              | Estilos compartidos de las páginas legales y de error. |
-| `aviso-legal/`, `privacidad/`, `404.html` | Páginas complementarias.                               |
-| `robots.txt`, `sitemap.xml`               | Configuración de rastreo y mapa del sitio.             |
-| `CNAME`                                   | Dominio personalizado de GitHub Pages.                 |
-| `.github/workflows/deploy.yml`            | Validación, compilación y publicación.                 |
+| Ruta                                      | Contenido                                                |
+| ----------------------------------------- | -------------------------------------------------------- |
+| `index.html`                              | Portada de consultoría, metadatos y datos estructurados. |
+| `asistentes-de-voz/index.html`            | Página de asistentes de voz con IA.                      |
+| `experience/main.ts`                      | Inicialización de la experiencia visual.                 |
+| `experience/core.ts`                      | Núcleo de partículas y renderizado con Three.js.         |
+| `experience/interactions.ts`              | Animaciones e interacciones con GSAP.                    |
+| `experience/style.css`                    | Estilos de la landing.                                   |
+| `experience/vite.config.ts`               | Configuración de compilación.                            |
+| `assets/experience/`                      | Archivos generados; no se versionan.                     |
+| `assets/brand/despliegue/`                | Identidad visual, logotipos, iconos e imagen social.     |
+| `styles.css`                              | Estilos compartidos de las páginas legales y de error.   |
+| `aviso-legal/`, `privacidad/`, `404.html` | Páginas complementarias.                                 |
+| `robots.txt`, `sitemap.xml`               | Configuración de rastreo y mapa del sitio.               |
+| `CNAME`                                   | Dominio personalizado de GitHub Pages.                   |
+| `.github/workflows/deploy.yml`            | Validación, compilación y publicación.                   |
 
 ## Publicación
 
@@ -55,6 +56,6 @@ Cada push a `main` ejecuta `npm ci` y `npm run check` en GitHub Actions. Si las 
 
 ## Edición de contenido
 
-Modifica `index.html` para actualizar textos, enlaces y ejemplos de conversación. Mantén el mensaje alineado con `PRODUCTO.md` y revisa los metadatos, datos estructurados y recursos sociales cuando cambie la información del negocio.
+Modifica `index.html` (consultoría) o `asistentes-de-voz/index.html` (voz) para actualizar textos, enlaces y ejemplos. Cada sección indica con `data-core` la posición del núcleo 3D (`hero`, `ambient`, `hidden` o `final`). Mantén el mensaje alineado con `PRODUCTO.md` y revisa los metadatos, datos estructurados y recursos sociales cuando cambie la información del negocio.
 
 Antes de subir cambios, ejecuta `npm run check` y revisa la landing y las páginas complementarias en móvil y escritorio.

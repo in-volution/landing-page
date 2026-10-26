@@ -1,7 +1,7 @@
 {
   "name": "involution-landing-page",
   "version": "1.0.0",
-  "description": "Involution - asistentes de voz con IA en tiempo real para negocios",
+  "description": "Involution - consultoría tecnológica, auditoría y automatización de procesos; asistentes de voz con IA",
   "private": true,
   "type": "module",
   "scripts": {
@@ -9,17 +9,18 @@
     "start": "npm run build:experience && npx serve .",
     "build:experience": "vite build --config experience/vite.config.ts",
     "check": "npm run check:files && npm run check:html && npm run check:experience && npm run check:format",
-    "check:files": "node -e \"const fs=require('fs'); for (const file of ['index.html','styles.css','experience/main.ts','experience/style.css','404.html','CNAME','aviso-legal/index.html','privacidad/index.html']) { if (!fs.existsSync(file)) throw new Error('Missing required file: '+file) }\"",
-    "check:html": "html-validate index.html 404.html aviso-legal/index.html privacidad/index.html",
+    "check:files": "node -e \"const fs=require('fs'); for (const file of ['index.html','styles.css','experience/main.ts','experience/style.css','404.html','CNAME','aviso-legal/index.html','privacidad/index.html','asistentes-de-voz/index.html']) { if (!fs.existsSync(file)) throw new Error('Missing required file: '+file) }\"",
+    "check:html": "html-validate index.html asistentes-de-voz/index.html 404.html aviso-legal/index.html privacidad/index.html",
     "check:experience": "tsc --noEmit -p experience/tsconfig.json && npm run build:experience",
     "check:format": "prettier --check .",
     "format": "prettier --write ."
   },
   "keywords": [
     "involution",
-    "voice-ai",
+    "consultoria-tecnologica",
+    "automatizacion-de-procesos",
+    "auditoria-de-procesos",
     "asistentes-de-voz",
-    "atencion-telefonica",
     "landing-page"
   ],
   "author": "Involution",

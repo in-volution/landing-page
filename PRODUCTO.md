@@ -2,39 +2,65 @@
 
 ## En una frase
 
-Involution diseña asistentes de voz con IA para negocios. Pueden atender conversaciones desde una web, una app o por teléfono, responder con información aprobada y dar continuidad a cada caso según reglas acordadas.
+Involution es una consultoría tecnológica para empresas: audita cómo trabajan, detecta tareas manuales y cuellos de botella técnicos, y los resuelve con automatización, integraciones, IA aplicada, datos y desarrollo a medida. Como línea especializada, diseña asistentes de voz con IA.
 
-**La oferta actual es solo de audio.** No se ofrecen experiencias de vídeo en directo ni análisis de imagen en esta fase.
+## Estructura de la web
 
-## Primer problema a resolver
+- `/` · Consultoría tecnológica y automatización de procesos (oferta principal).
+- `/asistentes-de-voz/` · Asistentes de voz con IA (línea especializada).
 
-Un asistente recibe consultas frecuentes, responde dentro de un alcance definido y recoge el contexto necesario para que el equipo pueda continuar. La primera versión debe resolver un tipo de conversación y un canal concretos antes de ampliar el sistema.
+## Consultoría y automatización
 
-## Alcance funcional propuesto
+### Primer paso: diagnóstico
+
+Toda colaboración empieza por entender cómo se trabaja hoy: procesos, herramientas, datos y sistemas. El resultado es una lista priorizada de mejoras según impacto y esfuerzo. La web lo presenta como «diagnóstico» o «auditoría» **sin concretar formato, duración ni coste**.
+
+### Servicios
+
+1. **Auditoría y diagnóstico** de procesos, herramientas y datos.
+2. **Automatización de procesos**: flujos que eliminan tareas repetitivas, con revisión humana donde haga falta.
+3. **Integraciones** entre ERP, CRM, correo, hojas de cálculo y otras herramientas.
+4. **IA aplicada**: clasificar, extraer y resumir documentos, correos y solicitudes; asistentes internos. Solo donde aporta frente a una automatización convencional.
+5. **Datos y reporting**: una fuente fiable e indicadores que se actualizan solos.
+6. **Mejoras técnicas y desarrollo a medida**: rendimiento, seguridad, modernización y software propio cuando ninguna herramienta encaja.
+
+### Proceso
+
+Diagnóstico → hoja de ruta priorizada → implementación por fases → seguimiento y mejora. Tras el diagnóstico, Involution implementa o acompaña al equipo técnico del cliente.
+
+### Público
+
+Pymes en general, sin dividir la oferta por sectores.
+
+## Asistentes de voz (línea especializada)
+
+Asistentes de voz con IA que atienden conversaciones desde una web, una app o por teléfono, responden con información aprobada y dan continuidad a cada caso según reglas acordadas.
+
+**La oferta de voz es solo de audio.** No se ofrecen experiencias de vídeo en directo ni análisis de imagen en esta fase.
+
+Alcance funcional:
 
 1. Permitir que el cliente hable desde la web, una app o por teléfono, según el canal elegido.
 2. Transmitir y responder por voz en tiempo real.
 3. Reconocer el motivo y consultar documentación o fuentes aprobadas por el negocio.
 4. Recoger los datos necesarios para el caso de uso elegido.
 5. Dejar una solicitud clara al equipo o derivar la conversación cuando esté fuera de alcance.
-6. Usar herramientas o integraciones a medida para consultar sistemas y completar acciones concretas cuando la conexión y los permisos estén acordados.
+6. Usar herramientas o integraciones a medida cuando la conexión y los permisos estén acordados.
 
 La agenda, el CRM, la telefonía y cualquier acción automática se especifican por proyecto; no se presuponen.
 
 ## Límites del mensaje comercial
 
-- Hablar de asistentes de voz y distinguir los canales web, app y teléfono.
-- Presentar un asistente adaptable, sin dividir la oferta por sectores.
-- Explicar el flujo de atención: respuesta, recogida de contexto y continuidad del caso.
-- No prometer disponibilidad permanente, porcentajes de resolución, ahorro, plazos de implantación ni citas confirmadas sin evidencia o integración validada.
-- No anunciar vídeo ni análisis de imagen como capacidades disponibles ahora.
+- No prometer porcentajes de ahorro, horas recuperadas, plazos de implantación, retorno ni garantías sin evidencia.
+- No citar clientes, casos de éxito ni logotipos que no estén confirmados y autorizados.
+- Marcar como ilustrativos los ejemplos y conversaciones de la web.
+- Presentar la IA como una herramienta más, no como solución a todo.
+- Integraciones: siempre «según cada herramienta y los permisos acordados».
+- Voz: distinguir web, app y teléfono; no prometer disponibilidad permanente ni citas confirmadas sin integración validada; no anunciar vídeo ni análisis de imagen.
 
 ## Decisiones pendientes
 
-- Canal prioritario del primer despliegue: web, app o teléfono.
-- Si se usa telefonía, alcance de llamadas: solo entrantes o también salientes.
-- Idiomas y variantes de voz prioritarios.
-- Forma de derivación: transferencia en directo, aviso al equipo, resumen posterior o combinación.
-- Integraciones del canal elegido y, si corresponde, sistema de telefonía del negocio.
-- Tratamiento de grabaciones, datos personales y consentimiento.
-- Modelo comercial, soporte y métricas de calidad que se mostrarán al cliente.
+- Formato del diagnóstico: duración, entregable y si tiene coste.
+- Modelo comercial de la implementación (proyecto cerrado, bolsa de horas, mantenimiento).
+- Casos reales publicables y testimonios.
+- Voz: canal prioritario, alcance de llamadas, idiomas, forma de derivación, telefonía, tratamiento de grabaciones y consentimiento.

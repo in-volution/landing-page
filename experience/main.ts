@@ -41,36 +41,19 @@ if (!reduced) {
       core.currentLayout.scale *= 0.4;
 
       addEventListener('scroll', () => (core.scroll = scrollY), { passive: true });
-      ScrollTrigger.create({
-        trigger: '.hero',
-        start: 'top top',
-        end: 'bottom 30%',
-        onToggle: (s) => s.isActive && setLayout('hero')
-      });
-      ScrollTrigger.create({
-        trigger: '#capacidades',
-        start: 'top 70%',
-        end: 'bottom 30%',
-        onToggle: (s) => s.isActive && setLayout('ambient')
-      });
-      ScrollTrigger.create({
-        trigger: '.arch',
-        start: 'top 70%',
-        end: 'bottom 30%',
-        onToggle: (s) => s.isActive && setLayout('hidden')
-      });
-      ScrollTrigger.create({
-        trigger: '#casos',
-        start: 'top 70%',
-        end: '#faq bottom 30%',
-        onToggle: (s) => s.isActive && setLayout('ambient')
-      });
-      ScrollTrigger.create({
-        trigger: '.final-cta',
-        start: 'top 60%',
-        end: 'bottom bottom',
-        onToggle: (s) => s.isActive && setLayout('final')
-      });
+      // Each section declares the core layout it wants with data-core.
+      const ranges: Record<string, { start: string; end: string }> = {
+        hero: { start: 'top top', end: 'bottom 30%' },
+        final: { start: 'top 60%', end: 'bottom bottom' }
+      };
+      for (const section of document.querySelectorAll<HTMLElement>('[data-core]')) {
+        const name = section.dataset.core!;
+        ScrollTrigger.create({
+          trigger: section,
+          ...(ranges[name] ?? { start: 'top 70%', end: 'bottom 30%' }),
+          onToggle: (s) => s.isActive && setLayout(name)
+        });
+      }
     } catch (error) {
       canvas.hidden = true;
       console.warn('Visualización 3D no disponible:', error);
