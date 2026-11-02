@@ -143,6 +143,9 @@ export function voiceInteractions() {
       key = next;
       const scenario = scenarios[key];
       demo.dataset.scenario = key;
+      demo.querySelectorAll<HTMLImageElement>('[data-scenario-art]').forEach((image) => {
+        image.hidden = image.dataset.scenarioArt !== key;
+      });
       get<HTMLElement>('[data-client-quote]').textContent = scenario.client;
       get<HTMLElement>('[data-agent-quote]').textContent = scenario.agent;
       get<HTMLElement>('[data-result-title]').textContent = scenario.result;

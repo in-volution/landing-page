@@ -44,6 +44,7 @@ Abre `http://localhost:3000`. El comando compila la experiencia y sirve los arch
 | `experience/voice.css`                    | Estilos propios de la página de atención al cliente.     |
 | `experience/style.css`                    | Estilos de la landing.                                   |
 | `experience/vite.config.ts`               | Configuración de compilación.                            |
+| `assets/illustrations/voice/`             | Ilustraciones de las acciones en la escena interactiva.  |
 | `assets/experience/`                      | Archivos generados; no se versionan.                     |
 | `assets/brand/despliegue/`                | Identidad visual, logotipos, iconos e imagen social.     |
 | `styles.css`                              | Estilos compartidos de las páginas legales y de error.   |
@@ -61,3 +62,5 @@ Cada push a `main` ejecuta `npm ci` y `npm run check` en GitHub Actions. Si las 
 Modifica `index.html` (consultoría) o `asistentes-de-voz/index.html` (voz) para actualizar textos, enlaces y ejemplos. Cada sección indica con `data-core` la posición del núcleo 3D (`hero`, `ambient`, `hidden` o `final`). Mantén el mensaje alineado con `PRODUCTO.md` y revisa los metadatos, datos estructurados y recursos sociales cuando cambie la información del negocio.
 
 Antes de subir cambios, ejecuta `npm run check` y revisa la landing y las páginas complementarias en móvil y escritorio.
+
+Los prompts y archivos de las ilustraciones de voz se documentan en [assets/illustrations/voice/README.md](assets/illustrations/voice/README.md).

@@ -44,6 +44,8 @@ La propuesta de cada proyecto debe detallar la configuración, las integraciones
 
 La página explica la oferta con dos escenas interactivas: una conversación animada (consulta, cita o incidencia) y un gráfico explorable de demanda o resolución. Los cuatro pasos de implantación permiten ver una explicación breve al seleccionarlos.
 
+La conversación animada incorpora tres ilustraciones generadas: atención de una consulta por teléfono, solicitud de cambio de cita y derivación de una incidencia al equipo. Cambian con el escenario y se entregan como imágenes WebP con fondo transparente.
+
 Los escenarios y las cifras de las 100 consultas del gráfico son ficticios y están identificados como ejemplos. No representan métricas de clientes, porcentajes de éxito ni resultados de Involution. La animación no incorpora una llamada real, micrófono ni audio. No hay una grabación publicable ni testimonios verificados incorporados a la página.
 
 Las animaciones se pueden pausar o repetir, se detienen cuando la escena deja de verse y muestran el resultado directamente si se solicita reducir el movimiento. Sin JavaScript, quedan visibles un ejemplo completo, la distribución de demanda y los pasos de implantación.

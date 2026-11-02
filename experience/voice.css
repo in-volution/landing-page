@@ -132,6 +132,37 @@
   min-height: 232px;
   padding: 18px 24px 22px;
 }
+.voice-scene-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  min-height: 124px;
+  margin: -8px 0 12px;
+}
+.voice-scene-images {
+  flex: 0 0 124px;
+  width: 124px;
+  height: 124px;
+}
+.voice-scene-images img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  animation: voice-scene-float 1.8s ease-in-out infinite alternate paused;
+}
+.is-playing .voice-scene-images img:not([hidden]) {
+  animation-play-state: running;
+}
+@keyframes voice-scene-float {
+  to {
+    transform: translateY(-4px);
+  }
+}
+.voice-scene-visual .voice-wave {
+  margin-bottom: 0;
+}
 .voice-wave {
   height: 36px;
   display: flex;

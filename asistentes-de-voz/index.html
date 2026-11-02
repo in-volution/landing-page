@@ -89,7 +89,7 @@
         ]
       }
     </script>
-    <link href="/assets/experience/style.css?v=visual-20261102" rel="stylesheet" />
+    <link href="/assets/experience/style.css?v=acciones-20261102" rel="stylesheet" />
   </head>
   <body class="voice-page">
     <canvas aria-hidden="true" id="gl"></canvas>
@@ -149,7 +149,43 @@
                 </button>
               </div>
               <div class="voice-call-stage">
-                <div class="voice-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="voice-scene-visual">
+                  <div class="voice-scene-images">
+                    <img
+                      alt="Atención de una consulta por teléfono"
+                      data-scenario-art="consulta"
+                      src="/assets/illustrations/voice/consulta.webp"
+                      srcset="/assets/illustrations/voice/consulta.webp 256w, /assets/illustrations/voice/consulta@2x.webp 512w"
+                      sizes="124px"
+                      width="256"
+                      height="256"
+                      decoding="async"
+                    />
+                    <img
+                      alt="Solicitud de cambio de cita en un calendario"
+                      data-scenario-art="cita"
+                      src="/assets/illustrations/voice/cita.webp"
+                      srcset="/assets/illustrations/voice/cita.webp 256w, /assets/illustrations/voice/cita@2x.webp 512w"
+                      sizes="124px"
+                      width="256"
+                      height="256"
+                      decoding="async"
+                      hidden
+                    />
+                    <img
+                      alt="Derivación de una incidencia al equipo de atención"
+                      data-scenario-art="incidencia"
+                      src="/assets/illustrations/voice/incidencia.webp"
+                      srcset="/assets/illustrations/voice/incidencia.webp 256w, /assets/illustrations/voice/incidencia@2x.webp 512w"
+                      sizes="124px"
+                      width="256"
+                      height="256"
+                      decoding="async"
+                      hidden
+                    />
+                  </div>
+                  <div class="voice-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                </div>
                 <div class="voice-speech voice-speech-client">
                   <span>Cliente</span>
                   <p data-client-quote>¿Cuál es vuestro horario?</p>
@@ -329,6 +365,6 @@
       </div>
     </div>
     <!-- ================= EXPERIENCIA VISUAL ================= -->
-    <script src="/assets/experience/experience.js?v=visual-20261102" type="module"></script>
+    <script src="/assets/experience/experience.js?v=acciones-20261102" type="module"></script>
   </body>
 </html>
