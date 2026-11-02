@@ -1,6 +1,6 @@
 # Involution · Consultoría tecnológica y automatización
 
-Web de [Involution](https://involution.es): consultoría tecnológica para empresas. Auditamos procesos y sistemas, y los mejoramos con automatización, integraciones, IA aplicada, datos y desarrollo a medida. Como línea especializada, diseñamos asistentes de voz con IA para web, app y teléfono.
+Web de [Involution](https://involution.es): consultoría tecnológica para empresas. Auditamos procesos y sistemas, y los mejoramos con automatización, integraciones, IA aplicada, datos y desarrollo a medida. Como línea especializada, automatizamos la atención al cliente de las empresas con asistentes de voz con IA para teléfono, web y app, y analizamos los datos de las conversaciones para entender la demanda y mejorar los procesos.
 
 Este repositorio contiene la web pública: la portada de consultoría (servicios, método, ejemplos, proceso, preguntas frecuentes y contacto) y la página de asistentes de voz en `/asistentes-de-voz/`. Los ejemplos y conversaciones mostrados son ilustrativos. El alcance de la oferta está documentado en [PRODUCTO.md](PRODUCTO.md).
 

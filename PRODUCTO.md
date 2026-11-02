@@ -34,7 +34,11 @@ Pymes en general, sin dividir la oferta por sectores.
 
 ## Asistentes de voz (línea especializada)
 
-Asistentes de voz con IA que atienden conversaciones desde una web, una app o por teléfono, responden con información aprobada y dan continuidad a cada caso según reglas acordadas.
+Automatizamos la atención al cliente de las empresas con asistentes de voz con IA. La propuesta comercial se centra en resolver consultas habituales, reducir tareas repetitivas y liberar al equipo para los casos que requieren atención personal. Los datos recogidos en esas conversaciones también permiten entender la demanda y mejorar los procesos de atención y las decisiones del negocio.
+
+Los asistentes atienden por teléfono, web o app, responden con información aprobada, recogen solicitudes y dan continuidad a cada caso según reglas acordadas. Los canales y la tecnología explican cómo se presta el servicio; el mensaje principal es la automatización de la atención al cliente.
+
+El primer paso comercial es revisar cómo atiende hoy la empresa y valorar un primer proceso para automatizar. El contacto de la página se realiza por WhatsApp, sin prometer una demostración conectada ni un diagnóstico gratuito.
 
 **La oferta de voz es solo de audio.** No se ofrecen experiencias de vídeo en directo ni análisis de imagen en esta fase.
 
@@ -46,6 +50,10 @@ Alcance funcional:
 4. Recoger los datos necesarios para el caso de uso elegido.
 5. Dejar una solicitud clara al equipo o derivar la conversación cuando esté fuera de alcance.
 6. Usar herramientas o integraciones a medida cuando la conexión y los permisos estén acordados.
+7. Analizar los datos recogidos en la atención para identificar motivos de contacto, demandas recurrentes y servicios solicitados.
+8. Revisar las consultas resueltas durante las llamadas, las derivaciones y los casos pendientes para detectar bloqueos y priorizar mejoras en procesos, información y oferta. La resolución final de los casos derivados requiere datos de seguimiento; no se presupone a partir de la llamada.
+
+El alcance del análisis, los datos que se recogen y los indicadores se definen por proyecto. No se presupone un cuadro de mando, grabación de llamadas ni análisis de todas las llamadas de la empresa.
 
 La agenda, el CRM, la telefonía y cualquier acción automática se especifican por proyecto; no se presuponen.
 
