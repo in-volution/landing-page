@@ -2,7 +2,7 @@
 
 Web de [Involution](https://involution.es): consultoría tecnológica para empresas. Auditamos procesos y sistemas, y los mejoramos con automatización, integraciones, IA aplicada, datos y desarrollo a medida. Como línea especializada, automatizamos la atención al cliente de las empresas con asistentes de voz con IA para teléfono, web y app, y analizamos los datos de las conversaciones para entender la demanda y mejorar los procesos.
 
-Este repositorio contiene la web pública: la portada de consultoría (servicios, método, ejemplos, proceso, preguntas frecuentes y contacto) y la página de asistentes de voz en `/asistentes-de-voz/`. Los ejemplos y conversaciones mostrados son ilustrativos. El alcance de la oferta está documentado en [PRODUCTO.md](PRODUCTO.md).
+Este repositorio contiene la web pública: la portada de consultoría (servicios, método, ejemplos, proceso, preguntas frecuentes y contacto) y la página de asistentes de voz en `/asistentes-de-voz/`. Los ejemplos, resúmenes de atención y la muestra de análisis mostrados son ilustrativos, con datos ficticios. El alcance de la oferta está documentado en [PRODUCTO.md](PRODUCTO.md).
 
 ## Tecnología
 
@@ -40,6 +40,7 @@ Abre `http://localhost:3000`. El comando compila la experiencia y sirve los arch
 | `experience/main.ts`                      | Inicialización de la experiencia visual.                 |
 | `experience/core.ts`                      | Núcleo de partículas y renderizado con Three.js.         |
 | `experience/interactions.ts`              | Animaciones e interacciones con GSAP.                    |
+| `experience/voice.css`                    | Estilos propios de la página de atención al cliente.     |
 | `experience/style.css`                    | Estilos de la landing.                                   |
 | `experience/vite.config.ts`               | Configuración de compilación.                            |
 | `assets/experience/`                      | Archivos generados; no se versionan.                     |

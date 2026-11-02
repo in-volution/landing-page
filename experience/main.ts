@@ -1,4 +1,5 @@
 import './style.css';
+import './voice.css';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { type Layout, VoiceCore } from './core';

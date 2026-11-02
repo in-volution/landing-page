@@ -64,82 +64,42 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "¿Qué parte de la atención al cliente puedo automatizar?",
+            "name": "¿Podemos mantener nuestro número y conectar nuestras herramientas?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Las consultas habituales sobre horarios, servicios o condiciones, la recogida de solicitudes e incidencias y la preparación de casos para tu equipo. Las consultas de disponibilidad o estado requieren una conexión con tus herramientas. Empezamos por un proceso concreto según las necesidades de tu empresa."
+              "text": "Estudiamos vuestra centralita o proveedor de telefonía y las herramientas que usáis. El asistente puede atender por teléfono, web o app. Las consultas a agendas, CRM y otros sistemas dependen de las conexiones y los permisos disponibles. La confirmación de citas requiere una integración validada."
             }
           },
           {
             "@type": "Question",
-            "name": "¿Dónde puede hablar el cliente con el asistente?",
+            "name": "¿Qué ocurre cuando el asistente no puede resolver una consulta?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Por teléfono, en tu web o dentro de tu app. Elegimos el canal en el que recibes las consultas que quieres automatizar y valoramos la integración necesaria."
+              "text": "Acordamos qué consultas atiende, qué información puede dar y cuándo interviene una persona. En los casos que lo requieren, recoge el motivo y los datos necesarios para que tu equipo continúe. La forma de derivación se define según el canal y las herramientas de tu empresa."
             }
           },
           {
             "@type": "Question",
-            "name": "¿Podemos mantener nuestro número de teléfono?",
+            "name": "¿Qué información se guarda de las conversaciones?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Estudiamos la conexión con vuestra centralita o proveedor de telefonía para valorar cómo automatizar la atención con vuestro número actual. La solución depende de la infraestructura y del flujo de llamadas."
+              "text": "Antes de ponerlo en marcha, definimos qué datos necesita cada proceso, dónde se guardan, quién puede acceder y durante cuánto tiempo se conservan. También acordamos si hace falta conservar audio. La recogida de información y su uso para el análisis se concretan en cada proyecto."
             }
           },
           {
             "@type": "Question",
-            "name": "¿Encaja con mi empresa?",
+            "name": "¿Cómo recibiremos el análisis de las llamadas?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Tiene sentido valorarlo si tu equipo dedica tiempo a responder las mismas preguntas, recoger datos o trasladar solicitudes. Revisamos el volumen, el tipo de consultas y las herramientas que usáis para decidir por dónde empezar."
+              "text": "Acordamos contigo los indicadores, el formato de entrega y la frecuencia de revisión. Podemos analizar motivos de contacto, demandas recurrentes y consultas resueltas, derivadas o pendientes. Para conocer la resolución final tras una derivación, necesitamos incorporar el seguimiento del caso."
             }
           },
           {
             "@type": "Question",
-            "name": "¿Cuándo interviene una persona?",
+            "name": "¿Qué determina el precio del servicio?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Definimos contigo qué casos debe atender tu equipo y qué ocurre cuando una consulta queda fuera del alcance del asistente. Puede recoger el motivo y los datos para que una persona continúe. La forma de derivación depende del canal y de las integraciones acordadas."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "¿Cómo se adapta a nuestra forma de atender?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Preparamos las respuestas a partir de vuestros servicios, preguntas frecuentes y políticas. Acordamos el tono, la información que puede dar y los casos que requieren revisión humana, y lo probamos con consultas representativas."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "¿Puede consultar mi agenda o mi CRM?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Podemos integrar agendas, CRM y otros sistemas para consultar disponibilidad, revisar el estado de solicitudes o realizar acciones acordadas. Lo que pueda hacer depende de cada herramienta y de los permisos disponibles. La confirmación de citas requiere una integración validada."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "¿Qué puedo aprender de las conversaciones con mis clientes?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Podemos analizar los datos recogidos en la atención para identificar motivos de contacto, peticiones recurrentes y servicios solicitados. También revisar qué consultas se resuelven durante la llamada, cuáles se derivan y cuáles quedan pendientes. Esto permite priorizar mejoras en la información, los procesos y la oferta de tu empresa. Para conocer el resultado final de los casos derivados, necesitamos incorporar su seguimiento."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "¿Cuánto cuesta automatizar la atención al cliente?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "El coste depende del proceso que quieras automatizar, del canal, del volumen de consultas y de las integraciones necesarias. Revisamos tu caso para concretar el alcance y preparar una propuesta."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "¿Qué necesito para empezar?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Cuéntanos qué consultas recibe tu empresa, por qué canal llegan y cómo las atiende hoy tu equipo. Con esa información valoramos qué proceso automatizar primero y qué necesitaría para funcionar."
+              "text": "La propuesta concreta el coste de configuración e integraciones y, cuando correspondan, el consumo, el mantenimiento y el análisis de conversaciones. El importe depende del canal, el volumen y el alcance acordado. Empezamos por valorar un caso concreto de tu atención al cliente."
             }
           }
         ]
@@ -147,7 +107,7 @@
     </script>
     <link href="/assets/experience/style.css" rel="stylesheet" />
   </head>
-  <body>
+  <body class="voice-page">
     <canvas aria-hidden="true" id="gl"></canvas>
     <div aria-hidden="true" class="grain"></div>
     <div aria-hidden="true" class="cursor"></div>
@@ -159,448 +119,316 @@
             ><img alt="Involution" class="brand-logo" height="128" src="/assets/brand/despliegue/involution-logo-horizontal-white-accent.svg" width="460"
           /></a>
           <nav aria-label="Principal" class="nav-links">
-            <a href="/">Consultoría</a>
-            <a href="#capacidades">Beneficios</a>
-            <a href="#arquitectura">Cómo funciona</a>
-            <a href="#casos">Qué automatizar</a>
-            <a href="#insights">Insights</a>
-            <a href="#faq">FAQ</a>
+            <a href="#ejemplo">Ejemplo de atención</a>
+            <a href="#capacidades">Para tu equipo</a>
+            <a href="#insights">Lo que aprendes</a>
+            <a href="#proceso">El servicio</a>
+            <a href="#faq">Preguntas</a>
           </nav>
-          <a
-            class="btn btn-ghost btn-sm"
-            data-cta="contacto"
-            href="https://wa.me/34639904072?text=Hola%2C%20quiero%20automatizar%20la%20atenci%C3%B3n%20al%20cliente%20de%20mi%20empresa.%0A%0AEmpresa%3A%0AConsultas%20que%20m%C3%A1s%20recibe%20mi%20equipo%3A%0ACanal%20de%20atenci%C3%B3n%20%28tel%C3%A9fono%2C%20web%20o%20app%29%3A"
-            rel="noopener"
-            target="_blank"
-            >Hablemos</a
-          >
+          <a class="btn btn-ghost btn-sm" href="#contacto">Hablemos</a>
         </header>
         <main id="top">
-          <!-- HERO -->
           <section class="hero" data-core="hero">
             <div class="hero-copy">
-              <p class="eyebrow reveal">Asistentes de voz con IA para empresas</p>
+              <p class="eyebrow reveal">Atención al cliente · Asistentes de voz con IA</p>
               <h1 class="hero-title">
-                <span class="line"><span>Automatiza</span></span>
-                <span class="line"><span>tu atención</span></span>
+                <span class="line"><span>Automatiza las</span></span>
+                <span class="line"><span>consultas repetitivas</span></span>
                 <span class="line"
-                  ><span>al <em class="grad">cliente.</em></span></span
+                  ><span>de tus <em class="grad">clientes.</em></span></span
                 >
               </h1>
               <p class="hero-sub reveal">
-                Resuelve consultas habituales y libera a tu equipo con asistentes de voz con IA para teléfono, web o app. Analiza los datos de las conversaciones para entender qué piden tus clientes,
-                qué demandas se repiten y dónde mejorar tus procesos.
+                Asistentes de voz con IA que responden preguntas, recogen solicitudes y derivan a tu equipo cuando hace falta. Analiza esas conversaciones para detectar demandas recurrentes y mejorar
+                tus procesos.
               </p>
               <div class="hero-ctas reveal">
                 <a
-                  class="btn btn-primary btn-lg magnetic"
+                  class="btn btn-primary btn-lg"
                   data-cta="contacto"
-                  href="https://wa.me/34639904072?text=Hola%2C%20quiero%20automatizar%20la%20atenci%C3%B3n%20al%20cliente%20de%20mi%20empresa.%0A%0AEmpresa%3A%0AConsultas%20que%20m%C3%A1s%20recibe%20mi%20equipo%3A%0ACanal%20de%20atenci%C3%B3n%20%28tel%C3%A9fono%2C%20web%20o%20app%29%3A"
+                  href="https://wa.me/34639904072?text=Hola%2C%20quiero%20valorar%20qu%C3%A9%20consultas%20puedo%20automatizar%20en%20mi%20empresa.%0A%0AEmpresa%3A%0AConsultas%20que%20m%C3%A1s%20recibe%20mi%20equipo%3A%0ACanal%20de%20atenci%C3%B3n%20%28tel%C3%A9fono%2C%20web%20o%20app%29%3A"
                   rel="noopener"
                   target="_blank"
-                  >Automatizar mi atención</a
-                >
-                <a class="btn btn-ghost btn-lg" href="#casos">Ver qué puedo automatizar</a>
+                  >Valorar qué puedo automatizar</a
+                ><a class="btn btn-ghost btn-lg" href="#ejemplo">Ver un ejemplo</a>
               </div>
-              <p class="hero-note reveal">Escríbenos por WhatsApp. Revisamos cómo atiendes hoy y qué consultas puedes automatizar.</p>
+              <p class="hero-note reveal">Por WhatsApp. Cuéntanos cómo atiendes hoy y valoramos por dónde empezar.</p>
             </div>
-            <ul aria-label="Qué puedes automatizar" class="hero-stats reveal">
-              <li><strong>Consultas</strong><span>respuestas habituales</span></li>
-              <li><strong>Solicitudes</strong><span>datos para continuar</span></li>
-              <li><strong>Citas</strong><span>con agenda conectada</span></li>
-              <li><strong>Equipo</strong><span>derivación con contexto</span></li>
-            </ul>
-            <div aria-hidden="true" class="scroll-hint"><span></span></div>
+            <p class="voice-fit reveal">Para equipos que responden las mismas preguntas, recogen solicitudes y consultan información para sus clientes. Por teléfono, web o app.</p>
           </section>
-          <!-- TICKER -->
-          <section aria-label="Ejemplos de conversaciones" class="ticker">
-            <div class="ticker-track">
-              <span>“¿Cuál es el horario?” <b>→ Resuelve una consulta habitual</b></span
-              ><span>“Necesito ayuda con un pedido” <b>→ Prepara el caso para tu equipo</b></span
-              ><span>“Quiero hablar con una persona” <b>→ Prepara la derivación</b></span
-              ><span>“Necesito cambiar una cita” <b>→ Consulta la agenda si está conectada</b></span
-              ><span>“¿Cuál es el horario?” <b>→ Resuelve una consulta habitual</b></span
-              ><span>“Necesito ayuda con un pedido” <b>→ Prepara el caso para tu equipo</b></span
-              ><span>“Quiero hablar con una persona” <b>→ Prepara la derivación</b></span
-              ><span>“Necesito cambiar una cita” <b>→ Consulta la agenda si está conectada</b></span>
-            </div>
-          </section>
-          <!-- CAPABILITIES -->
-          <section class="section" data-core="ambient" id="capacidades">
+
+          <section class="section voice-example" data-core="hidden" id="ejemplo">
             <header class="section-head">
-              <p class="kicker">01 — Beneficios para tu empresa</p>
-              <h2 class="section-title split">Menos consultas repetitivas.<br /><span class="muted">Más tiempo para tus clientes.</span></h2>
+              <p class="kicker">De la consulta al siguiente paso</p>
+              <h2 class="section-title split">Así se atiende.<br /><span class="muted">Así continúa cada caso.</span></h2>
+              <p class="voice-intro">Explora tres situaciones habituales y la información que queda preparada para tu empresa.</p>
+            </header>
+            <div class="voice-example-list" id="casos">
+              <details class="voice-scenario" name="atencion" open>
+                <summary><span>Una pregunta frecuente</span><span class="voice-outcome">Resuelta en la conversación</span></summary>
+                <div class="voice-scenario-content">
+                  <div class="voice-dialogue">
+                    <p><span>Cliente</span>¿Cuál es vuestro horario de atención?</p>
+                    <p><span>Asistente</span>Atendemos de lunes a viernes, de nueve de la mañana a seis de la tarde. ¿Necesitas ayuda con alguna otra consulta?</p>
+                  </div>
+                  <div class="voice-record">
+                    <p class="voice-label">Resumen del caso · Ejemplo</p>
+                    <dl>
+                      <div>
+                        <dt>Motivo</dt>
+                        <dd>Consulta de horario</dd>
+                      </div>
+                      <div>
+                        <dt>Resultado</dt>
+                        <dd>Información facilitada</dd>
+                      </div>
+                      <div>
+                        <dt>Siguiente paso</dt>
+                        <dd>Consulta atendida por el asistente</dd>
+                      </div>
+                    </dl>
+                    <p class="voice-record-insight">Si esta pregunta se repite, conviene revisar la visibilidad del horario en la web.</p>
+                  </div>
+                </div>
+              </details>
+              <details class="voice-scenario" name="atencion">
+                <summary><span>Un cambio de cita</span><span class="voice-outcome">Pendiente de confirmación</span></summary>
+                <div class="voice-scenario-content">
+                  <div class="voice-dialogue">
+                    <p><span>Cliente</span>Necesito cambiar mi cita del jueves a las diez. ¿Podría ser por la tarde?</p>
+                    <p><span>Asistente</span>Dejo la petición al equipo con el horario que prefieres para que revise la disponibilidad y te confirme el cambio.</p>
+                  </div>
+                  <div class="voice-record">
+                    <p class="voice-label">Resumen del caso · Ejemplo</p>
+                    <dl>
+                      <div>
+                        <dt>Motivo</dt>
+                        <dd>Cambio de cita</dd>
+                      </div>
+                      <div>
+                        <dt>Resultado</dt>
+                        <dd>Solicitud recogida; cita sin confirmar</dd>
+                      </div>
+                      <div>
+                        <dt>Siguiente paso</dt>
+                        <dd>El equipo revisa la disponibilidad y contacta con el cliente</dd>
+                      </div>
+                    </dl>
+                    <p class="voice-record-insight">Las peticiones de cambio muestran qué horarios solicitan tus clientes.</p>
+                  </div>
+                </div>
+              </details>
+              <details class="voice-scenario" name="atencion">
+                <summary><span>Una incidencia que necesita al equipo</span><span class="voice-outcome">Derivada con contexto</span></summary>
+                <div class="voice-scenario-content">
+                  <div class="voice-dialogue">
+                    <p><span>Cliente</span>Falta una pieza en el envío del pedido EJ-104. Quiero que lo revise una persona.</p>
+                    <p><span>Asistente</span>Dejo al equipo el número de pedido y el motivo para que revise el envío y continúe contigo.</p>
+                  </div>
+                  <div class="voice-record">
+                    <p class="voice-label">Resumen del caso · Ejemplo</p>
+                    <dl>
+                      <div>
+                        <dt>Motivo</dt>
+                        <dd>Pedido incompleto</dd>
+                      </div>
+                      <div>
+                        <dt>Resultado</dt>
+                        <dd>Caso preparado para atención personal</dd>
+                      </div>
+                      <div>
+                        <dt>Siguiente paso</dt>
+                        <dd>El equipo revisa el envío y da seguimiento</dd>
+                      </div>
+                    </dl>
+                    <p class="voice-record-insight">Agrupar estas incidencias permite detectar problemas recurrentes en los envíos.</p>
+                  </div>
+                </div>
+              </details>
+            </div>
+            <p class="cases-note">Ejemplos ilustrativos con información ficticia. Las respuestas, los resúmenes y las acciones se configuran para cada empresa.</p>
+          </section>
+
+          <section class="section voice-benefits" data-core="ambient" id="capacidades">
+            <header class="section-head">
+              <p class="kicker">Para tu equipo</p>
+              <h2 class="section-title split">Más tiempo para los casos<br /><span class="muted">que necesitan a una persona.</span></h2>
             </header>
             <div class="cards">
-              <article class="card tilt">
-                <div class="card-ico">
-                  <svg viewbox="0 0 24 24"><path d="M3 12h2l2-6 3 12 3-9 2 5 2-2h4"></path></svg>
-                </div>
-                <h3>Libera a tu equipo</h3>
-                <p>El asistente resuelve preguntas sobre horarios, servicios o políticas para que tu equipo dedique tiempo a los casos que necesitan atención personal.</p>
-                <span class="card-tag">Menos tareas repetitivas</span>
+              <article class="card">
+                <h3>Delega las consultas habituales</h3>
+                <p>El asistente responde con la información que apruebas sobre horarios, servicios y condiciones.</p>
               </article>
-              <article class="card tilt">
-                <div class="card-ico">
-                  <svg viewbox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"></path></svg>
-                </div>
-                <h3>Alivia la carga de llamadas</h3>
-                <p>Automatiza una primera atención para identificar qué necesita cada cliente, responder consultas y recoger solicitudes desde el canal elegido.</p>
-                <span class="card-tag">Teléfono · web · app</span>
+              <article class="card">
+                <h3>Continúa con el contexto</h3>
+                <p>Recibe el motivo de contacto y los datos necesarios para seguir con una solicitud o incidencia.</p>
               </article>
-              <article class="card tilt">
-                <div class="card-ico">
-                  <svg viewbox="0 0 24 24"><path d="M14 7l3-3 3 3-3 3M4 20l7-7M10 4H6a2 2 0 0 0-2 2v4M20 14v4a2 2 0 0 1-2 2h-4"></path></svg>
-                </div>
-                <h3>Unifica las respuestas</h3>
-                <p>Tus clientes reciben respuestas basadas en la información que apruebas: servicios, condiciones y preguntas frecuentes de tu empresa.</p>
-                <span class="card-tag">Tu información de referencia</span>
-              </article>
-              <article class="card tilt">
-                <div class="card-ico">
-                  <svg viewbox="0 0 24 24">
-                    <circle cx="12" cy="12" r="9"></circle>
-                    <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path>
-                  </svg>
-                </div>
-                <h3>Agiliza citas y consultas</h3>
-                <p>Conectamos tu agenda, CRM u otras herramientas para consultar disponibilidad o el estado de una solicitud, según la integración y los permisos acordados.</p>
-                <span class="card-tag">Según integración y permisos</span>
-              </article>
-              <article class="card tilt">
-                <div class="card-ico">
-                  <svg viewbox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"></path></svg>
-                </div>
-                <h3>Recibe solicitudes completas</h3>
-                <p>Recoge el motivo de contacto y los datos necesarios antes de pasar el caso al equipo. Así puede continuar con el contexto de la conversación.</p>
-                <span class="card-tag">Continuidad del caso</span>
-              </article>
-              <article class="card tilt">
-                <div class="card-ico">
-                  <svg viewbox="0 0 24 24">
-                    <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3Z"></path>
-                    <path d="M9 12l2 2 4-4"></path>
-                  </svg>
-                </div>
-                <h3>Mantén el control de la atención</h3>
-                <p>Tú decides qué consultas se automatizan y cuándo interviene una persona. Definimos los límites y la forma de derivación para cada caso.</p>
-                <span class="card-tag">Criterios de atención acordados</span>
+              <article class="card">
+                <h3>Decide cuándo intervenir</h3>
+                <p>Acordamos qué atiende el asistente y qué pasa a tu equipo. Las acciones en tus herramientas requieren una integración validada.</p>
               </article>
             </div>
           </section>
-          <!-- ARCHITECTURE -->
-          <section class="arch" data-core="hidden" id="arquitectura">
-            <div class="arch-content">
-              <header class="section-head arch-head">
-                <p class="kicker">02 — Cómo funciona</p>
-                <h2 class="section-title">Tu cliente pregunta.<br />Tu atención avanza.</h2>
-                <p aria-live="polite" class="arch-caption">
-                  <span class="arch-step-n">01</span>
-                  <span class="arch-step-t">Tu cliente contacta por teléfono, web o app.</span>
-                </p>
-              </header>
-              <div aria-hidden="true" class="arch-scene">
-                <div class="arch-plane">
-                  <svg class="arch-lines" preserveaspectratio="none" viewbox="0 0 1000 600">
-                    <defs>
-                      <lineargradient gradientunits="userSpaceOnUse" id="lg" x1="100" x2="900" y1="0" y2="0">
-                        <stop offset="0" stop-color="#3155ff"></stop>
-                        <stop offset="1" stop-color="#ffffff"></stop>
-                      </lineargradient>
-                    </defs>
-                    <path d="M120 300 C 220 300, 240 300, 330 300" id="p1"></path>
-                    <path d="M330 300 C 420 300, 440 300, 520 300" id="p2"></path>
-                    <path d="M520 300 C 600 300, 620 160, 700 150" id="p3"></path>
-                    <path d="M520 300 C 640 300, 700 450, 860 450" id="p4"></path>
-                    <path d="M700 150 C 800 150, 820 150, 880 150" id="p5"></path>
-                  </svg>
-                  <div class="node" data-step="0" style="--x: 12%; --y: 50%">
-                    <div class="node-ring"></div>
-                    <div class="node-body">
-                      <svg viewbox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"></path></svg>
-                    </div>
-                    <span class="node-label">Tu cliente</span>
-                  </div>
-                  <div class="node" data-step="1" style="--x: 33%; --y: 50%">
-                    <div class="node-ring"></div>
-                    <div class="node-body mono">VOZ</div>
-                    <span class="node-label">Su consulta</span>
-                  </div>
-                  <div class="node node-xl" data-step="2" style="--x: 52%; --y: 50%">
-                    <div class="node-ring"></div>
-                    <div class="node-body mono">IA</div>
-                    <span class="node-label">Asistente de voz</span>
-                  </div>
-                  <div class="node" data-step="3" style="--x: 70%; --y: 25%">
-                    <div class="node-ring"></div>
-                    <div class="node-body">
-                      <svg viewbox="0 0 24 24"><path d="M12 2c.6 5.4 4.6 9.4 10 10-5.4.6-9.4 4.6-10 10-.6-5.4-4.6-9.4-10-10 5.4-.6 9.4-4.6 10-10Z"></path></svg>
-                    </div>
-                    <span class="node-label">Tus criterios</span>
-                  </div>
-                  <div class="node" data-step="3" style="--x: 88%; --y: 25%">
-                    <div class="node-ring"></div>
-                    <div class="node-body">
-                      <svg viewbox="0 0 24 24"><path d="M3 12h2l2-6 3 12 3-9 2 5 2-2h4"></path></svg>
-                    </div>
-                    <span class="node-label">Respuesta al cliente</span>
-                  </div>
-                  <div class="node" data-step="4" style="--x: 86%; --y: 75%">
-                    <div class="node-ring"></div>
-                    <div class="node-body stack"><i>CRM</i><i>Agenda</i><i>Datos</i></div>
-                    <span class="node-label">Tus herramientas</span>
-                  </div>
-                </div>
-              </div>
-              <ol class="arch-steps" hidden>
-                <li>Tu cliente contacta por teléfono, web o app.</li>
-                <li>El asistente escucha e identifica qué necesita el cliente.</li>
-                <li>Consulta la información de tu empresa para responder preguntas habituales.</li>
-                <li>Aplica tus criterios de atención y recoge los datos necesarios.</li>
-                <li>Resuelve la consulta o prepara el caso para tu equipo. Consulta tus herramientas cuando están conectadas.</li>
-              </ol>
-            </div>
-          </section>
-          <!-- USE CASES -->
-          <section class="section" data-core="ambient" id="casos">
+
+          <section class="section voice-analysis" data-core="hidden" id="insights">
             <header class="section-head">
-              <p class="kicker">03 — Qué puedes automatizar</p>
-              <h2 class="section-title split">Empieza por las consultas<br /><span class="muted">que más recibe tu equipo.</span></h2>
-            </header>
-            <div class="cases">
-              <article
-                class="case tilt"
-                data-convo='[["u", "¿Qué información necesitáis para preparar un presupuesto?"], ["a", "¿Qué servicio te interesa? Así puedo indicarte qué datos necesitamos para valorar tu solicitud."]]'
-              >
-                <h3>Preguntas frecuentes</h3>
-                <p class="case-sub">Resuelve dudas habituales sin interrumpir al equipo.</p>
-                <div class="convo"></div>
-              </article>
-              <article
-                class="case tilt"
-                data-convo='[["u", "Necesito que me llaméis por una incidencia."], ["a", "Cuéntame qué ha ocurrido y déjame un teléfono de contacto para que el equipo pueda revisar tu caso."]]'
-              >
-                <h3>Recepción de incidencias</h3>
-                <p class="case-sub">Recoge el problema y los datos para dar seguimiento.</p>
-                <div class="convo"></div>
-              </article>
-              <article
-                class="case tilt"
-                data-convo='[["u", "¿Cómo puedo solicitar un cambio?"], ["a", "Voy a consultar nuestra política de cambios. ¿Qué producto quieres cambiar y cuándo lo compraste?"]]'
-              >
-                <h3>Cambios y devoluciones</h3>
-                <p class="case-sub">Explica las condiciones y los pasos de tu empresa.</p>
-                <div class="convo"></div>
-              </article>
-              <article class="case tilt" data-convo='[["u", "Quisiera concertar una reunión."], ["a", "¿Qué día te vendría bien? Voy a consultar los huecos disponibles en la agenda."]]'>
-                <h3>Solicitudes de cita</h3>
-                <p class="case-sub">Consulta disponibilidad con una agenda conectada.</p>
-                <div class="convo"></div>
-              </article>
-              <article
-                class="case tilt"
-                data-convo='[["u", "Prefiero hablar con una persona."], ["a", "De acuerdo. ¿Sobre qué necesitas hablar? Dejaré el motivo para que el equipo pueda continuar contigo."]]'
-              >
-                <h3>Atención personal</h3>
-                <p class="case-sub">Deriva los casos que requieren a una persona con su contexto.</p>
-                <div class="convo"></div>
-              </article>
-              <article class="case tilt" data-convo='[["u", "¿Cómo va mi solicitud?"], ["a", "¿Tienes el número de referencia? Lo necesito para consultar el estado de tu solicitud."]]'>
-                <h3>Seguimiento de solicitudes</h3>
-                <p class="case-sub">Informa del estado desde tus sistemas conectados.</p>
-                <div class="convo"></div>
-              </article>
-            </div>
-            <p class="cases-note">Conversaciones ilustrativas. Las respuestas y acciones reales dependen de cada configuración e integración.</p>
-          </section>
-          <!-- BUSINESS INSIGHTS -->
-          <section class="section" data-core="ambient" id="insights">
-            <header class="section-head">
-              <p class="kicker">04 — Datos para decidir</p>
-              <h2 class="section-title split">Convierte las conversaciones<br /><span class="muted">en decisiones de negocio.</span></h2>
-              <p class="voice-line-sub">
-                Cada consulta aporta información sobre lo que tus clientes necesitan y cómo lo estás resolviendo. Analizamos los datos recogidos en la atención para detectar patrones y decidir qué
-                mejorar.
+              <p class="kicker">Lo que aprendes de tus clientes</p>
+              <h2 class="section-title split">De las conversaciones<br /><span class="muted">a las decisiones de negocio.</span></h2>
+              <p class="voice-intro">
+                Detecta qué piden tus clientes, cómo se atienden sus consultas y qué conviene mejorar. Este ejemplo muestra el tipo de información que podemos analizar contigo.
               </p>
             </header>
-            <div class="cards">
-              <article class="card tilt">
-                <div class="card-ico">
-                  <svg viewbox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"></path></svg>
+            <div class="voice-report">
+              <header class="voice-report-head">
+                <div>
+                  <p class="voice-label">Muestra de análisis de atención</p>
+                  <h3>Qué se pide. Cómo se resuelve. Qué revisar.</h3>
                 </div>
-                <h3>Demandas recurrentes</h3>
-                <p>
-                  Identifica los motivos de contacto más frecuentes, los servicios que más se solicitan y las dudas que se repiten. Entiende qué quieren tus clientes a partir de sus propias
-                  peticiones.
-                </p>
-                <span class="card-tag">Qué pide tu cliente</span>
-              </article>
-              <article class="card tilt">
-                <div class="card-ico">
-                  <svg viewbox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h6M16 17l2 2 4-5"></path></svg>
-                </div>
-                <h3>Resolución de llamadas</h3>
-                <p>
-                  Revisa qué consultas se resuelven durante la llamada, cuáles se derivan al equipo y cuáles quedan pendientes. Detecta en qué pasos se atasca la atención y qué motivos requieren más
-                  intervención.
-                </p>
-                <span class="card-tag">Cómo se atiende cada solicitud</span>
-              </article>
-              <article class="card tilt">
-                <div class="card-ico">
-                  <svg viewbox="0 0 24 24"><path d="M3 17l6-6 4 4 8-10M15 5h6v6"></path></svg>
-                </div>
-                <h3>Oportunidades de mejora</h3>
-                <p>
-                  Usa esos patrones para actualizar la información que das, simplificar trámites y valorar nuevos servicios. Prioriza cambios en tu negocio a partir de necesidades que tus clientes
-                  expresan.
-                </p>
-                <span class="card-tag">Qué decisiones tomar</span>
-              </article>
+                <span class="voice-sample-label">Datos ficticios</span>
+              </header>
+              <div class="voice-report-table-wrap">
+                <table class="voice-report-table">
+                  <caption>
+                    Ejemplo ilustrativo de patrones y decisiones de negocio
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Patrón observado</th>
+                      <th scope="col">Qué revela</th>
+                      <th scope="col">Qué puedes decidir</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Se repiten las solicitudes de cita por la tarde</th>
+                      <td data-label="Qué revela">Preferencia por una franja horaria</td>
+                      <td data-label="Qué puedes decidir">Valorar la disponibilidad y la distribución de citas</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Los clientes vuelven a preguntar por el estado de su solicitud</th>
+                      <td data-label="Qué revela">Necesidad de información durante la espera</td>
+                      <td data-label="Qué puedes decidir">Revisar cómo y cuándo se comunican las actualizaciones</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Se solicitan presupuestos para un mismo servicio</th>
+                      <td data-label="Qué revela">Interés recurrente en una parte de la oferta</td>
+                      <td data-label="Qué puedes decidir">Revisar cómo se presenta ese servicio y cómo se prepara su presupuesto</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="voice-report-resolution">
+                <h4>El recorrido de cada consulta</h4>
+                <p><span>Resuelta durante la llamada</span><span>Derivada al equipo</span><span>Pendiente de seguimiento</span></p>
+              </div>
+              <footer class="voice-report-foot">
+                El formato, los indicadores y la frecuencia se acuerdan en cada proyecto. La resolución final de un caso derivado requiere incorporar su seguimiento.
+              </footer>
             </div>
-            <p class="cases-note">
-              Definimos contigo qué datos recoger y qué indicadores revisar. Para conocer la resolución final tras una derivación, el análisis necesita el seguimiento de ese caso.
-            </p>
+            <div class="voice-next-step">
+              <p>¿Qué podrías aprender de las consultas que recibe tu empresa?</p>
+              <a
+                class="btn btn-ghost btn-lg"
+                data-cta="contacto"
+                href="https://wa.me/34639904072?text=Hola%2C%20quiero%20valorar%20qu%C3%A9%20consultas%20puedo%20automatizar%20en%20mi%20empresa.%0A%0AEmpresa%3A%0AConsultas%20que%20m%C3%A1s%20recibe%20mi%20equipo%3A%0ACanal%20de%20atenci%C3%B3n%20%28tel%C3%A9fono%2C%20web%20o%20app%29%3A"
+                rel="noopener"
+                target="_blank"
+                >Valorar qué puedo automatizar</a
+              >
+            </div>
           </section>
-          <!-- PROCESS -->
-          <section class="section" data-core="ambient" id="proceso">
+
+          <section class="section voice-service" data-core="ambient" id="proceso">
             <header class="section-head">
-              <p class="kicker">05 — Proceso</p>
-              <h2 class="section-title split">De tu atención actual<br /><span class="muted">al primer proceso automatizado.</span></h2>
+              <p class="kicker">El servicio</p>
+              <h2 class="section-title split">Un primer proceso.<br /><span class="muted">Un alcance definido contigo.</span></h2>
+              <p class="voice-intro">En Involution revisamos tu atención, diseñamos las respuestas y preparamos las conexiones necesarias. El proyecto parte de cómo trabaja tu empresa.</p>
             </header>
             <ol class="process">
               <li>
                 <span class="p-n">01</span>
-                <h3>Revisamos tu atención</h3>
-                <p>Identificamos las consultas que más se repiten, cómo las resuelve tu equipo y qué conviene automatizar primero.</p>
+                <h3>Valoramos tu caso</h3>
+                <p>Nos cuentas qué consultas recibes, por qué canal y cómo las resuelve tu equipo. Proponemos un primer proceso y qué necesita para funcionar.</p>
               </li>
               <li>
                 <span class="p-n">02</span>
-                <h3>Diseñamos las respuestas</h3>
-                <p>Preparamos la información, el tono y los criterios de derivación para atender como necesita tu empresa.</p>
+                <h3>Concretamos la propuesta</h3>
+                <p>Definimos respuestas, derivaciones, integraciones, datos e indicadores. Acordamos el alcance y el presupuesto antes de implementar.</p>
               </li>
               <li>
                 <span class="p-n">03</span>
-                <h3>Conectamos y probamos</h3>
-                <p>Configuramos el canal y las integraciones acordadas. Probamos consultas representativas antes de ponerlo en servicio.</p>
+                <h3>Configuramos y probamos</h3>
+                <p>Preparamos el asistente y las conexiones acordadas. Probamos consultas y derivaciones representativas antes de ponerlo en servicio.</p>
               </li>
               <li>
                 <span class="p-n">04</span>
-                <h3>Seguimiento y mejora</h3>
-                <p>Analizamos las demandas recurrentes, las consultas resueltas y las derivaciones para mejorar la atención, ajustar procesos y valorar nuevas automatizaciones.</p>
+                <h3>Revisamos la atención</h3>
+                <p>Según el seguimiento acordado, analizamos consultas, resultados y nuevas demandas para ajustar respuestas y priorizar mejoras.</p>
               </li>
             </ol>
-            <div aria-hidden="true" class="process-line"><span></span></div>
+            <div class="voice-service-note">
+              <p><strong>La propuesta detalla qué se configura, qué se conecta y cómo se revisa.</strong> El consumo, el mantenimiento y el análisis se especifican según el alcance.</p>
+              <a href="/">Conoce nuestra consultoría tecnológica <span aria-hidden="true">↗</span></a>
+            </div>
           </section>
-          <!-- STACK -->
-          <section aria-label="Tareas de atención al cliente" class="stack-strip" data-core="ambient">
-            <p class="kicker">La atención que tu empresa necesita</p>
-            <ul>
-              <li>Preguntas frecuentes</li>
-              <li>Recepción de solicitudes</li>
-              <li>Atención telefónica</li>
-              <li>Gestión de consultas</li>
-              <li>Criterios de tu empresa</li>
-              <li>Tus herramientas</li>
-              <li>Derivación al equipo</li>
-              <li>Continuidad de cada caso</li>
-              <li>Análisis de conversaciones</li>
-              <li>Demandas recurrentes</li>
-            </ul>
-          </section>
-          <!-- FAQ -->
+
           <section class="section faq" data-core="ambient" id="faq">
             <header class="section-head">
-              <p class="kicker">06 — Preguntas frecuentes</p>
-              <h2 class="section-title">Antes de automatizar tu atención.</h2>
+              <p class="kicker">Preguntas antes de empezar</p>
+              <h2 class="section-title">Lo que necesitas tener claro.</h2>
             </header>
             <div class="faq-list">
               <details>
-                <summary>¿Qué parte de la atención al cliente puedo automatizar?</summary>
+                <summary>¿Podemos mantener nuestro número y conectar nuestras herramientas?</summary>
                 <p>
-                  Las consultas habituales sobre horarios, servicios o condiciones, la recogida de solicitudes e incidencias y la preparación de casos para tu equipo. Las consultas de disponibilidad o
-                  estado requieren una conexión con tus herramientas. Empezamos por un proceso concreto según las necesidades de tu empresa.
+                  Estudiamos vuestra centralita o proveedor de telefonía y las herramientas que usáis. El asistente puede atender por teléfono, web o app. Las consultas a agendas, CRM y otros sistemas
+                  dependen de las conexiones y los permisos disponibles. La confirmación de citas requiere una integración validada.
                 </p>
               </details>
               <details>
-                <summary>¿Dónde puede hablar el cliente con el asistente?</summary>
-                <p>Por teléfono, en tu web o dentro de tu app. Elegimos el canal en el que recibes las consultas que quieres automatizar y valoramos la integración necesaria.</p>
-              </details>
-              <details>
-                <summary>¿Podemos mantener nuestro número de teléfono?</summary>
+                <summary>¿Qué ocurre cuando el asistente no puede resolver una consulta?</summary>
                 <p>
-                  Estudiamos la conexión con vuestra centralita o proveedor de telefonía para valorar cómo automatizar la atención con vuestro número actual. La solución depende de la infraestructura
-                  y del flujo de llamadas.
+                  Acordamos qué consultas atiende, qué información puede dar y cuándo interviene una persona. En los casos que lo requieren, recoge el motivo y los datos necesarios para que tu equipo
+                  continúe. La forma de derivación se define según el canal y las herramientas de tu empresa.
                 </p>
               </details>
               <details>
-                <summary>¿Encaja con mi empresa?</summary>
+                <summary>¿Qué información se guarda de las conversaciones?</summary>
                 <p>
-                  Tiene sentido valorarlo si tu equipo dedica tiempo a responder las mismas preguntas, recoger datos o trasladar solicitudes. Revisamos el volumen, el tipo de consultas y las
-                  herramientas que usáis para decidir por dónde empezar.
+                  Antes de ponerlo en marcha, definimos qué datos necesita cada proceso, dónde se guardan, quién puede acceder y durante cuánto tiempo se conservan. También acordamos si hace falta
+                  conservar audio. La recogida de información y su uso para el análisis se concretan en cada proyecto.
                 </p>
               </details>
               <details>
-                <summary>¿Cuándo interviene una persona?</summary>
+                <summary>¿Cómo recibiremos el análisis de las llamadas?</summary>
                 <p>
-                  Definimos contigo qué casos debe atender tu equipo y qué ocurre cuando una consulta queda fuera del alcance del asistente. Puede recoger el motivo y los datos para que una persona
-                  continúe. La forma de derivación depende del canal y de las integraciones acordadas.
+                  Acordamos contigo los indicadores, el formato de entrega y la frecuencia de revisión. Podemos analizar motivos de contacto, demandas recurrentes y consultas resueltas, derivadas o
+                  pendientes. Para conocer la resolución final tras una derivación, necesitamos incorporar el seguimiento del caso.
                 </p>
               </details>
               <details>
-                <summary>¿Cómo se adapta a nuestra forma de atender?</summary>
+                <summary>¿Qué determina el precio del servicio?</summary>
                 <p>
-                  Preparamos las respuestas a partir de vuestros servicios, preguntas frecuentes y políticas. Acordamos el tono, la información que puede dar y los casos que requieren revisión humana,
-                  y lo probamos con consultas representativas.
-                </p>
-              </details>
-              <details>
-                <summary>¿Puede consultar mi agenda o mi CRM?</summary>
-                <p>
-                  Podemos integrar agendas, CRM y otros sistemas para consultar disponibilidad, revisar el estado de solicitudes o realizar acciones acordadas. Lo que pueda hacer depende de cada
-                  herramienta y de los permisos disponibles. La confirmación de citas requiere una integración validada.
-                </p>
-              </details>
-              <details>
-                <summary>¿Qué puedo aprender de las conversaciones con mis clientes?</summary>
-                <p>
-                  Podemos analizar los datos recogidos en la atención para identificar motivos de contacto, peticiones recurrentes y servicios solicitados. También revisar qué consultas se resuelven
-                  durante la llamada, cuáles se derivan y cuáles quedan pendientes. Esto permite priorizar mejoras en la información, los procesos y la oferta de tu empresa. Para conocer el resultado
-                  final de los casos derivados, necesitamos incorporar su seguimiento.
-                </p>
-              </details>
-              <details>
-                <summary>¿Cuánto cuesta automatizar la atención al cliente?</summary>
-                <p>
-                  El coste depende del proceso que quieras automatizar, del canal, del volumen de consultas y de las integraciones necesarias. Revisamos tu caso para concretar el alcance y preparar
-                  una propuesta.
-                </p>
-              </details>
-              <details>
-                <summary>¿Qué necesito para empezar?</summary>
-                <p>
-                  Cuéntanos qué consultas recibe tu empresa, por qué canal llegan y cómo las atiende hoy tu equipo. Con esa información valoramos qué proceso automatizar primero y qué necesitaría para
-                  funcionar.
+                  La propuesta concreta el coste de configuración e integraciones y, cuando correspondan, el consumo, el mantenimiento y el análisis de conversaciones. El importe depende del canal, el
+                  volumen y el alcance acordado. Empezamos por valorar un caso concreto de tu atención al cliente.
                 </p>
               </details>
             </div>
           </section>
-          <!-- FINAL CTA -->
-          <section class="final-cta" data-core="final">
-            <p class="kicker">Automatiza tu atención al cliente</p>
-            <h2 class="final-title">Libera a tu equipo.</h2>
-            <p class="final-sub">
-              Cuéntanos qué consultas se repiten y dónde se acumula el trabajo. Te proponemos un primer proceso para automatizar y qué datos analizar para mejorar tu atención y entender a tus
-              clientes.
-            </p>
+
+          <section class="final-cta" data-core="final" id="contacto">
+            <p class="kicker">Tu primer paso</p>
+            <h2 class="final-title">Veamos qué puedes<br />automatizar.</h2>
+            <p class="final-sub">Cuéntanos qué consultas recibe tu equipo y cómo las atiende. Te proponemos un primer caso y qué información o herramientas necesitaríamos.</p>
             <a
-              class="btn btn-primary btn-xl magnetic"
+              class="btn btn-primary btn-lg"
               data-cta="contacto"
-              href="https://wa.me/34639904072?text=Hola%2C%20quiero%20automatizar%20la%20atenci%C3%B3n%20al%20cliente%20de%20mi%20empresa.%0A%0AEmpresa%3A%0AConsultas%20que%20m%C3%A1s%20recibe%20mi%20equipo%3A%0ACanal%20de%20atenci%C3%B3n%20%28tel%C3%A9fono%2C%20web%20o%20app%29%3A"
+              href="https://wa.me/34639904072?text=Hola%2C%20quiero%20valorar%20qu%C3%A9%20consultas%20puedo%20automatizar%20en%20mi%20empresa.%0A%0AEmpresa%3A%0AConsultas%20que%20m%C3%A1s%20recibe%20mi%20equipo%3A%0ACanal%20de%20atenci%C3%B3n%20%28tel%C3%A9fono%2C%20web%20o%20app%29%3A"
               rel="noopener"
               target="_blank"
-              >Automatizar mi atención</a
+              >Valorar qué puedo automatizar</a
             >
+            <p class="voice-contact-note">Escríbenos por WhatsApp o a <a href="mailto:hola@involution.es">hola@involution.es</a>.</p>
           </section>
         </main>
         <footer class="footer">

@@ -38,7 +38,11 @@ Automatizamos la atención al cliente de las empresas con asistentes de voz con 
 
 Los asistentes atienden por teléfono, web o app, responden con información aprobada, recogen solicitudes y dan continuidad a cada caso según reglas acordadas. Los canales y la tecnología explican cómo se presta el servicio; el mensaje principal es la automatización de la atención al cliente.
 
-El primer paso comercial es revisar cómo atiende hoy la empresa y valorar un primer proceso para automatizar. El contacto de la página se realiza por WhatsApp, sin prometer una demostración conectada ni un diagnóstico gratuito.
+El primer paso comercial es revisar cómo atiende hoy la empresa y proponer un primer proceso para automatizar, junto con la información y las conexiones necesarias. El CTA «Valorar qué puedo automatizar» abre WhatsApp. No se fija duración ni coste para esta valoración.
+
+La propuesta de cada proyecto debe detallar la configuración, las integraciones y las pruebas, además del consumo, el mantenimiento y el análisis cuando correspondan. El formato de los análisis y la frecuencia de revisión se acuerdan por proyecto; la web muestra una muestra ilustrativa del contenido, sin prometer un panel estándar.
+
+La página presenta tres ejemplos de atención con sus resúmenes y un ejemplo de análisis con datos ficticios. Son explicaciones del servicio, no pruebas de resultados reales ni una demo de voz conectada. No hay una grabación publicable ni testimonios verificados incorporados a la página.
 
 **La oferta de voz es solo de audio.** No se ofrecen experiencias de vídeo en directo ni análisis de imagen en esta fase.
 
@@ -70,5 +74,5 @@ La agenda, el CRM, la telefonía y cualquier acción automática se especifican 
 
 - Formato del diagnóstico: duración, entregable y si tiene coste.
 - Modelo comercial de la implementación (proyecto cerrado, bolsa de horas, mantenimiento).
-- Casos reales publicables y testimonios.
+- Grabación de voz publicable, casos reales y testimonios autorizados para sustituir o acompañar los ejemplos ilustrativos.
 - Voz: canal prioritario, alcance de llamadas, idiomas, forma de derivación, telefonía, tratamiento de grabaciones y consentimiento.
