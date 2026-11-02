@@ -1,5 +1,6 @@
 import './style.css';
 import './voice.css';
+import { voiceInteractions } from './voice';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { type Layout, VoiceCore } from './core';
@@ -17,6 +18,7 @@ import {
 gsap.registerPlugin(ScrollTrigger);
 
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const isVoicePage = document.body.classList.contains('voice-page');
 const lowPower = innerWidth < 700 || (navigator.hardwareConcurrency ?? 8) <= 4;
 
 function layouts(): Record<string, Layout> {
@@ -30,7 +32,7 @@ function layouts(): Record<string, Layout> {
 }
 
 // The page remains usable when WebGL is unavailable or motion is reduced.
-if (!reduced) {
+if (!reduced && !isVoicePage) {
   const canvas = document.querySelector<HTMLCanvasElement>('#gl');
   if (canvas) {
     try {
@@ -68,7 +70,8 @@ scrollReveals(reduced);
 navScroll();
 tilt();
 magnetic();
-if (!reduced) cursor();
+if (!reduced && !isVoicePage) cursor();
 conversations(reduced);
 if (!reduced) architecture();
+if (isVoicePage) voiceInteractions();
 addEventListener('resize', () => ScrollTrigger.refresh());

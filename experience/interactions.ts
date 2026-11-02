@@ -45,18 +45,20 @@ export function scrollReveals(reduced: boolean) {
   }
   // process: the lines draw themselves one after another
   const steps = $$('.process li');
-  ScrollTrigger.create({
-    trigger: '.process',
-    start: 'top 75%',
-    end: 'bottom 45%',
-    scrub: true,
-    onUpdate: (st) => {
-      steps.forEach((li, i) => {
-        const p = gsap.utils.clamp(0, 1, st.progress * steps.length - i);
-        li.style.setProperty('--p', `${p * 100}%`);
-      });
-    }
-  });
+  if (steps.length) {
+    ScrollTrigger.create({
+      trigger: '.process',
+      start: 'top 75%',
+      end: 'bottom 45%',
+      scrub: true,
+      onUpdate: (st) => {
+        steps.forEach((li, i) => {
+          const p = gsap.utils.clamp(0, 1, st.progress * steps.length - i);
+          li.style.setProperty('--p', `${p * 100}%`);
+        });
+      }
+    });
+  }
   gsap.from('.faq details', {
     opacity: 0,
     y: 30,

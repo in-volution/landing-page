@@ -2,13 +2,13 @@
 
 Web de [Involution](https://involution.es): consultoría tecnológica para empresas. Auditamos procesos y sistemas, y los mejoramos con automatización, integraciones, IA aplicada, datos y desarrollo a medida. Como línea especializada, automatizamos la atención al cliente de las empresas con asistentes de voz con IA para teléfono, web y app, y analizamos los datos de las conversaciones para entender la demanda y mejorar los procesos.
 
-Este repositorio contiene la web pública: la portada de consultoría (servicios, método, ejemplos, proceso, preguntas frecuentes y contacto) y la página de asistentes de voz en `/asistentes-de-voz/`. Los ejemplos, resúmenes de atención y la muestra de análisis mostrados son ilustrativos, con datos ficticios. El alcance de la oferta está documentado en [PRODUCTO.md](PRODUCTO.md).
+Este repositorio contiene la web pública: la portada de consultoría (servicios, método, ejemplos, proceso, preguntas frecuentes y contacto) y la página de asistentes de voz en `/asistentes-de-voz/`. Las escenas interactivas de atención y los gráficos de análisis son ilustrativos, con datos ficticios. El alcance de la oferta está documentado en [PRODUCTO.md](PRODUCTO.md).
 
 ## Tecnología
 
 HTML y CSS estáticos, con TypeScript, Three.js y GSAP para el núcleo de partículas 3D y las animaciones. Vite compila la experiencia visual y GitHub Pages aloja la web.
 
-La web no incorpora backend ni un asistente de voz conectado. El contenido permanece accesible sin JavaScript; la visualización 3D se omite cuando WebGL no está disponible o el usuario prefiere reducir el movimiento.
+La web no incorpora backend ni un asistente de voz conectado. El contenido permanece accesible sin JavaScript; la visualización 3D de la portada se omite cuando WebGL no está disponible o el usuario prefiere reducir el movimiento. La página de voz usa animaciones de la conversación y gráficos interactivos, con pausa y una alternativa estática sin JavaScript o con movimiento reducido.
 
 ## Desarrollo local
 
@@ -40,6 +40,7 @@ Abre `http://localhost:3000`. El comando compila la experiencia y sirve los arch
 | `experience/main.ts`                      | Inicialización de la experiencia visual.                 |
 | `experience/core.ts`                      | Núcleo de partículas y renderizado con Three.js.         |
 | `experience/interactions.ts`              | Animaciones e interacciones con GSAP.                    |
+| `experience/voice.ts`                     | Escenas interactivas de atención y análisis ilustrativo. |
 | `experience/voice.css`                    | Estilos propios de la página de atención al cliente.     |
 | `experience/style.css`                    | Estilos de la landing.                                   |
 | `experience/vite.config.ts`               | Configuración de compilación.                            |

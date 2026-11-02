@@ -38,11 +38,15 @@ Automatizamos la atención al cliente de las empresas con asistentes de voz con 
 
 Los asistentes atienden por teléfono, web o app, responden con información aprobada, recogen solicitudes y dan continuidad a cada caso según reglas acordadas. Los canales y la tecnología explican cómo se presta el servicio; el mensaje principal es la automatización de la atención al cliente.
 
-El primer paso comercial es revisar cómo atiende hoy la empresa y proponer un primer proceso para automatizar, junto con la información y las conexiones necesarias. El CTA «Valorar qué puedo automatizar» abre WhatsApp. No se fija duración ni coste para esta valoración.
+El primer paso comercial es revisar cómo atiende hoy la empresa y proponer un primer proceso para automatizar, junto con la información y las conexiones necesarias. El CTA «Valorar mi caso» abre WhatsApp. No se fija duración ni coste para esta valoración.
 
 La propuesta de cada proyecto debe detallar la configuración, las integraciones y las pruebas, además del consumo, el mantenimiento y el análisis cuando correspondan. El formato de los análisis y la frecuencia de revisión se acuerdan por proyecto; la web muestra una muestra ilustrativa del contenido, sin prometer un panel estándar.
 
-La página presenta tres ejemplos de atención con sus resúmenes y un ejemplo de análisis con datos ficticios. Son explicaciones del servicio, no pruebas de resultados reales ni una demo de voz conectada. No hay una grabación publicable ni testimonios verificados incorporados a la página.
+La página explica la oferta con dos escenas interactivas: una conversación animada (consulta, cita o incidencia) y un gráfico explorable de demanda o resolución. Los cuatro pasos de implantación permiten ver una explicación breve al seleccionarlos.
+
+Los escenarios y las cifras de las 100 consultas del gráfico son ficticios y están identificados como ejemplos. No representan métricas de clientes, porcentajes de éxito ni resultados de Involution. La animación no incorpora una llamada real, micrófono ni audio. No hay una grabación publicable ni testimonios verificados incorporados a la página.
+
+Las animaciones se pueden pausar o repetir, se detienen cuando la escena deja de verse y muestran el resultado directamente si se solicita reducir el movimiento. Sin JavaScript, quedan visibles un ejemplo completo, la distribución de demanda y los pasos de implantación.
 
 **La oferta de voz es solo de audio.** No se ofrecen experiencias de vídeo en directo ni análisis de imagen en esta fase.
 
