@@ -42,13 +42,13 @@ El primer paso comercial es revisar cómo atiende hoy la empresa y proponer un p
 
 La propuesta de cada proyecto debe detallar la configuración, las integraciones y las pruebas, además del consumo, el mantenimiento y el análisis cuando correspondan. El formato de los análisis y la frecuencia de revisión se acuerdan por proyecto; la web muestra una muestra ilustrativa del contenido, sin prometer un panel estándar.
 
-La página explica la oferta con dos escenas interactivas: una conversación animada (consulta, cita o incidencia) y un gráfico explorable de demanda o resolución. Los cuatro pasos de implantación permiten ver una explicación breve al seleccionarlos.
+La página explica la oferta con cuatro escenas interactivas: una conversación animada (consulta, cita o incidencia), un gráfico explorable de demanda o resolución, un flujo hacia agenda/CRM/equipo y un ciclo de revisión de la atención. Las conexiones representan posibilidades que deben validarse por proyecto. La revisión incluye escucha, detección de patrones, revisión de casos y ajustes acordados; no se presenta como aprendizaje autónomo sin supervisión.
 
 La conversación animada incorpora tres ilustraciones generadas: atención de una consulta por teléfono, solicitud de cambio de cita y derivación de una incidencia al equipo. Cambian con el escenario y se entregan como imágenes WebP con fondo transparente.
 
 Los escenarios y las cifras de las 100 consultas del gráfico son ficticios y están identificados como ejemplos. No representan métricas de clientes, porcentajes de éxito ni resultados de Involution. La animación no incorpora una llamada real, micrófono ni audio. No hay una grabación publicable ni testimonios verificados incorporados a la página.
 
-Las animaciones se pueden pausar o repetir, se detienen cuando la escena deja de verse y muestran el resultado directamente si se solicita reducir el movimiento. Sin JavaScript, quedan visibles un ejemplo completo, la distribución de demanda y los pasos de implantación.
+Las animaciones se pueden pausar o repetir, se detienen cuando la escena deja de verse y muestran el resultado directamente si se solicita reducir el movimiento. Sin JavaScript, quedan visibles un ejemplo completo, la distribución de demanda, una conexión de ejemplo y los pasos de revisión.
 
 **La oferta de voz es solo de audio.** No se ofrecen experiencias de vídeo en directo ni análisis de imagen en esta fase.
 

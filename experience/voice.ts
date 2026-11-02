@@ -254,20 +254,68 @@ export function voiceInteractions() {
     render();
   }
 
+  const connections = document.querySelector<HTMLElement>('[data-voice-connections]');
+  if (connections) {
+    const captions: Record<string, string> = {
+      agenda: 'Solicitudes de cita listas para revisar.',
+      crm: 'El motivo y los datos, en tu CRM.',
+      equipo: 'Un resumen para que tu equipo continúe.'
+    };
+    let animation: Animation | undefined;
+    const animatePath = () => {
+      animation?.cancel();
+      const path = connections.querySelector<SVGPathElement>(`[data-connection-path="${connections.dataset.tool}"]`)!;
+      if (!motion.matches) {
+        animation = path.animate([{ strokeDashoffset: '32' }, { strokeDashoffset: '0' }], {
+          duration: 900,
+          iterations: 2
+        });
+      }
+    };
+    const buttons = Array.from(connections.querySelectorAll<HTMLButtonElement>('[data-tool-button]'));
+    buttons.forEach((button) => {
+      button.disabled = false;
+      button.addEventListener('click', () => {
+        const key = button.dataset.toolButton!;
+        connections.dataset.tool = key;
+        buttons.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+        connections.querySelector('[data-tool-caption]')!.textContent = captions[key];
+        animatePath();
+      });
+    });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          animatePath();
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.35 }
+    );
+    observer.observe(connections);
+    motion.addEventListener('change', () => {
+      if (motion.matches) animation?.cancel();
+    });
+    addEventListener('pagehide', () => {
+      animation?.cancel();
+      observer.disconnect();
+    });
+  }
+
   const journey = document.querySelector<HTMLElement>('[data-voice-journey]');
   if (journey) {
     const captions = [
-      'Qué consultas recibe tu equipo.',
-      'Tus respuestas, herramientas y reglas.',
-      'Consultas y derivaciones antes de empezar.',
-      'Lo que se resuelve y lo que se repite.'
+      'Las consultas que recibe tu equipo.',
+      'Las dudas y demandas que se repiten.',
+      'Los casos que necesitan atención.',
+      'Las respuestas y procesos que conviene mejorar.'
     ];
     const buttons = Array.from(journey.querySelectorAll<HTMLButtonElement>('[data-journey-step]'));
     buttons.forEach((button, i) => {
       button.disabled = false;
       button.addEventListener('click', () => {
         buttons.forEach((item, index) => item.setAttribute('aria-pressed', String(index === i)));
-        journey.style.setProperty('--journey-progress', String(i / 3));
+        journey.style.setProperty('--journey-progress', String((i + 1) / 4));
         journey.querySelector('[data-journey-caption]')!.textContent = captions[i];
       });
     });

@@ -89,7 +89,7 @@
         ]
       }
     </script>
-    <link href="/assets/experience/style.css?v=acciones-20261102" rel="stylesheet" />
+    <link href="/assets/experience/style.css?v=producto-20261102" rel="stylesheet" />
   </head>
   <body class="voice-page">
     <canvas aria-hidden="true" id="gl"></canvas>
@@ -102,7 +102,7 @@
           <a aria-label="Involution" class="brand" href="/"
             ><img alt="Involution" class="brand-logo" height="128" src="/assets/brand/despliegue/involution-logo-horizontal-white-accent.svg" width="460"
           /></a>
-          <nav aria-label="Principal" class="nav-links"><a href="#ejemplo">Así funciona</a><a href="#insights">Lo que descubres</a><a href="#proceso">Cómo empezamos</a></nav>
+          <nav aria-label="Principal" class="nav-links"><a href="#ejemplo">Así funciona</a><a href="#insights">Lo que descubres</a><a href="#proceso">Cómo encaja</a></nav>
           <a class="btn btn-ghost btn-sm" href="#contacto">Hablemos</a>
         </header>
         <main id="top">
@@ -286,39 +286,85 @@
 
           <section class="section voice-start" id="proceso">
             <header class="section-head">
-              <p class="kicker">Cómo empezamos</p>
-              <h2 class="section-title">Un proceso cada vez.</h2>
+              <p class="kicker">Dentro de tu negocio</p>
+              <h2 class="section-title">Así trabaja<br /><span class="muted">con tu equipo.</span></h2>
             </header>
-            <div class="voice-journey" data-voice-journey>
-              <ol class="voice-journey-steps">
-                <li>
-                  <button type="button" disabled data-journey-step="0" aria-pressed="true">
-                    <svg aria-hidden="true" viewBox="0 0 24 24">
-                      <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z" />
-                      <circle cx="12" cy="12" r="3" /></svg
-                    ><span>Revisamos</span></button
-                  ><span class="voice-step-fallback">Qué consultas recibe tu equipo.</span>
-                </li>
-                <li>
-                  <button type="button" disabled data-journey-step="1" aria-pressed="false">
-                    <svg aria-hidden="true" viewBox="0 0 24 24">
-                      <path d="m9 3-1 3-3 1-2 5 2 5 3 1 1 3h6l1-3 3-1 2-5-2-5-3-1-1-3Z" />
-                      <circle cx="12" cy="12" r="3" /></svg
-                    ><span>Configuramos</span></button
-                  ><span class="voice-step-fallback">Tus respuestas, herramientas y reglas.</span>
-                </li>
-                <li>
-                  <button type="button" disabled data-journey-step="2" aria-pressed="false">
-                    <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" /></svg><span>Probamos</span></button
-                  ><span class="voice-step-fallback">Consultas y derivaciones antes de empezar.</span>
-                </li>
-                <li>
-                  <button type="button" disabled data-journey-step="3" aria-pressed="false">
-                    <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 20V10m7 10V4m7 16v-7M2 20h20" /></svg><span>Mejoramos</span></button
-                  ><span class="voice-step-fallback">Lo que se resuelve y lo que se repite.</span>
-                </li>
-              </ol>
-              <p class="voice-journey-caption" data-journey-caption aria-live="polite">Qué consultas recibe tu equipo.</p>
+            <div class="voice-features">
+              <article class="voice-feature">
+                <p class="voice-label">Tus herramientas</p>
+                <h3>De la llamada al siguiente paso.</h3>
+                <div class="voice-connections" data-voice-connections data-tool="agenda">
+                  <div class="voice-connection-map">
+                    <svg class="voice-connect-lines" aria-hidden="true" viewBox="0 0 480 220" preserveAspectRatio="none">
+                      <path data-connection-path="agenda" d="M110 110 C230 110 240 35 344 35" />
+                      <path data-connection-path="crm" d="M110 110 H344" />
+                      <path data-connection-path="equipo" d="M110 110 C230 110 240 185 344 185" />
+                    </svg>
+                    <div class="voice-connect-origin"><img alt="" width="48" height="48" src="/assets/brand/despliegue/involution-isotype-color.svg" /><span>Tu asistente</span></div>
+                    <div class="voice-tool-targets" role="group" aria-label="Explora las conexiones del ejemplo">
+                      <button type="button" data-tool-button="agenda" aria-pressed="true" disabled>
+                        <svg aria-hidden="true" viewBox="0 0 24 24">
+                          <rect x="3" y="5" width="18" height="16" rx="3" />
+                          <path d="M7 3v4M17 3v4M3 11h18" /></svg
+                        ><span>Agenda</span></button
+                      ><button type="button" data-tool-button="crm" aria-pressed="false" disabled>
+                        <svg aria-hidden="true" viewBox="0 0 24 24">
+                          <rect x="3" y="4" width="18" height="16" rx="3" />
+                          <path d="M3 9h18M8 9v11M11 13h6M11 16h4" /></svg
+                        ><span>CRM</span></button
+                      ><button type="button" data-tool-button="equipo" aria-pressed="false" disabled>
+                        <svg aria-hidden="true" viewBox="0 0 24 24">
+                          <circle cx="12" cy="8" r="4" />
+                          <path d="M4 21v-2a8 8 0 0 1 16 0v2" /></svg
+                        ><span>Equipo</span>
+                      </button>
+                    </div>
+                  </div>
+                  <p class="voice-connection-caption" data-tool-caption aria-live="polite">Solicitudes de cita listas para revisar.</p>
+                </div>
+                <p class="voice-feature-note">Ejemplo de flujo. Conexiones según cada herramienta y sus permisos.</p>
+              </article>
+              <article class="voice-feature">
+                <p class="voice-label">Mejora continua</p>
+                <h3>Cada conversación deja una pista.</h3>
+                <div class="voice-journey" data-voice-journey>
+                  <svg class="voice-loop-ring" aria-hidden="true" viewBox="0 0 180 180">
+                    <circle class="voice-loop-track" cx="90" cy="90" r="80" />
+                    <circle class="voice-loop-progress" cx="90" cy="90" r="80" />
+                  </svg>
+                  <img class="voice-loop-brand" alt="" width="40" height="40" src="/assets/brand/despliegue/involution-isotype-color.svg" />
+                  <ol class="voice-journey-steps">
+                    <li>
+                      <button type="button" disabled data-journey-step="0" aria-pressed="true">
+                        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 12h2l2-6 3 12 3-9 2 5 2-2h4" /></svg><span>Escuchamos</span></button
+                      ><span class="voice-step-fallback">Las consultas que recibe tu equipo.</span>
+                    </li>
+                    <li>
+                      <button type="button" disabled data-journey-step="1" aria-pressed="false">
+                        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 20V10m7 10V4m7 16v-7M2 20h20" /></svg><span>Detectamos</span></button
+                      ><span class="voice-step-fallback">Las dudas y demandas que se repiten.</span>
+                    </li>
+                    <li>
+                      <button type="button" disabled data-journey-step="2" aria-pressed="false">
+                        <svg aria-hidden="true" viewBox="0 0 24 24">
+                          <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z" />
+                          <circle cx="12" cy="12" r="3" /></svg
+                        ><span>Revisamos</span></button
+                      ><span class="voice-step-fallback">Los casos que necesitan atención.</span>
+                    </li>
+                    <li>
+                      <button type="button" disabled data-journey-step="3" aria-pressed="false">
+                        <svg aria-hidden="true" viewBox="0 0 24 24">
+                          <path d="m9 3-1 3-3 1-2 5 2 5 3 1 1 3h6l1-3 3-1 2-5-2-5-3-1-1-3Z" />
+                          <circle cx="12" cy="12" r="3" /></svg
+                        ><span>Ajustamos</span></button
+                      ><span class="voice-step-fallback">Las respuestas y procesos que conviene mejorar.</span>
+                    </li>
+                  </ol>
+                  <p class="voice-journey-caption" data-journey-caption aria-live="polite">Las consultas que recibe tu equipo.</p>
+                </div>
+                <p class="voice-feature-note">Mejoras acordadas contigo a partir del análisis de la atención.</p>
+              </article>
             </div>
           </section>
 
@@ -365,6 +411,6 @@
       </div>
     </div>
     <!-- ================= EXPERIENCIA VISUAL ================= -->
-    <script src="/assets/experience/experience.js?v=acciones-20261102" type="module"></script>
+    <script src="/assets/experience/experience.js?v=producto-20261102" type="module"></script>
   </body>
 </html>
