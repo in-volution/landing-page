@@ -1,6 +1,7 @@
 import './style.css';
 import './voice.css';
 import { voiceInteractions } from './voice';
+import { heroVideoBackground } from './hero-video';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { type Layout, VoiceCore } from './core';
@@ -73,5 +74,8 @@ magnetic();
 if (!reduced && !isVoicePage) cursor();
 conversations(reduced);
 if (!reduced) architecture();
-if (isVoicePage) voiceInteractions();
+if (isVoicePage) {
+  voiceInteractions();
+  heroVideoBackground();
+}
 addEventListener('resize', () => ScrollTrigger.refresh());

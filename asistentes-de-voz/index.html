@@ -89,7 +89,7 @@
         ]
       }
     </script>
-    <link href="/assets/experience/style.css?v=producto-20261102" rel="stylesheet" />
+    <link href="/assets/experience/style.css?v=hero-video-20261102" rel="stylesheet" />
   </head>
   <body class="voice-page">
     <canvas aria-hidden="true" id="gl"></canvas>
@@ -107,6 +107,24 @@
         </header>
         <main id="top">
           <section class="hero voice-hero" data-core="hero">
+            <div class="voice-hero-background" aria-hidden="true">
+              <img class="voice-hero-poster" alt="" src="/assets/video/voice-hero-poster.webp" width="1280" height="720" fetchpriority="high" decoding="async" />
+              <video
+                class="voice-hero-video"
+                data-hero-video
+                data-src="/assets/video/voice-hero.mp4"
+                muted
+                loop
+                playsinline
+                preload="none"
+                poster="/assets/video/voice-hero-poster.webp"
+                width="1280"
+                height="720"
+                tabindex="-1"
+              ></video>
+            </div>
+            <button type="button" class="voice-hero-video-toggle" data-hero-video-toggle hidden aria-label="Pausar vídeo de fondo">Pausar fondo</button>
+
             <div class="hero-copy">
               <p class="eyebrow reveal">Asistentes de voz para empresas</p>
               <h1 class="hero-title">
@@ -411,6 +429,6 @@
       </div>
     </div>
     <!-- ================= EXPERIENCIA VISUAL ================= -->
-    <script src="/assets/experience/experience.js?v=producto-20261102" type="module"></script>
+    <script src="/assets/experience/experience.js?v=hero-video-20261102" type="module"></script>
   </body>
 </html>

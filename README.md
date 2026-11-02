@@ -40,10 +40,12 @@ Abre `http://localhost:3000`. El comando compila la experiencia y sirve los arch
 | `experience/main.ts`                      | Inicialización de la experiencia visual.                 |
 | `experience/core.ts`                      | Núcleo de partículas y renderizado con Three.js.         |
 | `experience/interactions.ts`              | Animaciones e interacciones con GSAP.                    |
+| `experience/hero-video.ts`                | Reproducción y preferencias del vídeo de fondo.          |
 | `experience/voice.ts`                     | Escenas de atención, análisis, conexiones y revisión.    |
 | `experience/voice.css`                    | Estilos propios de la página de atención al cliente.     |
 | `experience/style.css`                    | Estilos de la landing.                                   |
 | `experience/vite.config.ts`               | Configuración de compilación.                            |
+| `assets/video/`                           | Vídeo del hero, imagen fija y procedencia.               |
 | `assets/illustrations/voice/`             | Ilustraciones de las acciones en la escena interactiva.  |
 | `assets/experience/`                      | Archivos generados; no se versionan.                     |
 | `assets/brand/despliegue/`                | Identidad visual, logotipos, iconos e imagen social.     |

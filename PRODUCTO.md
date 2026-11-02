@@ -50,6 +50,8 @@ Los escenarios y las cifras de las 100 consultas del gráfico son ficticios y es
 
 Las animaciones se pueden pausar o repetir, se detienen cuando la escena deja de verse y muestran el resultado directamente si se solicita reducir el movimiento. Sin JavaScript, quedan visibles un ejemplo completo, la distribución de demanda, una conexión de ejemplo y los pasos de revisión.
 
+El hero utiliza un vídeo de stock urbano como fondo decorativo, en silencio y con control de pausa. Con movimiento reducido, ahorro de datos o sin JavaScript se mantiene una imagen fija. Es un recurso visual de la web, no una demostración ni una ampliación del alcance del servicio.
+
 **La oferta de voz es solo de audio.** No se ofrecen experiencias de vídeo en directo ni análisis de imagen en esta fase.
 
 Alcance funcional:

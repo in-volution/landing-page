@@ -31,6 +31,77 @@
   padding-top: 126px;
   padding-bottom: 58px;
 }
+.voice-hero {
+  isolation: isolate;
+  overflow: hidden;
+}
+.voice-hero-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: #080f1d;
+}
+.voice-hero-poster,
+.voice-hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.voice-hero-background::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(5, 10, 23, 0.68), rgba(5, 10, 23, 0.34)),
+    linear-gradient(0deg, #0a0a0a, transparent 24%, transparent 78%, rgba(5, 10, 23, 0.5));
+}
+.voice-page .voice-hero > .hero-copy,
+.voice-page .voice-hero > .voice-demo {
+  position: relative;
+  z-index: 1;
+}
+.voice-page .voice-hero .hero-title {
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.22);
+}
+.voice-page .voice-hero .grad {
+  background-image: linear-gradient(100deg, #ffffff, #a4b4ff);
+}
+.voice-page .voice-hero .hero-sub {
+  color: rgba(255, 255, 255, 0.88);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+}
+.voice-page .voice-hero .hero-note {
+  color: rgba(255, 255, 255, 0.72);
+}
+.voice-hero-video-toggle {
+  position: absolute;
+  bottom: 14px;
+  left: var(--gutter);
+  z-index: 2;
+  min-height: 34px;
+  padding: 7px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 100px;
+  background: rgba(5, 10, 23, 0.55);
+  color: #ffffff;
+  font-size: 11px;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+}
+@media (max-width: 760px) {
+  .voice-page .voice-hero {
+    padding-bottom: 60px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .voice-hero-video {
+    display: none;
+  }
+}
 .voice-page .hero-copy {
   max-width: none;
 }
