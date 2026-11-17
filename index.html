@@ -122,6 +122,14 @@
           },
           {
             "@type": "Question",
+            "name": "¿El diagnóstico tiene coste?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Dentro del programa de diagnóstico, no. Lo hacemos gratis para 10 empresas a cambio de conocer de cerca sus problemas. Después decidís si queréis que os ayudemos a implementarlo; no hay compromiso."
+            }
+          },
+          {
+            "@type": "Question",
             "name": "¿Qué pasa después del diagnóstico?",
             "acceptedAnswer": {
               "@type": "Answer",
@@ -173,7 +181,11 @@
           <!-- HERO -->
           <section class="hero" data-core="hero">
             <div class="hero-copy">
-              <p class="eyebrow reveal">Consultoría · Automatización</p>
+              <a class="program-pill reveal" href="#programa">
+                <span aria-hidden="true" class="dot-live"></span>
+                <span><strong>Diagnóstico gratuito</strong> · Solo 10 empresas</span>
+                <span aria-hidden="true" class="program-pill-arrow">→</span>
+              </a>
               <h1 class="hero-title">
                 <span class="line"><span>Detectamos,</span></span>
                 <span class="line"><span>automatizamos</span></span>
@@ -218,6 +230,55 @@
               ><span>“El informe semanal lleva una mañana” <b>→ Panel automático</b></span
               ><span>“Cada alta son diez pasos” <b>→ Flujo automatizado</b></span
               ><span>“El sistema se nos queda corto” <b>→ Mejora técnica</b></span>
+            </div>
+          </section>
+          <!-- PROGRAM -->
+          <section aria-labelledby="programa-title" class="section program" data-core="ambient" id="programa">
+            <div class="program-card">
+              <div class="program-main">
+                <p class="kicker"><span aria-hidden="true" class="dot-live"></span> Programa de diagnóstico · Plazas limitadas</p>
+                <h2 class="program-title" id="programa-title">Diagnóstico gratuito <span class="muted">para 10 empresas.</span></h2>
+                <p class="program-sub">
+                  Hemos abierto un programa para conocer de cerca los problemas reales de las empresas: dónde se pierde tiempo, qué se sigue haciendo a mano y qué sistemas se quedan cortos. A cada
+                  empresa participante le hacemos un diagnóstico completo, sin coste.
+                </p>
+                <div class="program-ctas">
+                  <a
+                    class="btn btn-primary btn-lg magnetic"
+                    data-cta="programa"
+                    href="https://wa.me/34639904072?text=Hola%2C%20quiero%20solicitar%20una%20plaza%20en%20el%20programa%20de%20diagn%C3%B3stico%20gratuito%20de%20Involution.%0A%0AEmpresa%3A%0ASector%3A%0AProceso%20o%20%C3%A1rea%20que%20m%C3%A1s%20tiempo%20consume%3A"
+                    rel="noopener"
+                    target="_blank"
+                    >Solicitar mi plaza</a
+                  >
+                  <span class="program-note">Sin coste y sin compromiso de contratar.</span>
+                </div>
+              </div>
+              <div class="program-side">
+                <h3 class="program-side-title">Qué incluye</h3>
+                <ul class="program-list">
+                  <li>Una sesión para entender cómo trabajáis y qué herramientas usáis.</li>
+                  <li>Revisión de procesos, sistemas y datos.</li>
+                  <li>Informe con las mejoras priorizadas por impacto y esfuerzo.</li>
+                  <li>Recomendación del primer paso, aunque lo hagáis por vuestra cuenta.</li>
+                </ul>
+                <!-- Para marcar una plaza como ocupada, añade class="is-taken" a un <li> y actualiza el texto de la etiqueta. -->
+                <div class="program-seats">
+                  <ol aria-hidden="true" class="program-seats-grid">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ol>
+                  <p class="program-seats-label"><strong>10 plazas</strong> en esta edición</p>
+                </div>
+              </div>
             </div>
           </section>
           <!-- SERVICES -->
@@ -518,6 +579,13 @@
                 <p>Acordamos qué datos se usan, dónde se procesan y quién accede a ellos. Cada integración trabaja con los permisos que necesita y dejamos documentado cada flujo.</p>
               </details>
               <details>
+                <summary>¿El diagnóstico tiene coste?</summary>
+                <p>
+                  Dentro del <a href="#programa">programa de diagnóstico</a>, no. Lo hacemos gratis para 10 empresas a cambio de conocer de cerca sus problemas. Después decidís si queréis que os
+                  ayudemos a implementarlo; no hay compromiso.
+                </p>
+              </details>
+              <details>
                 <summary>¿Qué pasa después del diagnóstico?</summary>
                 <p>
                   Recibís una propuesta priorizada. Podemos implementarla nosotros por fases o acompañar a vuestro equipo técnico. Empezamos por el cambio que más sentido tenga y ampliamos a partir de
@@ -537,7 +605,7 @@
           <section class="final-cta" data-core="final">
             <p class="kicker">¿Hablamos?</p>
             <h2 class="final-title">Hablemos.</h2>
-            <p class="final-sub">Cuéntanos qué procesos os quitan más tiempo. Empezamos por un diagnóstico.</p>
+            <p class="final-sub">Cuéntanos qué procesos os quitan más tiempo. Empezamos por un diagnóstico, gratuito para las empresas del programa.</p>
             <a
               class="btn btn-primary btn-xl magnetic"
               data-cta="contacto"

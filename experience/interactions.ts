@@ -21,7 +21,7 @@ export function heroIntro(reduced: boolean) {
 
 export function scrollReveals(reduced: boolean) {
   if (reduced) return;
-  for (const el of $$('.section-head, .stack-strip, .final-cta > *')) {
+  for (const el of $$('.section-head, .program-card, .stack-strip, .final-cta > *')) {
     gsap.from(el, {
       opacity: 0,
       y: 50,

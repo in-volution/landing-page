@@ -13,7 +13,13 @@ Involution es una consultoría tecnológica para empresas: audita cómo trabajan
 
 ### Primer paso: diagnóstico
 
-Toda colaboración empieza por entender cómo se trabaja hoy: procesos, herramientas, datos y sistemas. El resultado es una lista priorizada de mejoras según impacto y esfuerzo. La web lo presenta como «diagnóstico» o «auditoría» **sin concretar formato, duración ni coste**.
+Toda colaboración empieza por entender cómo se trabaja hoy: procesos, herramientas, datos y sistemas. El resultado es una lista priorizada de mejoras según impacto y esfuerzo. La web lo presenta como «diagnóstico» o «auditoría» **sin concretar formato ni duración**.
+
+### Programa de diagnóstico gratuito
+
+Involution ha abierto un programa para conocer de cerca los problemas operativos de las empresas. A **10 empresas** se les hace el diagnóstico completo **sin coste y sin compromiso de contratar**. Incluye una sesión para entender cómo trabajan, la revisión de procesos, sistemas y datos, un informe con las mejoras priorizadas y la recomendación del primer paso.
+
+En la portada aparece como aviso en el hero (enlaza a `#programa`), como sección propia tras el ticker, con un indicador de 10 plazas, y en las preguntas frecuentes. El CTA «Solicitar mi plaza» abre WhatsApp con un mensaje preparado. Para marcar plazas ocupadas, se añade la clase `is-taken` a los elementos del indicador y se actualiza el texto de la etiqueta; solo deben marcarse plazas realmente asignadas. Fuera del programa, el diagnóstico no tiene un coste publicado en la web.
 
 ### Servicios
 
